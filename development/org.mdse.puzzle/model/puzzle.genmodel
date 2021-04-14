@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/org.mdse.puzzle/src-gen" creationIcons="false"
+    editDirectory="/org.mdse.puzzle.edit/src-gen" editorDirectory="/org.mdse.puzzle.editor/src-gen"
+    modelPluginID="org.mdse.puzzle" modelName="Puzzle" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>puzzle.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Puzzle" basePackage="org.mdse" disposableProviderFactory="true"
+      ecorePackage="puzzle.ecore#/">
+    <genClasses ecoreClass="puzzle.ecore#//Puzzle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute puzzle.ecore#//Puzzle/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute puzzle.ecore#//Puzzle/description"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference puzzle.ecore#//Puzzle/tests"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference puzzle.ecore#//Puzzle/allowedStatements"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference puzzle.ecore#//Puzzle/inputs"/>
+    </genClasses>
+    <genClasses ecoreClass="puzzle.ecore#//UnitTest">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference puzzle.ecore#//UnitTest/expected"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference puzzle.ecore#//UnitTest/inputs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute puzzle.ecore#//UnitTest/errorMessage"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Constructs" ecorePackage="../../org.mdse.constructs/model/constructs.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="../../org.mdse.constructs/model/constructs.ecore#//ComparativeOperator">
+      <genEnumLiterals ecoreEnumLiteral="../../org.mdse.constructs/model/constructs.ecore#//ComparativeOperator/Equal"/>
+      <genEnumLiterals ecoreEnumLiteral="../../org.mdse.constructs/model/constructs.ecore#//ComparativeOperator/NotEqual"/>
+      <genEnumLiterals ecoreEnumLiteral="../../org.mdse.constructs/model/constructs.ecore#//ComparativeOperator/LessThan"/>
+      <genEnumLiterals ecoreEnumLiteral="../../org.mdse.constructs/model/constructs.ecore#//ComparativeOperator/LessThanEq"/>
+      <genEnumLiterals ecoreEnumLiteral="../../org.mdse.constructs/model/constructs.ecore#//ComparativeOperator/GreaterThan"/>
+      <genEnumLiterals ecoreEnumLiteral="../../org.mdse.constructs/model/constructs.ecore#//ComparativeOperator/GreaterThanEq"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="../../org.mdse.constructs/model/constructs.ecore#//ArithmeticOperator">
+      <genEnumLiterals ecoreEnumLiteral="../../org.mdse.constructs/model/constructs.ecore#//ArithmeticOperator/Plus"/>
+      <genEnumLiterals ecoreEnumLiteral="../../org.mdse.constructs/model/constructs.ecore#//ArithmeticOperator/Minus"/>
+      <genEnumLiterals ecoreEnumLiteral="../../org.mdse.constructs/model/constructs.ecore#//ArithmeticOperator/Multiply"/>
+      <genEnumLiterals ecoreEnumLiteral="../../org.mdse.constructs/model/constructs.ecore#//ArithmeticOperator/Divide"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//Expression"/>
+    <genClasses image="false" ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//Variable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.mdse.constructs/model/constructs.ecore#//Variable/name"/>
+    </genClasses>
+    <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//IntegerVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.mdse.constructs/model/constructs.ecore#//IntegerVariable/value"/>
+    </genClasses>
+    <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//StringVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.mdse.constructs/model/constructs.ecore#//StringVariable/value"/>
+    </genClasses>
+    <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//BooleanVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.mdse.constructs/model/constructs.ecore#//BooleanVariable/value"/>
+    </genClasses>
+    <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//ComparativeExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.mdse.constructs/model/constructs.ecore#//ComparativeExpression/operator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//ComparativeExpression/expression2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//ComparativeExpression/expression1"/>
+    </genClasses>
+    <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//ArithmeticExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.mdse.constructs/model/constructs.ecore#//ArithmeticExpression/operator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//ArithmeticExpression/expression2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//ArithmeticExpression/expression1"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//Statement"/>
+    <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//IfElseStatement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//IfElseStatement/condition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//IfElseStatement/statement2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//IfElseStatement/statement1"/>
+    </genClasses>
+    <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//DeclareStatement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//DeclareStatement/variable"/>
+    </genClasses>
+    <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//ReturnStatement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//ReturnStatement/expression"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

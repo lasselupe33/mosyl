@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="puzzle" nsURI="http://org.mdse/puzzle" nsPrefix="puzzle">
+  <eClassifiers xsi:type="ecore:EClass" name="Puzzle">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tests" lowerBound="1" upperBound="-1"
+        eType="#//UnitTest" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="allowedStatements" lowerBound="1"
+        upperBound="-1" eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//Statement"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
+        eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//DeclareStatement"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UnitTest">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="expected" lowerBound="1"
+        eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//Expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
+        eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//DeclareStatement"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="errorMessage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>
