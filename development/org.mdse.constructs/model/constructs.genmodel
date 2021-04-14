@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.mdse.constructs/src-gen" creationIcons="false"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/org.mdse.constructs/src-gen" creationIcons="false"
     editDirectory="/org.mdse.constructs.edit/src-gen" editorDirectory="/org.mdse.constructs.editor/src-gen"
     modelPluginID="org.mdse.constructs" modelName="Constructs" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
@@ -8,5 +9,55 @@
   <foreignModel>constructs.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Constructs" basePackage="org.mdse" disposableProviderFactory="true"
-      ecorePackage="constructs.ecore#/"/>
+      ecorePackage="constructs.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="constructs.ecore#//ComparativeOperator">
+      <genEnumLiterals ecoreEnumLiteral="constructs.ecore#//ComparativeOperator/Equal"/>
+      <genEnumLiterals ecoreEnumLiteral="constructs.ecore#//ComparativeOperator/NotEqual"/>
+      <genEnumLiterals ecoreEnumLiteral="constructs.ecore#//ComparativeOperator/LessThan"/>
+      <genEnumLiterals ecoreEnumLiteral="constructs.ecore#//ComparativeOperator/LessThanEq"/>
+      <genEnumLiterals ecoreEnumLiteral="constructs.ecore#//ComparativeOperator/GreaterThan"/>
+      <genEnumLiterals ecoreEnumLiteral="constructs.ecore#//ComparativeOperator/GreaterThanEq"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="constructs.ecore#//ArithmeticOperator">
+      <genEnumLiterals ecoreEnumLiteral="constructs.ecore#//ArithmeticOperator/Plus"/>
+      <genEnumLiterals ecoreEnumLiteral="constructs.ecore#//ArithmeticOperator/Minus"/>
+      <genEnumLiterals ecoreEnumLiteral="constructs.ecore#//ArithmeticOperator/Multiply"/>
+      <genEnumLiterals ecoreEnumLiteral="constructs.ecore#//ArithmeticOperator/Divide"/>
+    </genEnums>
+    <genClasses ecoreClass="constructs.ecore#//Expression"/>
+    <genClasses ecoreClass="constructs.ecore#//Variable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//Variable/name"/>
+    </genClasses>
+    <genClasses ecoreClass="constructs.ecore#//IntegerVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//IntegerVariable/value"/>
+    </genClasses>
+    <genClasses ecoreClass="constructs.ecore#//StringVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//StringVariable/value"/>
+    </genClasses>
+    <genClasses ecoreClass="constructs.ecore#//BooleanVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//BooleanVariable/value"/>
+    </genClasses>
+    <genClasses ecoreClass="constructs.ecore#//ComparativeExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//ComparativeExpression/operator"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference constructs.ecore#//ComparativeExpression/expression2"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference constructs.ecore#//ComparativeExpression/expression1"/>
+    </genClasses>
+    <genClasses ecoreClass="constructs.ecore#//ArithmeticExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//ArithmeticExpression/operator"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference constructs.ecore#//ArithmeticExpression/expression2"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference constructs.ecore#//ArithmeticExpression/expression1"/>
+    </genClasses>
+    <genClasses ecoreClass="constructs.ecore#//Statement"/>
+    <genClasses ecoreClass="constructs.ecore#//IfElseStatement">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference constructs.ecore#//IfElseStatement/condition"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference constructs.ecore#//IfElseStatement/statement2"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference constructs.ecore#//IfElseStatement/statement1"/>
+    </genClasses>
+    <genClasses ecoreClass="constructs.ecore#//DeclareStatement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference constructs.ecore#//DeclareStatement/variable"/>
+    </genClasses>
+    <genClasses ecoreClass="constructs.ecore#//ReturnStatement">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference constructs.ecore#//ReturnStatement/expression"/>
+    </genClasses>
+  </genPackages>
 </genmodel:GenModel>
