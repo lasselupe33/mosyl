@@ -7,7 +7,7 @@
     <semanticResources>platform:/resource/org.mdse.puzzle/model/puzzle.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_95IAsKJ7Eeu77N0yLFllHg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_95iQYKJ7Eeu77N0yLFllHg" name="game" repPath="#_95cJwKJ7Eeu77N0yLFllHg" changeId="fb45329c-5b1e-4c85-9b51-d02ba95216bf">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_95iQYKJ7Eeu77N0yLFllHg" name="game" repPath="#_95cJwKJ7Eeu77N0yLFllHg" changeId="8577df2d-b1d3-4e41-b833-bc11489fd55c">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="game.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -96,7 +96,7 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_-MhZoKKCEeufntMpU28_xw" type="4001" element="_-MfkcKKCEeufntMpU28_xw" source="_RT5XUKJ8Eeu77N0yLFllHg" target="_-MgykKKCEeufntMpU28_xw">
           <children xmi:type="notation:Node" xmi:id="_-MhZpKKCEeufntMpU28_xw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-MhZpaKCEeufntMpU28_xw" x="-94" y="-16"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-MhZpaKCEeufntMpU28_xw" x="-135" y="-11"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_-MhZpqKCEeufntMpU28_xw" type="6002">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-MhZp6KCEeufntMpU28_xw" y="10"/>
@@ -128,7 +128,7 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_IA7S8KKDEeufntMpU28_xw" type="4001" element="_IA1MYqKDEeufntMpU28_xw" source="_Ba4MAKKDEeufntMpU28_xw" target="_C6GjEKKDEeufntMpU28_xw">
           <children xmi:type="notation:Node" xmi:id="_IA76AKKDEeufntMpU28_xw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IA76AaKDEeufntMpU28_xw" x="2" y="-52"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IA76AaKDEeufntMpU28_xw" x="-74" y="-2"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_IA76AqKDEeufntMpU28_xw" type="6002">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IA76A6KDEeufntMpU28_xw" y="10"/>
