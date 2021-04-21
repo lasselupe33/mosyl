@@ -8,7 +8,7 @@
         upperBound="-1" eType="#//UsedStatement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UsedStatement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nextStatement" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nextStatements" upperBound="-1"
         eType="#//UsedStatement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="statement" lowerBound="1"
         eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//Statement"

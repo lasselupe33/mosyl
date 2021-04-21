@@ -7,7 +7,7 @@
     <semanticResources>platform:/resource/org.mdse.game/model/game.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_SXdrkJ02Eeu4fMSkFHpnKw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_SX5wcJ02Eeu4fMSkFHpnKw" name="puzzle" repPath="#_SXwmgJ02Eeu4fMSkFHpnKw" changeId="21dd7e2c-aec5-45c1-97f3-c18652fc9433">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_SX5wcJ02Eeu4fMSkFHpnKw" name="puzzle" repPath="#_SXwmgJ02Eeu4fMSkFHpnKw" changeId="054f791f-e901-43b5-b0c0-fd9c25277512">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="puzzle.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -119,7 +119,7 @@
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_3AUe0Z02Eeu4fMSkFHpnKw" routing="Tree"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_3AUe0p02Eeu4fMSkFHpnKw" fontName=".AppleSystemUIFont" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3AUe0502Eeu4fMSkFHpnKw" points="[0, 0, -195, 100]$[195, -100, 0, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3AUe0502Eeu4fMSkFHpnKw" points="[0, 49, -180, -55]$[0, 171, -180, 67]$[181, 171, 1, 67]$[181, 153, 1, 49]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3AWUAJ02Eeu4fMSkFHpnKw" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3AWUAZ02Eeu4fMSkFHpnKw" id="(0.5,0.5)"/>
         </edges>

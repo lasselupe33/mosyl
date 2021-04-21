@@ -27,25 +27,16 @@
     <genClasses ecoreClass="constructs.ecore#//Expression"/>
     <genClasses ecoreClass="constructs.ecore#//Variable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//Variable/name"/>
+      <genOperations ecoreOperation="constructs.ecore#//Variable/getValue"/>
     </genClasses>
-    <genClasses ecoreClass="constructs.ecore#//IntegerVariable">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//IntegerVariable/value"/>
-    </genClasses>
-    <genClasses ecoreClass="constructs.ecore#//StringVariable">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//StringVariable/value"/>
-    </genClasses>
-    <genClasses ecoreClass="constructs.ecore#//BooleanVariable">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//BooleanVariable/value"/>
-    </genClasses>
+    <genClasses ecoreClass="constructs.ecore#//IntegerVariable"/>
+    <genClasses ecoreClass="constructs.ecore#//StringVariable"/>
+    <genClasses ecoreClass="constructs.ecore#//BooleanVariable"/>
     <genClasses ecoreClass="constructs.ecore#//ComparativeExpression">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//ComparativeExpression/operator"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference constructs.ecore#//ComparativeExpression/expression2"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference constructs.ecore#//ComparativeExpression/expression1"/>
     </genClasses>
     <genClasses ecoreClass="constructs.ecore#//ArithmeticExpression">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//ArithmeticExpression/operator"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference constructs.ecore#//ArithmeticExpression/expression2"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference constructs.ecore#//ArithmeticExpression/expression1"/>
     </genClasses>
     <genClasses ecoreClass="constructs.ecore#//Statement"/>
     <genClasses ecoreClass="constructs.ecore#//IfElseStatement">
@@ -58,6 +49,10 @@
     </genClasses>
     <genClasses ecoreClass="constructs.ecore#//ReturnStatement">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference constructs.ecore#//ReturnStatement/expression"/>
+    </genClasses>
+    <genClasses ecoreClass="constructs.ecore#//BinaryExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference constructs.ecore#//BinaryExpression/expression1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference constructs.ecore#//BinaryExpression/expression2"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

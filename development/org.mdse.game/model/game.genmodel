@@ -15,7 +15,7 @@
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//Game/statements"/>
     </genClasses>
     <genClasses ecoreClass="game.ecore#//UsedStatement">
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//UsedStatement/nextStatement"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//UsedStatement/nextStatements"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//UsedStatement/statement"/>
     </genClasses>
   </genPackages>

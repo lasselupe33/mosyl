@@ -7,7 +7,7 @@
     <semanticResources>platform:/resource/org.mdse.puzzle/model/puzzle.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_95IAsKJ7Eeu77N0yLFllHg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_95iQYKJ7Eeu77N0yLFllHg" name="game" repPath="#_95cJwKJ7Eeu77N0yLFllHg" changeId="8577df2d-b1d3-4e41-b833-bc11489fd55c">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_95iQYKJ7Eeu77N0yLFllHg" name="game" repPath="#_95cJwKJ7Eeu77N0yLFllHg" changeId="325b5acc-6b21-4030-bca4-0b5bf90ef05d">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="game.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -128,17 +128,17 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_IA7S8KKDEeufntMpU28_xw" type="4001" element="_IA1MYqKDEeufntMpU28_xw" source="_Ba4MAKKDEeufntMpU28_xw" target="_C6GjEKKDEeufntMpU28_xw">
           <children xmi:type="notation:Node" xmi:id="_IA76AKKDEeufntMpU28_xw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IA76AaKDEeufntMpU28_xw" x="-74" y="-2"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IA76AaKDEeufntMpU28_xw" x="2" y="-56"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_IA76AqKDEeufntMpU28_xw" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IA76A6KDEeufntMpU28_xw" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IA76A6KDEeufntMpU28_xw" x="5" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_IA76BKKDEeufntMpU28_xw" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IA76BaKDEeufntMpU28_xw" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IA76BaKDEeufntMpU28_xw" x="-5" y="10"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_IA7S8aKDEeufntMpU28_xw" routing="Rectilinear"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_IA7S8qKDEeufntMpU28_xw" fontColor="7490599" fontName=".AppleSystemUIFont" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IA7S86KDEeufntMpU28_xw" points="[0, 0, 0, -42]$[0, 42, 0, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IA7S86KDEeufntMpU28_xw" points="[-36, 0, 0, -42]$[-36, 42, 0, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IA76BqKDEeufntMpU28_xw" id="(0.5,1.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IA76B6KDEeufntMpU28_xw" id="(0.5,0.0)"/>
         </edges>
@@ -374,9 +374,9 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_L977EKKDEeufntMpU28_xw" name="[0..*] nextStatement" sourceNode="_C5_OUKKDEeufntMpU28_xw" targetNode="_C5_OUKKDEeufntMpU28_xw">
-      <target xmi:type="ecore:EReference" href="game.ecore#//UsedStatement/nextStatement"/>
-      <semanticElements xmi:type="ecore:EReference" href="game.ecore#//UsedStatement/nextStatement"/>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_L977EKKDEeufntMpU28_xw" name="[0..*] nextStatements" sourceNode="_C5_OUKKDEeufntMpU28_xw" targetNode="_C5_OUKKDEeufntMpU28_xw">
+      <target xmi:type="ecore:EReference" href="game.ecore#//UsedStatement/nextStatements"/>
+      <semanticElements xmi:type="ecore:EReference" href="game.ecore#//UsedStatement/nextStatements"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_M25jY6KDEeufntMpU28_xw" description="_Ba2W16KDEeufntMpU28_xw" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_M25jZaKDEeufntMpU28_xw" showIcon="false"/>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_M25jZKKDEeufntMpU28_xw" labelSize="6" showIcon="false" labelColor="39,76,114"/>
