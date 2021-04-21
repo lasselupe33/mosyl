@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/org.mdse.game/src-gen" creationIcons="false" editDirectory="/org.mdse.game.edit/src-gen"
+    editorDirectory="/org.mdse.game.editor/src-gen" modelPluginID="org.mdse.game"
+    modelName="Game" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>game.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Game" basePackage="org.mdse" disposableProviderFactory="true"
+      ecorePackage="game.ecore#/">
+    <genClasses ecoreClass="game.ecore#//Game">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//Game/puzzle"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Puzzle" ecorePackage="../../org.mdse.puzzle/model/puzzle.ecore#/">
+    <genClasses ecoreClass="../../org.mdse.puzzle/model/puzzle.ecore#//Puzzle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.mdse.puzzle/model/puzzle.ecore#//Puzzle/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.mdse.puzzle/model/puzzle.ecore#//Puzzle/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.puzzle/model/puzzle.ecore#//Puzzle/tests"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.puzzle/model/puzzle.ecore#//Puzzle/allowedStatements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.puzzle/model/puzzle.ecore#//Puzzle/inputs"/>
+    </genClasses>
+    <genClasses ecoreClass="../../org.mdse.puzzle/model/puzzle.ecore#//UnitTest">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.puzzle/model/puzzle.ecore#//UnitTest/expected"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.puzzle/model/puzzle.ecore#//UnitTest/inputs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.mdse.puzzle/model/puzzle.ecore#//UnitTest/errorMessage"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

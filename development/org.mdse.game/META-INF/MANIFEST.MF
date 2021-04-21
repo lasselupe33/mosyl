@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: org.mdse.game
+Bundle-SymbolicName: org.mdse.game; singleton:=true
+Bundle-Version: 0.1.0.qualifier
+Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
+ org.eclipse.core.runtime,
+ org.mdse.constructs;bundle-version="0.1.0";visibility:=reexport,
+ org.mdse.puzzle;bundle-version="0.1.0";visibility:=reexport

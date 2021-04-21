@@ -5,7 +5,7 @@
     <semanticResources>constructs.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_umgGcJ0xEeuL_aZHJYBWiA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_updT0J0xEeuL_aZHJYBWiA" name="constructs" repPath="#_uoHQAJ0xEeuL_aZHJYBWiA" changeId="d6ed81b4-c8d3-4d6e-82f0-e0ad13dfc709">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_updT0J0xEeuL_aZHJYBWiA" name="constructs" repPath="#_uoHQAJ0xEeuL_aZHJYBWiA" changeId="ac9f1c01-b70b-49e3-b315-7b2d8b50ea1e">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="constructs.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -470,7 +470,7 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_-BtTYJ01Eeu4fMSkFHpnKw" type="4001" element="_-Bmlzp01Eeu4fMSkFHpnKw" source="_pbwjEJ01Eeu4fMSkFHpnKw" target="_bmJTkJ00Eeu4fMSkFHpnKw">
           <children xmi:type="notation:Node" xmi:id="_-BtTZJ01Eeu4fMSkFHpnKw" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-BtTZZ01Eeu4fMSkFHpnKw" x="-526" y="133"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-BtTZZ01Eeu4fMSkFHpnKw" x="-540" y="146"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_-BtTZp01Eeu4fMSkFHpnKw" type="6002">
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-BtTZ501Eeu4fMSkFHpnKw" x="-9" y="240"/>
