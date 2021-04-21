@@ -4,9 +4,14 @@
   <eClassifiers xsi:type="ecore:EClass" name="Game">
     <eStructuralFeatures xsi:type="ecore:EReference" name="puzzle" lowerBound="1"
         eType="ecore:EClass ../../org.mdse.puzzle/model/puzzle.ecore#//Puzzle" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statements" lowerBound="1"
+        upperBound="-1" eType="#//UsedStatement" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="UsedStatement" eSuperTypes="../../org.mdse.constructs/model/constructs.ecore#//Statement">
+  <eClassifiers xsi:type="ecore:EClass" name="UsedStatement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="nextStatement" upperBound="-1"
         eType="#//UsedStatement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statement" lowerBound="1"
+        eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//Statement"
+        containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

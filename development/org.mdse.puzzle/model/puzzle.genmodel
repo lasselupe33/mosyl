@@ -14,15 +14,18 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute puzzle.ecore#//Puzzle/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute puzzle.ecore#//Puzzle/description"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference puzzle.ecore#//Puzzle/tests"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference puzzle.ecore#//Puzzle/allowedStatements"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference puzzle.ecore#//Puzzle/inputs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference puzzle.ecore#//Puzzle/allowedStatements"/>
     </genClasses>
     <genClasses ecoreClass="puzzle.ecore#//UnitTest">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference puzzle.ecore#//UnitTest/expected"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute puzzle.ecore#//UnitTest/errorMessage"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference puzzle.ecore#//UnitTest/inputs"/>
     </genClasses>
-    <genClasses ecoreClass="puzzle.ecore#//Input"/>
+    <genClasses ecoreClass="puzzle.ecore#//Input">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference puzzle.ecore#//Input/nextStatement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference puzzle.ecore#//Input/declareStatement"/>
+    </genClasses>
   </genPackages>
   <genPackages prefix="Constructs" ecorePackage="../../org.mdse.constructs/model/constructs.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="../../org.mdse.constructs/model/constructs.ecore#//ComparativeOperator">
@@ -65,14 +68,24 @@
     <genClasses image="false" ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//Statement"/>
     <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//IfElseStatement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//IfElseStatement/condition"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//IfElseStatement/statement2"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//IfElseStatement/statement1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//IfElseStatement/elseStatement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//IfElseStatement/ifStatement"/>
     </genClasses>
     <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//DeclareStatement">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//DeclareStatement/variable"/>
     </genClasses>
     <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//ReturnStatement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//ReturnStatement/expression"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Game" ecorePackage="../../org.mdse.game/model/game.ecore#/">
+    <genClasses ecoreClass="../../org.mdse.game/model/game.ecore#//Game">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.game/model/game.ecore#//Game/puzzle"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.game/model/game.ecore#//Game/statements"/>
+    </genClasses>
+    <genClasses ecoreClass="../../org.mdse.game/model/game.ecore#//UsedStatement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.game/model/game.ecore#//UsedStatement/nextStatement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.game/model/game.ecore#//UsedStatement/statement"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

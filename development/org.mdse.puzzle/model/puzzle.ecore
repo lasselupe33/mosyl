@@ -6,10 +6,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tests" lowerBound="1" upperBound="-1"
         eType="#//UnitTest" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="allowedStatements" lowerBound="1"
-        upperBound="-1" eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//Statement"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
         eType="#//Input" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="allowedStatements" lowerBound="1"
+        upperBound="-1" eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//Statement"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UnitTest">
     <eStructuralFeatures xsi:type="ecore:EReference" name="expected" lowerBound="1"
@@ -19,8 +20,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
         eType="#//Input"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Input" eSuperTypes="../../org.mdse.constructs/model/constructs.ecore#//DeclareStatement">
+  <eClassifiers xsi:type="ecore:EClass" name="Input">
     <eStructuralFeatures xsi:type="ecore:EReference" name="nextStatement" lowerBound="1"
         eType="ecore:EClass ../../org.mdse.game/model/game.ecore#//UsedStatement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="declareStatement" lowerBound="1"
+        eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//DeclareStatement"
+        containment="true"/>
   </eClassifiers>
 </ecore:EPackage>
