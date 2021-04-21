@@ -6,7 +6,7 @@
         eType="ecore:EClass ../../org.mdse.puzzle/model/puzzle.ecore#//Puzzle" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UsedStatement" eSuperTypes="../../org.mdse.constructs/model/constructs.ecore#//Statement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nextStatement" eType="#//UsedStatement"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nextStatement" upperBound="-1"
+        eType="#//UsedStatement" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

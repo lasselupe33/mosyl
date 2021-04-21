@@ -50,11 +50,11 @@
     <genClasses ecoreClass="constructs.ecore#//Statement"/>
     <genClasses ecoreClass="constructs.ecore#//IfElseStatement">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference constructs.ecore#//IfElseStatement/condition"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference constructs.ecore#//IfElseStatement/statement2"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference constructs.ecore#//IfElseStatement/statement1"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference constructs.ecore#//IfElseStatement/elseStatement"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference constructs.ecore#//IfElseStatement/ifStatement"/>
     </genClasses>
     <genClasses ecoreClass="constructs.ecore#//DeclareStatement">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference constructs.ecore#//DeclareStatement/variable"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference constructs.ecore#//DeclareStatement/variable"/>
     </genClasses>
     <genClasses ecoreClass="constructs.ecore#//ReturnStatement">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference constructs.ecore#//ReturnStatement/expression"/>

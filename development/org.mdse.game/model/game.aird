@@ -7,7 +7,7 @@
     <semanticResources>platform:/resource/org.mdse.puzzle/model/puzzle.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_95IAsKJ7Eeu77N0yLFllHg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_95iQYKJ7Eeu77N0yLFllHg" name="game" repPath="#_95cJwKJ7Eeu77N0yLFllHg" changeId="71d02ef9-9294-4470-a2b9-61c054d3db6d">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_95iQYKJ7Eeu77N0yLFllHg" name="game" repPath="#_95cJwKJ7Eeu77N0yLFllHg" changeId="ec304d94-ac67-45ee-8fa6-57526c4998f0">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="game.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -315,14 +315,11 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_-MfkcKKCEeufntMpU28_xw" name="[1..*] allowedStatements" sourceNode="_RTz3wKJ8Eeu77N0yLFllHg" targetNode="_-Mar8KKCEeufntMpU28_xw">
       <target xmi:type="ecore:EReference" href="platform:/resource/org.mdse.puzzle/model/puzzle.ecore#//Puzzle/allowedStatements"/>
       <semanticElements xmi:type="ecore:EReference" href="platform:/resource/org.mdse.puzzle/model/puzzle.ecore#//Puzzle/allowedStatements"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_-MfkcaKCEeufntMpU28_xw" description="_VF7egKJ8Eeu77N0yLFllHg" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_-Mfkc6KCEeufntMpU28_xw" showIcon="false">
-          <customFeatures>labelSize</customFeatures>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_beFu4KKGEeufntMpU28_xw" description="_I5OM7KKDEeufntMpU28_xw" routingStyle="manhattan" strokeColor="0,0,0">
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_beFu4qKGEeufntMpU28_xw" showIcon="false">
           <labelFormat>bold</labelFormat>
         </centerLabelStyle>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_-MfkcqKCEeufntMpU28_xw" showIcon="false" labelColor="39,76,114">
-          <customFeatures>labelSize</customFeatures>
-        </endLabelStyle>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_beFu4aKGEeufntMpU28_xw" labelSize="6" showIcon="false" labelColor="39,76,114"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
@@ -410,7 +407,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_L977EKKDEeufntMpU28_xw" name="[0..1] nextStatement" sourceNode="_C5_OUKKDEeufntMpU28_xw" targetNode="_C5_OUKKDEeufntMpU28_xw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_L977EKKDEeufntMpU28_xw" name="[0..*] nextStatement" sourceNode="_C5_OUKKDEeufntMpU28_xw" targetNode="_C5_OUKKDEeufntMpU28_xw">
       <target xmi:type="ecore:EReference" href="game.ecore#//UsedStatement/nextStatement"/>
       <semanticElements xmi:type="ecore:EReference" href="game.ecore#//UsedStatement/nextStatement"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_M25jY6KDEeufntMpU28_xw" description="_Ba2W16KDEeufntMpU28_xw" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">

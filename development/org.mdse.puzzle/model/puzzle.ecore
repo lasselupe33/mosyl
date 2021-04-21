@@ -7,8 +7,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="tests" lowerBound="1" upperBound="-1"
         eType="#//UnitTest" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="allowedStatements" lowerBound="1"
-        upperBound="-1" eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//Statement"
-        containment="true"/>
+        upperBound="-1" eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//Statement"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
         eType="#//Input" containment="true"/>
   </eClassifiers>
