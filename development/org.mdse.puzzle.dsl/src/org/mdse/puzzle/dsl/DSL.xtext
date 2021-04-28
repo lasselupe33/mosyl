@@ -18,9 +18,14 @@ Expression returns constructs::Expression:
 	IntegerVariable | StringVariable | BooleanVariable;
 
 Puzzle:
-	"META {"
+	"PUZZLE {"
 		name=STRING
 		description=STRING
+		
+		Input
+		
+		UnitTest
+		
 	"}"
 ;
 
@@ -53,14 +58,14 @@ IntegerVariable returns constructs::IntegerVariable:
 	{constructs::IntegerVariable}
 	'IntegerVariable'
 	name=ID
-	variable=INT
+	value=INT
 	;
 
 StringVariable returns constructs::StringVariable:
 	{constructs::StringVariable}
 	'StringVariable'
 	name=ID
-	variable=STRING
+	value=STRING
 	;
 	
 terminal BOOLEAN returns ecore::EBoolean: ('true' | 'false');
@@ -69,6 +74,6 @@ BooleanVariable returns constructs::BooleanVariable:
 	{constructs::BooleanVariable}
 	'BooleanVariable'
 	name=ID
-	variable=BOOLEAN
+	value=BOOLEAN
 	;
 	
