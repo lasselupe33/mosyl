@@ -5,7 +5,6 @@ package org.mdse.constructs;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
-import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -115,22 +114,13 @@ public interface ConstructsPackage extends EPackage {
 	int VARIABLE_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Get Value</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VARIABLE___GET_VALUE = EXPRESSION_OPERATION_COUNT + 0;
-
-	/**
 	 * The number of operations of the '<em>Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 1;
+	int VARIABLE_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.mdse.constructs.impl.IntegerVariableImpl <em>Integer Variable</em>}' class.
@@ -152,22 +142,22 @@ public interface ConstructsPackage extends EPackage {
 	int INTEGER_VARIABLE__NAME = VARIABLE__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEGER_VARIABLE__VALUE = VARIABLE_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Integer Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTEGER_VARIABLE_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Value</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTEGER_VARIABLE___GET_VALUE = VARIABLE___GET_VALUE;
+	int INTEGER_VARIABLE_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Integer Variable</em>' class.
@@ -198,22 +188,22 @@ public interface ConstructsPackage extends EPackage {
 	int STRING_VARIABLE__NAME = VARIABLE__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_VARIABLE__VALUE = VARIABLE_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>String Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRING_VARIABLE_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Value</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_VARIABLE___GET_VALUE = VARIABLE___GET_VALUE;
+	int STRING_VARIABLE_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>String Variable</em>' class.
@@ -244,22 +234,22 @@ public interface ConstructsPackage extends EPackage {
 	int BOOLEAN_VARIABLE__NAME = VARIABLE__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_VARIABLE__VALUE = VARIABLE_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Boolean Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN_VARIABLE_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Get Value</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOLEAN_VARIABLE___GET_VALUE = VARIABLE___GET_VALUE;
+	int BOOLEAN_VARIABLE_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Boolean Variable</em>' class.
@@ -635,16 +625,6 @@ public interface ConstructsPackage extends EPackage {
 	EAttribute getVariable_Name();
 
 	/**
-	 * Returns the meta object for the '{@link org.mdse.constructs.Variable#getValue() <em>Get Value</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Value</em>' operation.
-	 * @see org.mdse.constructs.Variable#getValue()
-	 * @generated
-	 */
-	EOperation getVariable__GetValue();
-
-	/**
 	 * Returns the meta object for class '{@link org.mdse.constructs.IntegerVariable <em>Integer Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -653,6 +633,17 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getIntegerVariable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mdse.constructs.IntegerVariable#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see org.mdse.constructs.IntegerVariable#getValue()
+	 * @see #getIntegerVariable()
+	 * @generated
+	 */
+	EAttribute getIntegerVariable_Value();
 
 	/**
 	 * Returns the meta object for class '{@link org.mdse.constructs.StringVariable <em>String Variable</em>}'.
@@ -665,6 +656,17 @@ public interface ConstructsPackage extends EPackage {
 	EClass getStringVariable();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.mdse.constructs.StringVariable#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see org.mdse.constructs.StringVariable#getValue()
+	 * @see #getStringVariable()
+	 * @generated
+	 */
+	EAttribute getStringVariable_Value();
+
+	/**
 	 * Returns the meta object for class '{@link org.mdse.constructs.BooleanVariable <em>Boolean Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -673,6 +675,17 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getBooleanVariable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mdse.constructs.BooleanVariable#getValue <em>Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Value</em>'.
+	 * @see org.mdse.constructs.BooleanVariable#getValue()
+	 * @see #getBooleanVariable()
+	 * @generated
+	 */
+	EAttribute getBooleanVariable_Value();
 
 	/**
 	 * Returns the meta object for class '{@link org.mdse.constructs.ComparativeExpression <em>Comparative Expression</em>}'.
@@ -915,14 +928,6 @@ public interface ConstructsPackage extends EPackage {
 		EAttribute VARIABLE__NAME = eINSTANCE.getVariable_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Value</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation VARIABLE___GET_VALUE = eINSTANCE.getVariable__GetValue();
-
-		/**
 		 * The meta object literal for the '{@link org.mdse.constructs.impl.IntegerVariableImpl <em>Integer Variable</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -931,6 +936,14 @@ public interface ConstructsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass INTEGER_VARIABLE = eINSTANCE.getIntegerVariable();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INTEGER_VARIABLE__VALUE = eINSTANCE.getIntegerVariable_Value();
 
 		/**
 		 * The meta object literal for the '{@link org.mdse.constructs.impl.StringVariableImpl <em>String Variable</em>}' class.
@@ -943,6 +956,14 @@ public interface ConstructsPackage extends EPackage {
 		EClass STRING_VARIABLE = eINSTANCE.getStringVariable();
 
 		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STRING_VARIABLE__VALUE = eINSTANCE.getStringVariable_Value();
+
+		/**
 		 * The meta object literal for the '{@link org.mdse.constructs.impl.BooleanVariableImpl <em>Boolean Variable</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -951,6 +972,14 @@ public interface ConstructsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass BOOLEAN_VARIABLE = eINSTANCE.getBooleanVariable();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BOOLEAN_VARIABLE__VALUE = eINSTANCE.getBooleanVariable_Value();
 
 		/**
 		 * The meta object literal for the '{@link org.mdse.constructs.impl.ComparativeExpressionImpl <em>Comparative Expression</em>}' class.

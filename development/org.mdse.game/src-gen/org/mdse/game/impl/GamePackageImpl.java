@@ -10,10 +10,11 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.mdse.constructs.ConstructsPackage;
 
+import org.mdse.game.Entrypoint;
 import org.mdse.game.Game;
 import org.mdse.game.GameFactory;
 import org.mdse.game.GamePackage;
-import org.mdse.game.UsedInputs;
+import org.mdse.game.UsedInput;
 import org.mdse.game.UsedStatement;
 
 import org.mdse.puzzle.PuzzlePackage;
@@ -44,7 +45,14 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass usedInputsEClass = null;
+	private EClass usedInputEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass entrypointEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -137,7 +145,7 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGame_Statements() {
+	public EReference getGame_Entrypoint() {
 		return (EReference) gameEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -173,8 +181,8 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getUsedInputs() {
-		return usedInputsEClass;
+	public EClass getUsedInput() {
+		return usedInputEClass;
 	}
 
 	/**
@@ -182,8 +190,53 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getUsedInputs_NextStatement() {
-		return (EReference) usedInputsEClass.getEStructuralFeatures().get(0);
+	public EReference getUsedInput_NextStatement() {
+		return (EReference) usedInputEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getUsedInput_Input() {
+		return (EReference) usedInputEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getUsedInput_NextInput() {
+		return (EReference) usedInputEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEntrypoint() {
+		return entrypointEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntrypoint_Input() {
+		return (EReference) entrypointEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getEntrypoint_Statement() {
+		return (EReference) entrypointEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -217,14 +270,20 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage {
 		// Create classes and their features
 		gameEClass = createEClass(GAME);
 		createEReference(gameEClass, GAME__PUZZLE);
-		createEReference(gameEClass, GAME__STATEMENTS);
+		createEReference(gameEClass, GAME__ENTRYPOINT);
 
 		usedStatementEClass = createEClass(USED_STATEMENT);
 		createEReference(usedStatementEClass, USED_STATEMENT__NEXT_STATEMENTS);
 		createEReference(usedStatementEClass, USED_STATEMENT__STATEMENT);
 
-		usedInputsEClass = createEClass(USED_INPUTS);
-		createEReference(usedInputsEClass, USED_INPUTS__NEXT_STATEMENT);
+		usedInputEClass = createEClass(USED_INPUT);
+		createEReference(usedInputEClass, USED_INPUT__NEXT_STATEMENT);
+		createEReference(usedInputEClass, USED_INPUT__INPUT);
+		createEReference(usedInputEClass, USED_INPUT__NEXT_INPUT);
+
+		entrypointEClass = createEClass(ENTRYPOINT);
+		createEReference(entrypointEClass, ENTRYPOINT__INPUT);
+		createEReference(entrypointEClass, ENTRYPOINT__STATEMENT);
 	}
 
 	/**
@@ -253,8 +312,6 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage {
 
 		// Obtain other dependent packages
 		PuzzlePackage thePuzzlePackage = (PuzzlePackage) EPackage.Registry.INSTANCE.getEPackage(PuzzlePackage.eNS_URI);
-		ConstructsPackage theConstructsPackage = (ConstructsPackage) EPackage.Registry.INSTANCE
-				.getEPackage(ConstructsPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -267,7 +324,7 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage {
 		initEReference(getGame_Puzzle(), thePuzzlePackage.getPuzzle(), null, "puzzle", null, 1, 1, Game.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGame_Statements(), this.getUsedStatement(), null, "statements", null, 1, -1, Game.class,
+		initEReference(getGame_Entrypoint(), this.getEntrypoint(), null, "entrypoint", null, 1, 1, Game.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -276,14 +333,29 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage {
 		initEReference(getUsedStatement_NextStatements(), this.getUsedStatement(), null, "nextStatements", null, 0, -1,
 				UsedStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getUsedStatement_Statement(), theConstructsPackage.getStatement(), null, "statement", null, 1, 1,
-				UsedStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEReference(getUsedStatement_Statement(), thePuzzlePackage.getAllowedStatement(), null, "statement", null, 1,
+				1, UsedStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(usedInputsEClass, UsedInputs.class, "UsedInputs", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(usedInputEClass, UsedInput.class, "UsedInput", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getUsedInputs_NextStatement(), this.getUsedStatement(), null, "nextStatement", null, 1, 1,
-				UsedInputs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEReference(getUsedInput_NextStatement(), this.getUsedStatement(), null, "nextStatement", null, 0, 1,
+				UsedInput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUsedInput_Input(), thePuzzlePackage.getInput(), null, "input", null, 1, 1, UsedInput.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUsedInput_NextInput(), this.getUsedInput(), null, "nextInput", null, 0, 1, UsedInput.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(entrypointEClass, Entrypoint.class, "Entrypoint", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getEntrypoint_Input(), this.getUsedInput(), null, "input", null, 0, 1, Entrypoint.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEntrypoint_Statement(), this.getUsedStatement(), null, "statement", null, 0, 1,
+				Entrypoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource

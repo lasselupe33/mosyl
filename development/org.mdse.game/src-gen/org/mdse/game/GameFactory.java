@@ -40,13 +40,22 @@ public interface GameFactory extends EFactory {
 	UsedStatement createUsedStatement();
 
 	/**
-	 * Returns a new object of class '<em>Used Inputs</em>'.
+	 * Returns a new object of class '<em>Used Input</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Used Inputs</em>'.
+	 * @return a new object of class '<em>Used Input</em>'.
 	 * @generated
 	 */
-	UsedInputs createUsedInputs();
+	UsedInput createUsedInput();
+
+	/**
+	 * Returns a new object of class '<em>Entrypoint</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Entrypoint</em>'.
+	 * @generated
+	 */
+	Entrypoint createEntrypoint();
 
 	/**
 	 * Returns the package supported by this factory.

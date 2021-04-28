@@ -6,8 +6,6 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.mdse.constructs.Statement;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Puzzle</b></em>'.
@@ -99,7 +97,7 @@ public interface Puzzle extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Allowed Statements</b></em>' containment reference list.
-	 * The list contents are of type {@link org.mdse.constructs.Statement}.
+	 * The list contents are of type {@link org.mdse.puzzle.AllowedStatement}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Allowed Statements</em>' containment reference list.
@@ -107,6 +105,6 @@ public interface Puzzle extends EObject {
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<Statement> getAllowedStatements();
+	EList<AllowedStatement> getAllowedStatements();
 
 } // Puzzle

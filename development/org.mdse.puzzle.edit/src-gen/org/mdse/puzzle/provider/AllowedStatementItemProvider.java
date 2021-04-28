@@ -1,6 +1,6 @@
 /**
  */
-package org.mdse.game.provider;
+package org.mdse.puzzle.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -21,17 +21,18 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.mdse.game.GameFactory;
-import org.mdse.game.GamePackage;
-import org.mdse.game.UsedInputs;
+import org.mdse.constructs.ConstructsFactory;
+
+import org.mdse.puzzle.AllowedStatement;
+import org.mdse.puzzle.PuzzlePackage;
 
 /**
- * This is the item provider adapter for a {@link org.mdse.game.UsedInputs} object.
+ * This is the item provider adapter for a {@link org.mdse.puzzle.AllowedStatement} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class UsedInputsItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+public class AllowedStatementItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
 		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -39,7 +40,7 @@ public class UsedInputsItemProvider extends ItemProviderAdapter implements IEdit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UsedInputsItemProvider(AdapterFactory adapterFactory) {
+	public AllowedStatementItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -70,7 +71,7 @@ public class UsedInputsItemProvider extends ItemProviderAdapter implements IEdit
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(GamePackage.Literals.USED_INPUTS__NEXT_STATEMENT);
+			childrenFeatures.add(PuzzlePackage.Literals.ALLOWED_STATEMENT__STATEMENT);
 		}
 		return childrenFeatures;
 	}
@@ -89,14 +90,14 @@ public class UsedInputsItemProvider extends ItemProviderAdapter implements IEdit
 	}
 
 	/**
-	 * This returns UsedInputs.gif.
+	 * This returns AllowedStatement.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/UsedInputs"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/AllowedStatement"));
 	}
 
 	/**
@@ -117,7 +118,7 @@ public class UsedInputsItemProvider extends ItemProviderAdapter implements IEdit
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_UsedInputs_type");
+		return getString("_UI_AllowedStatement_type");
 	}
 
 	/**
@@ -131,8 +132,8 @@ public class UsedInputsItemProvider extends ItemProviderAdapter implements IEdit
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(UsedInputs.class)) {
-		case GamePackage.USED_INPUTS__NEXT_STATEMENT:
+		switch (notification.getFeatureID(AllowedStatement.class)) {
+		case PuzzlePackage.ALLOWED_STATEMENT__STATEMENT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -150,8 +151,14 @@ public class UsedInputsItemProvider extends ItemProviderAdapter implements IEdit
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(GamePackage.Literals.USED_INPUTS__NEXT_STATEMENT,
-				GameFactory.eINSTANCE.createUsedStatement()));
+		newChildDescriptors.add(createChildParameter(PuzzlePackage.Literals.ALLOWED_STATEMENT__STATEMENT,
+				ConstructsFactory.eINSTANCE.createIfElseStatement()));
+
+		newChildDescriptors.add(createChildParameter(PuzzlePackage.Literals.ALLOWED_STATEMENT__STATEMENT,
+				ConstructsFactory.eINSTANCE.createDeclareStatement()));
+
+		newChildDescriptors.add(createChildParameter(PuzzlePackage.Literals.ALLOWED_STATEMENT__STATEMENT,
+				ConstructsFactory.eINSTANCE.createReturnStatement()));
 	}
 
 	/**
@@ -162,7 +169,7 @@ public class UsedInputsItemProvider extends ItemProviderAdapter implements IEdit
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return GameEditPlugin.INSTANCE;
+		return PuzzleEditPlugin.INSTANCE;
 	}
 
 }

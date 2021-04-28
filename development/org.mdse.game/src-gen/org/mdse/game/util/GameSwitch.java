@@ -80,9 +80,16 @@ public class GameSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GamePackage.USED_INPUTS: {
-			UsedInputs usedInputs = (UsedInputs) theEObject;
-			T result = caseUsedInputs(usedInputs);
+		case GamePackage.USED_INPUT: {
+			UsedInput usedInput = (UsedInput) theEObject;
+			T result = caseUsedInput(usedInput);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case GamePackage.ENTRYPOINT: {
+			Entrypoint entrypoint = (Entrypoint) theEObject;
+			T result = caseEntrypoint(entrypoint);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -123,17 +130,32 @@ public class GameSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Used Inputs</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Used Input</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Used Inputs</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Used Input</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseUsedInputs(UsedInputs object) {
+	public T caseUsedInput(UsedInput object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Entrypoint</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Entrypoint</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEntrypoint(Entrypoint object) {
 		return null;
 	}
 

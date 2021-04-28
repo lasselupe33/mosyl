@@ -25,7 +25,9 @@
     </genClasses>
     <genClasses ecoreClass="puzzle.ecore#//Input">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference puzzle.ecore#//Input/declareStatement"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference puzzle.ecore#//Input/input"/>
+    </genClasses>
+    <genClasses ecoreClass="puzzle.ecore#//AllowedStatement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference puzzle.ecore#//AllowedStatement/statement"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

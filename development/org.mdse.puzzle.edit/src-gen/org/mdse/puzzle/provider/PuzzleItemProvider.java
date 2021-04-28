@@ -22,9 +22,6 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
-
-import org.mdse.constructs.ConstructsFactory;
-
 import org.mdse.puzzle.Puzzle;
 import org.mdse.puzzle.PuzzleFactory;
 import org.mdse.puzzle.PuzzlePackage;
@@ -234,13 +231,7 @@ public class PuzzleItemProvider extends ItemProviderAdapter implements IEditingD
 				createChildParameter(PuzzlePackage.Literals.PUZZLE__INPUTS, PuzzleFactory.eINSTANCE.createInput()));
 
 		newChildDescriptors.add(createChildParameter(PuzzlePackage.Literals.PUZZLE__ALLOWED_STATEMENTS,
-				ConstructsFactory.eINSTANCE.createIfElseStatement()));
-
-		newChildDescriptors.add(createChildParameter(PuzzlePackage.Literals.PUZZLE__ALLOWED_STATEMENTS,
-				ConstructsFactory.eINSTANCE.createDeclareStatement()));
-
-		newChildDescriptors.add(createChildParameter(PuzzlePackage.Literals.PUZZLE__ALLOWED_STATEMENTS,
-				ConstructsFactory.eINSTANCE.createReturnStatement()));
+				PuzzleFactory.eINSTANCE.createAllowedStatement()));
 	}
 
 	/**

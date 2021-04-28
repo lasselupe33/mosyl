@@ -2,8 +2,6 @@
  */
 package org.mdse.game;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 import org.mdse.puzzle.Puzzle;
@@ -18,7 +16,7 @@ import org.mdse.puzzle.Puzzle;
  * </p>
  * <ul>
  *   <li>{@link org.mdse.game.Game#getPuzzle <em>Puzzle</em>}</li>
- *   <li>{@link org.mdse.game.Game#getStatements <em>Statements</em>}</li>
+ *   <li>{@link org.mdse.game.Game#getEntrypoint <em>Entrypoint</em>}</li>
  * </ul>
  *
  * @see org.mdse.game.GamePackage#getGame()
@@ -49,15 +47,25 @@ public interface Game extends EObject {
 	void setPuzzle(Puzzle value);
 
 	/**
-	 * Returns the value of the '<em><b>Statements</b></em>' containment reference list.
-	 * The list contents are of type {@link org.mdse.game.UsedStatement}.
+	 * Returns the value of the '<em><b>Entrypoint</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Statements</em>' containment reference list.
-	 * @see org.mdse.game.GamePackage#getGame_Statements()
+	 * @return the value of the '<em>Entrypoint</em>' containment reference.
+	 * @see #setEntrypoint(Entrypoint)
+	 * @see org.mdse.game.GamePackage#getGame_Entrypoint()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<UsedStatement> getStatements();
+	Entrypoint getEntrypoint();
+
+	/**
+	 * Sets the value of the '{@link org.mdse.game.Game#getEntrypoint <em>Entrypoint</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Entrypoint</em>' containment reference.
+	 * @see #getEntrypoint()
+	 * @generated
+	 */
+	void setEntrypoint(Entrypoint value);
 
 } // Game

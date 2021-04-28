@@ -142,6 +142,29 @@ public class PuzzleItemProviderAdapterFactory extends PuzzleAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.mdse.puzzle.AllowedStatement} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AllowedStatementItemProvider allowedStatementItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mdse.puzzle.AllowedStatement}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAllowedStatementAdapter() {
+		if (allowedStatementItemProvider == null) {
+			allowedStatementItemProvider = new AllowedStatementItemProvider(this);
+		}
+
+		return allowedStatementItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -246,6 +269,8 @@ public class PuzzleItemProviderAdapterFactory extends PuzzleAdapterFactory
 			unitTestItemProvider.dispose();
 		if (inputItemProvider != null)
 			inputItemProvider.dispose();
+		if (allowedStatementItemProvider != null)
+			allowedStatementItemProvider.dispose();
 	}
 
 }

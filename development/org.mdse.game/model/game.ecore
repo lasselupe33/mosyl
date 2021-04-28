@@ -4,18 +4,28 @@
   <eClassifiers xsi:type="ecore:EClass" name="Game">
     <eStructuralFeatures xsi:type="ecore:EReference" name="puzzle" lowerBound="1"
         eType="ecore:EClass ../../org.mdse.puzzle/model/puzzle.ecore#//Puzzle" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="statements" lowerBound="1"
-        upperBound="-1" eType="#//UsedStatement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="entrypoint" lowerBound="1"
+        eType="#//Entrypoint" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UsedStatement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="nextStatements" upperBound="-1"
         eType="#//UsedStatement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="statement" lowerBound="1"
-        eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//Statement"
+        eType="ecore:EClass ../../org.mdse.puzzle/model/puzzle.ecore#//AllowedStatement"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="UsedInputs">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nextStatement" lowerBound="1"
-        eType="#//UsedStatement" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="UsedInput">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nextStatement" eType="#//UsedStatement"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="input" lowerBound="1" eType="ecore:EClass ../../org.mdse.puzzle/model/puzzle.ecore#//Input"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nextInput" eType="#//UsedInput"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Entrypoint">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//UsedInput"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statement" eType="#//UsedStatement"
+        containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

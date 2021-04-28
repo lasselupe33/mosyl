@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.mdse.constructs.ConstructsPackage;
+import org.mdse.puzzle.AllowedStatement;
 import org.mdse.puzzle.Input;
 import org.mdse.puzzle.Puzzle;
 import org.mdse.puzzle.PuzzleFactory;
@@ -43,6 +44,13 @@ public class PuzzlePackageImpl extends EPackageImpl implements PuzzlePackage {
 	 * @generated
 	 */
 	private EClass inputEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass allowedStatementEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -224,6 +232,24 @@ public class PuzzlePackageImpl extends EPackageImpl implements PuzzlePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getAllowedStatement() {
+		return allowedStatementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAllowedStatement_Statement() {
+		return (EReference) allowedStatementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public PuzzleFactory getPuzzleFactory() {
 		return (PuzzleFactory) getEFactoryInstance();
 	}
@@ -262,6 +288,9 @@ public class PuzzlePackageImpl extends EPackageImpl implements PuzzlePackage {
 
 		inputEClass = createEClass(INPUT);
 		createEReference(inputEClass, INPUT__DECLARE_STATEMENT);
+
+		allowedStatementEClass = createEClass(ALLOWED_STATEMENT);
+		createEReference(allowedStatementEClass, ALLOWED_STATEMENT__STATEMENT);
 	}
 
 	/**
@@ -310,9 +339,9 @@ public class PuzzlePackageImpl extends EPackageImpl implements PuzzlePackage {
 		initEReference(getPuzzle_Inputs(), this.getInput(), null, "inputs", null, 0, -1, Puzzle.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEReference(getPuzzle_AllowedStatements(), theConstructsPackage.getStatement(), null, "allowedStatements",
-				null, 1, -1, Puzzle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPuzzle_AllowedStatements(), this.getAllowedStatement(), null, "allowedStatements", null, 1,
+				-1, Puzzle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(unitTestEClass, UnitTest.class, "UnitTest", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -323,12 +352,18 @@ public class PuzzlePackageImpl extends EPackageImpl implements PuzzlePackage {
 				UnitTest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEReference(getUnitTest_Inputs(), this.getInput(), null, "inputs", null, 0, -1, UnitTest.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(inputEClass, Input.class, "Input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInput_DeclareStatement(), theConstructsPackage.getDeclareStatement(), null,
 				"declareStatement", null, 1, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(allowedStatementEClass, AllowedStatement.class, "AllowedStatement", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAllowedStatement_Statement(), theConstructsPackage.getStatement(), null, "statement", null, 1,
+				1, AllowedStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource

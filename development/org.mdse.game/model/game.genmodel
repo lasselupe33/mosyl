@@ -13,14 +13,20 @@
       ecorePackage="game.ecore#/">
     <genClasses ecoreClass="game.ecore#//Game">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//Game/puzzle"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//Game/statements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//Game/entrypoint"/>
     </genClasses>
     <genClasses ecoreClass="game.ecore#//UsedStatement">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//UsedStatement/nextStatements"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//UsedStatement/statement"/>
     </genClasses>
-    <genClasses ecoreClass="game.ecore#//UsedInputs">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//UsedInputs/nextStatement"/>
+    <genClasses ecoreClass="game.ecore#//UsedInput">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//UsedInput/nextStatement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//UsedInput/input"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//UsedInput/nextInput"/>
+    </genClasses>
+    <genClasses ecoreClass="game.ecore#//Entrypoint">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//Entrypoint/input"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//Entrypoint/statement"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

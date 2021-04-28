@@ -17,9 +17,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import org.mdse.constructs.Statement;
-
+import org.mdse.puzzle.AllowedStatement;
 import org.mdse.puzzle.Input;
 import org.mdse.puzzle.Puzzle;
 import org.mdse.puzzle.PuzzlePackage;
@@ -111,7 +109,7 @@ public class PuzzleImpl extends MinimalEObjectImpl.Container implements Puzzle {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Statement> allowedStatements;
+	protected EList<AllowedStatement> allowedStatements;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -204,9 +202,9 @@ public class PuzzleImpl extends MinimalEObjectImpl.Container implements Puzzle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Statement> getAllowedStatements() {
+	public EList<AllowedStatement> getAllowedStatements() {
 		if (allowedStatements == null) {
-			allowedStatements = new EObjectContainmentEList<Statement>(Statement.class, this,
+			allowedStatements = new EObjectContainmentEList<AllowedStatement>(AllowedStatement.class, this,
 					PuzzlePackage.PUZZLE__ALLOWED_STATEMENTS);
 		}
 		return allowedStatements;
@@ -277,7 +275,7 @@ public class PuzzleImpl extends MinimalEObjectImpl.Container implements Puzzle {
 			return;
 		case PuzzlePackage.PUZZLE__ALLOWED_STATEMENTS:
 			getAllowedStatements().clear();
-			getAllowedStatements().addAll((Collection<? extends Statement>) newValue);
+			getAllowedStatements().addAll((Collection<? extends AllowedStatement>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);

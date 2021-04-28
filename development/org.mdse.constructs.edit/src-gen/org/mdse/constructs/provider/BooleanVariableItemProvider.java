@@ -8,9 +8,13 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 import org.mdse.constructs.BooleanVariable;
+import org.mdse.constructs.ConstructsPackage;
 
 /**
  * This is the item provider adapter for a {@link org.mdse.constructs.BooleanVariable} object.
@@ -40,8 +44,25 @@ public class BooleanVariableItemProvider extends VariableItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addValuePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Value feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addValuePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_BooleanVariable_value_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_BooleanVariable_value_feature",
+								"_UI_BooleanVariable_type"),
+						ConstructsPackage.Literals.BOOLEAN_VARIABLE__VALUE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -88,6 +109,12 @@ public class BooleanVariableItemProvider extends VariableItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(BooleanVariable.class)) {
+		case ConstructsPackage.BOOLEAN_VARIABLE__VALUE:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
+		}
 		super.notifyChanged(notification);
 	}
 

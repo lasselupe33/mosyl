@@ -2,12 +2,8 @@
  */
 package org.mdse.game.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -15,12 +11,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
+import org.mdse.game.Entrypoint;
 import org.mdse.game.Game;
 import org.mdse.game.GamePackage;
-import org.mdse.game.UsedStatement;
 
 import org.mdse.puzzle.Puzzle;
 
@@ -33,7 +26,7 @@ import org.mdse.puzzle.Puzzle;
  * </p>
  * <ul>
  *   <li>{@link org.mdse.game.impl.GameImpl#getPuzzle <em>Puzzle</em>}</li>
- *   <li>{@link org.mdse.game.impl.GameImpl#getStatements <em>Statements</em>}</li>
+ *   <li>{@link org.mdse.game.impl.GameImpl#getEntrypoint <em>Entrypoint</em>}</li>
  * </ul>
  *
  * @generated
@@ -50,14 +43,14 @@ public class GameImpl extends MinimalEObjectImpl.Container implements Game {
 	protected Puzzle puzzle;
 
 	/**
-	 * The cached value of the '{@link #getStatements() <em>Statements</em>}' containment reference list.
+	 * The cached value of the '{@link #getEntrypoint() <em>Entrypoint</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getStatements()
+	 * @see #getEntrypoint()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<UsedStatement> statements;
+	protected Entrypoint entrypoint;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -132,12 +125,49 @@ public class GameImpl extends MinimalEObjectImpl.Container implements Game {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<UsedStatement> getStatements() {
-		if (statements == null) {
-			statements = new EObjectContainmentEList<UsedStatement>(UsedStatement.class, this,
-					GamePackage.GAME__STATEMENTS);
+	public Entrypoint getEntrypoint() {
+		return entrypoint;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetEntrypoint(Entrypoint newEntrypoint, NotificationChain msgs) {
+		Entrypoint oldEntrypoint = entrypoint;
+		entrypoint = newEntrypoint;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GamePackage.GAME__ENTRYPOINT,
+					oldEntrypoint, newEntrypoint);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
 		}
-		return statements;
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setEntrypoint(Entrypoint newEntrypoint) {
+		if (newEntrypoint != entrypoint) {
+			NotificationChain msgs = null;
+			if (entrypoint != null)
+				msgs = ((InternalEObject) entrypoint).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GamePackage.GAME__ENTRYPOINT, null, msgs);
+			if (newEntrypoint != null)
+				msgs = ((InternalEObject) newEntrypoint).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GamePackage.GAME__ENTRYPOINT, null, msgs);
+			msgs = basicSetEntrypoint(newEntrypoint, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.GAME__ENTRYPOINT, newEntrypoint,
+					newEntrypoint));
 	}
 
 	/**
@@ -150,8 +180,8 @@ public class GameImpl extends MinimalEObjectImpl.Container implements Game {
 		switch (featureID) {
 		case GamePackage.GAME__PUZZLE:
 			return basicSetPuzzle(null, msgs);
-		case GamePackage.GAME__STATEMENTS:
-			return ((InternalEList<?>) getStatements()).basicRemove(otherEnd, msgs);
+		case GamePackage.GAME__ENTRYPOINT:
+			return basicSetEntrypoint(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -166,8 +196,8 @@ public class GameImpl extends MinimalEObjectImpl.Container implements Game {
 		switch (featureID) {
 		case GamePackage.GAME__PUZZLE:
 			return getPuzzle();
-		case GamePackage.GAME__STATEMENTS:
-			return getStatements();
+		case GamePackage.GAME__ENTRYPOINT:
+			return getEntrypoint();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -177,16 +207,14 @@ public class GameImpl extends MinimalEObjectImpl.Container implements Game {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case GamePackage.GAME__PUZZLE:
 			setPuzzle((Puzzle) newValue);
 			return;
-		case GamePackage.GAME__STATEMENTS:
-			getStatements().clear();
-			getStatements().addAll((Collection<? extends UsedStatement>) newValue);
+		case GamePackage.GAME__ENTRYPOINT:
+			setEntrypoint((Entrypoint) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -203,8 +231,8 @@ public class GameImpl extends MinimalEObjectImpl.Container implements Game {
 		case GamePackage.GAME__PUZZLE:
 			setPuzzle((Puzzle) null);
 			return;
-		case GamePackage.GAME__STATEMENTS:
-			getStatements().clear();
+		case GamePackage.GAME__ENTRYPOINT:
+			setEntrypoint((Entrypoint) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -220,8 +248,8 @@ public class GameImpl extends MinimalEObjectImpl.Container implements Game {
 		switch (featureID) {
 		case GamePackage.GAME__PUZZLE:
 			return puzzle != null;
-		case GamePackage.GAME__STATEMENTS:
-			return statements != null && !statements.isEmpty();
+		case GamePackage.GAME__ENTRYPOINT:
+			return entrypoint != null;
 		}
 		return super.eIsSet(featureID);
 	}
