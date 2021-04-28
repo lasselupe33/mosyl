@@ -3,7 +3,7 @@ grammar org.mdse.puzzle.dsl.DSL with org.eclipse.xtext.common.Terminals
 
 
 
-import "http://org.mdse/puzzle" 
+import "http://org.mdse/puzzle" as puzzle
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 import "http://org.mdse/constructs" as constructs
 import "http://org.mdse/game" as game
@@ -17,37 +17,43 @@ Variable returns constructs::Variable:
 Expression returns constructs::Expression:
 	IntegerVariable | StringVariable | BooleanVariable;
 
-Puzzle:
-	"PUZZLE {"
+Puzzle returns puzzle::Puzzle:
+	'PUZZLE' '{'
 		name=STRING
 		description=STRING
 		
 		Input
 		
-		UnitTest
+		tests+=UnitTest
 		
-	"}"
+		(tests+=UnitTest)
+		
+	'}'
 ;
 
 Input:
-	"VARIABLES {"
+	'VARIABLES' '{'
 		
-	"}"	
+	'}'	
 ;
 
-UnitTest:
-	"TEST {"
+
+
+UnitTest returns puzzle::UnitTest:
+	{puzzle::UnitTest}
+	'TEST' '{'
 		/* ... */
 		
-		"INPUT {"
+		'INPUT' '{'
 			/* ... */
-		"}"
+		'}'
 		
-		("ON_FAIL {"
-			/* ... */
-		"}"
+		(
+			'ON_FAIL' '{'
+				/* ... */
+			'}'
 		)
-	"}"
+	'}'
 ;
 
 DeclareStatement returns constructs::DeclareStatement:
