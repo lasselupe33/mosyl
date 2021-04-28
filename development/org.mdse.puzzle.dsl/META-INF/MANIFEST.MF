@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: org.mdse.puzzle.dsl
+Bundle-ManifestVersion: 2
+Bundle-Name: org.mdse.puzzle.dsl
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: org.mdse.puzzle.dsl; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.mdse.puzzle,
+ org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
