@@ -7,7 +7,7 @@
     <semanticResources>platform:/resource/org.mdse.game/model/game.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_SXdrkJ02Eeu4fMSkFHpnKw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_SX5wcJ02Eeu4fMSkFHpnKw" name="puzzle" repPath="#_SXwmgJ02Eeu4fMSkFHpnKw" changeId="054f791f-e901-43b5-b0c0-fd9c25277512">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_SX5wcJ02Eeu4fMSkFHpnKw" name="puzzle" repPath="#_SXwmgJ02Eeu4fMSkFHpnKw" changeId="6b8d0974-e8a4-4549-b935-4811d7246e81">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="puzzle.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -268,9 +268,9 @@
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_ERVB4J03Eeu4fMSkFHpnKw" name="errorMessage : EString" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="puzzle.ecore#//UnitTest/errorMessage"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="puzzle.ecore#//UnitTest/errorMessage"/>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_ERVB4J03Eeu4fMSkFHpnKw" name="failedMessage : EString" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="puzzle.ecore#//UnitTest/failedMessage"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="puzzle.ecore#//UnitTest/failedMessage"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_KsQd_p03Eeu4fMSkFHpnKw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>

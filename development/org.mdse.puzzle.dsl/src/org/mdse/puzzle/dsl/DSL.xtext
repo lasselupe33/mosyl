@@ -35,7 +35,7 @@ EString returns ecore::EString:
 UnitTest returns UnitTest:
 	'UnitTest'
 	'{'
-		('errorMessage' errorMessage=EString)?
+		('errorMessage' failedMessage=EString)?
 		('inputs' '(' inputs+=[Input|EString] ( "," inputs+=[Input|EString])* ')' )?
 		'expected' expected=Expression
 	'}';
