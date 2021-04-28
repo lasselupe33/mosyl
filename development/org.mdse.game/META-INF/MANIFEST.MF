@@ -1,9 +1,24 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: org.mdse.game
-Bundle-SymbolicName: org.mdse.game; singleton:=true
+Bundle-Name: %pluginName
+Bundle-SymbolicName: org.mdse.game;singleton:=true
+Automatic-Module-Name: org.mdse.game
 Bundle-Version: 0.1.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Export-Package: constructs,
+ constructs.impl,
+ constructs.util,
+ org.mdse.game,
+ org.mdse.game.impl,
+ org.mdse.game.util,
+ puzzle,
+ puzzle.impl,
+ puzzle.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime,
  org.mdse.constructs;bundle-version="0.1.0";visibility:=reexport,
  org.mdse.puzzle;bundle-version="0.1.0";visibility:=reexport
+Bundle-ActivationPolicy: lazy

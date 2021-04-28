@@ -45,25 +45,16 @@
     <genClasses image="false" ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//Expression"/>
     <genClasses image="false" ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//Variable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.mdse.constructs/model/constructs.ecore#//Variable/name"/>
+      <genOperations ecoreOperation="../../org.mdse.constructs/model/constructs.ecore#//Variable/getValue"/>
     </genClasses>
-    <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//IntegerVariable">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.mdse.constructs/model/constructs.ecore#//IntegerVariable/value"/>
-    </genClasses>
-    <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//StringVariable">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.mdse.constructs/model/constructs.ecore#//StringVariable/value"/>
-    </genClasses>
-    <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//BooleanVariable">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.mdse.constructs/model/constructs.ecore#//BooleanVariable/value"/>
-    </genClasses>
+    <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//IntegerVariable"/>
+    <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//StringVariable"/>
+    <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//BooleanVariable"/>
     <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//ComparativeExpression">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.mdse.constructs/model/constructs.ecore#//ComparativeExpression/operator"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//ComparativeExpression/expression2"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//ComparativeExpression/expression1"/>
     </genClasses>
     <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//ArithmeticExpression">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.mdse.constructs/model/constructs.ecore#//ArithmeticExpression/operator"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//ArithmeticExpression/expression2"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//ArithmeticExpression/expression1"/>
     </genClasses>
     <genClasses image="false" ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//Statement"/>
     <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//IfElseStatement">
@@ -77,6 +68,10 @@
     <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//ReturnStatement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//ReturnStatement/expression"/>
     </genClasses>
+    <genClasses image="false" ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//BinaryExpression">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//BinaryExpression/expression1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//BinaryExpression/expression2"/>
+    </genClasses>
   </genPackages>
   <genPackages prefix="Game" ecorePackage="../../org.mdse.game/model/game.ecore#/">
     <genClasses ecoreClass="../../org.mdse.game/model/game.ecore#//Game">
@@ -84,7 +79,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.game/model/game.ecore#//Game/statements"/>
     </genClasses>
     <genClasses ecoreClass="../../org.mdse.game/model/game.ecore#//UsedStatement">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.game/model/game.ecore#//UsedStatement/nextStatement"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.game/model/game.ecore#//UsedStatement/nextStatements"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.game/model/game.ecore#//UsedStatement/statement"/>
     </genClasses>
   </genPackages>
