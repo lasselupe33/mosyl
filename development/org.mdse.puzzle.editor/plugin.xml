@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated puzzle -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.mdse.puzzle.presentation.PuzzleModelWizardID"
+            name="%_UI_PuzzleModelWizard_label"
+            class="org.mdse.puzzle.presentation.PuzzleModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/PuzzleModelFile.gif">
+         <description>%_UI_PuzzleModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated puzzle -->
+      <editor
+            id="org.mdse.puzzle.presentation.PuzzleEditorID"
+            name="%_UI_PuzzleEditor_label"
+            icon="icons/full/obj16/PuzzleModelFile.gif"
+            extensions="puzzle"
+            class="org.mdse.puzzle.presentation.PuzzleEditor"
+            contributorClass="org.mdse.puzzle.presentation.PuzzleActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated puzzle -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="constructs.presentation.ConstructsModelWizardID"
+            name="%_UI_ConstructsModelWizard_label"
+            class="constructs.presentation.ConstructsModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ConstructsModelFile.gif">
+         <description>%_UI_ConstructsModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated puzzle -->
+      <editor
+            id="constructs.presentation.ConstructsEditorID"
+            name="%_UI_ConstructsEditor_label"
+            icon="icons/full/obj16/ConstructsModelFile.gif"
+            extensions="constructs"
+            class="constructs.presentation.ConstructsEditor"
+            contributorClass="constructs.presentation.ConstructsActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated puzzle -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="game.presentation.GameModelWizardID"
+            name="%_UI_GameModelWizard_label"
+            class="game.presentation.GameModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/GameModelFile.gif">
+         <description>%_UI_GameModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated puzzle -->
+      <editor
+            id="game.presentation.GameEditorID"
+            name="%_UI_GameEditor_label"
+            icon="icons/full/obj16/GameModelFile.gif"
+            extensions="game"
+            class="game.presentation.GameEditor"
+            contributorClass="game.presentation.GameActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
