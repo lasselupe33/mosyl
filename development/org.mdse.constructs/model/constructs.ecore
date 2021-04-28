@@ -3,31 +3,39 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="constructs" nsURI="http://org.mdse/constructs" nsPrefix="constructs">
   <eClassifiers xsi:type="ecore:EClass" name="Expression" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="Variable" abstract="true" eSuperTypes="#//Expression">
-    <eOperations name="getValue" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IntegerVariable" eSuperTypes="#//Variable"/>
-  <eClassifiers xsi:type="ecore:EClass" name="StringVariable" eSuperTypes="#//Variable"/>
-  <eClassifiers xsi:type="ecore:EClass" name="BooleanVariable" eSuperTypes="#//Variable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IntegerVariable" eSuperTypes="#//Variable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+        defaultValueLiteral="0"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StringVariable" eSuperTypes="#//Variable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral=""/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BooleanVariable" eSuperTypes="#//Variable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
+        defaultValueLiteral="false"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ComparativeExpression" eSuperTypes="#//BinaryExpression">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="operator" eType="#//ComparativeOperator"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ComparativeOperator">
-    <eLiterals name="Equal" literal="EQUAL"/>
-    <eLiterals name="NotEqual" value="1" literal="NOT_EQUAL"/>
-    <eLiterals name="LessThan" value="2" literal="LESS_THAN"/>
-    <eLiterals name="LessThanEq" value="3" literal="LESS_THAN_EQ"/>
-    <eLiterals name="GreaterThan" value="4" literal="GREATER_THAN"/>
-    <eLiterals name="GreaterThanEq" value="5" literal="GREATER_THAN_EQ"/>
+    <eLiterals name="Equal"/>
+    <eLiterals name="NotEqual" value="1"/>
+    <eLiterals name="LessThan" value="2"/>
+    <eLiterals name="LessThanEq" value="3"/>
+    <eLiterals name="GreaterThan" value="4"/>
+    <eLiterals name="GreaterThanEq" value="5"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ArithmeticExpression" eSuperTypes="#//BinaryExpression">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="operator" eType="#//ArithmeticOperator"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ArithmeticOperator">
-    <eLiterals name="Plus" literal="PLUS"/>
-    <eLiterals name="Minus" value="1" literal="MINUS"/>
-    <eLiterals name="Multiply" value="2" literal="MULTIPLY"/>
-    <eLiterals name="Divide" value="3" literal="DIVIDE"/>
+    <eLiterals name="Plus"/>
+    <eLiterals name="Minus" value="1"/>
+    <eLiterals name="Multiply" value="2"/>
+    <eLiterals name="Divide" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Statement" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="IfElseStatement" eSuperTypes="#//Statement">

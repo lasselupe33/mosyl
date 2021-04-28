@@ -2,12 +2,8 @@
  */
 package org.mdse.game.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -15,38 +11,35 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
+import org.mdse.game.Entrypoint;
 import org.mdse.game.GamePackage;
+import org.mdse.game.UsedInput;
 import org.mdse.game.UsedStatement;
-
-import org.mdse.puzzle.AllowedStatement;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Used Statement</b></em>'.
+ * An implementation of the model object '<em><b>Entrypoint</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.mdse.game.impl.UsedStatementImpl#getNextStatements <em>Next Statements</em>}</li>
- *   <li>{@link org.mdse.game.impl.UsedStatementImpl#getStatement <em>Statement</em>}</li>
+ *   <li>{@link org.mdse.game.impl.EntrypointImpl#getInput <em>Input</em>}</li>
+ *   <li>{@link org.mdse.game.impl.EntrypointImpl#getStatement <em>Statement</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class UsedStatementImpl extends MinimalEObjectImpl.Container implements UsedStatement {
+public class EntrypointImpl extends MinimalEObjectImpl.Container implements Entrypoint {
 	/**
-	 * The cached value of the '{@link #getNextStatements() <em>Next Statements</em>}' containment reference list.
+	 * The cached value of the '{@link #getInput() <em>Input</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNextStatements()
+	 * @see #getInput()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<UsedStatement> nextStatements;
+	protected UsedInput input;
 
 	/**
 	 * The cached value of the '{@link #getStatement() <em>Statement</em>}' containment reference.
@@ -56,14 +49,14 @@ public class UsedStatementImpl extends MinimalEObjectImpl.Container implements U
 	 * @generated
 	 * @ordered
 	 */
-	protected AllowedStatement statement;
+	protected UsedStatement statement;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected UsedStatementImpl() {
+	protected EntrypointImpl() {
 		super();
 	}
 
@@ -74,7 +67,7 @@ public class UsedStatementImpl extends MinimalEObjectImpl.Container implements U
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GamePackage.Literals.USED_STATEMENT;
+		return GamePackage.Literals.ENTRYPOINT;
 	}
 
 	/**
@@ -82,12 +75,8 @@ public class UsedStatementImpl extends MinimalEObjectImpl.Container implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<UsedStatement> getNextStatements() {
-		if (nextStatements == null) {
-			nextStatements = new EObjectContainmentEList<UsedStatement>(UsedStatement.class, this,
-					GamePackage.USED_STATEMENT__NEXT_STATEMENTS);
-		}
-		return nextStatements;
+	public UsedInput getInput() {
+		return input;
 	}
 
 	/**
@@ -95,21 +84,12 @@ public class UsedStatementImpl extends MinimalEObjectImpl.Container implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AllowedStatement getStatement() {
-		return statement;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetStatement(AllowedStatement newStatement, NotificationChain msgs) {
-		AllowedStatement oldStatement = statement;
-		statement = newStatement;
+	public NotificationChain basicSetInput(UsedInput newInput, NotificationChain msgs) {
+		UsedInput oldInput = input;
+		input = newInput;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					GamePackage.USED_STATEMENT__STATEMENT, oldStatement, newStatement);
+					GamePackage.ENTRYPOINT__INPUT, oldInput, newInput);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -123,20 +103,69 @@ public class UsedStatementImpl extends MinimalEObjectImpl.Container implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStatement(AllowedStatement newStatement) {
+	public void setInput(UsedInput newInput) {
+		if (newInput != input) {
+			NotificationChain msgs = null;
+			if (input != null)
+				msgs = ((InternalEObject) input).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GamePackage.ENTRYPOINT__INPUT, null, msgs);
+			if (newInput != null)
+				msgs = ((InternalEObject) newInput).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GamePackage.ENTRYPOINT__INPUT, null, msgs);
+			msgs = basicSetInput(newInput, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.ENTRYPOINT__INPUT, newInput, newInput));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UsedStatement getStatement() {
+		return statement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetStatement(UsedStatement newStatement, NotificationChain msgs) {
+		UsedStatement oldStatement = statement;
+		statement = newStatement;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					GamePackage.ENTRYPOINT__STATEMENT, oldStatement, newStatement);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStatement(UsedStatement newStatement) {
 		if (newStatement != statement) {
 			NotificationChain msgs = null;
 			if (statement != null)
 				msgs = ((InternalEObject) statement).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - GamePackage.USED_STATEMENT__STATEMENT, null, msgs);
+						EOPPOSITE_FEATURE_BASE - GamePackage.ENTRYPOINT__STATEMENT, null, msgs);
 			if (newStatement != null)
 				msgs = ((InternalEObject) newStatement).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - GamePackage.USED_STATEMENT__STATEMENT, null, msgs);
+						EOPPOSITE_FEATURE_BASE - GamePackage.ENTRYPOINT__STATEMENT, null, msgs);
 			msgs = basicSetStatement(newStatement, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.USED_STATEMENT__STATEMENT, newStatement,
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.ENTRYPOINT__STATEMENT, newStatement,
 					newStatement));
 	}
 
@@ -148,9 +177,9 @@ public class UsedStatementImpl extends MinimalEObjectImpl.Container implements U
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case GamePackage.USED_STATEMENT__NEXT_STATEMENTS:
-			return ((InternalEList<?>) getNextStatements()).basicRemove(otherEnd, msgs);
-		case GamePackage.USED_STATEMENT__STATEMENT:
+		case GamePackage.ENTRYPOINT__INPUT:
+			return basicSetInput(null, msgs);
+		case GamePackage.ENTRYPOINT__STATEMENT:
 			return basicSetStatement(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -164,9 +193,9 @@ public class UsedStatementImpl extends MinimalEObjectImpl.Container implements U
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GamePackage.USED_STATEMENT__NEXT_STATEMENTS:
-			return getNextStatements();
-		case GamePackage.USED_STATEMENT__STATEMENT:
+		case GamePackage.ENTRYPOINT__INPUT:
+			return getInput();
+		case GamePackage.ENTRYPOINT__STATEMENT:
 			return getStatement();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -177,16 +206,14 @@ public class UsedStatementImpl extends MinimalEObjectImpl.Container implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GamePackage.USED_STATEMENT__NEXT_STATEMENTS:
-			getNextStatements().clear();
-			getNextStatements().addAll((Collection<? extends UsedStatement>) newValue);
+		case GamePackage.ENTRYPOINT__INPUT:
+			setInput((UsedInput) newValue);
 			return;
-		case GamePackage.USED_STATEMENT__STATEMENT:
-			setStatement((AllowedStatement) newValue);
+		case GamePackage.ENTRYPOINT__STATEMENT:
+			setStatement((UsedStatement) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -200,11 +227,11 @@ public class UsedStatementImpl extends MinimalEObjectImpl.Container implements U
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GamePackage.USED_STATEMENT__NEXT_STATEMENTS:
-			getNextStatements().clear();
+		case GamePackage.ENTRYPOINT__INPUT:
+			setInput((UsedInput) null);
 			return;
-		case GamePackage.USED_STATEMENT__STATEMENT:
-			setStatement((AllowedStatement) null);
+		case GamePackage.ENTRYPOINT__STATEMENT:
+			setStatement((UsedStatement) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -218,12 +245,12 @@ public class UsedStatementImpl extends MinimalEObjectImpl.Container implements U
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GamePackage.USED_STATEMENT__NEXT_STATEMENTS:
-			return nextStatements != null && !nextStatements.isEmpty();
-		case GamePackage.USED_STATEMENT__STATEMENT:
+		case GamePackage.ENTRYPOINT__INPUT:
+			return input != null;
+		case GamePackage.ENTRYPOINT__STATEMENT:
 			return statement != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //UsedStatementImpl
+} //EntrypointImpl

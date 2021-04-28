@@ -27,11 +27,16 @@
     <genClasses ecoreClass="constructs.ecore#//Expression"/>
     <genClasses ecoreClass="constructs.ecore#//Variable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//Variable/name"/>
-      <genOperations ecoreOperation="constructs.ecore#//Variable/getValue"/>
     </genClasses>
-    <genClasses ecoreClass="constructs.ecore#//IntegerVariable"/>
-    <genClasses ecoreClass="constructs.ecore#//StringVariable"/>
-    <genClasses ecoreClass="constructs.ecore#//BooleanVariable"/>
+    <genClasses ecoreClass="constructs.ecore#//IntegerVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//IntegerVariable/value"/>
+    </genClasses>
+    <genClasses ecoreClass="constructs.ecore#//StringVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//StringVariable/value"/>
+    </genClasses>
+    <genClasses ecoreClass="constructs.ecore#//BooleanVariable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//BooleanVariable/value"/>
+    </genClasses>
     <genClasses ecoreClass="constructs.ecore#//ComparativeExpression">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//ComparativeExpression/operator"/>
     </genClasses>

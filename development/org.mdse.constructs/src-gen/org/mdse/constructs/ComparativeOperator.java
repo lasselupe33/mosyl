@@ -26,7 +26,7 @@ public enum ComparativeOperator implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	EQUAL(0, "Equal", "EQUAL"),
+	EQUAL(0, "Equal", "Equal"),
 
 	/**
 	 * The '<em><b>Not Equal</b></em>' literal object.
@@ -36,7 +36,7 @@ public enum ComparativeOperator implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	NOT_EQUAL(1, "NotEqual", "NOT_EQUAL"),
+	NOT_EQUAL(1, "NotEqual", "NotEqual"),
 
 	/**
 	 * The '<em><b>Less Than</b></em>' literal object.
@@ -46,7 +46,7 @@ public enum ComparativeOperator implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	LESS_THAN(2, "LessThan", "LESS_THAN"),
+	LESS_THAN(2, "LessThan", "LessThan"),
 
 	/**
 	 * The '<em><b>Less Than Eq</b></em>' literal object.
@@ -56,7 +56,7 @@ public enum ComparativeOperator implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	LESS_THAN_EQ(3, "LessThanEq", "LESS_THAN_EQ"),
+	LESS_THAN_EQ(3, "LessThanEq", "LessThanEq"),
 
 	/**
 	 * The '<em><b>Greater Than</b></em>' literal object.
@@ -66,7 +66,7 @@ public enum ComparativeOperator implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	GREATER_THAN(4, "GreaterThan", "GREATER_THAN"),
+	GREATER_THAN(4, "GreaterThan", "GreaterThan"),
 
 	/**
 	 * The '<em><b>Greater Than Eq</b></em>' literal object.
@@ -76,14 +76,14 @@ public enum ComparativeOperator implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	GREATER_THAN_EQ(5, "GreaterThanEq", "GREATER_THAN_EQ");
+	GREATER_THAN_EQ(5, "GreaterThanEq", "GreaterThanEq");
 
 	/**
 	 * The '<em><b>Equal</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #EQUAL
-	 * @model name="Equal" literal="EQUAL"
+	 * @model name="Equal"
 	 * @generated
 	 * @ordered
 	 */
@@ -94,7 +94,7 @@ public enum ComparativeOperator implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #NOT_EQUAL
-	 * @model name="NotEqual" literal="NOT_EQUAL"
+	 * @model name="NotEqual"
 	 * @generated
 	 * @ordered
 	 */
@@ -105,7 +105,7 @@ public enum ComparativeOperator implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #LESS_THAN
-	 * @model name="LessThan" literal="LESS_THAN"
+	 * @model name="LessThan"
 	 * @generated
 	 * @ordered
 	 */
@@ -116,7 +116,7 @@ public enum ComparativeOperator implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #LESS_THAN_EQ
-	 * @model name="LessThanEq" literal="LESS_THAN_EQ"
+	 * @model name="LessThanEq"
 	 * @generated
 	 * @ordered
 	 */
@@ -127,7 +127,7 @@ public enum ComparativeOperator implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #GREATER_THAN
-	 * @model name="GreaterThan" literal="GREATER_THAN"
+	 * @model name="GreaterThan"
 	 * @generated
 	 * @ordered
 	 */
@@ -138,7 +138,7 @@ public enum ComparativeOperator implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #GREATER_THAN_EQ
-	 * @model name="GreaterThanEq" literal="GREATER_THAN_EQ"
+	 * @model name="GreaterThanEq"
 	 * @generated
 	 * @ordered
 	 */

@@ -58,7 +58,6 @@ public class GameItemProvider extends ItemProviderAdapter implements IEditingDom
 			super.getPropertyDescriptors(object);
 
 			addPuzzlePropertyDescriptor(object);
-			addStatementsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -78,20 +77,6 @@ public class GameItemProvider extends ItemProviderAdapter implements IEditingDom
 	}
 
 	/**
-	 * This adds a property descriptor for the Statements feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addStatementsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Game_statements_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Game_statements_feature", "_UI_Game_type"),
-						GamePackage.Literals.GAME__STATEMENTS, true, false, true, null, null, null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -104,7 +89,7 @@ public class GameItemProvider extends ItemProviderAdapter implements IEditingDom
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(GamePackage.Literals.GAME__PUZZLE);
-			childrenFeatures.add(GamePackage.Literals.GAME__STATEMENTS);
+			childrenFeatures.add(GamePackage.Literals.GAME__ENTRYPOINT);
 		}
 		return childrenFeatures;
 	}
@@ -167,7 +152,7 @@ public class GameItemProvider extends ItemProviderAdapter implements IEditingDom
 
 		switch (notification.getFeatureID(Game.class)) {
 		case GamePackage.GAME__PUZZLE:
-		case GamePackage.GAME__STATEMENTS:
+		case GamePackage.GAME__ENTRYPOINT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -188,8 +173,8 @@ public class GameItemProvider extends ItemProviderAdapter implements IEditingDom
 		newChildDescriptors
 				.add(createChildParameter(GamePackage.Literals.GAME__PUZZLE, PuzzleFactory.eINSTANCE.createPuzzle()));
 
-		newChildDescriptors.add(createChildParameter(GamePackage.Literals.GAME__STATEMENTS,
-				GameFactory.eINSTANCE.createUsedStatement()));
+		newChildDescriptors.add(
+				createChildParameter(GamePackage.Literals.GAME__ENTRYPOINT, GameFactory.eINSTANCE.createEntrypoint()));
 	}
 
 	/**

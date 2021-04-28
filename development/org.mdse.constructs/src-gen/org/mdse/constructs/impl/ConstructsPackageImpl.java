@@ -5,7 +5,6 @@ package org.mdse.constructs.impl;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
-import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -229,8 +228,8 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getVariable__GetValue() {
-		return variableEClass.getEOperations().get(0);
+	public EClass getIntegerVariable() {
+		return integerVariableEClass;
 	}
 
 	/**
@@ -238,8 +237,8 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getIntegerVariable() {
-		return integerVariableEClass;
+	public EAttribute getIntegerVariable_Value() {
+		return (EAttribute) integerVariableEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -256,8 +255,26 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getStringVariable_Value() {
+		return (EAttribute) stringVariableEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getBooleanVariable() {
 		return booleanVariableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBooleanVariable_Value() {
+		return (EAttribute) booleanVariableEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -455,13 +472,15 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 
 		variableEClass = createEClass(VARIABLE);
 		createEAttribute(variableEClass, VARIABLE__NAME);
-		createEOperation(variableEClass, VARIABLE___GET_VALUE);
 
 		integerVariableEClass = createEClass(INTEGER_VARIABLE);
+		createEAttribute(integerVariableEClass, INTEGER_VARIABLE__VALUE);
 
 		stringVariableEClass = createEClass(STRING_VARIABLE);
+		createEAttribute(stringVariableEClass, STRING_VARIABLE__VALUE);
 
 		booleanVariableEClass = createEClass(BOOLEAN_VARIABLE);
+		createEAttribute(booleanVariableEClass, BOOLEAN_VARIABLE__VALUE);
 
 		comparativeExpressionEClass = createEClass(COMPARATIVE_EXPRESSION);
 		createEAttribute(comparativeExpressionEClass, COMPARATIVE_EXPRESSION__OPERATOR);
@@ -539,16 +558,21 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 		initEAttribute(getVariable_Name(), ecorePackage.getEString(), "name", null, 0, 1, Variable.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getVariable__GetValue(), ecorePackage.getEObject(), "getValue", 0, 1, IS_UNIQUE, IS_ORDERED);
-
 		initEClass(integerVariableEClass, IntegerVariable.class, "IntegerVariable", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getIntegerVariable_Value(), ecorePackage.getEInt(), "value", "0", 0, 1, IntegerVariable.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(stringVariableEClass, StringVariable.class, "StringVariable", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getStringVariable_Value(), ecorePackage.getEString(), "value", "", 0, 1, StringVariable.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(booleanVariableEClass, BooleanVariable.class, "BooleanVariable", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getBooleanVariable_Value(), ecorePackage.getEBooleanObject(), "value", "false", 0, 1,
+				BooleanVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(comparativeExpressionEClass, ComparativeExpression.class, "ComparativeExpression", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

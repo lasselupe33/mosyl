@@ -1,6 +1,6 @@
 /**
  */
-package org.mdse.game.impl;
+package org.mdse.puzzle.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -11,40 +11,41 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.mdse.game.GamePackage;
-import org.mdse.game.UsedInputs;
-import org.mdse.game.UsedStatement;
+import org.mdse.constructs.Statement;
+
+import org.mdse.puzzle.AllowedStatement;
+import org.mdse.puzzle.PuzzlePackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Used Inputs</b></em>'.
+ * An implementation of the model object '<em><b>Allowed Statement</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.mdse.game.impl.UsedInputsImpl#getNextStatement <em>Next Statement</em>}</li>
+ *   <li>{@link org.mdse.puzzle.impl.AllowedStatementImpl#getStatement <em>Statement</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class UsedInputsImpl extends MinimalEObjectImpl.Container implements UsedInputs {
+public class AllowedStatementImpl extends MinimalEObjectImpl.Container implements AllowedStatement {
 	/**
-	 * The cached value of the '{@link #getNextStatement() <em>Next Statement</em>}' containment reference.
+	 * The cached value of the '{@link #getStatement() <em>Statement</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNextStatement()
+	 * @see #getStatement()
 	 * @generated
 	 * @ordered
 	 */
-	protected UsedStatement nextStatement;
+	protected Statement statement;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected UsedInputsImpl() {
+	protected AllowedStatementImpl() {
 		super();
 	}
 
@@ -55,7 +56,7 @@ public class UsedInputsImpl extends MinimalEObjectImpl.Container implements Used
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return GamePackage.Literals.USED_INPUTS;
+		return PuzzlePackage.Literals.ALLOWED_STATEMENT;
 	}
 
 	/**
@@ -63,8 +64,8 @@ public class UsedInputsImpl extends MinimalEObjectImpl.Container implements Used
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UsedStatement getNextStatement() {
-		return nextStatement;
+	public Statement getStatement() {
+		return statement;
 	}
 
 	/**
@@ -72,12 +73,12 @@ public class UsedInputsImpl extends MinimalEObjectImpl.Container implements Used
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetNextStatement(UsedStatement newNextStatement, NotificationChain msgs) {
-		UsedStatement oldNextStatement = nextStatement;
-		nextStatement = newNextStatement;
+	public NotificationChain basicSetStatement(Statement newStatement, NotificationChain msgs) {
+		Statement oldStatement = statement;
+		statement = newStatement;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					GamePackage.USED_INPUTS__NEXT_STATEMENT, oldNextStatement, newNextStatement);
+					PuzzlePackage.ALLOWED_STATEMENT__STATEMENT, oldStatement, newStatement);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -91,21 +92,21 @@ public class UsedInputsImpl extends MinimalEObjectImpl.Container implements Used
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNextStatement(UsedStatement newNextStatement) {
-		if (newNextStatement != nextStatement) {
+	public void setStatement(Statement newStatement) {
+		if (newStatement != statement) {
 			NotificationChain msgs = null;
-			if (nextStatement != null)
-				msgs = ((InternalEObject) nextStatement).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - GamePackage.USED_INPUTS__NEXT_STATEMENT, null, msgs);
-			if (newNextStatement != null)
-				msgs = ((InternalEObject) newNextStatement).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - GamePackage.USED_INPUTS__NEXT_STATEMENT, null, msgs);
-			msgs = basicSetNextStatement(newNextStatement, msgs);
+			if (statement != null)
+				msgs = ((InternalEObject) statement).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - PuzzlePackage.ALLOWED_STATEMENT__STATEMENT, null, msgs);
+			if (newStatement != null)
+				msgs = ((InternalEObject) newStatement).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - PuzzlePackage.ALLOWED_STATEMENT__STATEMENT, null, msgs);
+			msgs = basicSetStatement(newStatement, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.USED_INPUTS__NEXT_STATEMENT,
-					newNextStatement, newNextStatement));
+			eNotify(new ENotificationImpl(this, Notification.SET, PuzzlePackage.ALLOWED_STATEMENT__STATEMENT,
+					newStatement, newStatement));
 	}
 
 	/**
@@ -116,8 +117,8 @@ public class UsedInputsImpl extends MinimalEObjectImpl.Container implements Used
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case GamePackage.USED_INPUTS__NEXT_STATEMENT:
-			return basicSetNextStatement(null, msgs);
+		case PuzzlePackage.ALLOWED_STATEMENT__STATEMENT:
+			return basicSetStatement(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -130,8 +131,8 @@ public class UsedInputsImpl extends MinimalEObjectImpl.Container implements Used
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GamePackage.USED_INPUTS__NEXT_STATEMENT:
-			return getNextStatement();
+		case PuzzlePackage.ALLOWED_STATEMENT__STATEMENT:
+			return getStatement();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -144,8 +145,8 @@ public class UsedInputsImpl extends MinimalEObjectImpl.Container implements Used
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GamePackage.USED_INPUTS__NEXT_STATEMENT:
-			setNextStatement((UsedStatement) newValue);
+		case PuzzlePackage.ALLOWED_STATEMENT__STATEMENT:
+			setStatement((Statement) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -159,8 +160,8 @@ public class UsedInputsImpl extends MinimalEObjectImpl.Container implements Used
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GamePackage.USED_INPUTS__NEXT_STATEMENT:
-			setNextStatement((UsedStatement) null);
+		case PuzzlePackage.ALLOWED_STATEMENT__STATEMENT:
+			setStatement((Statement) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -174,10 +175,10 @@ public class UsedInputsImpl extends MinimalEObjectImpl.Container implements Used
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GamePackage.USED_INPUTS__NEXT_STATEMENT:
-			return nextStatement != null;
+		case PuzzlePackage.ALLOWED_STATEMENT__STATEMENT:
+			return statement != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //UsedInputsImpl
+} //AllowedStatementImpl

@@ -26,7 +26,7 @@ public enum ArithmeticOperator implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	PLUS(0, "Plus", "PLUS"),
+	PLUS(0, "Plus", "Plus"),
 
 	/**
 	 * The '<em><b>Minus</b></em>' literal object.
@@ -36,7 +36,7 @@ public enum ArithmeticOperator implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MINUS(1, "Minus", "MINUS"),
+	MINUS(1, "Minus", "Minus"),
 
 	/**
 	 * The '<em><b>Multiply</b></em>' literal object.
@@ -46,7 +46,7 @@ public enum ArithmeticOperator implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MULTIPLY(2, "Multiply", "MULTIPLY"),
+	MULTIPLY(2, "Multiply", "Multiply"),
 
 	/**
 	 * The '<em><b>Divide</b></em>' literal object.
@@ -56,14 +56,14 @@ public enum ArithmeticOperator implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DIVIDE(3, "Divide", "DIVIDE");
+	DIVIDE(3, "Divide", "Divide");
 
 	/**
 	 * The '<em><b>Plus</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #PLUS
-	 * @model name="Plus" literal="PLUS"
+	 * @model name="Plus"
 	 * @generated
 	 * @ordered
 	 */
@@ -74,7 +74,7 @@ public enum ArithmeticOperator implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #MINUS
-	 * @model name="Minus" literal="MINUS"
+	 * @model name="Minus"
 	 * @generated
 	 * @ordered
 	 */
@@ -85,7 +85,7 @@ public enum ArithmeticOperator implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #MULTIPLY
-	 * @model name="Multiply" literal="MULTIPLY"
+	 * @model name="Multiply"
 	 * @generated
 	 * @ordered
 	 */
@@ -96,7 +96,7 @@ public enum ArithmeticOperator implements Enumerator {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #DIVIDE
-	 * @model name="Divide" literal="DIVIDE"
+	 * @model name="Divide"
 	 * @generated
 	 * @ordered
 	 */

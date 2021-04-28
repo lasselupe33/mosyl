@@ -72,13 +72,13 @@ public interface UnitTest extends EObject {
 	void setFailedMessage(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Inputs</b></em>' reference list.
+	 * Returns the value of the '<em><b>Inputs</b></em>' containment reference list.
 	 * The list contents are of type {@link org.mdse.puzzle.Input}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Inputs</em>' reference list.
+	 * @return the value of the '<em>Inputs</em>' containment reference list.
 	 * @see org.mdse.puzzle.PuzzlePackage#getUnitTest_Inputs()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Input> getInputs();

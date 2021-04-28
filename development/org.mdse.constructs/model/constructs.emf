@@ -10,12 +10,15 @@ abstract class Variable extends Expression {
 }
 
 class IntegerVariable extends Variable {
+	attr int value = 0;
 }
 
 class StringVariable extends Variable {
+	attr String value = "";
 }
 
 class BooleanVariable extends Variable {
+	attr Boolean value = false;
 }
 
 class ComparativeExpression extends BinaryExpression {

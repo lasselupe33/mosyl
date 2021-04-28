@@ -119,26 +119,49 @@ public class GameItemProviderAdapterFactory extends GameAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.mdse.game.UsedInputs} instances.
+	 * This keeps track of the one adapter used for all {@link org.mdse.game.UsedInput} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected UsedInputsItemProvider usedInputsItemProvider;
+	protected UsedInputItemProvider usedInputItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.mdse.game.UsedInputs}.
+	 * This creates an adapter for a {@link org.mdse.game.UsedInput}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createUsedInputsAdapter() {
-		if (usedInputsItemProvider == null) {
-			usedInputsItemProvider = new UsedInputsItemProvider(this);
+	public Adapter createUsedInputAdapter() {
+		if (usedInputItemProvider == null) {
+			usedInputItemProvider = new UsedInputItemProvider(this);
 		}
 
-		return usedInputsItemProvider;
+		return usedInputItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.mdse.game.Entrypoint} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected EntrypointItemProvider entrypointItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mdse.game.Entrypoint}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createEntrypointAdapter() {
+		if (entrypointItemProvider == null) {
+			entrypointItemProvider = new EntrypointItemProvider(this);
+		}
+
+		return entrypointItemProvider;
 	}
 
 	/**
@@ -244,8 +267,10 @@ public class GameItemProviderAdapterFactory extends GameAdapterFactory
 			gameItemProvider.dispose();
 		if (usedStatementItemProvider != null)
 			usedStatementItemProvider.dispose();
-		if (usedInputsItemProvider != null)
-			usedInputsItemProvider.dispose();
+		if (usedInputItemProvider != null)
+			usedInputItemProvider.dispose();
+		if (entrypointItemProvider != null)
+			entrypointItemProvider.dispose();
 	}
 
 }

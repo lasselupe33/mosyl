@@ -59,8 +59,10 @@ public class GameFactoryImpl extends EFactoryImpl implements GameFactory {
 			return createGame();
 		case GamePackage.USED_STATEMENT:
 			return createUsedStatement();
-		case GamePackage.USED_INPUTS:
-			return createUsedInputs();
+		case GamePackage.USED_INPUT:
+			return createUsedInput();
+		case GamePackage.ENTRYPOINT:
+			return createEntrypoint();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -91,9 +93,19 @@ public class GameFactoryImpl extends EFactoryImpl implements GameFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UsedInputs createUsedInputs() {
-		UsedInputsImpl usedInputs = new UsedInputsImpl();
-		return usedInputs;
+	public UsedInput createUsedInput() {
+		UsedInputImpl usedInput = new UsedInputImpl();
+		return usedInput;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Entrypoint createEntrypoint() {
+		EntrypointImpl entrypoint = new EntrypointImpl();
+		return entrypoint;
 	}
 
 	/**

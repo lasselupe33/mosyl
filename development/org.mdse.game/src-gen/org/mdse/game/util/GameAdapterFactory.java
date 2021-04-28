@@ -77,8 +77,13 @@ public class GameAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseUsedInputs(UsedInputs object) {
-			return createUsedInputsAdapter();
+		public Adapter caseUsedInput(UsedInput object) {
+			return createUsedInputAdapter();
+		}
+
+		@Override
+		public Adapter caseEntrypoint(Entrypoint object) {
+			return createEntrypointAdapter();
 		}
 
 		@Override
@@ -129,16 +134,30 @@ public class GameAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.mdse.game.UsedInputs <em>Used Inputs</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.mdse.game.UsedInput <em>Used Input</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.mdse.game.UsedInputs
+	 * @see org.mdse.game.UsedInput
 	 * @generated
 	 */
-	public Adapter createUsedInputsAdapter() {
+	public Adapter createUsedInputAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mdse.game.Entrypoint <em>Entrypoint</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mdse.game.Entrypoint
+	 * @generated
+	 */
+	public Adapter createEntrypointAdapter() {
 		return null;
 	}
 
