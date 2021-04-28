@@ -2,8 +2,6 @@
  */
 package org.mdse.puzzle.provider;
 
-import constructs.ConstructsFactory;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -24,6 +22,8 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import org.mdse.constructs.ConstructsFactory;
 
 import org.mdse.puzzle.PuzzlePackage;
 import org.mdse.puzzle.UnitTest;

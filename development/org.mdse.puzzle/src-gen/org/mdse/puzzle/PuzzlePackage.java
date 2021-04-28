@@ -195,22 +195,13 @@ public interface PuzzlePackage extends EPackage {
 	int INPUT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Next Statement</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INPUT__NEXT_STATEMENT = 0;
-
-	/**
 	 * The feature id for the '<em><b>Declare Statement</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT__DECLARE_STATEMENT = 1;
+	int INPUT__DECLARE_STATEMENT = 0;
 
 	/**
 	 * The number of structural features of the '<em>Input</em>' class.
@@ -219,7 +210,7 @@ public interface PuzzlePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_FEATURE_COUNT = 2;
+	int INPUT_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Input</em>' class.
@@ -349,17 +340,6 @@ public interface PuzzlePackage extends EPackage {
 	EClass getInput();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.mdse.puzzle.Input#getNextStatement <em>Next Statement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Next Statement</em>'.
-	 * @see org.mdse.puzzle.Input#getNextStatement()
-	 * @see #getInput()
-	 * @generated
-	 */
-	EReference getInput_NextStatement();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link org.mdse.puzzle.Input#getDeclareStatement <em>Declare Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -486,14 +466,6 @@ public interface PuzzlePackage extends EPackage {
 		 * @generated
 		 */
 		EClass INPUT = eINSTANCE.getInput();
-
-		/**
-		 * The meta object literal for the '<em><b>Next Statement</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INPUT__NEXT_STATEMENT = eINSTANCE.getInput_NextStatement();
 
 		/**
 		 * The meta object literal for the '<em><b>Declare Statement</b></em>' containment reference feature.

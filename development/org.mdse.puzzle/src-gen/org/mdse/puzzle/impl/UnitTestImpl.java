@@ -2,8 +2,6 @@
  */
 package org.mdse.puzzle.impl;
 
-import constructs.Expression;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -18,6 +16,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
+import org.mdse.constructs.Expression;
 
 import org.mdse.puzzle.Input;
 import org.mdse.puzzle.PuzzlePackage;

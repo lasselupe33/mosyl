@@ -77,6 +77,11 @@ public class GameAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseUsedInputs(UsedInputs object) {
+			return createUsedInputsAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -120,6 +125,20 @@ public class GameAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createUsedStatementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mdse.game.UsedInputs <em>Used Inputs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mdse.game.UsedInputs
+	 * @generated
+	 */
+	public Adapter createUsedInputsAdapter() {
 		return null;
 	}
 

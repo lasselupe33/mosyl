@@ -2,8 +2,6 @@
  */
 package org.mdse.game.provider;
 
-import constructs.ConstructsFactory;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -23,6 +21,8 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import org.mdse.constructs.ConstructsFactory;
 
 import org.mdse.game.GameFactory;
 import org.mdse.game.GamePackage;

@@ -119,6 +119,29 @@ public class GameItemProviderAdapterFactory extends GameAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.mdse.game.UsedInputs} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected UsedInputsItemProvider usedInputsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mdse.game.UsedInputs}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createUsedInputsAdapter() {
+		if (usedInputsItemProvider == null) {
+			usedInputsItemProvider = new UsedInputsItemProvider(this);
+		}
+
+		return usedInputsItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -221,6 +244,8 @@ public class GameItemProviderAdapterFactory extends GameAdapterFactory
 			gameItemProvider.dispose();
 		if (usedStatementItemProvider != null)
 			usedStatementItemProvider.dispose();
+		if (usedInputsItemProvider != null)
+			usedInputsItemProvider.dispose();
 	}
 
 }

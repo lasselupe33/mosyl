@@ -22,7 +22,7 @@ import org.mdse.game.Game;
 import org.mdse.game.GamePackage;
 import org.mdse.game.UsedStatement;
 
-import puzzle.Puzzle;
+import org.mdse.puzzle.Puzzle;
 
 /**
  * <!-- begin-user-doc -->

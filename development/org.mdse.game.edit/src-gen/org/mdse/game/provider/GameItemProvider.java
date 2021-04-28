@@ -26,7 +26,7 @@ import org.mdse.game.Game;
 import org.mdse.game.GameFactory;
 import org.mdse.game.GamePackage;
 
-import puzzle.PuzzleFactory;
+import org.mdse.puzzle.PuzzleFactory;
 
 /**
  * This is the item provider adapter for a {@link org.mdse.game.Game} object.

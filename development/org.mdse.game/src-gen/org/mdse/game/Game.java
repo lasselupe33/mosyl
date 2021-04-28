@@ -6,7 +6,7 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
 
-import puzzle.Puzzle;
+import org.mdse.puzzle.Puzzle;
 
 /**
  * <!-- begin-user-doc -->

@@ -9,13 +9,13 @@ Bundle-Activator: org.mdse.game.presentation.GameEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: constructs.presentation,
- org.mdse.game.presentation,
- puzzle.presentation
+Export-Package: org.mdse.game.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  org.mdse.game.edit;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.eclipse.emf.edit.ui;visibility:=reexport,
- org.eclipse.ui.ide;visibility:=reexport
+ org.eclipse.ui.ide;visibility:=reexport,
+ org.mdse.constructs.edit;visibility:=reexport,
+ org.mdse.puzzle.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

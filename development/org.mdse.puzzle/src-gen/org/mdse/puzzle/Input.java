@@ -2,11 +2,9 @@
  */
 package org.mdse.puzzle;
 
-import constructs.DeclareStatement;
-
-import game.UsedStatement;
-
 import org.eclipse.emf.ecore.EObject;
+
+import org.mdse.constructs.DeclareStatement;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,7 +15,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.mdse.puzzle.Input#getNextStatement <em>Next Statement</em>}</li>
  *   <li>{@link org.mdse.puzzle.Input#getDeclareStatement <em>Declare Statement</em>}</li>
  * </ul>
  *
@@ -26,28 +23,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Input extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Next Statement</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Next Statement</em>' reference.
-	 * @see #setNextStatement(UsedStatement)
-	 * @see org.mdse.puzzle.PuzzlePackage#getInput_NextStatement()
-	 * @model required="true"
-	 * @generated
-	 */
-	UsedStatement getNextStatement();
-
-	/**
-	 * Sets the value of the '{@link org.mdse.puzzle.Input#getNextStatement <em>Next Statement</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Next Statement</em>' reference.
-	 * @see #getNextStatement()
-	 * @generated
-	 */
-	void setNextStatement(UsedStatement value);
-
 	/**
 	 * Returns the value of the '<em><b>Declare Statement</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

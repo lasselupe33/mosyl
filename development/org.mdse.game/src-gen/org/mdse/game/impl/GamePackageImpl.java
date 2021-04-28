@@ -2,24 +2,21 @@
  */
 package org.mdse.game.impl;
 
-import constructs.ConstructsPackage;
-
-import constructs.impl.ConstructsPackageImpl;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.mdse.constructs.ConstructsPackage;
+
 import org.mdse.game.Game;
 import org.mdse.game.GameFactory;
 import org.mdse.game.GamePackage;
+import org.mdse.game.UsedInputs;
 import org.mdse.game.UsedStatement;
 
-import puzzle.PuzzlePackage;
-
-import puzzle.impl.PuzzlePackageImpl;
+import org.mdse.puzzle.PuzzlePackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -41,6 +38,13 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage {
 	 * @generated
 	 */
 	private EClass usedStatementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass usedInputsEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -92,25 +96,15 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage {
 
 		isInited = true;
 
-		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(PuzzlePackage.eNS_URI);
-		PuzzlePackageImpl thePuzzlePackage = (PuzzlePackageImpl) (registeredPackage instanceof PuzzlePackageImpl
-				? registeredPackage
-				: PuzzlePackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ConstructsPackage.eNS_URI);
-		ConstructsPackageImpl theConstructsPackage = (ConstructsPackageImpl) (registeredPackage instanceof ConstructsPackageImpl
-				? registeredPackage
-				: ConstructsPackage.eINSTANCE);
+		// Initialize simple dependencies
+		ConstructsPackage.eINSTANCE.eClass();
+		PuzzlePackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theGamePackage.createPackageContents();
-		thePuzzlePackage.createPackageContents();
-		theConstructsPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theGamePackage.initializePackageContents();
-		thePuzzlePackage.initializePackageContents();
-		theConstructsPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theGamePackage.freeze();
@@ -179,6 +173,24 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getUsedInputs() {
+		return usedInputsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getUsedInputs_NextStatement() {
+		return (EReference) usedInputsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public GameFactory getGameFactory() {
 		return (GameFactory) getEFactoryInstance();
 	}
@@ -210,6 +222,9 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage {
 		usedStatementEClass = createEClass(USED_STATEMENT);
 		createEReference(usedStatementEClass, USED_STATEMENT__NEXT_STATEMENTS);
 		createEReference(usedStatementEClass, USED_STATEMENT__STATEMENT);
+
+		usedInputsEClass = createEClass(USED_INPUTS);
+		createEReference(usedInputsEClass, USED_INPUTS__NEXT_STATEMENT);
 	}
 
 	/**
@@ -263,6 +278,12 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage {
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUsedStatement_Statement(), theConstructsPackage.getStatement(), null, "statement", null, 1, 1,
 				UsedStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(usedInputsEClass, UsedInputs.class, "UsedInputs", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getUsedInputs_NextStatement(), this.getUsedStatement(), null, "nextStatement", null, 1, 1,
+				UsedInputs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource

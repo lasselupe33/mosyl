@@ -2,10 +2,6 @@
  */
 package org.mdse.puzzle.impl;
 
-import constructs.DeclareStatement;
-
-import game.UsedStatement;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -15,6 +11,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.mdse.constructs.DeclareStatement;
 import org.mdse.puzzle.Input;
 import org.mdse.puzzle.PuzzlePackage;
 
@@ -26,23 +23,12 @@ import org.mdse.puzzle.PuzzlePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.mdse.puzzle.impl.InputImpl#getNextStatement <em>Next Statement</em>}</li>
  *   <li>{@link org.mdse.puzzle.impl.InputImpl#getDeclareStatement <em>Declare Statement</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class InputImpl extends MinimalEObjectImpl.Container implements Input {
-	/**
-	 * The cached value of the '{@link #getNextStatement() <em>Next Statement</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNextStatement()
-	 * @generated
-	 * @ordered
-	 */
-	protected UsedStatement nextStatement;
-
 	/**
 	 * The cached value of the '{@link #getDeclareStatement() <em>Declare Statement</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -70,46 +56,6 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input {
 	@Override
 	protected EClass eStaticClass() {
 		return PuzzlePackage.Literals.INPUT;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UsedStatement getNextStatement() {
-		if (nextStatement != null && nextStatement.eIsProxy()) {
-			InternalEObject oldNextStatement = (InternalEObject) nextStatement;
-			nextStatement = (UsedStatement) eResolveProxy(oldNextStatement);
-			if (nextStatement != oldNextStatement) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PuzzlePackage.INPUT__NEXT_STATEMENT,
-							oldNextStatement, nextStatement));
-			}
-		}
-		return nextStatement;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public UsedStatement basicGetNextStatement() {
-		return nextStatement;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setNextStatement(UsedStatement newNextStatement) {
-		UsedStatement oldNextStatement = nextStatement;
-		nextStatement = newNextStatement;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PuzzlePackage.INPUT__NEXT_STATEMENT, oldNextStatement,
-					nextStatement));
 	}
 
 	/**
@@ -184,10 +130,6 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case PuzzlePackage.INPUT__NEXT_STATEMENT:
-			if (resolve)
-				return getNextStatement();
-			return basicGetNextStatement();
 		case PuzzlePackage.INPUT__DECLARE_STATEMENT:
 			return getDeclareStatement();
 		}
@@ -202,9 +144,6 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case PuzzlePackage.INPUT__NEXT_STATEMENT:
-			setNextStatement((UsedStatement) newValue);
-			return;
 		case PuzzlePackage.INPUT__DECLARE_STATEMENT:
 			setDeclareStatement((DeclareStatement) newValue);
 			return;
@@ -220,9 +159,6 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case PuzzlePackage.INPUT__NEXT_STATEMENT:
-			setNextStatement((UsedStatement) null);
-			return;
 		case PuzzlePackage.INPUT__DECLARE_STATEMENT:
 			setDeclareStatement((DeclareStatement) null);
 			return;
@@ -238,8 +174,6 @@ public class InputImpl extends MinimalEObjectImpl.Container implements Input {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case PuzzlePackage.INPUT__NEXT_STATEMENT:
-			return nextStatement != null;
 		case PuzzlePackage.INPUT__DECLARE_STATEMENT:
 			return declareStatement != null;
 		}

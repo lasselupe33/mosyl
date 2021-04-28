@@ -155,11 +155,11 @@ import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
 import org.mdse.game.provider.GameItemProviderAdapterFactory;
 
-import constructs.provider.ConstructsItemProviderAdapterFactory;
-
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
-import puzzle.provider.PuzzleItemProviderAdapterFactory;
+import org.mdse.constructs.provider.ConstructsItemProviderAdapterFactory;
+
+import org.mdse.puzzle.provider.PuzzleItemProviderAdapterFactory;
 
 /**
  * This is an example of a Game model editor.
@@ -680,8 +680,8 @@ public class GameEditor extends MultiPageEditorPart
 
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new GameItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new PuzzleItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ConstructsItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new PuzzleItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.

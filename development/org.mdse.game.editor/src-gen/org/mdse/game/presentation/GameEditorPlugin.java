@@ -8,6 +8,10 @@ import org.eclipse.emf.common.ui.EclipseUIPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.mdse.constructs.provider.ConstructsEditPlugin;
+
+import org.mdse.puzzle.provider.PuzzleEditPlugin;
+
 /**
  * This is the central singleton for the Game editor plugin.
  * <!-- begin-user-doc -->
@@ -38,7 +42,7 @@ public final class GameEditorPlugin extends EMFPlugin {
 	 * @generated
 	 */
 	public GameEditorPlugin() {
-		super(new ResourceLocator[] {});
+		super(new ResourceLocator[] { ConstructsEditPlugin.INSTANCE, PuzzleEditPlugin.INSTANCE, });
 	}
 
 	/**

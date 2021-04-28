@@ -21,10 +21,10 @@
         eType="#//Input"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Input">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nextStatement" lowerBound="1"
-        eType="ecore:EClass ../../org.mdse.game/model/game.ecore#//UsedStatement"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="declareStatement" lowerBound="1"
         eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//DeclareStatement"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="input" lowerBound="1" eType="ecore:EClass ../../org.mdse.game/model/game.ecore#//UsedInputs"
         containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

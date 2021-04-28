@@ -2,11 +2,11 @@
  */
 package org.mdse.puzzle;
 
-import constructs.Statement;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
+
+import org.mdse.constructs.Statement;
 
 /**
  * <!-- begin-user-doc -->
@@ -99,7 +99,7 @@ public interface Puzzle extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Allowed Statements</b></em>' containment reference list.
-	 * The list contents are of type {@link constructs.Statement}.
+	 * The list contents are of type {@link org.mdse.constructs.Statement}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Allowed Statements</em>' containment reference list.

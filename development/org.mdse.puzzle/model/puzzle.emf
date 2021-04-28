@@ -1,0 +1,23 @@
+@namespace(uri="http://org.mdse/puzzle", prefix="puzzle")
+package puzzle;
+
+import "platform:/resource/org.mdse.constructs/model/constructs.ecore";
+
+class Puzzle {
+	attr String name;
+	attr String description;
+	val UnitTest[+] tests;
+	val Input[*] inputs;
+	val constructs.Statement[+] allowedStatements;
+}
+
+class UnitTest {
+	val constructs.Expression[1] expected;
+	attr String failedMessage;
+	ref Input[*] inputs;
+}
+
+class Input {
+	val constructs.DeclareStatement[1] declareStatement;
+}
+

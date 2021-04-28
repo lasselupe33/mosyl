@@ -2,14 +2,6 @@
  */
 package org.mdse.puzzle.impl;
 
-import constructs.ConstructsPackage;
-
-import constructs.impl.ConstructsPackageImpl;
-
-import game.GamePackage;
-
-import game.impl.GamePackageImpl;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -17,6 +9,7 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import org.mdse.constructs.ConstructsPackage;
 import org.mdse.puzzle.Input;
 import org.mdse.puzzle.Puzzle;
 import org.mdse.puzzle.PuzzleFactory;
@@ -101,25 +94,14 @@ public class PuzzlePackageImpl extends EPackageImpl implements PuzzlePackage {
 
 		isInited = true;
 
-		// Obtain or create and register interdependencies
-		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(ConstructsPackage.eNS_URI);
-		ConstructsPackageImpl theConstructsPackage = (ConstructsPackageImpl) (registeredPackage instanceof ConstructsPackageImpl
-				? registeredPackage
-				: ConstructsPackage.eINSTANCE);
-		registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GamePackage.eNS_URI);
-		GamePackageImpl theGamePackage = (GamePackageImpl) (registeredPackage instanceof GamePackageImpl
-				? registeredPackage
-				: GamePackage.eINSTANCE);
+		// Initialize simple dependencies
+		ConstructsPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		thePuzzlePackage.createPackageContents();
-		theConstructsPackage.createPackageContents();
-		theGamePackage.createPackageContents();
 
 		// Initialize created meta-data
 		thePuzzlePackage.initializePackageContents();
-		theConstructsPackage.initializePackageContents();
-		theGamePackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		thePuzzlePackage.freeze();
@@ -233,17 +215,8 @@ public class PuzzlePackageImpl extends EPackageImpl implements PuzzlePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInput_NextStatement() {
-		return (EReference) inputEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getInput_DeclareStatement() {
-		return (EReference) inputEClass.getEStructuralFeatures().get(1);
+		return (EReference) inputEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -288,7 +261,6 @@ public class PuzzlePackageImpl extends EPackageImpl implements PuzzlePackage {
 		createEReference(unitTestEClass, UNIT_TEST__INPUTS);
 
 		inputEClass = createEClass(INPUT);
-		createEReference(inputEClass, INPUT__NEXT_STATEMENT);
 		createEReference(inputEClass, INPUT__DECLARE_STATEMENT);
 	}
 
@@ -319,7 +291,6 @@ public class PuzzlePackageImpl extends EPackageImpl implements PuzzlePackage {
 		// Obtain other dependent packages
 		ConstructsPackage theConstructsPackage = (ConstructsPackage) EPackage.Registry.INSTANCE
 				.getEPackage(ConstructsPackage.eNS_URI);
-		GamePackage theGamePackage = (GamePackage) EPackage.Registry.INSTANCE.getEPackage(GamePackage.eNS_URI);
 
 		// Create type parameters
 
@@ -356,9 +327,6 @@ public class PuzzlePackageImpl extends EPackageImpl implements PuzzlePackage {
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(inputEClass, Input.class, "Input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getInput_NextStatement(), theGamePackage.getUsedStatement(), null, "nextStatement", null, 1, 1,
-				Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInput_DeclareStatement(), theConstructsPackage.getDeclareStatement(), null,
 				"declareStatement", null, 1, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

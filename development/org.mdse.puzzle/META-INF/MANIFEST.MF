@@ -8,13 +8,7 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: constructs,
- constructs.impl,
- constructs.util,
- game,
- game.impl,
- game.util,
- org.mdse.puzzle,
+Export-Package: org.mdse.puzzle,
  org.mdse.puzzle.impl,
  org.mdse.puzzle.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,

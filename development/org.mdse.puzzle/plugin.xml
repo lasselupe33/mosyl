@@ -14,20 +14,4 @@
             genModel="model/puzzle.genmodel"/>
    </extension>
 
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated puzzle -->
-      <package
-            uri="http://org.mdse/constructs"
-            class="constructs.ConstructsPackage"
-            genModel="model/puzzle.genmodel"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated puzzle -->
-      <package
-            uri="http://org.mdse/game"
-            class="game.GamePackage"
-            genModel="model/puzzle.genmodel"/>
-   </extension>
-
 </plugin>

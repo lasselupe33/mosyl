@@ -5,7 +5,8 @@
     editorDirectory="/org.mdse.game.editor/src-gen" modelPluginID="org.mdse.game"
     modelName="Game" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
-    copyrightFields="false" operationReflection="true" importOrganizing="true">
+    copyrightFields="false" usedGenPackages="../../org.mdse.constructs/model/constructs.genmodel#//constructs ../../org.mdse.puzzle/model/puzzle.genmodel#//puzzle"
+    operationReflection="true" importOrganizing="true">
   <foreignModel>game.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Game" basePackage="org.mdse" disposableProviderFactory="true"
@@ -18,69 +19,8 @@
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//UsedStatement/nextStatements"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//UsedStatement/statement"/>
     </genClasses>
-  </genPackages>
-  <genPackages prefix="Puzzle" ecorePackage="../../org.mdse.puzzle/model/puzzle.ecore#/">
-    <genClasses ecoreClass="../../org.mdse.puzzle/model/puzzle.ecore#//Puzzle">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.mdse.puzzle/model/puzzle.ecore#//Puzzle/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.mdse.puzzle/model/puzzle.ecore#//Puzzle/description"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.puzzle/model/puzzle.ecore#//Puzzle/tests"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.puzzle/model/puzzle.ecore#//Puzzle/inputs"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.puzzle/model/puzzle.ecore#//Puzzle/allowedStatements"/>
-    </genClasses>
-    <genClasses ecoreClass="../../org.mdse.puzzle/model/puzzle.ecore#//UnitTest">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.puzzle/model/puzzle.ecore#//UnitTest/expected"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.mdse.puzzle/model/puzzle.ecore#//UnitTest/failedMessage"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.puzzle/model/puzzle.ecore#//UnitTest/inputs"/>
-    </genClasses>
-    <genClasses ecoreClass="../../org.mdse.puzzle/model/puzzle.ecore#//Input">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../org.mdse.puzzle/model/puzzle.ecore#//Input/nextStatement"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.puzzle/model/puzzle.ecore#//Input/declareStatement"/>
-    </genClasses>
-  </genPackages>
-  <genPackages prefix="Constructs" ecorePackage="../../org.mdse.constructs/model/constructs.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="../../org.mdse.constructs/model/constructs.ecore#//ComparativeOperator">
-      <genEnumLiterals ecoreEnumLiteral="../../org.mdse.constructs/model/constructs.ecore#//ComparativeOperator/Equal"/>
-      <genEnumLiterals ecoreEnumLiteral="../../org.mdse.constructs/model/constructs.ecore#//ComparativeOperator/NotEqual"/>
-      <genEnumLiterals ecoreEnumLiteral="../../org.mdse.constructs/model/constructs.ecore#//ComparativeOperator/LessThan"/>
-      <genEnumLiterals ecoreEnumLiteral="../../org.mdse.constructs/model/constructs.ecore#//ComparativeOperator/LessThanEq"/>
-      <genEnumLiterals ecoreEnumLiteral="../../org.mdse.constructs/model/constructs.ecore#//ComparativeOperator/GreaterThan"/>
-      <genEnumLiterals ecoreEnumLiteral="../../org.mdse.constructs/model/constructs.ecore#//ComparativeOperator/GreaterThanEq"/>
-    </genEnums>
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="../../org.mdse.constructs/model/constructs.ecore#//ArithmeticOperator">
-      <genEnumLiterals ecoreEnumLiteral="../../org.mdse.constructs/model/constructs.ecore#//ArithmeticOperator/Plus"/>
-      <genEnumLiterals ecoreEnumLiteral="../../org.mdse.constructs/model/constructs.ecore#//ArithmeticOperator/Minus"/>
-      <genEnumLiterals ecoreEnumLiteral="../../org.mdse.constructs/model/constructs.ecore#//ArithmeticOperator/Multiply"/>
-      <genEnumLiterals ecoreEnumLiteral="../../org.mdse.constructs/model/constructs.ecore#//ArithmeticOperator/Divide"/>
-    </genEnums>
-    <genClasses image="false" ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//Expression"/>
-    <genClasses image="false" ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//Variable">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.mdse.constructs/model/constructs.ecore#//Variable/name"/>
-      <genOperations ecoreOperation="../../org.mdse.constructs/model/constructs.ecore#//Variable/getValue"/>
-    </genClasses>
-    <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//IntegerVariable"/>
-    <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//StringVariable"/>
-    <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//BooleanVariable"/>
-    <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//ComparativeExpression">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.mdse.constructs/model/constructs.ecore#//ComparativeExpression/operator"/>
-    </genClasses>
-    <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//ArithmeticExpression">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ../../org.mdse.constructs/model/constructs.ecore#//ArithmeticExpression/operator"/>
-    </genClasses>
-    <genClasses image="false" ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//Statement"/>
-    <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//IfElseStatement">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//IfElseStatement/condition"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//IfElseStatement/elseStatement"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//IfElseStatement/ifStatement"/>
-    </genClasses>
-    <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//DeclareStatement">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//DeclareStatement/variable"/>
-    </genClasses>
-    <genClasses ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//ReturnStatement">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//ReturnStatement/expression"/>
-    </genClasses>
-    <genClasses image="false" ecoreClass="../../org.mdse.constructs/model/constructs.ecore#//BinaryExpression">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//BinaryExpression/expression1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference ../../org.mdse.constructs/model/constructs.ecore#//BinaryExpression/expression2"/>
+    <genClasses ecoreClass="game.ecore#//UsedInputs">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//UsedInputs/nextStatement"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

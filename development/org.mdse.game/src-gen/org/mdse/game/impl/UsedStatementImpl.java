@@ -2,8 +2,6 @@
  */
 package org.mdse.game.impl;
 
-import constructs.Statement;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -19,6 +17,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import org.mdse.constructs.Statement;
 
 import org.mdse.game.GamePackage;
 import org.mdse.game.UsedStatement;

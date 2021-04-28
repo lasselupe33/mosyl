@@ -2,8 +2,6 @@
  */
 package org.mdse.puzzle.provider;
 
-import constructs.ConstructsFactory;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -14,7 +12,6 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -23,6 +20,8 @@ import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import org.mdse.constructs.ConstructsFactory;
 
 import org.mdse.puzzle.Input;
 import org.mdse.puzzle.PuzzlePackage;
@@ -56,24 +55,8 @@ public class InputItemProvider extends ItemProviderAdapter implements IEditingDo
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNextStatementPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Next Statement feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNextStatementPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Input_nextStatement_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Input_nextStatement_feature",
-								"_UI_Input_type"),
-						PuzzlePackage.Literals.INPUT__NEXT_STATEMENT, true, false, true, null, null, null));
 	}
 
 	/**

@@ -2,11 +2,11 @@
  */
 package org.mdse.game;
 
-import constructs.Statement;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
+
+import org.mdse.constructs.Statement;
 
 /**
  * <!-- begin-user-doc -->

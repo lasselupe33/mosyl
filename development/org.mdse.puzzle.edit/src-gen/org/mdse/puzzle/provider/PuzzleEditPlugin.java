@@ -6,6 +6,8 @@ import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.mdse.constructs.provider.ConstructsEditPlugin;
+
 /**
  * This is the central singleton for the Puzzle edit plugin.
  * <!-- begin-user-doc -->
@@ -36,7 +38,7 @@ public final class PuzzleEditPlugin extends EMFPlugin {
 	 * @generated
 	 */
 	public PuzzleEditPlugin() {
-		super(new ResourceLocator[] {});
+		super(new ResourceLocator[] { ConstructsEditPlugin.INSTANCE, });
 	}
 
 	/**

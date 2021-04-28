@@ -59,6 +59,8 @@ public class GameFactoryImpl extends EFactoryImpl implements GameFactory {
 			return createGame();
 		case GamePackage.USED_STATEMENT:
 			return createUsedStatement();
+		case GamePackage.USED_INPUTS:
+			return createUsedInputs();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -82,6 +84,16 @@ public class GameFactoryImpl extends EFactoryImpl implements GameFactory {
 	public UsedStatement createUsedStatement() {
 		UsedStatementImpl usedStatement = new UsedStatementImpl();
 		return usedStatement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public UsedInputs createUsedInputs() {
+		UsedInputsImpl usedInputs = new UsedInputsImpl();
+		return usedInputs;
 	}
 
 	/**

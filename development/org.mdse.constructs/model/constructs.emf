@@ -1,0 +1,66 @@
+@namespace(uri="http://org.mdse/constructs", prefix="constructs")
+package constructs;
+
+abstract class Expression {
+}
+
+abstract class Variable extends Expression {
+	op EObject getValue();
+	attr String name;
+}
+
+class IntegerVariable extends Variable {
+}
+
+class StringVariable extends Variable {
+}
+
+class BooleanVariable extends Variable {
+}
+
+class ComparativeExpression extends BinaryExpression {
+	attr ComparativeOperator operator;
+}
+
+enum ComparativeOperator {
+	Equal = 0;
+	NotEqual = 1;
+	LessThan = 2;
+	LessThanEq = 3;
+	GreaterThan = 4;
+	GreaterThanEq = 5;
+}
+
+class ArithmeticExpression extends BinaryExpression {
+	attr ArithmeticOperator operator;
+}
+
+enum ArithmeticOperator {
+	Plus = 0;
+	Minus = 1;
+	Multiply = 2;
+	Divide = 3;
+}
+
+abstract class Statement {
+}
+
+class IfElseStatement extends Statement {
+	val Expression[1] condition;
+	val Statement[1] elseStatement;
+	val Statement[1] ifStatement;
+}
+
+class DeclareStatement extends Statement {
+	val Variable[1] variable;
+}
+
+class ReturnStatement extends Statement {
+	val Expression[1] expression;
+}
+
+abstract class BinaryExpression extends Expression {
+	val Expression[+] expression1;
+	val Expression[1] expression2;
+}
+

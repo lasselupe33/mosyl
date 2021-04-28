@@ -148,6 +148,43 @@ public interface GamePackage extends EPackage {
 	int USED_STATEMENT_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.mdse.game.impl.UsedInputsImpl <em>Used Inputs</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mdse.game.impl.UsedInputsImpl
+	 * @see org.mdse.game.impl.GamePackageImpl#getUsedInputs()
+	 * @generated
+	 */
+	int USED_INPUTS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Next Statement</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USED_INPUTS__NEXT_STATEMENT = 0;
+
+	/**
+	 * The number of structural features of the '<em>Used Inputs</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USED_INPUTS_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Used Inputs</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USED_INPUTS_OPERATION_COUNT = 0;
+
+	/**
 	 * Returns the meta object for class '{@link org.mdse.game.Game <em>Game</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -210,6 +247,27 @@ public interface GamePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getUsedStatement_Statement();
+
+	/**
+	 * Returns the meta object for class '{@link org.mdse.game.UsedInputs <em>Used Inputs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Used Inputs</em>'.
+	 * @see org.mdse.game.UsedInputs
+	 * @generated
+	 */
+	EClass getUsedInputs();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.mdse.game.UsedInputs#getNextStatement <em>Next Statement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Next Statement</em>'.
+	 * @see org.mdse.game.UsedInputs#getNextStatement()
+	 * @see #getUsedInputs()
+	 * @generated
+	 */
+	EReference getUsedInputs_NextStatement();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -285,6 +343,24 @@ public interface GamePackage extends EPackage {
 		 * @generated
 		 */
 		EReference USED_STATEMENT__STATEMENT = eINSTANCE.getUsedStatement_Statement();
+
+		/**
+		 * The meta object literal for the '{@link org.mdse.game.impl.UsedInputsImpl <em>Used Inputs</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mdse.game.impl.UsedInputsImpl
+		 * @see org.mdse.game.impl.GamePackageImpl#getUsedInputs()
+		 * @generated
+		 */
+		EClass USED_INPUTS = eINSTANCE.getUsedInputs();
+
+		/**
+		 * The meta object literal for the '<em><b>Next Statement</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference USED_INPUTS__NEXT_STATEMENT = eINSTANCE.getUsedInputs_NextStatement();
 
 	}
 
