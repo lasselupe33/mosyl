@@ -5,12 +5,26 @@ import "platform:/resource/org.mdse.puzzle/model/puzzle.ecore";
 import "platform:/resource/org.mdse.constructs/model/constructs.ecore";
 
 class Game {
-	val puzzle.Puzzle[1] puzzle;
-	val UsedStatement[+] statements;
+	attr String name;
+	attr String description;
+	val Entrypoint[1] entrypoint;
+	
+	val puzzle.UnitTest[*] tests;
 }
 
 class UsedStatement {
 	val UsedStatement[*] nextStatements;
 	val constructs.Statement[1] statement;
+}
+
+class UsedInput {
+	val UsedStatement nextStatement;
+	val puzzle.Input[1] input;
+	val UsedInput nextInput;
+}
+
+class Entrypoint {
+	val UsedInput input;
+	val UsedStatement statement;
 }
 

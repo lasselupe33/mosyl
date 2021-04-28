@@ -2,6 +2,7 @@
  */
 package org.mdse.game;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -66,13 +67,22 @@ public interface GamePackage extends EPackage {
 	int GAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Puzzle</b></em>' containment reference.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GAME__PUZZLE = 0;
+	int GAME__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME__DESCRIPTION = 1;
 
 	/**
 	 * The feature id for the '<em><b>Entrypoint</b></em>' containment reference.
@@ -81,7 +91,16 @@ public interface GamePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GAME__ENTRYPOINT = 1;
+	int GAME__ENTRYPOINT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Tests</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME__TESTS = 3;
 
 	/**
 	 * The number of structural features of the '<em>Game</em>' class.
@@ -90,7 +109,7 @@ public interface GamePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GAME_FEATURE_COUNT = 2;
+	int GAME_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Game</em>' class.
@@ -259,15 +278,26 @@ public interface GamePackage extends EPackage {
 	EClass getGame();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.mdse.game.Game#getPuzzle <em>Puzzle</em>}'.
+	 * Returns the meta object for the attribute '{@link org.mdse.game.Game#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Puzzle</em>'.
-	 * @see org.mdse.game.Game#getPuzzle()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see org.mdse.game.Game#getName()
 	 * @see #getGame()
 	 * @generated
 	 */
-	EReference getGame_Puzzle();
+	EAttribute getGame_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mdse.game.Game#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see org.mdse.game.Game#getDescription()
+	 * @see #getGame()
+	 * @generated
+	 */
+	EAttribute getGame_Description();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link org.mdse.game.Game#getEntrypoint <em>Entrypoint</em>}'.
@@ -279,6 +309,17 @@ public interface GamePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getGame_Entrypoint();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.mdse.game.Game#getTests <em>Tests</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Tests</em>'.
+	 * @see org.mdse.game.Game#getTests()
+	 * @see #getGame()
+	 * @generated
+	 */
+	EReference getGame_Tests();
 
 	/**
 	 * Returns the meta object for class '{@link org.mdse.game.UsedStatement <em>Used Statement</em>}'.
@@ -421,12 +462,20 @@ public interface GamePackage extends EPackage {
 		EClass GAME = eINSTANCE.getGame();
 
 		/**
-		 * The meta object literal for the '<em><b>Puzzle</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GAME__PUZZLE = eINSTANCE.getGame_Puzzle();
+		EAttribute GAME__NAME = eINSTANCE.getGame_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GAME__DESCRIPTION = eINSTANCE.getGame_Description();
 
 		/**
 		 * The meta object literal for the '<em><b>Entrypoint</b></em>' containment reference feature.
@@ -435,6 +484,14 @@ public interface GamePackage extends EPackage {
 		 * @generated
 		 */
 		EReference GAME__ENTRYPOINT = eINSTANCE.getGame_Entrypoint();
+
+		/**
+		 * The meta object literal for the '<em><b>Tests</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference GAME__TESTS = eINSTANCE.getGame_Tests();
 
 		/**
 		 * The meta object literal for the '{@link org.mdse.game.impl.UsedStatementImpl <em>Used Statement</em>}' class.

@@ -22,11 +22,11 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.mdse.constructs.ConstructsFactory;
+
 import org.mdse.game.GameFactory;
 import org.mdse.game.GamePackage;
 import org.mdse.game.UsedStatement;
-
-import org.mdse.puzzle.PuzzleFactory;
 
 /**
  * This is the item provider adapter for a {@link org.mdse.game.UsedStatement} object.
@@ -175,7 +175,13 @@ public class UsedStatementItemProvider extends ItemProviderAdapter implements IE
 				GameFactory.eINSTANCE.createUsedStatement()));
 
 		newChildDescriptors.add(createChildParameter(GamePackage.Literals.USED_STATEMENT__STATEMENT,
-				PuzzleFactory.eINSTANCE.createAllowedStatement()));
+				ConstructsFactory.eINSTANCE.createIfElseStatement()));
+
+		newChildDescriptors.add(createChildParameter(GamePackage.Literals.USED_STATEMENT__STATEMENT,
+				ConstructsFactory.eINSTANCE.createDeclareStatement()));
+
+		newChildDescriptors.add(createChildParameter(GamePackage.Literals.USED_STATEMENT__STATEMENT,
+				ConstructsFactory.eINSTANCE.createReturnStatement()));
 	}
 
 	/**

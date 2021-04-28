@@ -16,7 +16,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute puzzle.ecore#//Puzzle/description"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference puzzle.ecore#//Puzzle/tests"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference puzzle.ecore#//Puzzle/inputs"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference puzzle.ecore#//Puzzle/allowedStatements"/>
     </genClasses>
     <genClasses ecoreClass="puzzle.ecore#//UnitTest">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference puzzle.ecore#//UnitTest/expected"/>
@@ -25,9 +24,6 @@
     </genClasses>
     <genClasses ecoreClass="puzzle.ecore#//Input">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference puzzle.ecore#//Input/declareStatement"/>
-    </genClasses>
-    <genClasses ecoreClass="puzzle.ecore#//AllowedStatement">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference puzzle.ecore#//AllowedStatement/statement"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

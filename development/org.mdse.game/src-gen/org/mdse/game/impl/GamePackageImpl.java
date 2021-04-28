@@ -2,6 +2,7 @@
  */
 package org.mdse.game.impl;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -136,8 +137,17 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGame_Puzzle() {
-		return (EReference) gameEClass.getEStructuralFeatures().get(0);
+	public EAttribute getGame_Name() {
+		return (EAttribute) gameEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getGame_Description() {
+		return (EAttribute) gameEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -146,7 +156,16 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage {
 	 * @generated
 	 */
 	public EReference getGame_Entrypoint() {
-		return (EReference) gameEClass.getEStructuralFeatures().get(1);
+		return (EReference) gameEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getGame_Tests() {
+		return (EReference) gameEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -269,8 +288,10 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage {
 
 		// Create classes and their features
 		gameEClass = createEClass(GAME);
-		createEReference(gameEClass, GAME__PUZZLE);
+		createEAttribute(gameEClass, GAME__NAME);
+		createEAttribute(gameEClass, GAME__DESCRIPTION);
 		createEReference(gameEClass, GAME__ENTRYPOINT);
+		createEReference(gameEClass, GAME__TESTS);
 
 		usedStatementEClass = createEClass(USED_STATEMENT);
 		createEReference(usedStatementEClass, USED_STATEMENT__NEXT_STATEMENTS);
@@ -312,6 +333,8 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage {
 
 		// Obtain other dependent packages
 		PuzzlePackage thePuzzlePackage = (PuzzlePackage) EPackage.Registry.INSTANCE.getEPackage(PuzzlePackage.eNS_URI);
+		ConstructsPackage theConstructsPackage = (ConstructsPackage) EPackage.Registry.INSTANCE
+				.getEPackage(ConstructsPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -321,10 +344,14 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage {
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(gameEClass, Game.class, "Game", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGame_Puzzle(), thePuzzlePackage.getPuzzle(), null, "puzzle", null, 1, 1, Game.class,
+		initEAttribute(getGame_Name(), ecorePackage.getEString(), "name", null, 0, 1, Game.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getGame_Description(), ecorePackage.getEString(), "description", null, 0, 1, Game.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGame_Entrypoint(), this.getEntrypoint(), null, "entrypoint", null, 1, 1, Game.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGame_Entrypoint(), this.getEntrypoint(), null, "entrypoint", null, 1, 1, Game.class,
+		initEReference(getGame_Tests(), thePuzzlePackage.getUnitTest(), null, "tests", null, 0, -1, Game.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -333,8 +360,8 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage {
 		initEReference(getUsedStatement_NextStatements(), this.getUsedStatement(), null, "nextStatements", null, 0, -1,
 				UsedStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getUsedStatement_Statement(), thePuzzlePackage.getAllowedStatement(), null, "statement", null, 1,
-				1, UsedStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEReference(getUsedStatement_Statement(), theConstructsPackage.getStatement(), null, "statement", null, 1, 1,
+				UsedStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(usedInputEClass, UsedInput.class, "UsedInput", !IS_ABSTRACT, !IS_INTERFACE,

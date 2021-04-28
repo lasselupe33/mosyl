@@ -22,6 +22,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
 import org.mdse.puzzle.Puzzle;
 import org.mdse.puzzle.PuzzleFactory;
 import org.mdse.puzzle.PuzzlePackage;
@@ -136,7 +137,6 @@ public class PuzzleItemProvider extends ItemProviderAdapter implements IEditingD
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(PuzzlePackage.Literals.PUZZLE__TESTS);
 			childrenFeatures.add(PuzzlePackage.Literals.PUZZLE__INPUTS);
-			childrenFeatures.add(PuzzlePackage.Literals.PUZZLE__ALLOWED_STATEMENTS);
 		}
 		return childrenFeatures;
 	}
@@ -206,7 +206,6 @@ public class PuzzleItemProvider extends ItemProviderAdapter implements IEditingD
 			return;
 		case PuzzlePackage.PUZZLE__TESTS:
 		case PuzzlePackage.PUZZLE__INPUTS:
-		case PuzzlePackage.PUZZLE__ALLOWED_STATEMENTS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -229,9 +228,6 @@ public class PuzzleItemProvider extends ItemProviderAdapter implements IEditingD
 
 		newChildDescriptors.add(
 				createChildParameter(PuzzlePackage.Literals.PUZZLE__INPUTS, PuzzleFactory.eINSTANCE.createInput()));
-
-		newChildDescriptors.add(createChildParameter(PuzzlePackage.Literals.PUZZLE__ALLOWED_STATEMENTS,
-				PuzzleFactory.eINSTANCE.createAllowedStatement()));
 	}
 
 	/**

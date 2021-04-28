@@ -3,13 +3,14 @@
   <ownedViewpoints name="Game Viewpoint" modelFileExtension="game">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Game Diagram Description" domainClass="game.Game" enablePopupBars="true">
       <defaultLayer name="Default">
-        <nodeMappings name="Input Node" domainClass="org.mdse.puzzle.Input">
-          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="3" labelSize="12" labelPosition="node" resizeKind="NSEW" width="8" height="8">
+        <nodeMappings name="Input Node" domainClass="puzzle.Input">
+          <style xsi:type="style:SquareDescription" borderSizeComputationExpression="3" labelSize="12" labelExpression="[self.declareStatement.variable.name/]" labelPosition="node" resizeKind="NSEW" width="8" height="8">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
           </style>
         </nodeMappings>
+        <nodeMappings/>
       </defaultLayer>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="org.mdse.game.graphical.Services"/>

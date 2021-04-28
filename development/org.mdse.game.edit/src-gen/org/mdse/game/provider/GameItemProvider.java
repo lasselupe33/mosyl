@@ -19,6 +19,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -57,23 +58,41 @@ public class GameItemProvider extends ItemProviderAdapter implements IEditingDom
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addPuzzlePropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
+			addDescriptionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Puzzle feature.
+	 * This adds a property descriptor for the Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPuzzlePropertyDescriptor(Object object) {
+	protected void addNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Game_puzzle_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Game_puzzle_feature", "_UI_Game_type"),
-						GamePackage.Literals.GAME__PUZZLE, true, false, true, null, null, null));
+						getResourceLocator(), getString("_UI_Game_name_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Game_name_feature", "_UI_Game_type"),
+						GamePackage.Literals.GAME__NAME, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+						null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Description feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDescriptionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Game_description_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Game_description_feature",
+								"_UI_Game_type"),
+						GamePackage.Literals.GAME__DESCRIPTION, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -88,8 +107,8 @@ public class GameItemProvider extends ItemProviderAdapter implements IEditingDom
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(GamePackage.Literals.GAME__PUZZLE);
 			childrenFeatures.add(GamePackage.Literals.GAME__ENTRYPOINT);
+			childrenFeatures.add(GamePackage.Literals.GAME__TESTS);
 		}
 		return childrenFeatures;
 	}
@@ -136,7 +155,9 @@ public class GameItemProvider extends ItemProviderAdapter implements IEditingDom
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Game_type");
+		String label = ((Game) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_Game_type")
+				: getString("_UI_Game_type") + " " + label;
 	}
 
 	/**
@@ -151,8 +172,12 @@ public class GameItemProvider extends ItemProviderAdapter implements IEditingDom
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Game.class)) {
-		case GamePackage.GAME__PUZZLE:
+		case GamePackage.GAME__NAME:
+		case GamePackage.GAME__DESCRIPTION:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
 		case GamePackage.GAME__ENTRYPOINT:
+		case GamePackage.GAME__TESTS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -170,11 +195,11 @@ public class GameItemProvider extends ItemProviderAdapter implements IEditingDom
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors
-				.add(createChildParameter(GamePackage.Literals.GAME__PUZZLE, PuzzleFactory.eINSTANCE.createPuzzle()));
-
 		newChildDescriptors.add(
 				createChildParameter(GamePackage.Literals.GAME__ENTRYPOINT, GameFactory.eINSTANCE.createEntrypoint()));
+
+		newChildDescriptors
+				.add(createChildParameter(GamePackage.Literals.GAME__TESTS, PuzzleFactory.eINSTANCE.createUnitTest()));
 	}
 
 	/**

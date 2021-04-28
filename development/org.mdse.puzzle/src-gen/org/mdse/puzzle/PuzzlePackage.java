@@ -103,22 +103,13 @@ public interface PuzzlePackage extends EPackage {
 	int PUZZLE__INPUTS = 3;
 
 	/**
-	 * The feature id for the '<em><b>Allowed Statements</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PUZZLE__ALLOWED_STATEMENTS = 4;
-
-	/**
 	 * The number of structural features of the '<em>Puzzle</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PUZZLE_FEATURE_COUNT = 5;
+	int PUZZLE_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Puzzle</em>' class.
@@ -222,43 +213,6 @@ public interface PuzzlePackage extends EPackage {
 	int INPUT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.mdse.puzzle.impl.AllowedStatementImpl <em>Allowed Statement</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mdse.puzzle.impl.AllowedStatementImpl
-	 * @see org.mdse.puzzle.impl.PuzzlePackageImpl#getAllowedStatement()
-	 * @generated
-	 */
-	int ALLOWED_STATEMENT = 3;
-
-	/**
-	 * The feature id for the '<em><b>Statement</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLOWED_STATEMENT__STATEMENT = 0;
-
-	/**
-	 * The number of structural features of the '<em>Allowed Statement</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLOWED_STATEMENT_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Allowed Statement</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ALLOWED_STATEMENT_OPERATION_COUNT = 0;
-
-	/**
 	 * Returns the meta object for class '{@link org.mdse.puzzle.Puzzle <em>Puzzle</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -311,17 +265,6 @@ public interface PuzzlePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPuzzle_Inputs();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link org.mdse.puzzle.Puzzle#getAllowedStatements <em>Allowed Statements</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Allowed Statements</em>'.
-	 * @see org.mdse.puzzle.Puzzle#getAllowedStatements()
-	 * @see #getPuzzle()
-	 * @generated
-	 */
-	EReference getPuzzle_AllowedStatements();
 
 	/**
 	 * Returns the meta object for class '{@link org.mdse.puzzle.UnitTest <em>Unit Test</em>}'.
@@ -386,27 +329,6 @@ public interface PuzzlePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getInput_DeclareStatement();
-
-	/**
-	 * Returns the meta object for class '{@link org.mdse.puzzle.AllowedStatement <em>Allowed Statement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Allowed Statement</em>'.
-	 * @see org.mdse.puzzle.AllowedStatement
-	 * @generated
-	 */
-	EClass getAllowedStatement();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.mdse.puzzle.AllowedStatement#getStatement <em>Statement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Statement</em>'.
-	 * @see org.mdse.puzzle.AllowedStatement#getStatement()
-	 * @see #getAllowedStatement()
-	 * @generated
-	 */
-	EReference getAllowedStatement_Statement();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -474,14 +396,6 @@ public interface PuzzlePackage extends EPackage {
 		EReference PUZZLE__INPUTS = eINSTANCE.getPuzzle_Inputs();
 
 		/**
-		 * The meta object literal for the '<em><b>Allowed Statements</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PUZZLE__ALLOWED_STATEMENTS = eINSTANCE.getPuzzle_AllowedStatements();
-
-		/**
 		 * The meta object literal for the '{@link org.mdse.puzzle.impl.UnitTestImpl <em>Unit Test</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -532,24 +446,6 @@ public interface PuzzlePackage extends EPackage {
 		 * @generated
 		 */
 		EReference INPUT__DECLARE_STATEMENT = eINSTANCE.getInput_DeclareStatement();
-
-		/**
-		 * The meta object literal for the '{@link org.mdse.puzzle.impl.AllowedStatementImpl <em>Allowed Statement</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.mdse.puzzle.impl.AllowedStatementImpl
-		 * @see org.mdse.puzzle.impl.PuzzlePackageImpl#getAllowedStatement()
-		 * @generated
-		 */
-		EClass ALLOWED_STATEMENT = eINSTANCE.getAllowedStatement();
-
-		/**
-		 * The meta object literal for the '<em><b>Statement</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ALLOWED_STATEMENT__STATEMENT = eINSTANCE.getAllowedStatement_Statement();
 
 	}
 

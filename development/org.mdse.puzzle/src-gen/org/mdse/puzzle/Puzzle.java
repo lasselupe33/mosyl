@@ -19,7 +19,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.mdse.puzzle.Puzzle#getDescription <em>Description</em>}</li>
  *   <li>{@link org.mdse.puzzle.Puzzle#getTests <em>Tests</em>}</li>
  *   <li>{@link org.mdse.puzzle.Puzzle#getInputs <em>Inputs</em>}</li>
- *   <li>{@link org.mdse.puzzle.Puzzle#getAllowedStatements <em>Allowed Statements</em>}</li>
  * </ul>
  *
  * @see org.mdse.puzzle.PuzzlePackage#getPuzzle()
@@ -94,17 +93,5 @@ public interface Puzzle extends EObject {
 	 * @generated
 	 */
 	EList<Input> getInputs();
-
-	/**
-	 * Returns the value of the '<em><b>Allowed Statements</b></em>' containment reference list.
-	 * The list contents are of type {@link org.mdse.puzzle.AllowedStatement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Allowed Statements</em>' containment reference list.
-	 * @see org.mdse.puzzle.PuzzlePackage#getPuzzle_AllowedStatements()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	EList<AllowedStatement> getAllowedStatements();
 
 } // Puzzle

@@ -8,16 +8,14 @@ class Puzzle {
 	attr String description;
 	val UnitTest[+] tests;
 	val Input[*] inputs;
-	val constructs.Statement[+] allowedStatements;
 }
 
 class UnitTest {
 	val constructs.Expression[1] expected;
 	attr String failedMessage;
-	ref Input[*] inputs;
+	val Input[*] inputs;
 }
 
 class Input {
 	val constructs.DeclareStatement[1] declareStatement;
 }
-

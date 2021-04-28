@@ -18,10 +18,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import org.mdse.constructs.Statement;
+
 import org.mdse.game.GamePackage;
 import org.mdse.game.UsedStatement;
-
-import org.mdse.puzzle.AllowedStatement;
 
 /**
  * <!-- begin-user-doc -->
@@ -56,7 +56,7 @@ public class UsedStatementImpl extends MinimalEObjectImpl.Container implements U
 	 * @generated
 	 * @ordered
 	 */
-	protected AllowedStatement statement;
+	protected Statement statement;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -95,7 +95,7 @@ public class UsedStatementImpl extends MinimalEObjectImpl.Container implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AllowedStatement getStatement() {
+	public Statement getStatement() {
 		return statement;
 	}
 
@@ -104,8 +104,8 @@ public class UsedStatementImpl extends MinimalEObjectImpl.Container implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetStatement(AllowedStatement newStatement, NotificationChain msgs) {
-		AllowedStatement oldStatement = statement;
+	public NotificationChain basicSetStatement(Statement newStatement, NotificationChain msgs) {
+		Statement oldStatement = statement;
 		statement = newStatement;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
@@ -123,7 +123,7 @@ public class UsedStatementImpl extends MinimalEObjectImpl.Container implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStatement(AllowedStatement newStatement) {
+	public void setStatement(Statement newStatement) {
 		if (newStatement != statement) {
 			NotificationChain msgs = null;
 			if (statement != null)
@@ -186,7 +186,7 @@ public class UsedStatementImpl extends MinimalEObjectImpl.Container implements U
 			getNextStatements().addAll((Collection<? extends UsedStatement>) newValue);
 			return;
 		case GamePackage.USED_STATEMENT__STATEMENT:
-			setStatement((AllowedStatement) newValue);
+			setStatement((Statement) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -204,7 +204,7 @@ public class UsedStatementImpl extends MinimalEObjectImpl.Container implements U
 			getNextStatements().clear();
 			return;
 		case GamePackage.USED_STATEMENT__STATEMENT:
-			setStatement((AllowedStatement) null);
+			setStatement((Statement) null);
 			return;
 		}
 		super.eUnset(featureID);

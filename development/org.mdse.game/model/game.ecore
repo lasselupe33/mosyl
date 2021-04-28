@@ -2,16 +2,18 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="game" nsURI="http://org.mdse/game" nsPrefix="game">
   <eClassifiers xsi:type="ecore:EClass" name="Game">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="puzzle" lowerBound="1"
-        eType="ecore:EClass ../../org.mdse.puzzle/model/puzzle.ecore#//Puzzle" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="entrypoint" lowerBound="1"
         eType="#//Entrypoint" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tests" upperBound="-1"
+        eType="ecore:EClass ../../org.mdse.puzzle/model/puzzle.ecore#//UnitTest" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UsedStatement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="nextStatements" upperBound="-1"
         eType="#//UsedStatement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="statement" lowerBound="1"
-        eType="ecore:EClass ../../org.mdse.puzzle/model/puzzle.ecore#//AllowedStatement"
+        eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//Statement"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UsedInput">

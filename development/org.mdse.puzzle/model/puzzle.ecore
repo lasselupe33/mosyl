@@ -8,8 +8,6 @@
         eType="#//UnitTest" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
         eType="#//Input" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="allowedStatements" lowerBound="1"
-        upperBound="-1" eType="#//AllowedStatement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UnitTest">
     <eStructuralFeatures xsi:type="ecore:EReference" name="expected" lowerBound="1"
@@ -22,11 +20,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Input">
     <eStructuralFeatures xsi:type="ecore:EReference" name="declareStatement" lowerBound="1"
         eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//DeclareStatement"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AllowedStatement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="statement" lowerBound="1"
-        eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//Statement"
         containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

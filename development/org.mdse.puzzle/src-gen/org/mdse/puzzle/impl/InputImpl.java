@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.mdse.constructs.DeclareStatement;
+
 import org.mdse.puzzle.Input;
 import org.mdse.puzzle.PuzzlePackage;
 

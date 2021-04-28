@@ -12,8 +12,10 @@
   <genPackages prefix="Game" basePackage="org.mdse" disposableProviderFactory="true"
       ecorePackage="game.ecore#/">
     <genClasses ecoreClass="game.ecore#//Game">
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//Game/puzzle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Game/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Game/description"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//Game/entrypoint"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//Game/tests"/>
     </genClasses>
     <genClasses ecoreClass="game.ecore#//UsedStatement">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//UsedStatement/nextStatements"/>

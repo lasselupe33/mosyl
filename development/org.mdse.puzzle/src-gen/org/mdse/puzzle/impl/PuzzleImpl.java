@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-import org.mdse.puzzle.AllowedStatement;
+
 import org.mdse.puzzle.Input;
 import org.mdse.puzzle.Puzzle;
 import org.mdse.puzzle.PuzzlePackage;
@@ -35,7 +35,6 @@ import org.mdse.puzzle.UnitTest;
  *   <li>{@link org.mdse.puzzle.impl.PuzzleImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.mdse.puzzle.impl.PuzzleImpl#getTests <em>Tests</em>}</li>
  *   <li>{@link org.mdse.puzzle.impl.PuzzleImpl#getInputs <em>Inputs</em>}</li>
- *   <li>{@link org.mdse.puzzle.impl.PuzzleImpl#getAllowedStatements <em>Allowed Statements</em>}</li>
  * </ul>
  *
  * @generated
@@ -100,16 +99,6 @@ public class PuzzleImpl extends MinimalEObjectImpl.Container implements Puzzle {
 	 * @ordered
 	 */
 	protected EList<Input> inputs;
-
-	/**
-	 * The cached value of the '{@link #getAllowedStatements() <em>Allowed Statements</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAllowedStatements()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<AllowedStatement> allowedStatements;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -202,19 +191,6 @@ public class PuzzleImpl extends MinimalEObjectImpl.Container implements Puzzle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<AllowedStatement> getAllowedStatements() {
-		if (allowedStatements == null) {
-			allowedStatements = new EObjectContainmentEList<AllowedStatement>(AllowedStatement.class, this,
-					PuzzlePackage.PUZZLE__ALLOWED_STATEMENTS);
-		}
-		return allowedStatements;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -222,8 +198,6 @@ public class PuzzleImpl extends MinimalEObjectImpl.Container implements Puzzle {
 			return ((InternalEList<?>) getTests()).basicRemove(otherEnd, msgs);
 		case PuzzlePackage.PUZZLE__INPUTS:
 			return ((InternalEList<?>) getInputs()).basicRemove(otherEnd, msgs);
-		case PuzzlePackage.PUZZLE__ALLOWED_STATEMENTS:
-			return ((InternalEList<?>) getAllowedStatements()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -244,8 +218,6 @@ public class PuzzleImpl extends MinimalEObjectImpl.Container implements Puzzle {
 			return getTests();
 		case PuzzlePackage.PUZZLE__INPUTS:
 			return getInputs();
-		case PuzzlePackage.PUZZLE__ALLOWED_STATEMENTS:
-			return getAllowedStatements();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -273,10 +245,6 @@ public class PuzzleImpl extends MinimalEObjectImpl.Container implements Puzzle {
 			getInputs().clear();
 			getInputs().addAll((Collection<? extends Input>) newValue);
 			return;
-		case PuzzlePackage.PUZZLE__ALLOWED_STATEMENTS:
-			getAllowedStatements().clear();
-			getAllowedStatements().addAll((Collection<? extends AllowedStatement>) newValue);
-			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -301,9 +269,6 @@ public class PuzzleImpl extends MinimalEObjectImpl.Container implements Puzzle {
 		case PuzzlePackage.PUZZLE__INPUTS:
 			getInputs().clear();
 			return;
-		case PuzzlePackage.PUZZLE__ALLOWED_STATEMENTS:
-			getAllowedStatements().clear();
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -324,8 +289,6 @@ public class PuzzleImpl extends MinimalEObjectImpl.Container implements Puzzle {
 			return tests != null && !tests.isEmpty();
 		case PuzzlePackage.PUZZLE__INPUTS:
 			return inputs != null && !inputs.isEmpty();
-		case PuzzlePackage.PUZZLE__ALLOWED_STATEMENTS:
-			return allowedStatements != null && !allowedStatements.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

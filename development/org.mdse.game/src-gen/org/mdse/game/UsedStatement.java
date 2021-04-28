@@ -6,7 +6,7 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.mdse.puzzle.AllowedStatement;
+import org.mdse.constructs.Statement;
 
 /**
  * <!-- begin-user-doc -->
@@ -43,12 +43,12 @@ public interface UsedStatement extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Statement</em>' containment reference.
-	 * @see #setStatement(AllowedStatement)
+	 * @see #setStatement(Statement)
 	 * @see org.mdse.game.GamePackage#getUsedStatement_Statement()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	AllowedStatement getStatement();
+	Statement getStatement();
 
 	/**
 	 * Sets the value of the '{@link org.mdse.game.UsedStatement#getStatement <em>Statement</em>}' containment reference.
@@ -58,6 +58,6 @@ public interface UsedStatement extends EObject {
 	 * @see #getStatement()
 	 * @generated
 	 */
-	void setStatement(AllowedStatement value);
+	void setStatement(Statement value);
 
 } // UsedStatement
