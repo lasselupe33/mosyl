@@ -16,7 +16,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="expected" lowerBound="1"
         eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//Expression"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="errorMessage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="failedMessage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
         eType="#//Input"/>
   </eClassifiers>

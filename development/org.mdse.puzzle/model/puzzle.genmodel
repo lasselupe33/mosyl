@@ -19,7 +19,7 @@
     </genClasses>
     <genClasses ecoreClass="puzzle.ecore#//UnitTest">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference puzzle.ecore#//UnitTest/expected"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute puzzle.ecore#//UnitTest/errorMessage"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute puzzle.ecore#//UnitTest/failedMessage"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference puzzle.ecore#//UnitTest/inputs"/>
     </genClasses>
     <genClasses ecoreClass="puzzle.ecore#//Input">
