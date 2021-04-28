@@ -3,7 +3,7 @@ grammar org.mdse.puzzle.dsl.DSL with org.eclipse.xtext.common.Terminals
 
 
 
-import "http://org.mdse/puzzle" 
+import "http://org.mdse/puzzle" as puzzle
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 import "http://org.mdse/constructs" as constructs
 import "http://org.mdse/game" as game
@@ -17,32 +17,43 @@ Variable returns constructs::Variable:
 Expression returns constructs::Expression:
 	IntegerVariable | StringVariable | BooleanVariable;
 
-Puzzle:
-	"META {"
+Puzzle returns puzzle::Puzzle:
+	'PUZZLE' '{'
 		name=STRING
 		description=STRING
-	"}"
+		
+		Input
+		
+		tests+=UnitTest
+		
+		(tests+=UnitTest)
+		
+	'}'
 ;
 
 Input:
-	"VARIABLES {"
+	'VARIABLES' '{'
 		
-	"}"	
+	'}'	
 ;
 
-UnitTest:
-	"TEST {"
+
+
+UnitTest returns puzzle::UnitTest:
+	{puzzle::UnitTest}
+	'TEST' '{'
 		/* ... */
 		
-		"INPUT {"
+		'INPUT' '{'
 			/* ... */
-		"}"
+		'}'
 		
-		("ON_FAIL {"
-			/* ... */
-		"}"
+		(
+			'ON_FAIL' '{'
+				/* ... */
+			'}'
 		)
-	"}"
+	'}'
 ;
 
 DeclareStatement returns constructs::DeclareStatement:
@@ -53,14 +64,14 @@ IntegerVariable returns constructs::IntegerVariable:
 	{constructs::IntegerVariable}
 	'IntegerVariable'
 	name=ID
-	variable=INT
+	value=INT
 	;
 
 StringVariable returns constructs::StringVariable:
 	{constructs::StringVariable}
 	'StringVariable'
 	name=ID
-	variable=STRING
+	value=STRING
 	;
 	
 terminal BOOLEAN returns ecore::EBoolean: ('true' | 'false');
@@ -69,6 +80,6 @@ BooleanVariable returns constructs::BooleanVariable:
 	{constructs::BooleanVariable}
 	'BooleanVariable'
 	name=ID
-	variable=BOOLEAN
+	value=BOOLEAN
 	;
 	

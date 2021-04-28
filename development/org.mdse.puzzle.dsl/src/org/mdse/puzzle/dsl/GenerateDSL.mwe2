@@ -26,7 +26,7 @@ Workflow {
 		}
 		language = StandardLanguage {
 			name = "org.mdse.puzzle.dsl.DSL"
-			fileExtensions = "mydsl"
+			fileExtensions = "puzzle"
 			referencedResource = "platform:/resource/org.mdse.puzzle/model/puzzle.genmodel"
 			
 			fragment = ecore2xtext.Ecore2XtextValueConverterServiceFragment2 auto-inject {}
