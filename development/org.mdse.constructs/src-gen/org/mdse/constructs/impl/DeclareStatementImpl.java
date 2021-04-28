@@ -4,6 +4,7 @@ package org.mdse.constructs.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -28,7 +29,7 @@ import org.mdse.constructs.Variable;
  */
 public class DeclareStatementImpl extends StatementImpl implements DeclareStatement {
 	/**
-	 * The cached value of the '{@link #getVariable() <em>Variable</em>}' reference.
+	 * The cached value of the '{@link #getVariable() <em>Variable</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getVariable()
@@ -62,15 +63,6 @@ public class DeclareStatementImpl extends StatementImpl implements DeclareStatem
 	 * @generated
 	 */
 	public Variable getVariable() {
-		if (variable != null && variable.eIsProxy()) {
-			InternalEObject oldVariable = (InternalEObject) variable;
-			variable = (Variable) eResolveProxy(oldVariable);
-			if (variable != oldVariable) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							ConstructsPackage.DECLARE_STATEMENT__VARIABLE, oldVariable, variable));
-			}
-		}
 		return variable;
 	}
 
@@ -79,8 +71,18 @@ public class DeclareStatementImpl extends StatementImpl implements DeclareStatem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Variable basicGetVariable() {
-		return variable;
+	public NotificationChain basicSetVariable(Variable newVariable, NotificationChain msgs) {
+		Variable oldVariable = variable;
+		variable = newVariable;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					ConstructsPackage.DECLARE_STATEMENT__VARIABLE, oldVariable, newVariable);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -89,11 +91,34 @@ public class DeclareStatementImpl extends StatementImpl implements DeclareStatem
 	 * @generated
 	 */
 	public void setVariable(Variable newVariable) {
-		Variable oldVariable = variable;
-		variable = newVariable;
-		if (eNotificationRequired())
+		if (newVariable != variable) {
+			NotificationChain msgs = null;
+			if (variable != null)
+				msgs = ((InternalEObject) variable).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - ConstructsPackage.DECLARE_STATEMENT__VARIABLE, null, msgs);
+			if (newVariable != null)
+				msgs = ((InternalEObject) newVariable).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - ConstructsPackage.DECLARE_STATEMENT__VARIABLE, null, msgs);
+			msgs = basicSetVariable(newVariable, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ConstructsPackage.DECLARE_STATEMENT__VARIABLE,
-					oldVariable, variable));
+					newVariable, newVariable));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case ConstructsPackage.DECLARE_STATEMENT__VARIABLE:
+			return basicSetVariable(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -105,9 +130,7 @@ public class DeclareStatementImpl extends StatementImpl implements DeclareStatem
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case ConstructsPackage.DECLARE_STATEMENT__VARIABLE:
-			if (resolve)
-				return getVariable();
-			return basicGetVariable();
+			return getVariable();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

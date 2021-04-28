@@ -7,9 +7,6 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
@@ -17,7 +14,6 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.mdse.constructs.ComparativeExpression;
 import org.mdse.constructs.ComparativeOperator;
-import org.mdse.constructs.ConstructsFactory;
 import org.mdse.constructs.ConstructsPackage;
 
 /**
@@ -26,7 +22,7 @@ import org.mdse.constructs.ConstructsPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ComparativeExpressionItemProvider extends ExpressionItemProvider {
+public class ComparativeExpressionItemProvider extends BinaryExpressionItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -49,8 +45,6 @@ public class ComparativeExpressionItemProvider extends ExpressionItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addOperatorPropertyDescriptor(object);
-			addExpression2PropertyDescriptor(object);
-			addExpression1PropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -69,67 +63,6 @@ public class ComparativeExpressionItemProvider extends ExpressionItemProvider {
 						"_UI_ComparativeExpression_type"),
 				ConstructsPackage.Literals.COMPARATIVE_EXPRESSION__OPERATOR, true, false, false,
 				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Expression2 feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addExpression2PropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_ComparativeExpression_expression2_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_ComparativeExpression_expression2_feature",
-						"_UI_ComparativeExpression_type"),
-				ConstructsPackage.Literals.COMPARATIVE_EXPRESSION__EXPRESSION2, true, false, true, null, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Expression1 feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addExpression1PropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_ComparativeExpression_expression1_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_ComparativeExpression_expression1_feature",
-						"_UI_ComparativeExpression_type"),
-				ConstructsPackage.Literals.COMPARATIVE_EXPRESSION__EXPRESSION1, true, false, true, null, null, null));
-	}
-
-	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(ConstructsPackage.Literals.COMPARATIVE_EXPRESSION__EXPRESSION2);
-			childrenFeatures.add(ConstructsPackage.Literals.COMPARATIVE_EXPRESSION__EXPRESSION1);
-		}
-		return childrenFeatures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -182,10 +115,6 @@ public class ComparativeExpressionItemProvider extends ExpressionItemProvider {
 		case ConstructsPackage.COMPARATIVE_EXPRESSION__OPERATOR:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
-		case ConstructsPackage.COMPARATIVE_EXPRESSION__EXPRESSION2:
-		case ConstructsPackage.COMPARATIVE_EXPRESSION__EXPRESSION1:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
-			return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -200,36 +129,6 @@ public class ComparativeExpressionItemProvider extends ExpressionItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.COMPARATIVE_EXPRESSION__EXPRESSION2,
-				ConstructsFactory.eINSTANCE.createIntegerVariable()));
-
-		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.COMPARATIVE_EXPRESSION__EXPRESSION2,
-				ConstructsFactory.eINSTANCE.createStringVariable()));
-
-		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.COMPARATIVE_EXPRESSION__EXPRESSION2,
-				ConstructsFactory.eINSTANCE.createBooleanVariable()));
-
-		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.COMPARATIVE_EXPRESSION__EXPRESSION2,
-				ConstructsFactory.eINSTANCE.createComparativeExpression()));
-
-		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.COMPARATIVE_EXPRESSION__EXPRESSION2,
-				ConstructsFactory.eINSTANCE.createArithmeticExpression()));
-
-		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.COMPARATIVE_EXPRESSION__EXPRESSION1,
-				ConstructsFactory.eINSTANCE.createIntegerVariable()));
-
-		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.COMPARATIVE_EXPRESSION__EXPRESSION1,
-				ConstructsFactory.eINSTANCE.createStringVariable()));
-
-		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.COMPARATIVE_EXPRESSION__EXPRESSION1,
-				ConstructsFactory.eINSTANCE.createBooleanVariable()));
-
-		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.COMPARATIVE_EXPRESSION__EXPRESSION1,
-				ConstructsFactory.eINSTANCE.createComparativeExpression()));
-
-		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.COMPARATIVE_EXPRESSION__EXPRESSION1,
-				ConstructsFactory.eINSTANCE.createArithmeticExpression()));
 	}
 
 	/**
@@ -243,8 +142,8 @@ public class ComparativeExpressionItemProvider extends ExpressionItemProvider {
 		Object childFeature = feature;
 		Object childObject = child;
 
-		boolean qualify = childFeature == ConstructsPackage.Literals.COMPARATIVE_EXPRESSION__EXPRESSION2
-				|| childFeature == ConstructsPackage.Literals.COMPARATIVE_EXPRESSION__EXPRESSION1;
+		boolean qualify = childFeature == ConstructsPackage.Literals.BINARY_EXPRESSION__EXPRESSION1
+				|| childFeature == ConstructsPackage.Literals.BINARY_EXPRESSION__EXPRESSION2;
 
 		if (qualify) {
 			return getString("_UI_CreateChild_text2",

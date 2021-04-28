@@ -5,6 +5,7 @@ package org.mdse.constructs.impl;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -12,6 +13,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.mdse.constructs.ArithmeticExpression;
 import org.mdse.constructs.ArithmeticOperator;
+import org.mdse.constructs.BinaryExpression;
 import org.mdse.constructs.BooleanVariable;
 import org.mdse.constructs.ComparativeExpression;
 import org.mdse.constructs.ComparativeOperator;
@@ -109,6 +111,13 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 * @generated
 	 */
 	private EClass returnStatementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass binaryExpressionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -220,8 +229,8 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getIntegerVariable() {
-		return integerVariableEClass;
+	public EOperation getVariable__GetValue() {
+		return variableEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -229,8 +238,8 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getIntegerVariable_Value() {
-		return (EAttribute) integerVariableEClass.getEStructuralFeatures().get(0);
+	public EClass getIntegerVariable() {
+		return integerVariableEClass;
 	}
 
 	/**
@@ -247,26 +256,8 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getStringVariable_Value() {
-		return (EAttribute) stringVariableEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getBooleanVariable() {
 		return booleanVariableEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getBooleanVariable_Value() {
-		return (EAttribute) booleanVariableEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -292,24 +283,6 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getComparativeExpression_Expression2() {
-		return (EReference) comparativeExpressionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getComparativeExpression_Expression1() {
-		return (EReference) comparativeExpressionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getArithmeticExpression() {
 		return arithmeticExpressionEClass;
 	}
@@ -321,24 +294,6 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 */
 	public EAttribute getArithmeticExpression_Operator() {
 		return (EAttribute) arithmeticExpressionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getArithmeticExpression_Expression2() {
-		return (EReference) arithmeticExpressionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getArithmeticExpression_Expression1() {
-		return (EReference) arithmeticExpressionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -373,7 +328,7 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIfElseStatement_Statement2() {
+	public EReference getIfElseStatement_ElseStatement() {
 		return (EReference) ifElseStatementEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -382,7 +337,7 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getIfElseStatement_Statement1() {
+	public EReference getIfElseStatement_IfStatement() {
 		return (EReference) ifElseStatementEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -420,6 +375,33 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 */
 	public EReference getReturnStatement_Expression() {
 		return (EReference) returnStatementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBinaryExpression() {
+		return binaryExpressionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBinaryExpression_Expression1() {
+		return (EReference) binaryExpressionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBinaryExpression_Expression2() {
+		return (EReference) binaryExpressionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -473,38 +455,36 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 
 		variableEClass = createEClass(VARIABLE);
 		createEAttribute(variableEClass, VARIABLE__NAME);
+		createEOperation(variableEClass, VARIABLE___GET_VALUE);
 
 		integerVariableEClass = createEClass(INTEGER_VARIABLE);
-		createEAttribute(integerVariableEClass, INTEGER_VARIABLE__VALUE);
 
 		stringVariableEClass = createEClass(STRING_VARIABLE);
-		createEAttribute(stringVariableEClass, STRING_VARIABLE__VALUE);
 
 		booleanVariableEClass = createEClass(BOOLEAN_VARIABLE);
-		createEAttribute(booleanVariableEClass, BOOLEAN_VARIABLE__VALUE);
 
 		comparativeExpressionEClass = createEClass(COMPARATIVE_EXPRESSION);
 		createEAttribute(comparativeExpressionEClass, COMPARATIVE_EXPRESSION__OPERATOR);
-		createEReference(comparativeExpressionEClass, COMPARATIVE_EXPRESSION__EXPRESSION2);
-		createEReference(comparativeExpressionEClass, COMPARATIVE_EXPRESSION__EXPRESSION1);
 
 		arithmeticExpressionEClass = createEClass(ARITHMETIC_EXPRESSION);
 		createEAttribute(arithmeticExpressionEClass, ARITHMETIC_EXPRESSION__OPERATOR);
-		createEReference(arithmeticExpressionEClass, ARITHMETIC_EXPRESSION__EXPRESSION2);
-		createEReference(arithmeticExpressionEClass, ARITHMETIC_EXPRESSION__EXPRESSION1);
 
 		statementEClass = createEClass(STATEMENT);
 
 		ifElseStatementEClass = createEClass(IF_ELSE_STATEMENT);
 		createEReference(ifElseStatementEClass, IF_ELSE_STATEMENT__CONDITION);
-		createEReference(ifElseStatementEClass, IF_ELSE_STATEMENT__STATEMENT2);
-		createEReference(ifElseStatementEClass, IF_ELSE_STATEMENT__STATEMENT1);
+		createEReference(ifElseStatementEClass, IF_ELSE_STATEMENT__ELSE_STATEMENT);
+		createEReference(ifElseStatementEClass, IF_ELSE_STATEMENT__IF_STATEMENT);
 
 		declareStatementEClass = createEClass(DECLARE_STATEMENT);
 		createEReference(declareStatementEClass, DECLARE_STATEMENT__VARIABLE);
 
 		returnStatementEClass = createEClass(RETURN_STATEMENT);
 		createEReference(returnStatementEClass, RETURN_STATEMENT__EXPRESSION);
+
+		binaryExpressionEClass = createEClass(BINARY_EXPRESSION);
+		createEReference(binaryExpressionEClass, BINARY_EXPRESSION__EXPRESSION1);
+		createEReference(binaryExpressionEClass, BINARY_EXPRESSION__EXPRESSION2);
 
 		// Create enums
 		comparativeOperatorEEnum = createEEnum(COMPARATIVE_OPERATOR);
@@ -544,11 +524,12 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 		integerVariableEClass.getESuperTypes().add(this.getVariable());
 		stringVariableEClass.getESuperTypes().add(this.getVariable());
 		booleanVariableEClass.getESuperTypes().add(this.getVariable());
-		comparativeExpressionEClass.getESuperTypes().add(this.getExpression());
-		arithmeticExpressionEClass.getESuperTypes().add(this.getExpression());
+		comparativeExpressionEClass.getESuperTypes().add(this.getBinaryExpression());
+		arithmeticExpressionEClass.getESuperTypes().add(this.getBinaryExpression());
 		ifElseStatementEClass.getESuperTypes().add(this.getStatement());
 		declareStatementEClass.getESuperTypes().add(this.getStatement());
 		returnStatementEClass.getESuperTypes().add(this.getStatement());
+		binaryExpressionEClass.getESuperTypes().add(this.getExpression());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(expressionEClass, Expression.class, "Expression", IS_ABSTRACT, !IS_INTERFACE,
@@ -558,45 +539,28 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 		initEAttribute(getVariable_Name(), ecorePackage.getEString(), "name", null, 0, 1, Variable.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEOperation(getVariable__GetValue(), ecorePackage.getEObject(), "getValue", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(integerVariableEClass, IntegerVariable.class, "IntegerVariable", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getIntegerVariable_Value(), ecorePackage.getEInt(), "value", null, 0, 1, IntegerVariable.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(stringVariableEClass, StringVariable.class, "StringVariable", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getStringVariable_Value(), ecorePackage.getEString(), "value", null, 0, 1, StringVariable.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(booleanVariableEClass, BooleanVariable.class, "BooleanVariable", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getBooleanVariable_Value(), ecorePackage.getEBoolean(), "value", null, 0, 1,
-				BooleanVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(comparativeExpressionEClass, ComparativeExpression.class, "ComparativeExpression", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getComparativeExpression_Operator(), this.getComparativeOperator(), "operator", null, 0, 1,
 				ComparativeExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComparativeExpression_Expression2(), this.getExpression(), null, "expression2", null, 1, 1,
-				ComparativeExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComparativeExpression_Expression1(), this.getExpression(), null, "expression1", null, 1, 1,
-				ComparativeExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(arithmeticExpressionEClass, ArithmeticExpression.class, "ArithmeticExpression", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getArithmeticExpression_Operator(), this.getArithmeticOperator(), "operator", null, 0, 1,
 				ArithmeticExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getArithmeticExpression_Expression2(), this.getExpression(), null, "expression2", null, 1, 1,
-				ArithmeticExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getArithmeticExpression_Expression1(), this.getExpression(), null, "expression1", null, 1, 1,
-				ArithmeticExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
-				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(statementEClass, Statement.class, "Statement", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -606,23 +570,32 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 		initEReference(getIfElseStatement_Condition(), this.getExpression(), null, "condition", null, 1, 1,
 				IfElseStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIfElseStatement_Statement2(), this.getStatement(), null, "statement2", null, 1, 1,
+		initEReference(getIfElseStatement_ElseStatement(), this.getStatement(), null, "elseStatement", null, 1, 1,
 				IfElseStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getIfElseStatement_Statement1(), this.getStatement(), null, "statement1", null, 1, 1,
+		initEReference(getIfElseStatement_IfStatement(), this.getStatement(), null, "ifStatement", null, 1, 1,
 				IfElseStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(declareStatementEClass, DeclareStatement.class, "DeclareStatement", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDeclareStatement_Variable(), this.getVariable(), null, "variable", null, 1, 1,
-				DeclareStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				DeclareStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(returnStatementEClass, ReturnStatement.class, "ReturnStatement", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getReturnStatement_Expression(), this.getExpression(), null, "expression", null, 1, 1,
 				ReturnStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(binaryExpressionEClass, BinaryExpression.class, "BinaryExpression", IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getBinaryExpression_Expression1(), this.getExpression(), null, "expression1", null, 1, -1,
+				BinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBinaryExpression_Expression2(), this.getExpression(), null, "expression2", null, 1, 1,
+				BinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals

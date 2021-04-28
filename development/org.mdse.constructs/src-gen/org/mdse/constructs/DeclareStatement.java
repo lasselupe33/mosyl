@@ -20,22 +20,22 @@ package org.mdse.constructs;
  */
 public interface DeclareStatement extends Statement {
 	/**
-	 * Returns the value of the '<em><b>Variable</b></em>' reference.
+	 * Returns the value of the '<em><b>Variable</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Variable</em>' reference.
+	 * @return the value of the '<em>Variable</em>' containment reference.
 	 * @see #setVariable(Variable)
 	 * @see org.mdse.constructs.ConstructsPackage#getDeclareStatement_Variable()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Variable getVariable();
 
 	/**
-	 * Sets the value of the '{@link org.mdse.constructs.DeclareStatement#getVariable <em>Variable</em>}' reference.
+	 * Sets the value of the '{@link org.mdse.constructs.DeclareStatement#getVariable <em>Variable</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Variable</em>' reference.
+	 * @param value the new value of the '<em>Variable</em>' containment reference.
 	 * @see #getVariable()
 	 * @generated
 	 */

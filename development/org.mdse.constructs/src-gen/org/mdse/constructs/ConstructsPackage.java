@@ -5,6 +5,7 @@ package org.mdse.constructs;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -114,13 +115,22 @@ public interface ConstructsPackage extends EPackage {
 	int VARIABLE_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Get Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE___GET_VALUE = EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
 	 * The number of operations of the '<em>Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+	int VARIABLE_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.mdse.constructs.impl.IntegerVariableImpl <em>Integer Variable</em>}' class.
@@ -142,22 +152,22 @@ public interface ConstructsPackage extends EPackage {
 	int INTEGER_VARIABLE__NAME = VARIABLE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTEGER_VARIABLE__VALUE = VARIABLE_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Integer Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTEGER_VARIABLE_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 1;
+	int INTEGER_VARIABLE_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEGER_VARIABLE___GET_VALUE = VARIABLE___GET_VALUE;
 
 	/**
 	 * The number of operations of the '<em>Integer Variable</em>' class.
@@ -188,22 +198,22 @@ public interface ConstructsPackage extends EPackage {
 	int STRING_VARIABLE__NAME = VARIABLE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STRING_VARIABLE__VALUE = VARIABLE_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>String Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRING_VARIABLE_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 1;
+	int STRING_VARIABLE_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_VARIABLE___GET_VALUE = VARIABLE___GET_VALUE;
 
 	/**
 	 * The number of operations of the '<em>String Variable</em>' class.
@@ -234,22 +244,22 @@ public interface ConstructsPackage extends EPackage {
 	int BOOLEAN_VARIABLE__NAME = VARIABLE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BOOLEAN_VARIABLE__VALUE = VARIABLE_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Boolean Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN_VARIABLE_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 1;
+	int BOOLEAN_VARIABLE_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Get Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_VARIABLE___GET_VALUE = VARIABLE___GET_VALUE;
 
 	/**
 	 * The number of operations of the '<em>Boolean Variable</em>' class.
@@ -259,6 +269,52 @@ public interface ConstructsPackage extends EPackage {
 	 * @ordered
 	 */
 	int BOOLEAN_VARIABLE_OPERATION_COUNT = VARIABLE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link org.mdse.constructs.impl.BinaryExpressionImpl <em>Binary Expression</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mdse.constructs.impl.BinaryExpressionImpl
+	 * @see org.mdse.constructs.impl.ConstructsPackageImpl#getBinaryExpression()
+	 * @generated
+	 */
+	int BINARY_EXPRESSION = 11;
+
+	/**
+	 * The feature id for the '<em><b>Expression1</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINARY_EXPRESSION__EXPRESSION1 = EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Expression2</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINARY_EXPRESSION__EXPRESSION2 = EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Binary Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINARY_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Binary Expression</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINARY_EXPRESSION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.mdse.constructs.impl.ComparativeExpressionImpl <em>Comparative Expression</em>}' class.
@@ -271,13 +327,13 @@ public interface ConstructsPackage extends EPackage {
 	int COMPARATIVE_EXPRESSION = 5;
 
 	/**
-	 * The feature id for the '<em><b>Operator</b></em>' attribute.
+	 * The feature id for the '<em><b>Expression1</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPARATIVE_EXPRESSION__OPERATOR = EXPRESSION_FEATURE_COUNT + 0;
+	int COMPARATIVE_EXPRESSION__EXPRESSION1 = BINARY_EXPRESSION__EXPRESSION1;
 
 	/**
 	 * The feature id for the '<em><b>Expression2</b></em>' containment reference.
@@ -286,16 +342,16 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPARATIVE_EXPRESSION__EXPRESSION2 = EXPRESSION_FEATURE_COUNT + 1;
+	int COMPARATIVE_EXPRESSION__EXPRESSION2 = BINARY_EXPRESSION__EXPRESSION2;
 
 	/**
-	 * The feature id for the '<em><b>Expression1</b></em>' containment reference.
+	 * The feature id for the '<em><b>Operator</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPARATIVE_EXPRESSION__EXPRESSION1 = EXPRESSION_FEATURE_COUNT + 2;
+	int COMPARATIVE_EXPRESSION__OPERATOR = BINARY_EXPRESSION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Comparative Expression</em>' class.
@@ -304,7 +360,7 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPARATIVE_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
+	int COMPARATIVE_EXPRESSION_FEATURE_COUNT = BINARY_EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Comparative Expression</em>' class.
@@ -313,7 +369,7 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPARATIVE_EXPRESSION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+	int COMPARATIVE_EXPRESSION_OPERATION_COUNT = BINARY_EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.mdse.constructs.impl.ArithmeticExpressionImpl <em>Arithmetic Expression</em>}' class.
@@ -326,13 +382,13 @@ public interface ConstructsPackage extends EPackage {
 	int ARITHMETIC_EXPRESSION = 6;
 
 	/**
-	 * The feature id for the '<em><b>Operator</b></em>' attribute.
+	 * The feature id for the '<em><b>Expression1</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARITHMETIC_EXPRESSION__OPERATOR = EXPRESSION_FEATURE_COUNT + 0;
+	int ARITHMETIC_EXPRESSION__EXPRESSION1 = BINARY_EXPRESSION__EXPRESSION1;
 
 	/**
 	 * The feature id for the '<em><b>Expression2</b></em>' containment reference.
@@ -341,16 +397,16 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARITHMETIC_EXPRESSION__EXPRESSION2 = EXPRESSION_FEATURE_COUNT + 1;
+	int ARITHMETIC_EXPRESSION__EXPRESSION2 = BINARY_EXPRESSION__EXPRESSION2;
 
 	/**
-	 * The feature id for the '<em><b>Expression1</b></em>' containment reference.
+	 * The feature id for the '<em><b>Operator</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARITHMETIC_EXPRESSION__EXPRESSION1 = EXPRESSION_FEATURE_COUNT + 2;
+	int ARITHMETIC_EXPRESSION__OPERATOR = BINARY_EXPRESSION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Arithmetic Expression</em>' class.
@@ -359,7 +415,7 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARITHMETIC_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 3;
+	int ARITHMETIC_EXPRESSION_FEATURE_COUNT = BINARY_EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Arithmetic Expression</em>' class.
@@ -368,7 +424,7 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARITHMETIC_EXPRESSION_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+	int ARITHMETIC_EXPRESSION_OPERATION_COUNT = BINARY_EXPRESSION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.mdse.constructs.impl.StatementImpl <em>Statement</em>}' class.
@@ -418,22 +474,22 @@ public interface ConstructsPackage extends EPackage {
 	int IF_ELSE_STATEMENT__CONDITION = STATEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Statement2</b></em>' containment reference.
+	 * The feature id for the '<em><b>Else Statement</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IF_ELSE_STATEMENT__STATEMENT2 = STATEMENT_FEATURE_COUNT + 1;
+	int IF_ELSE_STATEMENT__ELSE_STATEMENT = STATEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Statement1</b></em>' containment reference.
+	 * The feature id for the '<em><b>If Statement</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int IF_ELSE_STATEMENT__STATEMENT1 = STATEMENT_FEATURE_COUNT + 2;
+	int IF_ELSE_STATEMENT__IF_STATEMENT = STATEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>If Else Statement</em>' class.
@@ -464,7 +520,7 @@ public interface ConstructsPackage extends EPackage {
 	int DECLARE_STATEMENT = 9;
 
 	/**
-	 * The feature id for the '<em><b>Variable</b></em>' reference.
+	 * The feature id for the '<em><b>Variable</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -535,7 +591,7 @@ public interface ConstructsPackage extends EPackage {
 	 * @see org.mdse.constructs.impl.ConstructsPackageImpl#getComparativeOperator()
 	 * @generated
 	 */
-	int COMPARATIVE_OPERATOR = 11;
+	int COMPARATIVE_OPERATOR = 12;
 
 	/**
 	 * The meta object id for the '{@link org.mdse.constructs.ArithmeticOperator <em>Arithmetic Operator</em>}' enum.
@@ -545,7 +601,7 @@ public interface ConstructsPackage extends EPackage {
 	 * @see org.mdse.constructs.impl.ConstructsPackageImpl#getArithmeticOperator()
 	 * @generated
 	 */
-	int ARITHMETIC_OPERATOR = 12;
+	int ARITHMETIC_OPERATOR = 13;
 
 	/**
 	 * Returns the meta object for class '{@link org.mdse.constructs.Expression <em>Expression</em>}'.
@@ -579,6 +635,16 @@ public interface ConstructsPackage extends EPackage {
 	EAttribute getVariable_Name();
 
 	/**
+	 * Returns the meta object for the '{@link org.mdse.constructs.Variable#getValue() <em>Get Value</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Value</em>' operation.
+	 * @see org.mdse.constructs.Variable#getValue()
+	 * @generated
+	 */
+	EOperation getVariable__GetValue();
+
+	/**
 	 * Returns the meta object for class '{@link org.mdse.constructs.IntegerVariable <em>Integer Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -587,17 +653,6 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getIntegerVariable();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.mdse.constructs.IntegerVariable#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see org.mdse.constructs.IntegerVariable#getValue()
-	 * @see #getIntegerVariable()
-	 * @generated
-	 */
-	EAttribute getIntegerVariable_Value();
 
 	/**
 	 * Returns the meta object for class '{@link org.mdse.constructs.StringVariable <em>String Variable</em>}'.
@@ -610,17 +665,6 @@ public interface ConstructsPackage extends EPackage {
 	EClass getStringVariable();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.mdse.constructs.StringVariable#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see org.mdse.constructs.StringVariable#getValue()
-	 * @see #getStringVariable()
-	 * @generated
-	 */
-	EAttribute getStringVariable_Value();
-
-	/**
 	 * Returns the meta object for class '{@link org.mdse.constructs.BooleanVariable <em>Boolean Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -629,17 +673,6 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getBooleanVariable();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.mdse.constructs.BooleanVariable#isValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see org.mdse.constructs.BooleanVariable#isValue()
-	 * @see #getBooleanVariable()
-	 * @generated
-	 */
-	EAttribute getBooleanVariable_Value();
 
 	/**
 	 * Returns the meta object for class '{@link org.mdse.constructs.ComparativeExpression <em>Comparative Expression</em>}'.
@@ -663,28 +696,6 @@ public interface ConstructsPackage extends EPackage {
 	EAttribute getComparativeExpression_Operator();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.mdse.constructs.ComparativeExpression#getExpression2 <em>Expression2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Expression2</em>'.
-	 * @see org.mdse.constructs.ComparativeExpression#getExpression2()
-	 * @see #getComparativeExpression()
-	 * @generated
-	 */
-	EReference getComparativeExpression_Expression2();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.mdse.constructs.ComparativeExpression#getExpression1 <em>Expression1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Expression1</em>'.
-	 * @see org.mdse.constructs.ComparativeExpression#getExpression1()
-	 * @see #getComparativeExpression()
-	 * @generated
-	 */
-	EReference getComparativeExpression_Expression1();
-
-	/**
 	 * Returns the meta object for class '{@link org.mdse.constructs.ArithmeticExpression <em>Arithmetic Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -704,28 +715,6 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getArithmeticExpression_Operator();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.mdse.constructs.ArithmeticExpression#getExpression2 <em>Expression2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Expression2</em>'.
-	 * @see org.mdse.constructs.ArithmeticExpression#getExpression2()
-	 * @see #getArithmeticExpression()
-	 * @generated
-	 */
-	EReference getArithmeticExpression_Expression2();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.mdse.constructs.ArithmeticExpression#getExpression1 <em>Expression1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Expression1</em>'.
-	 * @see org.mdse.constructs.ArithmeticExpression#getExpression1()
-	 * @see #getArithmeticExpression()
-	 * @generated
-	 */
-	EReference getArithmeticExpression_Expression1();
 
 	/**
 	 * Returns the meta object for class '{@link org.mdse.constructs.Statement <em>Statement</em>}'.
@@ -759,26 +748,26 @@ public interface ConstructsPackage extends EPackage {
 	EReference getIfElseStatement_Condition();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.mdse.constructs.IfElseStatement#getStatement2 <em>Statement2</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.mdse.constructs.IfElseStatement#getElseStatement <em>Else Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Statement2</em>'.
-	 * @see org.mdse.constructs.IfElseStatement#getStatement2()
+	 * @return the meta object for the containment reference '<em>Else Statement</em>'.
+	 * @see org.mdse.constructs.IfElseStatement#getElseStatement()
 	 * @see #getIfElseStatement()
 	 * @generated
 	 */
-	EReference getIfElseStatement_Statement2();
+	EReference getIfElseStatement_ElseStatement();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.mdse.constructs.IfElseStatement#getStatement1 <em>Statement1</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.mdse.constructs.IfElseStatement#getIfStatement <em>If Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Statement1</em>'.
-	 * @see org.mdse.constructs.IfElseStatement#getStatement1()
+	 * @return the meta object for the containment reference '<em>If Statement</em>'.
+	 * @see org.mdse.constructs.IfElseStatement#getIfStatement()
 	 * @see #getIfElseStatement()
 	 * @generated
 	 */
-	EReference getIfElseStatement_Statement1();
+	EReference getIfElseStatement_IfStatement();
 
 	/**
 	 * Returns the meta object for class '{@link org.mdse.constructs.DeclareStatement <em>Declare Statement</em>}'.
@@ -791,10 +780,10 @@ public interface ConstructsPackage extends EPackage {
 	EClass getDeclareStatement();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.mdse.constructs.DeclareStatement#getVariable <em>Variable</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.mdse.constructs.DeclareStatement#getVariable <em>Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Variable</em>'.
+	 * @return the meta object for the containment reference '<em>Variable</em>'.
 	 * @see org.mdse.constructs.DeclareStatement#getVariable()
 	 * @see #getDeclareStatement()
 	 * @generated
@@ -821,6 +810,38 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getReturnStatement_Expression();
+
+	/**
+	 * Returns the meta object for class '{@link org.mdse.constructs.BinaryExpression <em>Binary Expression</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Binary Expression</em>'.
+	 * @see org.mdse.constructs.BinaryExpression
+	 * @generated
+	 */
+	EClass getBinaryExpression();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.mdse.constructs.BinaryExpression#getExpression1 <em>Expression1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Expression1</em>'.
+	 * @see org.mdse.constructs.BinaryExpression#getExpression1()
+	 * @see #getBinaryExpression()
+	 * @generated
+	 */
+	EReference getBinaryExpression_Expression1();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.mdse.constructs.BinaryExpression#getExpression2 <em>Expression2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Expression2</em>'.
+	 * @see org.mdse.constructs.BinaryExpression#getExpression2()
+	 * @see #getBinaryExpression()
+	 * @generated
+	 */
+	EReference getBinaryExpression_Expression2();
 
 	/**
 	 * Returns the meta object for enum '{@link org.mdse.constructs.ComparativeOperator <em>Comparative Operator</em>}'.
@@ -894,6 +915,14 @@ public interface ConstructsPackage extends EPackage {
 		EAttribute VARIABLE__NAME = eINSTANCE.getVariable_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Get Value</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation VARIABLE___GET_VALUE = eINSTANCE.getVariable__GetValue();
+
+		/**
 		 * The meta object literal for the '{@link org.mdse.constructs.impl.IntegerVariableImpl <em>Integer Variable</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -902,14 +931,6 @@ public interface ConstructsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass INTEGER_VARIABLE = eINSTANCE.getIntegerVariable();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute INTEGER_VARIABLE__VALUE = eINSTANCE.getIntegerVariable_Value();
 
 		/**
 		 * The meta object literal for the '{@link org.mdse.constructs.impl.StringVariableImpl <em>String Variable</em>}' class.
@@ -922,14 +943,6 @@ public interface ConstructsPackage extends EPackage {
 		EClass STRING_VARIABLE = eINSTANCE.getStringVariable();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute STRING_VARIABLE__VALUE = eINSTANCE.getStringVariable_Value();
-
-		/**
 		 * The meta object literal for the '{@link org.mdse.constructs.impl.BooleanVariableImpl <em>Boolean Variable</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -938,14 +951,6 @@ public interface ConstructsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass BOOLEAN_VARIABLE = eINSTANCE.getBooleanVariable();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute BOOLEAN_VARIABLE__VALUE = eINSTANCE.getBooleanVariable_Value();
 
 		/**
 		 * The meta object literal for the '{@link org.mdse.constructs.impl.ComparativeExpressionImpl <em>Comparative Expression</em>}' class.
@@ -966,22 +971,6 @@ public interface ConstructsPackage extends EPackage {
 		EAttribute COMPARATIVE_EXPRESSION__OPERATOR = eINSTANCE.getComparativeExpression_Operator();
 
 		/**
-		 * The meta object literal for the '<em><b>Expression2</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMPARATIVE_EXPRESSION__EXPRESSION2 = eINSTANCE.getComparativeExpression_Expression2();
-
-		/**
-		 * The meta object literal for the '<em><b>Expression1</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMPARATIVE_EXPRESSION__EXPRESSION1 = eINSTANCE.getComparativeExpression_Expression1();
-
-		/**
 		 * The meta object literal for the '{@link org.mdse.constructs.impl.ArithmeticExpressionImpl <em>Arithmetic Expression</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -998,22 +987,6 @@ public interface ConstructsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ARITHMETIC_EXPRESSION__OPERATOR = eINSTANCE.getArithmeticExpression_Operator();
-
-		/**
-		 * The meta object literal for the '<em><b>Expression2</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ARITHMETIC_EXPRESSION__EXPRESSION2 = eINSTANCE.getArithmeticExpression_Expression2();
-
-		/**
-		 * The meta object literal for the '<em><b>Expression1</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ARITHMETIC_EXPRESSION__EXPRESSION1 = eINSTANCE.getArithmeticExpression_Expression1();
 
 		/**
 		 * The meta object literal for the '{@link org.mdse.constructs.impl.StatementImpl <em>Statement</em>}' class.
@@ -1044,20 +1017,20 @@ public interface ConstructsPackage extends EPackage {
 		EReference IF_ELSE_STATEMENT__CONDITION = eINSTANCE.getIfElseStatement_Condition();
 
 		/**
-		 * The meta object literal for the '<em><b>Statement2</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Else Statement</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference IF_ELSE_STATEMENT__STATEMENT2 = eINSTANCE.getIfElseStatement_Statement2();
+		EReference IF_ELSE_STATEMENT__ELSE_STATEMENT = eINSTANCE.getIfElseStatement_ElseStatement();
 
 		/**
-		 * The meta object literal for the '<em><b>Statement1</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>If Statement</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference IF_ELSE_STATEMENT__STATEMENT1 = eINSTANCE.getIfElseStatement_Statement1();
+		EReference IF_ELSE_STATEMENT__IF_STATEMENT = eINSTANCE.getIfElseStatement_IfStatement();
 
 		/**
 		 * The meta object literal for the '{@link org.mdse.constructs.impl.DeclareStatementImpl <em>Declare Statement</em>}' class.
@@ -1070,7 +1043,7 @@ public interface ConstructsPackage extends EPackage {
 		EClass DECLARE_STATEMENT = eINSTANCE.getDeclareStatement();
 
 		/**
-		 * The meta object literal for the '<em><b>Variable</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Variable</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1094,6 +1067,32 @@ public interface ConstructsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference RETURN_STATEMENT__EXPRESSION = eINSTANCE.getReturnStatement_Expression();
+
+		/**
+		 * The meta object literal for the '{@link org.mdse.constructs.impl.BinaryExpressionImpl <em>Binary Expression</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mdse.constructs.impl.BinaryExpressionImpl
+		 * @see org.mdse.constructs.impl.ConstructsPackageImpl#getBinaryExpression()
+		 * @generated
+		 */
+		EClass BINARY_EXPRESSION = eINSTANCE.getBinaryExpression();
+
+		/**
+		 * The meta object literal for the '<em><b>Expression1</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BINARY_EXPRESSION__EXPRESSION1 = eINSTANCE.getBinaryExpression_Expression1();
+
+		/**
+		 * The meta object literal for the '<em><b>Expression2</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BINARY_EXPRESSION__EXPRESSION2 = eINSTANCE.getBinaryExpression_Expression2();
 
 		/**
 		 * The meta object literal for the '{@link org.mdse.constructs.ComparativeOperator <em>Comparative Operator</em>}' enum.

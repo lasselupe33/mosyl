@@ -47,8 +47,8 @@ public class IfElseStatementItemProvider extends StatementItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addConditionPropertyDescriptor(object);
-			addStatement2PropertyDescriptor(object);
-			addStatement1PropertyDescriptor(object);
+			addElseStatementPropertyDescriptor(object);
+			addIfStatementPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -69,33 +69,34 @@ public class IfElseStatementItemProvider extends StatementItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Statement2 feature.
+	 * This adds a property descriptor for the Else Statement feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addStatement2PropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_IfElseStatement_statement2_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_IfElseStatement_statement2_feature",
-								"_UI_IfElseStatement_type"),
-						ConstructsPackage.Literals.IF_ELSE_STATEMENT__STATEMENT2, true, false, true, null, null, null));
+	protected void addElseStatementPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_IfElseStatement_elseStatement_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_IfElseStatement_elseStatement_feature",
+						"_UI_IfElseStatement_type"),
+				ConstructsPackage.Literals.IF_ELSE_STATEMENT__ELSE_STATEMENT, true, false, true, null, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Statement1 feature.
+	 * This adds a property descriptor for the If Statement feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addStatement1PropertyDescriptor(Object object) {
+	protected void addIfStatementPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_IfElseStatement_statement1_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_IfElseStatement_statement1_feature",
+						getResourceLocator(), getString("_UI_IfElseStatement_ifStatement_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_IfElseStatement_ifStatement_feature",
 								"_UI_IfElseStatement_type"),
-						ConstructsPackage.Literals.IF_ELSE_STATEMENT__STATEMENT1, true, false, true, null, null, null));
+						ConstructsPackage.Literals.IF_ELSE_STATEMENT__IF_STATEMENT, true, false, true, null, null,
+						null));
 	}
 
 	/**
@@ -111,8 +112,8 @@ public class IfElseStatementItemProvider extends StatementItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ConstructsPackage.Literals.IF_ELSE_STATEMENT__CONDITION);
-			childrenFeatures.add(ConstructsPackage.Literals.IF_ELSE_STATEMENT__STATEMENT2);
-			childrenFeatures.add(ConstructsPackage.Literals.IF_ELSE_STATEMENT__STATEMENT1);
+			childrenFeatures.add(ConstructsPackage.Literals.IF_ELSE_STATEMENT__ELSE_STATEMENT);
+			childrenFeatures.add(ConstructsPackage.Literals.IF_ELSE_STATEMENT__IF_STATEMENT);
 		}
 		return childrenFeatures;
 	}
@@ -175,8 +176,8 @@ public class IfElseStatementItemProvider extends StatementItemProvider {
 
 		switch (notification.getFeatureID(IfElseStatement.class)) {
 		case ConstructsPackage.IF_ELSE_STATEMENT__CONDITION:
-		case ConstructsPackage.IF_ELSE_STATEMENT__STATEMENT2:
-		case ConstructsPackage.IF_ELSE_STATEMENT__STATEMENT1:
+		case ConstructsPackage.IF_ELSE_STATEMENT__ELSE_STATEMENT:
+		case ConstructsPackage.IF_ELSE_STATEMENT__IF_STATEMENT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -209,22 +210,22 @@ public class IfElseStatementItemProvider extends StatementItemProvider {
 		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__CONDITION,
 				ConstructsFactory.eINSTANCE.createArithmeticExpression()));
 
-		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__STATEMENT2,
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__ELSE_STATEMENT,
 				ConstructsFactory.eINSTANCE.createIfElseStatement()));
 
-		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__STATEMENT2,
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__ELSE_STATEMENT,
 				ConstructsFactory.eINSTANCE.createDeclareStatement()));
 
-		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__STATEMENT2,
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__ELSE_STATEMENT,
 				ConstructsFactory.eINSTANCE.createReturnStatement()));
 
-		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__STATEMENT1,
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__IF_STATEMENT,
 				ConstructsFactory.eINSTANCE.createIfElseStatement()));
 
-		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__STATEMENT1,
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__IF_STATEMENT,
 				ConstructsFactory.eINSTANCE.createDeclareStatement()));
 
-		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__STATEMENT1,
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__IF_STATEMENT,
 				ConstructsFactory.eINSTANCE.createReturnStatement()));
 	}
 
@@ -239,8 +240,8 @@ public class IfElseStatementItemProvider extends StatementItemProvider {
 		Object childFeature = feature;
 		Object childObject = child;
 
-		boolean qualify = childFeature == ConstructsPackage.Literals.IF_ELSE_STATEMENT__STATEMENT2
-				|| childFeature == ConstructsPackage.Literals.IF_ELSE_STATEMENT__STATEMENT1;
+		boolean qualify = childFeature == ConstructsPackage.Literals.IF_ELSE_STATEMENT__ELSE_STATEMENT
+				|| childFeature == ConstructsPackage.Literals.IF_ELSE_STATEMENT__IF_STATEMENT;
 
 		if (qualify) {
 			return getString("_UI_CreateChild_text2",

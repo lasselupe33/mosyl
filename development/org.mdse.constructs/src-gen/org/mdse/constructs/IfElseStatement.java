@@ -12,8 +12,8 @@ package org.mdse.constructs;
  * </p>
  * <ul>
  *   <li>{@link org.mdse.constructs.IfElseStatement#getCondition <em>Condition</em>}</li>
- *   <li>{@link org.mdse.constructs.IfElseStatement#getStatement2 <em>Statement2</em>}</li>
- *   <li>{@link org.mdse.constructs.IfElseStatement#getStatement1 <em>Statement1</em>}</li>
+ *   <li>{@link org.mdse.constructs.IfElseStatement#getElseStatement <em>Else Statement</em>}</li>
+ *   <li>{@link org.mdse.constructs.IfElseStatement#getIfStatement <em>If Statement</em>}</li>
  * </ul>
  *
  * @see org.mdse.constructs.ConstructsPackage#getIfElseStatement()
@@ -44,47 +44,47 @@ public interface IfElseStatement extends Statement {
 	void setCondition(Expression value);
 
 	/**
-	 * Returns the value of the '<em><b>Statement2</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Else Statement</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Statement2</em>' containment reference.
-	 * @see #setStatement2(Statement)
-	 * @see org.mdse.constructs.ConstructsPackage#getIfElseStatement_Statement2()
+	 * @return the value of the '<em>Else Statement</em>' containment reference.
+	 * @see #setElseStatement(Statement)
+	 * @see org.mdse.constructs.ConstructsPackage#getIfElseStatement_ElseStatement()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	Statement getStatement2();
+	Statement getElseStatement();
 
 	/**
-	 * Sets the value of the '{@link org.mdse.constructs.IfElseStatement#getStatement2 <em>Statement2</em>}' containment reference.
+	 * Sets the value of the '{@link org.mdse.constructs.IfElseStatement#getElseStatement <em>Else Statement</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Statement2</em>' containment reference.
-	 * @see #getStatement2()
+	 * @param value the new value of the '<em>Else Statement</em>' containment reference.
+	 * @see #getElseStatement()
 	 * @generated
 	 */
-	void setStatement2(Statement value);
+	void setElseStatement(Statement value);
 
 	/**
-	 * Returns the value of the '<em><b>Statement1</b></em>' containment reference.
+	 * Returns the value of the '<em><b>If Statement</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Statement1</em>' containment reference.
-	 * @see #setStatement1(Statement)
-	 * @see org.mdse.constructs.ConstructsPackage#getIfElseStatement_Statement1()
+	 * @return the value of the '<em>If Statement</em>' containment reference.
+	 * @see #setIfStatement(Statement)
+	 * @see org.mdse.constructs.ConstructsPackage#getIfElseStatement_IfStatement()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	Statement getStatement1();
+	Statement getIfStatement();
 
 	/**
-	 * Sets the value of the '{@link org.mdse.constructs.IfElseStatement#getStatement1 <em>Statement1</em>}' containment reference.
+	 * Sets the value of the '{@link org.mdse.constructs.IfElseStatement#getIfStatement <em>If Statement</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Statement1</em>' containment reference.
-	 * @see #getStatement1()
+	 * @param value the new value of the '<em>If Statement</em>' containment reference.
+	 * @see #getIfStatement()
 	 * @generated
 	 */
-	void setStatement1(Statement value);
+	void setIfStatement(Statement value);
 
 } // IfElseStatement

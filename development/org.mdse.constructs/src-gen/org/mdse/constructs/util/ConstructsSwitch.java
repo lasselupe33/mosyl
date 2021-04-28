@@ -119,6 +119,8 @@ public class ConstructsSwitch<T> extends Switch<T> {
 			ComparativeExpression comparativeExpression = (ComparativeExpression) theEObject;
 			T result = caseComparativeExpression(comparativeExpression);
 			if (result == null)
+				result = caseBinaryExpression(comparativeExpression);
+			if (result == null)
 				result = caseExpression(comparativeExpression);
 			if (result == null)
 				result = defaultCase(theEObject);
@@ -127,6 +129,8 @@ public class ConstructsSwitch<T> extends Switch<T> {
 		case ConstructsPackage.ARITHMETIC_EXPRESSION: {
 			ArithmeticExpression arithmeticExpression = (ArithmeticExpression) theEObject;
 			T result = caseArithmeticExpression(arithmeticExpression);
+			if (result == null)
+				result = caseBinaryExpression(arithmeticExpression);
 			if (result == null)
 				result = caseExpression(arithmeticExpression);
 			if (result == null)
@@ -163,6 +167,15 @@ public class ConstructsSwitch<T> extends Switch<T> {
 			T result = caseReturnStatement(returnStatement);
 			if (result == null)
 				result = caseStatement(returnStatement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ConstructsPackage.BINARY_EXPRESSION: {
+			BinaryExpression binaryExpression = (BinaryExpression) theEObject;
+			T result = caseBinaryExpression(binaryExpression);
+			if (result == null)
+				result = caseExpression(binaryExpression);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -334,6 +347,21 @@ public class ConstructsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseReturnStatement(ReturnStatement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Binary Expression</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Binary Expression</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBinaryExpression(BinaryExpression object) {
 		return null;
 	}
 

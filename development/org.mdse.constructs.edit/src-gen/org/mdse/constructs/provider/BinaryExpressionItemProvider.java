@@ -9,28 +9,28 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import org.mdse.constructs.BinaryExpression;
 import org.mdse.constructs.ConstructsFactory;
 import org.mdse.constructs.ConstructsPackage;
-import org.mdse.constructs.DeclareStatement;
 
 /**
- * This is the item provider adapter for a {@link org.mdse.constructs.DeclareStatement} object.
+ * This is the item provider adapter for a {@link org.mdse.constructs.BinaryExpression} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class DeclareStatementItemProvider extends StatementItemProvider {
+public class BinaryExpressionItemProvider extends ExpressionItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DeclareStatementItemProvider(AdapterFactory adapterFactory) {
+	public BinaryExpressionItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -45,24 +45,8 @@ public class DeclareStatementItemProvider extends StatementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addVariablePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Variable feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addVariablePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_DeclareStatement_variable_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_DeclareStatement_variable_feature",
-								"_UI_DeclareStatement_type"),
-						ConstructsPackage.Literals.DECLARE_STATEMENT__VARIABLE, true, false, true, null, null, null));
 	}
 
 	/**
@@ -77,7 +61,8 @@ public class DeclareStatementItemProvider extends StatementItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ConstructsPackage.Literals.DECLARE_STATEMENT__VARIABLE);
+			childrenFeatures.add(ConstructsPackage.Literals.BINARY_EXPRESSION__EXPRESSION1);
+			childrenFeatures.add(ConstructsPackage.Literals.BINARY_EXPRESSION__EXPRESSION2);
 		}
 		return childrenFeatures;
 	}
@@ -96,14 +81,14 @@ public class DeclareStatementItemProvider extends StatementItemProvider {
 	}
 
 	/**
-	 * This returns DeclareStatement.gif.
+	 * This returns BinaryExpression.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/DeclareStatement"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/BinaryExpression"));
 	}
 
 	/**
@@ -124,7 +109,7 @@ public class DeclareStatementItemProvider extends StatementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_DeclareStatement_type");
+		return getString("_UI_BinaryExpression_type");
 	}
 
 	/**
@@ -138,8 +123,9 @@ public class DeclareStatementItemProvider extends StatementItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(DeclareStatement.class)) {
-		case ConstructsPackage.DECLARE_STATEMENT__VARIABLE:
+		switch (notification.getFeatureID(BinaryExpression.class)) {
+		case ConstructsPackage.BINARY_EXPRESSION__EXPRESSION1:
+		case ConstructsPackage.BINARY_EXPRESSION__EXPRESSION2:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -157,14 +143,56 @@ public class DeclareStatementItemProvider extends StatementItemProvider {
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.DECLARE_STATEMENT__VARIABLE,
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.BINARY_EXPRESSION__EXPRESSION1,
 				ConstructsFactory.eINSTANCE.createIntegerVariable()));
 
-		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.DECLARE_STATEMENT__VARIABLE,
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.BINARY_EXPRESSION__EXPRESSION1,
 				ConstructsFactory.eINSTANCE.createStringVariable()));
 
-		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.DECLARE_STATEMENT__VARIABLE,
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.BINARY_EXPRESSION__EXPRESSION1,
 				ConstructsFactory.eINSTANCE.createBooleanVariable()));
+
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.BINARY_EXPRESSION__EXPRESSION1,
+				ConstructsFactory.eINSTANCE.createComparativeExpression()));
+
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.BINARY_EXPRESSION__EXPRESSION1,
+				ConstructsFactory.eINSTANCE.createArithmeticExpression()));
+
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.BINARY_EXPRESSION__EXPRESSION2,
+				ConstructsFactory.eINSTANCE.createIntegerVariable()));
+
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.BINARY_EXPRESSION__EXPRESSION2,
+				ConstructsFactory.eINSTANCE.createStringVariable()));
+
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.BINARY_EXPRESSION__EXPRESSION2,
+				ConstructsFactory.eINSTANCE.createBooleanVariable()));
+
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.BINARY_EXPRESSION__EXPRESSION2,
+				ConstructsFactory.eINSTANCE.createComparativeExpression()));
+
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.BINARY_EXPRESSION__EXPRESSION2,
+				ConstructsFactory.eINSTANCE.createArithmeticExpression()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify = childFeature == ConstructsPackage.Literals.BINARY_EXPRESSION__EXPRESSION1
+				|| childFeature == ConstructsPackage.Literals.BINARY_EXPRESSION__EXPRESSION2;
+
+		if (qualify) {
+			return getString("_UI_CreateChild_text2",
+					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

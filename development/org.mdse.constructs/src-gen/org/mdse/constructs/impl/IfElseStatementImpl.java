@@ -24,8 +24,8 @@ import org.mdse.constructs.Statement;
  * </p>
  * <ul>
  *   <li>{@link org.mdse.constructs.impl.IfElseStatementImpl#getCondition <em>Condition</em>}</li>
- *   <li>{@link org.mdse.constructs.impl.IfElseStatementImpl#getStatement2 <em>Statement2</em>}</li>
- *   <li>{@link org.mdse.constructs.impl.IfElseStatementImpl#getStatement1 <em>Statement1</em>}</li>
+ *   <li>{@link org.mdse.constructs.impl.IfElseStatementImpl#getElseStatement <em>Else Statement</em>}</li>
+ *   <li>{@link org.mdse.constructs.impl.IfElseStatementImpl#getIfStatement <em>If Statement</em>}</li>
  * </ul>
  *
  * @generated
@@ -42,24 +42,24 @@ public class IfElseStatementImpl extends StatementImpl implements IfElseStatemen
 	protected Expression condition;
 
 	/**
-	 * The cached value of the '{@link #getStatement2() <em>Statement2</em>}' containment reference.
+	 * The cached value of the '{@link #getElseStatement() <em>Else Statement</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getStatement2()
+	 * @see #getElseStatement()
 	 * @generated
 	 * @ordered
 	 */
-	protected Statement statement2;
+	protected Statement elseStatement;
 
 	/**
-	 * The cached value of the '{@link #getStatement1() <em>Statement1</em>}' containment reference.
+	 * The cached value of the '{@link #getIfStatement() <em>If Statement</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getStatement1()
+	 * @see #getIfStatement()
 	 * @generated
 	 * @ordered
 	 */
-	protected Statement statement1;
+	protected Statement ifStatement;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -135,8 +135,8 @@ public class IfElseStatementImpl extends StatementImpl implements IfElseStatemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Statement getStatement2() {
-		return statement2;
+	public Statement getElseStatement() {
+		return elseStatement;
 	}
 
 	/**
@@ -144,12 +144,12 @@ public class IfElseStatementImpl extends StatementImpl implements IfElseStatemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetStatement2(Statement newStatement2, NotificationChain msgs) {
-		Statement oldStatement2 = statement2;
-		statement2 = newStatement2;
+	public NotificationChain basicSetElseStatement(Statement newElseStatement, NotificationChain msgs) {
+		Statement oldElseStatement = elseStatement;
+		elseStatement = newElseStatement;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					ConstructsPackage.IF_ELSE_STATEMENT__STATEMENT2, oldStatement2, newStatement2);
+					ConstructsPackage.IF_ELSE_STATEMENT__ELSE_STATEMENT, oldElseStatement, newElseStatement);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -163,21 +163,21 @@ public class IfElseStatementImpl extends StatementImpl implements IfElseStatemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStatement2(Statement newStatement2) {
-		if (newStatement2 != statement2) {
+	public void setElseStatement(Statement newElseStatement) {
+		if (newElseStatement != elseStatement) {
 			NotificationChain msgs = null;
-			if (statement2 != null)
-				msgs = ((InternalEObject) statement2).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - ConstructsPackage.IF_ELSE_STATEMENT__STATEMENT2, null, msgs);
-			if (newStatement2 != null)
-				msgs = ((InternalEObject) newStatement2).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - ConstructsPackage.IF_ELSE_STATEMENT__STATEMENT2, null, msgs);
-			msgs = basicSetStatement2(newStatement2, msgs);
+			if (elseStatement != null)
+				msgs = ((InternalEObject) elseStatement).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - ConstructsPackage.IF_ELSE_STATEMENT__ELSE_STATEMENT, null, msgs);
+			if (newElseStatement != null)
+				msgs = ((InternalEObject) newElseStatement).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - ConstructsPackage.IF_ELSE_STATEMENT__ELSE_STATEMENT, null, msgs);
+			msgs = basicSetElseStatement(newElseStatement, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ConstructsPackage.IF_ELSE_STATEMENT__STATEMENT2,
-					newStatement2, newStatement2));
+			eNotify(new ENotificationImpl(this, Notification.SET, ConstructsPackage.IF_ELSE_STATEMENT__ELSE_STATEMENT,
+					newElseStatement, newElseStatement));
 	}
 
 	/**
@@ -185,8 +185,8 @@ public class IfElseStatementImpl extends StatementImpl implements IfElseStatemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Statement getStatement1() {
-		return statement1;
+	public Statement getIfStatement() {
+		return ifStatement;
 	}
 
 	/**
@@ -194,12 +194,12 @@ public class IfElseStatementImpl extends StatementImpl implements IfElseStatemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetStatement1(Statement newStatement1, NotificationChain msgs) {
-		Statement oldStatement1 = statement1;
-		statement1 = newStatement1;
+	public NotificationChain basicSetIfStatement(Statement newIfStatement, NotificationChain msgs) {
+		Statement oldIfStatement = ifStatement;
+		ifStatement = newIfStatement;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					ConstructsPackage.IF_ELSE_STATEMENT__STATEMENT1, oldStatement1, newStatement1);
+					ConstructsPackage.IF_ELSE_STATEMENT__IF_STATEMENT, oldIfStatement, newIfStatement);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -213,21 +213,21 @@ public class IfElseStatementImpl extends StatementImpl implements IfElseStatemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStatement1(Statement newStatement1) {
-		if (newStatement1 != statement1) {
+	public void setIfStatement(Statement newIfStatement) {
+		if (newIfStatement != ifStatement) {
 			NotificationChain msgs = null;
-			if (statement1 != null)
-				msgs = ((InternalEObject) statement1).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - ConstructsPackage.IF_ELSE_STATEMENT__STATEMENT1, null, msgs);
-			if (newStatement1 != null)
-				msgs = ((InternalEObject) newStatement1).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - ConstructsPackage.IF_ELSE_STATEMENT__STATEMENT1, null, msgs);
-			msgs = basicSetStatement1(newStatement1, msgs);
+			if (ifStatement != null)
+				msgs = ((InternalEObject) ifStatement).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - ConstructsPackage.IF_ELSE_STATEMENT__IF_STATEMENT, null, msgs);
+			if (newIfStatement != null)
+				msgs = ((InternalEObject) newIfStatement).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - ConstructsPackage.IF_ELSE_STATEMENT__IF_STATEMENT, null, msgs);
+			msgs = basicSetIfStatement(newIfStatement, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ConstructsPackage.IF_ELSE_STATEMENT__STATEMENT1,
-					newStatement1, newStatement1));
+			eNotify(new ENotificationImpl(this, Notification.SET, ConstructsPackage.IF_ELSE_STATEMENT__IF_STATEMENT,
+					newIfStatement, newIfStatement));
 	}
 
 	/**
@@ -240,10 +240,10 @@ public class IfElseStatementImpl extends StatementImpl implements IfElseStatemen
 		switch (featureID) {
 		case ConstructsPackage.IF_ELSE_STATEMENT__CONDITION:
 			return basicSetCondition(null, msgs);
-		case ConstructsPackage.IF_ELSE_STATEMENT__STATEMENT2:
-			return basicSetStatement2(null, msgs);
-		case ConstructsPackage.IF_ELSE_STATEMENT__STATEMENT1:
-			return basicSetStatement1(null, msgs);
+		case ConstructsPackage.IF_ELSE_STATEMENT__ELSE_STATEMENT:
+			return basicSetElseStatement(null, msgs);
+		case ConstructsPackage.IF_ELSE_STATEMENT__IF_STATEMENT:
+			return basicSetIfStatement(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -258,10 +258,10 @@ public class IfElseStatementImpl extends StatementImpl implements IfElseStatemen
 		switch (featureID) {
 		case ConstructsPackage.IF_ELSE_STATEMENT__CONDITION:
 			return getCondition();
-		case ConstructsPackage.IF_ELSE_STATEMENT__STATEMENT2:
-			return getStatement2();
-		case ConstructsPackage.IF_ELSE_STATEMENT__STATEMENT1:
-			return getStatement1();
+		case ConstructsPackage.IF_ELSE_STATEMENT__ELSE_STATEMENT:
+			return getElseStatement();
+		case ConstructsPackage.IF_ELSE_STATEMENT__IF_STATEMENT:
+			return getIfStatement();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -277,11 +277,11 @@ public class IfElseStatementImpl extends StatementImpl implements IfElseStatemen
 		case ConstructsPackage.IF_ELSE_STATEMENT__CONDITION:
 			setCondition((Expression) newValue);
 			return;
-		case ConstructsPackage.IF_ELSE_STATEMENT__STATEMENT2:
-			setStatement2((Statement) newValue);
+		case ConstructsPackage.IF_ELSE_STATEMENT__ELSE_STATEMENT:
+			setElseStatement((Statement) newValue);
 			return;
-		case ConstructsPackage.IF_ELSE_STATEMENT__STATEMENT1:
-			setStatement1((Statement) newValue);
+		case ConstructsPackage.IF_ELSE_STATEMENT__IF_STATEMENT:
+			setIfStatement((Statement) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -298,11 +298,11 @@ public class IfElseStatementImpl extends StatementImpl implements IfElseStatemen
 		case ConstructsPackage.IF_ELSE_STATEMENT__CONDITION:
 			setCondition((Expression) null);
 			return;
-		case ConstructsPackage.IF_ELSE_STATEMENT__STATEMENT2:
-			setStatement2((Statement) null);
+		case ConstructsPackage.IF_ELSE_STATEMENT__ELSE_STATEMENT:
+			setElseStatement((Statement) null);
 			return;
-		case ConstructsPackage.IF_ELSE_STATEMENT__STATEMENT1:
-			setStatement1((Statement) null);
+		case ConstructsPackage.IF_ELSE_STATEMENT__IF_STATEMENT:
+			setIfStatement((Statement) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -318,10 +318,10 @@ public class IfElseStatementImpl extends StatementImpl implements IfElseStatemen
 		switch (featureID) {
 		case ConstructsPackage.IF_ELSE_STATEMENT__CONDITION:
 			return condition != null;
-		case ConstructsPackage.IF_ELSE_STATEMENT__STATEMENT2:
-			return statement2 != null;
-		case ConstructsPackage.IF_ELSE_STATEMENT__STATEMENT1:
-			return statement1 != null;
+		case ConstructsPackage.IF_ELSE_STATEMENT__ELSE_STATEMENT:
+			return elseStatement != null;
+		case ConstructsPackage.IF_ELSE_STATEMENT__IF_STATEMENT:
+			return ifStatement != null;
 		}
 		return super.eIsSet(featureID);
 	}
