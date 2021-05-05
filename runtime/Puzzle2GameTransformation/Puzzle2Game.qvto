@@ -13,25 +13,22 @@ mapping MMPuzzle::Puzzle :: Puzzle2Game() : MMGame::Game {
 	description := self.description;
 	tests := self.tests;
 	
-	if (self.inputs->size() > 0) {
-		var rest = self.inputs->asSequence()->subSequence(2, self.inputs->size());
-		entrypoint := self.inputs->first().map
-			Input2Entrypoint(rest);
+	if (self.variables->size() > 0) {	
+		entrypoint := self.variables.map Inputs2Entrypoint();
 	}
+	
+	// if (self.inputs->size() > 0) {
+	//	var rest = self.inputs->asSequence()->subSequence(2, self.inputs->size());
+	//	entrypoint := self.inputs->first().map
+	//		Input2Entrypoint(rest);
+	//}
 	
 }
 
-mapping MMPuzzle::Input :: Input2Entrypoint( remain : Sequence(Input) ) : MMGame::Entrypoint {
-	input := self.map
-		Input2UsedInput(remain)
+mapping MMPuzzle::Inputs :: Inputs2Entrypoint() : MMGame::Entrypoint {
+	inputs := self.map Inputs2GameInputs();
 }
 
-mapping MMPuzzle::Input :: Input2UsedInput(remain : Sequence(Input) ) : MMGame::UsedInput {
-	input := self;
-
-	var rest = remain->subSequence(2, remain->size());
-	if (remain->first() != null) {
-		nextInput := remain->first().map
-			Input2UsedInput(rest)
-	}
+mapping MMPuzzle::Inputs :: Inputs2GameInputs() : MMGame::GameInputs {
+	inputs := self;
 }

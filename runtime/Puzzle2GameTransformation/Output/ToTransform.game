@@ -1,33 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<game:Game xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:constructs="http://org.mdse/constructs" xmlns:game="http://org.mdse/game" name="A Puzzle" description="With a nice description">
+<game:Game xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:constructs="http://org.mdse/constructs" xmlns:game="http://org.mdse/game">
   <entrypoint>
-    <input>
-      <input>
+    <inputs>
+      <inputs>
         <declareStatement>
-          <variable xsi:type="constructs:IntegerVariable" name="firstInput" value="23"/>
+          <variable xsi:type="constructs:BooleanVariable" name="a"/>
         </declareStatement>
-      </input>
-      <nextInput>
-        <input>
-          <declareStatement>
-            <variable xsi:type="constructs:StringVariable" name="Test" value="test"/>
-          </declareStatement>
-        </input>
-        <nextInput>
-          <input>
-            <declareStatement>
-              <variable xsi:type="constructs:StringVariable" name="Sad?" value=":(("/>
-            </declareStatement>
-          </input>
-        </nextInput>
-      </nextInput>
-    </input>
+        <declareStatement>
+          <variable xsi:type="constructs:StringVariable" name="b" value="What"/>
+        </declareStatement>
+      </inputs>
+    </inputs>
   </entrypoint>
-  <tests failedMessage="Something went wrong">
-    <expected xsi:type="constructs:BooleanVariable" name="Expected" value="true"/>
+  <tests failedMessage="Some message">
+    <expected xsi:type="constructs:IntergerLiteral" value="2"/>
     <inputs>
       <declareStatement>
-        <variable xsi:type="constructs:StringVariable" name="Sad?" value="Overwritten"/>
+        <variable xsi:type="constructs:IntegerVariable" name="a" value="2"/>
+      </declareStatement>
+      <declareStatement>
+        <variable xsi:type="constructs:StringVariable" name="b" value="Hello"/>
       </declareStatement>
     </inputs>
   </tests>

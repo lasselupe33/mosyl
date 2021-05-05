@@ -5,8 +5,7 @@ package org.mdse.puzzle;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
-
-import org.mdse.constructs.DeclareStatement;
+import org.mdse.constructs.Variable;
 
 /**
  * <!-- begin-user-doc -->
@@ -17,7 +16,7 @@ import org.mdse.constructs.DeclareStatement;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.mdse.puzzle.Inputs#getDeclareStatement <em>Declare Statement</em>}</li>
+ *   <li>{@link org.mdse.puzzle.Inputs#getVariables <em>Variables</em>}</li>
  * </ul>
  *
  * @see org.mdse.puzzle.PuzzlePackage#getInputs()
@@ -26,15 +25,15 @@ import org.mdse.constructs.DeclareStatement;
  */
 public interface Inputs extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Declare Statement</b></em>' containment reference list.
-	 * The list contents are of type {@link org.mdse.constructs.DeclareStatement}.
+	 * Returns the value of the '<em><b>Variables</b></em>' containment reference list.
+	 * The list contents are of type {@link org.mdse.constructs.Variable}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Declare Statement</em>' containment reference list.
-	 * @see org.mdse.puzzle.PuzzlePackage#getInputs_DeclareStatement()
+	 * @return the value of the '<em>Variables</em>' containment reference list.
+	 * @see org.mdse.puzzle.PuzzlePackage#getInputs_Variables()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<DeclareStatement> getDeclareStatement();
+	EList<Variable> getVariables();
 
 } // Inputs

@@ -121,7 +121,7 @@ public class PuzzleItemProvider extends ItemProviderAdapter implements IEditingD
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(PuzzlePackage.Literals.PUZZLE__TESTS);
-			childrenFeatures.add(PuzzlePackage.Literals.PUZZLE__VARIABLES);
+			childrenFeatures.add(PuzzlePackage.Literals.PUZZLE__INPUTS);
 		}
 		return childrenFeatures;
 	}
@@ -190,7 +190,7 @@ public class PuzzleItemProvider extends ItemProviderAdapter implements IEditingD
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case PuzzlePackage.PUZZLE__TESTS:
-		case PuzzlePackage.PUZZLE__VARIABLES:
+		case PuzzlePackage.PUZZLE__INPUTS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -212,7 +212,7 @@ public class PuzzleItemProvider extends ItemProviderAdapter implements IEditingD
 				createChildParameter(PuzzlePackage.Literals.PUZZLE__TESTS, PuzzleFactory.eINSTANCE.createUnitTest()));
 
 		newChildDescriptors.add(
-				createChildParameter(PuzzlePackage.Literals.PUZZLE__VARIABLES, PuzzleFactory.eINSTANCE.createInputs()));
+				createChildParameter(PuzzlePackage.Literals.PUZZLE__INPUTS, PuzzleFactory.eINSTANCE.createInputs()));
 	}
 
 	/**

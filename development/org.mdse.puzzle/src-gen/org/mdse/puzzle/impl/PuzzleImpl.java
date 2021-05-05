@@ -34,7 +34,7 @@ import org.mdse.puzzle.UnitTest;
  *   <li>{@link org.mdse.puzzle.impl.PuzzleImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.mdse.puzzle.impl.PuzzleImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.mdse.puzzle.impl.PuzzleImpl#getTests <em>Tests</em>}</li>
- *   <li>{@link org.mdse.puzzle.impl.PuzzleImpl#getVariables <em>Variables</em>}</li>
+ *   <li>{@link org.mdse.puzzle.impl.PuzzleImpl#getInputs <em>Inputs</em>}</li>
  * </ul>
  *
  * @generated
@@ -91,14 +91,14 @@ public class PuzzleImpl extends MinimalEObjectImpl.Container implements Puzzle {
 	protected EList<UnitTest> tests;
 
 	/**
-	 * The cached value of the '{@link #getVariables() <em>Variables</em>}' containment reference.
+	 * The cached value of the '{@link #getInputs() <em>Inputs</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVariables()
+	 * @see #getInputs()
 	 * @generated
 	 * @ordered
 	 */
-	protected Inputs variables;
+	protected Inputs inputs;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -179,8 +179,8 @@ public class PuzzleImpl extends MinimalEObjectImpl.Container implements Puzzle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Inputs getVariables() {
-		return variables;
+	public Inputs getInputs() {
+		return inputs;
 	}
 
 	/**
@@ -188,12 +188,12 @@ public class PuzzleImpl extends MinimalEObjectImpl.Container implements Puzzle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetVariables(Inputs newVariables, NotificationChain msgs) {
-		Inputs oldVariables = variables;
-		variables = newVariables;
+	public NotificationChain basicSetInputs(Inputs newInputs, NotificationChain msgs) {
+		Inputs oldInputs = inputs;
+		inputs = newInputs;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					PuzzlePackage.PUZZLE__VARIABLES, oldVariables, newVariables);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PuzzlePackage.PUZZLE__INPUTS,
+					oldInputs, newInputs);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -207,21 +207,20 @@ public class PuzzleImpl extends MinimalEObjectImpl.Container implements Puzzle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVariables(Inputs newVariables) {
-		if (newVariables != variables) {
+	public void setInputs(Inputs newInputs) {
+		if (newInputs != inputs) {
 			NotificationChain msgs = null;
-			if (variables != null)
-				msgs = ((InternalEObject) variables).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - PuzzlePackage.PUZZLE__VARIABLES, null, msgs);
-			if (newVariables != null)
-				msgs = ((InternalEObject) newVariables).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - PuzzlePackage.PUZZLE__VARIABLES, null, msgs);
-			msgs = basicSetVariables(newVariables, msgs);
+			if (inputs != null)
+				msgs = ((InternalEObject) inputs).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - PuzzlePackage.PUZZLE__INPUTS, null, msgs);
+			if (newInputs != null)
+				msgs = ((InternalEObject) newInputs).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - PuzzlePackage.PUZZLE__INPUTS, null, msgs);
+			msgs = basicSetInputs(newInputs, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PuzzlePackage.PUZZLE__VARIABLES, newVariables,
-					newVariables));
+			eNotify(new ENotificationImpl(this, Notification.SET, PuzzlePackage.PUZZLE__INPUTS, newInputs, newInputs));
 	}
 
 	/**
@@ -234,8 +233,8 @@ public class PuzzleImpl extends MinimalEObjectImpl.Container implements Puzzle {
 		switch (featureID) {
 		case PuzzlePackage.PUZZLE__TESTS:
 			return ((InternalEList<?>) getTests()).basicRemove(otherEnd, msgs);
-		case PuzzlePackage.PUZZLE__VARIABLES:
-			return basicSetVariables(null, msgs);
+		case PuzzlePackage.PUZZLE__INPUTS:
+			return basicSetInputs(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -254,8 +253,8 @@ public class PuzzleImpl extends MinimalEObjectImpl.Container implements Puzzle {
 			return getDescription();
 		case PuzzlePackage.PUZZLE__TESTS:
 			return getTests();
-		case PuzzlePackage.PUZZLE__VARIABLES:
-			return getVariables();
+		case PuzzlePackage.PUZZLE__INPUTS:
+			return getInputs();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -279,8 +278,8 @@ public class PuzzleImpl extends MinimalEObjectImpl.Container implements Puzzle {
 			getTests().clear();
 			getTests().addAll((Collection<? extends UnitTest>) newValue);
 			return;
-		case PuzzlePackage.PUZZLE__VARIABLES:
-			setVariables((Inputs) newValue);
+		case PuzzlePackage.PUZZLE__INPUTS:
+			setInputs((Inputs) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -303,8 +302,8 @@ public class PuzzleImpl extends MinimalEObjectImpl.Container implements Puzzle {
 		case PuzzlePackage.PUZZLE__TESTS:
 			getTests().clear();
 			return;
-		case PuzzlePackage.PUZZLE__VARIABLES:
-			setVariables((Inputs) null);
+		case PuzzlePackage.PUZZLE__INPUTS:
+			setInputs((Inputs) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -324,8 +323,8 @@ public class PuzzleImpl extends MinimalEObjectImpl.Container implements Puzzle {
 			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		case PuzzlePackage.PUZZLE__TESTS:
 			return tests != null && !tests.isEmpty();
-		case PuzzlePackage.PUZZLE__VARIABLES:
-			return variables != null;
+		case PuzzlePackage.PUZZLE__INPUTS:
+			return inputs != null;
 		}
 		return super.eIsSet(featureID);
 	}

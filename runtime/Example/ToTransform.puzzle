@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<puzzle:Puzzle xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:constructs="http://org.mdse/constructs" xmlns:puzzle="http://org.mdse/puzzle" name="A Puzzle" description="With a nice description">
-  <tests failedMessage="Something went wrong">
+<puzzle:Puzzle xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:constructs="http://org.mdse/constructs" xmlns:puzzle="http://org.mdse/puzzle">
+  <tests failedMessage="Some message">
+    <expected xsi:type="constructs:IntergerLiteral" value="2"/>
     <inputs>
       <declareStatement>
-        <variable xsi:type="constructs:StringVariable" name="Sad?" value="Overwritten"/>
+        <variable xsi:type="constructs:IntegerVariable" name="a" value="2"/>
+      </declareStatement>
+      <declareStatement>
+        <variable xsi:type="constructs:StringVariable" name="b" value="Hello"/>
       </declareStatement>
     </inputs>
   </tests>
-  <inputs>
+  <variables>
     <declareStatement>
-      <variable xsi:type="constructs:IntegerVariable" name="firstInput" value="23"/>
+      <variable xsi:type="constructs:BooleanVariable" name="a"/>
     </declareStatement>
-  </inputs>
-  <inputs>
     <declareStatement>
-      <variable xsi:type="constructs:StringVariable" name="Test" value="test"/>
+      <variable xsi:type="constructs:StringVariable" name="b" value="What"/>
     </declareStatement>
-  </inputs>
-  <inputs>
-    <declareStatement>
-      <variable xsi:type="constructs:StringVariable" name="Sad?" value=":(("/>
-    </declareStatement>
-  </inputs>
+  </variables>
 </puzzle:Puzzle>

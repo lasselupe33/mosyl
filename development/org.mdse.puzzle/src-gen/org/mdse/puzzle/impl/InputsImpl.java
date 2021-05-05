@@ -15,9 +15,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
-import org.mdse.constructs.DeclareStatement;
-
+import org.mdse.constructs.Variable;
 import org.mdse.puzzle.Inputs;
 import org.mdse.puzzle.PuzzlePackage;
 
@@ -29,21 +27,21 @@ import org.mdse.puzzle.PuzzlePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.mdse.puzzle.impl.InputsImpl#getDeclareStatement <em>Declare Statement</em>}</li>
+ *   <li>{@link org.mdse.puzzle.impl.InputsImpl#getVariables <em>Variables</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class InputsImpl extends MinimalEObjectImpl.Container implements Inputs {
 	/**
-	 * The cached value of the '{@link #getDeclareStatement() <em>Declare Statement</em>}' containment reference list.
+	 * The cached value of the '{@link #getVariables() <em>Variables</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDeclareStatement()
+	 * @see #getVariables()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<DeclareStatement> declareStatement;
+	protected EList<Variable> variables;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -69,12 +67,11 @@ public class InputsImpl extends MinimalEObjectImpl.Container implements Inputs {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DeclareStatement> getDeclareStatement() {
-		if (declareStatement == null) {
-			declareStatement = new EObjectContainmentEList<DeclareStatement>(DeclareStatement.class, this,
-					PuzzlePackage.INPUTS__DECLARE_STATEMENT);
+	public EList<Variable> getVariables() {
+		if (variables == null) {
+			variables = new EObjectContainmentEList<Variable>(Variable.class, this, PuzzlePackage.INPUTS__VARIABLES);
 		}
-		return declareStatement;
+		return variables;
 	}
 
 	/**
@@ -85,8 +82,8 @@ public class InputsImpl extends MinimalEObjectImpl.Container implements Inputs {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case PuzzlePackage.INPUTS__DECLARE_STATEMENT:
-			return ((InternalEList<?>) getDeclareStatement()).basicRemove(otherEnd, msgs);
+		case PuzzlePackage.INPUTS__VARIABLES:
+			return ((InternalEList<?>) getVariables()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -99,8 +96,8 @@ public class InputsImpl extends MinimalEObjectImpl.Container implements Inputs {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case PuzzlePackage.INPUTS__DECLARE_STATEMENT:
-			return getDeclareStatement();
+		case PuzzlePackage.INPUTS__VARIABLES:
+			return getVariables();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -114,9 +111,9 @@ public class InputsImpl extends MinimalEObjectImpl.Container implements Inputs {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case PuzzlePackage.INPUTS__DECLARE_STATEMENT:
-			getDeclareStatement().clear();
-			getDeclareStatement().addAll((Collection<? extends DeclareStatement>) newValue);
+		case PuzzlePackage.INPUTS__VARIABLES:
+			getVariables().clear();
+			getVariables().addAll((Collection<? extends Variable>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -130,8 +127,8 @@ public class InputsImpl extends MinimalEObjectImpl.Container implements Inputs {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case PuzzlePackage.INPUTS__DECLARE_STATEMENT:
-			getDeclareStatement().clear();
+		case PuzzlePackage.INPUTS__VARIABLES:
+			getVariables().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -145,8 +142,8 @@ public class InputsImpl extends MinimalEObjectImpl.Container implements Inputs {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case PuzzlePackage.INPUTS__DECLARE_STATEMENT:
-			return declareStatement != null && !declareStatement.isEmpty();
+		case PuzzlePackage.INPUTS__VARIABLES:
+			return variables != null && !variables.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

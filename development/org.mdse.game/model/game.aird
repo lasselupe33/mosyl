@@ -10,7 +10,7 @@
     <semanticResources>platform:/resource/org.mdse.puzzle/model/puzzle.genmodel</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_95IAsKJ7Eeu77N0yLFllHg">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_95iQYKJ7Eeu77N0yLFllHg" name="game" repPath="#_95cJwKJ7Eeu77N0yLFllHg" changeId="5fa16362-f7bb-4dbc-84d6-77b722d50637">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_95iQYKJ7Eeu77N0yLFllHg" name="game" repPath="#_95cJwKJ7Eeu77N0yLFllHg" changeId="62eb69f5-1c3d-4a8a-8df2-535f7799499e">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="game.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -55,9 +55,9 @@
               <styles xmi:type="notation:FontStyle" xmi:id="_RT6ld6J8Eeu77N0yLFllHg" fontName=".AppleSystemUIFont" fontHeight="8" bold="true"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_RT6leKJ8Eeu77N0yLFllHg"/>
             </children>
-            <children xmi:type="notation:Node" xmi:id="_Ewni0K2GEeutfoSBtAjFgA" visible="false" type="3010" element="_EuQLUq2GEeutfoSBtAjFgA">
-              <styles xmi:type="notation:FontStyle" xmi:id="_Ewni0a2GEeutfoSBtAjFgA" fontName=".AppleSystemUIFont" fontHeight="8"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_Ewni0q2GEeutfoSBtAjFgA"/>
+            <children xmi:type="notation:Node" xmi:id="_VjdvwK2YEeutfoSBtAjFgA" visible="false" type="3010" element="_ViwlIa2YEeutfoSBtAjFgA">
+              <styles xmi:type="notation:FontStyle" xmi:id="_Vjdvwa2YEeutfoSBtAjFgA" fontName=".AppleSystemUIFont" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_Vjdvwq2YEeutfoSBtAjFgA"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_RT5XVaJ8Eeu77N0yLFllHg"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_RT5XVqJ8Eeu77N0yLFllHg"/>
@@ -285,10 +285,10 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_EuQLUq2GEeutfoSBtAjFgA" name=" variables : Inputs" visible="false" tooltipText="">
-        <target xmi:type="ecore:EReference" href="platform:/resource/org.mdse.puzzle/model/puzzle.ecore#//Puzzle/variables"/>
-        <semanticElements xmi:type="ecore:EReference" href="platform:/resource/org.mdse.puzzle/model/puzzle.ecore#//Puzzle/variables"/>
-        <ownedStyle xmi:type="diagram:BundledImage" uid="_EuQLU62GEeutfoSBtAjFgA" labelAlignment="LEFT" color="114,159,207">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_ViwlIa2YEeutfoSBtAjFgA" name=" inputs : Inputs" visible="false" tooltipText="">
+        <target xmi:type="ecore:EReference" href="platform:/resource/org.mdse.puzzle/model/puzzle.ecore#//Puzzle/inputs"/>
+        <semanticElements xmi:type="ecore:EReference" href="platform:/resource/org.mdse.puzzle/model/puzzle.ecore#//Puzzle/inputs"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_VixMMK2YEeutfoSBtAjFgA" labelAlignment="LEFT" color="114,159,207">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EReferenceNode']"/>

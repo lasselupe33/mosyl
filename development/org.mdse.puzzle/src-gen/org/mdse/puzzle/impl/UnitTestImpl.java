@@ -2,18 +2,21 @@
  */
 package org.mdse.puzzle.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.mdse.constructs.Literal;
 
-import org.mdse.puzzle.Inputs;
+import org.mdse.constructs.Variable;
 import org.mdse.puzzle.PuzzlePackage;
 import org.mdse.puzzle.UnitTest;
 
@@ -64,14 +67,14 @@ public class UnitTestImpl extends MinimalEObjectImpl.Container implements UnitTe
 	protected String failedMessage = FAILED_MESSAGE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getInputs() <em>Inputs</em>}' containment reference.
+	 * The cached value of the '{@link #getInputs() <em>Inputs</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getInputs()
 	 * @generated
 	 * @ordered
 	 */
-	protected Inputs inputs;
+	protected EList<Variable> inputs;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -169,49 +172,11 @@ public class UnitTestImpl extends MinimalEObjectImpl.Container implements UnitTe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Inputs getInputs() {
-		return inputs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetInputs(Inputs newInputs, NotificationChain msgs) {
-		Inputs oldInputs = inputs;
-		inputs = newInputs;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					PuzzlePackage.UNIT_TEST__INPUTS, oldInputs, newInputs);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
+	public EList<Variable> getInputs() {
+		if (inputs == null) {
+			inputs = new EObjectResolvingEList<Variable>(Variable.class, this, PuzzlePackage.UNIT_TEST__INPUTS);
 		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setInputs(Inputs newInputs) {
-		if (newInputs != inputs) {
-			NotificationChain msgs = null;
-			if (inputs != null)
-				msgs = ((InternalEObject) inputs).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - PuzzlePackage.UNIT_TEST__INPUTS, null, msgs);
-			if (newInputs != null)
-				msgs = ((InternalEObject) newInputs).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - PuzzlePackage.UNIT_TEST__INPUTS, null, msgs);
-			msgs = basicSetInputs(newInputs, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PuzzlePackage.UNIT_TEST__INPUTS, newInputs,
-					newInputs));
+		return inputs;
 	}
 
 	/**
@@ -224,8 +189,6 @@ public class UnitTestImpl extends MinimalEObjectImpl.Container implements UnitTe
 		switch (featureID) {
 		case PuzzlePackage.UNIT_TEST__EXPECTED:
 			return basicSetExpected(null, msgs);
-		case PuzzlePackage.UNIT_TEST__INPUTS:
-			return basicSetInputs(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -253,6 +216,7 @@ public class UnitTestImpl extends MinimalEObjectImpl.Container implements UnitTe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -263,7 +227,8 @@ public class UnitTestImpl extends MinimalEObjectImpl.Container implements UnitTe
 			setFailedMessage((String) newValue);
 			return;
 		case PuzzlePackage.UNIT_TEST__INPUTS:
-			setInputs((Inputs) newValue);
+			getInputs().clear();
+			getInputs().addAll((Collection<? extends Variable>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -284,7 +249,7 @@ public class UnitTestImpl extends MinimalEObjectImpl.Container implements UnitTe
 			setFailedMessage(FAILED_MESSAGE_EDEFAULT);
 			return;
 		case PuzzlePackage.UNIT_TEST__INPUTS:
-			setInputs((Inputs) null);
+			getInputs().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -304,7 +269,7 @@ public class UnitTestImpl extends MinimalEObjectImpl.Container implements UnitTe
 			return FAILED_MESSAGE_EDEFAULT == null ? failedMessage != null
 					: !FAILED_MESSAGE_EDEFAULT.equals(failedMessage);
 		case PuzzlePackage.UNIT_TEST__INPUTS:
-			return inputs != null;
+			return inputs != null && !inputs.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

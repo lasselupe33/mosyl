@@ -1,6 +1,6 @@
 /**
  */
-package org.mdse.puzzle.provider;
+package org.mdse.game.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -21,18 +21,19 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import org.mdse.constructs.ConstructsFactory;
+import org.mdse.game.GameFactory;
+import org.mdse.game.GameInputs;
+import org.mdse.game.GamePackage;
 
-import org.mdse.puzzle.Inputs;
-import org.mdse.puzzle.PuzzlePackage;
+import org.mdse.puzzle.PuzzleFactory;
 
 /**
- * This is the item provider adapter for a {@link org.mdse.puzzle.Inputs} object.
+ * This is the item provider adapter for a {@link org.mdse.game.GameInputs} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class InputsItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+public class GameInputsItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
 		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -40,7 +41,7 @@ public class InputsItemProvider extends ItemProviderAdapter implements IEditingD
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public InputsItemProvider(AdapterFactory adapterFactory) {
+	public GameInputsItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -71,7 +72,8 @@ public class InputsItemProvider extends ItemProviderAdapter implements IEditingD
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(PuzzlePackage.Literals.INPUTS__VARIABLES);
+			childrenFeatures.add(GamePackage.Literals.GAME_INPUTS__NEXT_STATEMENT);
+			childrenFeatures.add(GamePackage.Literals.GAME_INPUTS__INPUTS);
 		}
 		return childrenFeatures;
 	}
@@ -90,14 +92,14 @@ public class InputsItemProvider extends ItemProviderAdapter implements IEditingD
 	}
 
 	/**
-	 * This returns Inputs.gif.
+	 * This returns GameInputs.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Inputs"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/GameInputs"));
 	}
 
 	/**
@@ -118,7 +120,7 @@ public class InputsItemProvider extends ItemProviderAdapter implements IEditingD
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Inputs_type");
+		return getString("_UI_GameInputs_type");
 	}
 
 	/**
@@ -132,8 +134,9 @@ public class InputsItemProvider extends ItemProviderAdapter implements IEditingD
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Inputs.class)) {
-		case PuzzlePackage.INPUTS__VARIABLES:
+		switch (notification.getFeatureID(GameInputs.class)) {
+		case GamePackage.GAME_INPUTS__NEXT_STATEMENT:
+		case GamePackage.GAME_INPUTS__INPUTS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -151,14 +154,11 @@ public class InputsItemProvider extends ItemProviderAdapter implements IEditingD
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(PuzzlePackage.Literals.INPUTS__VARIABLES,
-				ConstructsFactory.eINSTANCE.createIntegerVariable()));
+		newChildDescriptors.add(createChildParameter(GamePackage.Literals.GAME_INPUTS__NEXT_STATEMENT,
+				GameFactory.eINSTANCE.createGameStatement()));
 
-		newChildDescriptors.add(createChildParameter(PuzzlePackage.Literals.INPUTS__VARIABLES,
-				ConstructsFactory.eINSTANCE.createStringVariable()));
-
-		newChildDescriptors.add(createChildParameter(PuzzlePackage.Literals.INPUTS__VARIABLES,
-				ConstructsFactory.eINSTANCE.createBooleanVariable()));
+		newChildDescriptors.add(
+				createChildParameter(GamePackage.Literals.GAME_INPUTS__INPUTS, PuzzleFactory.eINSTANCE.createInputs()));
 	}
 
 	/**
@@ -169,7 +169,7 @@ public class InputsItemProvider extends ItemProviderAdapter implements IEditingD
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return PuzzleEditPlugin.INSTANCE;
+		return GameEditPlugin.INSTANCE;
 	}
 
 }
