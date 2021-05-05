@@ -49,6 +49,15 @@ public interface PuzzleFactory extends EFactory {
 	Inputs createInputs();
 
 	/**
+	 * Returns a new object of class '<em>Unit Test Input</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Unit Test Input</em>'.
+	 * @generated
+	 */
+	UnitTestInput createUnitTestInput();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

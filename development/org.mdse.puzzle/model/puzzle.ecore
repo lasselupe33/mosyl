@@ -15,11 +15,17 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="failedMessage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
-        eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//Variable"/>
+        eType="#//UnitTestInput" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Inputs">
     <eStructuralFeatures xsi:type="ecore:EReference" name="variables" lowerBound="1"
         upperBound="-1" eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//Variable"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UnitTestInput">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
+        eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//Variable"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="overwritingValue" eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//Literal"
         containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

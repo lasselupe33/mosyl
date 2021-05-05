@@ -149,7 +149,7 @@ public interface PuzzlePackage extends EPackage {
 	int UNIT_TEST__FAILED_MESSAGE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Inputs</b></em>' reference list.
+	 * The feature id for the '<em><b>Inputs</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -211,6 +211,52 @@ public interface PuzzlePackage extends EPackage {
 	 * @ordered
 	 */
 	int INPUTS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link org.mdse.puzzle.impl.UnitTestInputImpl <em>Unit Test Input</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mdse.puzzle.impl.UnitTestInputImpl
+	 * @see org.mdse.puzzle.impl.PuzzlePackageImpl#getUnitTestInput()
+	 * @generated
+	 */
+	int UNIT_TEST_INPUT = 3;
+
+	/**
+	 * The feature id for the '<em><b>Variable</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_TEST_INPUT__VARIABLE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Overwriting Value</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_TEST_INPUT__OVERWRITING_VALUE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Unit Test Input</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_TEST_INPUT_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Unit Test Input</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNIT_TEST_INPUT_OPERATION_COUNT = 0;
 
 	/**
 	 * Returns the meta object for class '{@link org.mdse.puzzle.Puzzle <em>Puzzle</em>}'.
@@ -299,10 +345,10 @@ public interface PuzzlePackage extends EPackage {
 	EAttribute getUnitTest_FailedMessage();
 
 	/**
-	 * Returns the meta object for the reference list '{@link org.mdse.puzzle.UnitTest#getInputs <em>Inputs</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.mdse.puzzle.UnitTest#getInputs <em>Inputs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Inputs</em>'.
+	 * @return the meta object for the containment reference list '<em>Inputs</em>'.
 	 * @see org.mdse.puzzle.UnitTest#getInputs()
 	 * @see #getUnitTest()
 	 * @generated
@@ -329,6 +375,38 @@ public interface PuzzlePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getInputs_Variables();
+
+	/**
+	 * Returns the meta object for class '{@link org.mdse.puzzle.UnitTestInput <em>Unit Test Input</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Unit Test Input</em>'.
+	 * @see org.mdse.puzzle.UnitTestInput
+	 * @generated
+	 */
+	EClass getUnitTestInput();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.mdse.puzzle.UnitTestInput#getVariable <em>Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Variable</em>'.
+	 * @see org.mdse.puzzle.UnitTestInput#getVariable()
+	 * @see #getUnitTestInput()
+	 * @generated
+	 */
+	EReference getUnitTestInput_Variable();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link org.mdse.puzzle.UnitTestInput#getOverwritingValue <em>Overwriting Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Overwriting Value</em>'.
+	 * @see org.mdse.puzzle.UnitTestInput#getOverwritingValue()
+	 * @see #getUnitTestInput()
+	 * @generated
+	 */
+	EReference getUnitTestInput_OverwritingValue();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -422,7 +500,7 @@ public interface PuzzlePackage extends EPackage {
 		EAttribute UNIT_TEST__FAILED_MESSAGE = eINSTANCE.getUnitTest_FailedMessage();
 
 		/**
-		 * The meta object literal for the '<em><b>Inputs</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Inputs</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -446,6 +524,32 @@ public interface PuzzlePackage extends EPackage {
 		 * @generated
 		 */
 		EReference INPUTS__VARIABLES = eINSTANCE.getInputs_Variables();
+
+		/**
+		 * The meta object literal for the '{@link org.mdse.puzzle.impl.UnitTestInputImpl <em>Unit Test Input</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mdse.puzzle.impl.UnitTestInputImpl
+		 * @see org.mdse.puzzle.impl.PuzzlePackageImpl#getUnitTestInput()
+		 * @generated
+		 */
+		EClass UNIT_TEST_INPUT = eINSTANCE.getUnitTestInput();
+
+		/**
+		 * The meta object literal for the '<em><b>Variable</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference UNIT_TEST_INPUT__VARIABLE = eINSTANCE.getUnitTestInput_Variable();
+
+		/**
+		 * The meta object literal for the '<em><b>Overwriting Value</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference UNIT_TEST_INPUT__OVERWRITING_VALUE = eINSTANCE.getUnitTestInput_OverwritingValue();
 
 	}
 

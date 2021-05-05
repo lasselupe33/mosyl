@@ -16,6 +16,7 @@ import org.mdse.puzzle.Puzzle;
 import org.mdse.puzzle.PuzzleFactory;
 import org.mdse.puzzle.PuzzlePackage;
 import org.mdse.puzzle.UnitTest;
+import org.mdse.puzzle.UnitTestInput;
 
 /**
  * <!-- begin-user-doc -->
@@ -44,6 +45,13 @@ public class PuzzlePackageImpl extends EPackageImpl implements PuzzlePackage {
 	 * @generated
 	 */
 	private EClass inputsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass unitTestInputEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -216,6 +224,33 @@ public class PuzzlePackageImpl extends EPackageImpl implements PuzzlePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getUnitTestInput() {
+		return unitTestInputEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getUnitTestInput_Variable() {
+		return (EReference) unitTestInputEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getUnitTestInput_OverwritingValue() {
+		return (EReference) unitTestInputEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public PuzzleFactory getPuzzleFactory() {
 		return (PuzzleFactory) getEFactoryInstance();
 	}
@@ -253,6 +288,10 @@ public class PuzzlePackageImpl extends EPackageImpl implements PuzzlePackage {
 
 		inputsEClass = createEClass(INPUTS);
 		createEReference(inputsEClass, INPUTS__VARIABLES);
+
+		unitTestInputEClass = createEClass(UNIT_TEST_INPUT);
+		createEReference(unitTestInputEClass, UNIT_TEST_INPUT__VARIABLE);
+		createEReference(unitTestInputEClass, UNIT_TEST_INPUT__OVERWRITING_VALUE);
 	}
 
 	/**
@@ -310,14 +349,23 @@ public class PuzzlePackageImpl extends EPackageImpl implements PuzzlePackage {
 		initEAttribute(getUnitTest_FailedMessage(), ecorePackage.getEString(), "failedMessage", null, 0, 1,
 				UnitTest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEReference(getUnitTest_Inputs(), theConstructsPackage.getVariable(), null, "inputs", null, 0, -1,
-				UnitTest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUnitTest_Inputs(), this.getUnitTestInput(), null, "inputs", null, 0, -1, UnitTest.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(inputsEClass, Inputs.class, "Inputs", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getInputs_Variables(), theConstructsPackage.getVariable(), null, "variables", null, 1, -1,
 				Inputs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(unitTestInputEClass, UnitTestInput.class, "UnitTestInput", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getUnitTestInput_Variable(), theConstructsPackage.getVariable(), null, "variable", null, 1, 1,
+				UnitTestInput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getUnitTestInput_OverwritingValue(), theConstructsPackage.getLiteral(), null, "overwritingValue",
+				null, 0, 1, UnitTestInput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

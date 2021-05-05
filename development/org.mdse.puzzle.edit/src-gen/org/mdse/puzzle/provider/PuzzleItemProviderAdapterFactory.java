@@ -142,6 +142,29 @@ public class PuzzleItemProviderAdapterFactory extends PuzzleAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.mdse.puzzle.UnitTestInput} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected UnitTestInputItemProvider unitTestInputItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mdse.puzzle.UnitTestInput}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createUnitTestInputAdapter() {
+		if (unitTestInputItemProvider == null) {
+			unitTestInputItemProvider = new UnitTestInputItemProvider(this);
+		}
+
+		return unitTestInputItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -246,6 +269,8 @@ public class PuzzleItemProviderAdapterFactory extends PuzzleAdapterFactory
 			unitTestItemProvider.dispose();
 		if (inputsItemProvider != null)
 			inputsItemProvider.dispose();
+		if (unitTestInputItemProvider != null)
+			unitTestInputItemProvider.dispose();
 	}
 
 }

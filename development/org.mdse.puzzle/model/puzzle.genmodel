@@ -25,5 +25,9 @@
     <genClasses ecoreClass="puzzle.ecore#//Inputs">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference puzzle.ecore#//Inputs/variables"/>
     </genClasses>
+    <genClasses ecoreClass="puzzle.ecore#//UnitTestInput">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference puzzle.ecore#//UnitTestInput/variable"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference puzzle.ecore#//UnitTestInput/overwritingValue"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -13,12 +13,12 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 import org.mdse.constructs.Literal;
-
-import org.mdse.constructs.Variable;
 import org.mdse.puzzle.PuzzlePackage;
 import org.mdse.puzzle.UnitTest;
+import org.mdse.puzzle.UnitTestInput;
 
 /**
  * <!-- begin-user-doc -->
@@ -67,14 +67,14 @@ public class UnitTestImpl extends MinimalEObjectImpl.Container implements UnitTe
 	protected String failedMessage = FAILED_MESSAGE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getInputs() <em>Inputs</em>}' reference list.
+	 * The cached value of the '{@link #getInputs() <em>Inputs</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getInputs()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Variable> inputs;
+	protected EList<UnitTestInput> inputs;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -172,9 +172,10 @@ public class UnitTestImpl extends MinimalEObjectImpl.Container implements UnitTe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Variable> getInputs() {
+	public EList<UnitTestInput> getInputs() {
 		if (inputs == null) {
-			inputs = new EObjectResolvingEList<Variable>(Variable.class, this, PuzzlePackage.UNIT_TEST__INPUTS);
+			inputs = new EObjectContainmentEList<UnitTestInput>(UnitTestInput.class, this,
+					PuzzlePackage.UNIT_TEST__INPUTS);
 		}
 		return inputs;
 	}
@@ -189,6 +190,8 @@ public class UnitTestImpl extends MinimalEObjectImpl.Container implements UnitTe
 		switch (featureID) {
 		case PuzzlePackage.UNIT_TEST__EXPECTED:
 			return basicSetExpected(null, msgs);
+		case PuzzlePackage.UNIT_TEST__INPUTS:
+			return ((InternalEList<?>) getInputs()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -228,7 +231,7 @@ public class UnitTestImpl extends MinimalEObjectImpl.Container implements UnitTe
 			return;
 		case PuzzlePackage.UNIT_TEST__INPUTS:
 			getInputs().clear();
-			getInputs().addAll((Collection<? extends Variable>) newValue);
+			getInputs().addAll((Collection<? extends UnitTestInput>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
