@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:constructs="http://org.mdse/constructs" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:game="http://org.mdse/game" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:puzzle="http://org.mdse/puzzle" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_9pjlQK2gEeu0ZvQqMVcM2Q" selectedViews="_-9eEMK2gEeu0ZvQqMVcM2Q" version="14.3.1.202003261200">
+    <semanticResources>ToTransform.game</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_-9eEMK2gEeu0ZvQqMVcM2Q">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game%20Viewpoint']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_B20P4K2hEeu0ZvQqMVcM2Q" name="new Game Diagram Description" repPath="#_B2W84K2hEeu0ZvQqMVcM2Q" changeId="88e773dc-5eec-4465-bd78-0e31689f1fd5">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game%20Viewpoint']/@ownedRepresentations[name='Game%20Diagram%20Description']"/>
+        <target xmi:type="game:Game" href="ToTransform.game#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_B2W84K2hEeu0ZvQqMVcM2Q">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_B3TYEK2hEeu0ZvQqMVcM2Q" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_B3TYEa2hEeu0ZvQqMVcM2Q" type="Sirius" element="_B2W84K2hEeu0ZvQqMVcM2Q" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_B4PzQK2hEeu0ZvQqMVcM2Q" type="2002" element="_B3gzcK2hEeu0ZvQqMVcM2Q">
+          <children xmi:type="notation:Node" xmi:id="_B4XIAK2hEeu0ZvQqMVcM2Q" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_B4Y9MK2hEeu0ZvQqMVcM2Q" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_PrH30K2iEeuJncY3Bh2sEw" type="3007" element="_Pq84sK2iEeuJncY3Bh2sEw">
+              <children xmi:type="notation:Node" xmi:id="_PrMJQK2iEeuJncY3Bh2sEw" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_PrMJQa2iEeuJncY3Bh2sEw" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_PrRo0K2iEeuJncY3Bh2sEw" type="3003" element="_Pq-G0K2iEeuJncY3Bh2sEw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_PrRo0a2iEeuJncY3Bh2sEw" fontName=".AppleSystemUIFont"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PrRo0q2iEeuJncY3Bh2sEw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_PrH30a2iEeuJncY3Bh2sEw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PrH30q2iEeuJncY3Bh2sEw" x="51" y="30" width="120" height="112"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_PrPzoK2iEeuJncY3Bh2sEw" type="3007" element="_Pq_U8a2iEeuJncY3Bh2sEw">
+              <children xmi:type="notation:Node" xmi:id="_PrQasK2iEeuJncY3Bh2sEw" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_PrQasa2iEeuJncY3Bh2sEw" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_PrSP4K2iEeuJncY3Bh2sEw" type="3003" element="_Pq_U8q2iEeuJncY3Bh2sEw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_PrSP4a2iEeuJncY3Bh2sEw" fontName=".AppleSystemUIFont"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PrSP4q2iEeuJncY3Bh2sEw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_PrPzoa2iEeuJncY3Bh2sEw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PrPzoq2iEeuJncY3Bh2sEw" x="179" y="30" width="120" height="112"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_PrRBwK2iEeuJncY3Bh2sEw" type="3007" element="_Pq_8Aa2iEeuJncY3Bh2sEw">
+              <children xmi:type="notation:Node" xmi:id="_PrRBw62iEeuJncY3Bh2sEw" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_PrRBxK2iEeuJncY3Bh2sEw" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_PrS28K2iEeuJncY3Bh2sEw" type="3003" element="_Pq_8Aq2iEeuJncY3Bh2sEw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_PrS28a2iEeuJncY3Bh2sEw" fontName=".AppleSystemUIFont"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PrS28q2iEeuJncY3Bh2sEw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_PrRBwa2iEeuJncY3Bh2sEw" fontName=".AppleSystemUIFont" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PrRBwq2iEeuJncY3Bh2sEw" x="307" y="30" width="120" height="112"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_B4Y9Ma2hEeu0ZvQqMVcM2Q"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_B4Y9Mq2hEeu0ZvQqMVcM2Q"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_B4PzQa2hEeu0ZvQqMVcM2Q" fontName=".AppleSystemUIFont"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_B4PzQq2hEeu0ZvQqMVcM2Q" x="152" y="40" width="523" height="179"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_B3TYEq2hEeu0ZvQqMVcM2Q"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_B38RQK2hEeu0ZvQqMVcM2Q" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_B384UK2hEeu0ZvQqMVcM2Q"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_B3gzcK2hEeu0ZvQqMVcM2Q">
+      <target xmi:type="puzzle:Inputs" href="ToTransform.game#//@entrypoint/@inputs/@inputs"/>
+      <semanticElements xmi:type="puzzle:Inputs" href="ToTransform.game#//@entrypoint/@inputs/@inputs"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game%20Viewpoint']/@ownedRepresentations[name='Game%20Diagram%20Description']/@defaultLayer/@containerMappings[name='Inputs%20Container']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_Pq84sK2iEeuJncY3Bh2sEw" name="2" width="12" height="8" resizeKind="NSEW">
+        <target xmi:type="constructs:IntegerVariable" href="ToTransform.game#//@entrypoint/@inputs/@inputs/@variables.0"/>
+        <semanticElements xmi:type="constructs:IntegerVariable" href="ToTransform.game#//@entrypoint/@inputs/@inputs/@variables.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_Pq-G0K2iEeuJncY3Bh2sEw" labelSize="12" borderSize="1" borderSizeComputationExpression="1" borderColor="252,175,62" labelPosition="node" width="12" height="8" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game%20Viewpoint']/@ownedRepresentations[name='Game%20Diagram%20Description']/@defaultLayer/@containerMappings[name='Inputs%20Container']/@subNodeMappings[name='Input']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game%20Viewpoint']/@ownedRepresentations[name='Game%20Diagram%20Description']/@defaultLayer/@containerMappings[name='Inputs%20Container']/@subNodeMappings[name='Input']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_Pq_U8a2iEeuJncY3Bh2sEw" name="World" width="12" height="8" resizeKind="NSEW">
+        <target xmi:type="constructs:StringVariable" href="ToTransform.game#//@entrypoint/@inputs/@inputs/@variables.1"/>
+        <semanticElements xmi:type="constructs:StringVariable" href="ToTransform.game#//@entrypoint/@inputs/@inputs/@variables.1"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_Pq_U8q2iEeuJncY3Bh2sEw" labelSize="12" borderSize="1" borderSizeComputationExpression="1" borderColor="252,175,62" labelPosition="node" width="12" height="8" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game%20Viewpoint']/@ownedRepresentations[name='Game%20Diagram%20Description']/@defaultLayer/@containerMappings[name='Inputs%20Container']/@subNodeMappings[name='Input']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game%20Viewpoint']/@ownedRepresentations[name='Game%20Diagram%20Description']/@defaultLayer/@containerMappings[name='Inputs%20Container']/@subNodeMappings[name='Input']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_Pq_8Aa2iEeuJncY3Bh2sEw" name="true" width="12" height="8" resizeKind="NSEW">
+        <target xmi:type="constructs:BooleanVariable" href="ToTransform.game#//@entrypoint/@inputs/@inputs/@variables.2"/>
+        <semanticElements xmi:type="constructs:BooleanVariable" href="ToTransform.game#//@entrypoint/@inputs/@inputs/@variables.2"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_Pq_8Aq2iEeuJncY3Bh2sEw" labelSize="12" borderSize="1" borderSizeComputationExpression="1" borderColor="252,175,62" labelPosition="node" width="12" height="8" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game%20Viewpoint']/@ownedRepresentations[name='Game%20Diagram%20Description']/@defaultLayer/@containerMappings[name='Inputs%20Container']/@subNodeMappings[name='Input']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game%20Viewpoint']/@ownedRepresentations[name='Game%20Diagram%20Description']/@defaultLayer/@containerMappings[name='Inputs%20Container']/@subNodeMappings[name='Input']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game%20Viewpoint']/@ownedRepresentations[name='Game%20Diagram%20Description']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_B2jKIK2hEeu0ZvQqMVcM2Q"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game%20Viewpoint']/@ownedRepresentations[name='Game%20Diagram%20Description']/@defaultLayer"/>
+    <target xmi:type="game:Game" href="ToTransform.game#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>
