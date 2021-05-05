@@ -20,22 +20,22 @@ package org.mdse.constructs;
  */
 public interface ReturnStatement extends Statement {
 	/**
-	 * Returns the value of the '<em><b>Expression</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Expression</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Expression</em>' containment reference.
+	 * @return the value of the '<em>Expression</em>' reference.
 	 * @see #setExpression(Expression)
 	 * @see org.mdse.constructs.ConstructsPackage#getReturnStatement_Expression()
-	 * @model containment="true" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
 	Expression getExpression();
 
 	/**
-	 * Sets the value of the '{@link org.mdse.constructs.ReturnStatement#getExpression <em>Expression</em>}' containment reference.
+	 * Sets the value of the '{@link org.mdse.constructs.ReturnStatement#getExpression <em>Expression</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Expression</em>' containment reference.
+	 * @param value the new value of the '<em>Expression</em>' reference.
 	 * @see #getExpression()
 	 * @generated
 	 */

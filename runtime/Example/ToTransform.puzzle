@@ -1,22 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <puzzle:Puzzle xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:constructs="http://org.mdse/constructs" xmlns:puzzle="http://org.mdse/puzzle">
-  <tests failedMessage="Some message">
-    <expected xsi:type="constructs:IntergerLiteral" value="2"/>
-    <inputs>
-      <declareStatement>
-        <variable xsi:type="constructs:IntegerVariable" name="a" value="2"/>
-      </declareStatement>
-      <declareStatement>
-        <variable xsi:type="constructs:StringVariable" name="b" value="Hello"/>
-      </declareStatement>
-    </inputs>
+  <tests failedMessage="Hello world">
+    <expected xsi:type="constructs:StringLiteral" value="Hello"/>
   </tests>
-  <variables>
-    <declareStatement>
-      <variable xsi:type="constructs:BooleanVariable" name="a"/>
-    </declareStatement>
-    <declareStatement>
-      <variable xsi:type="constructs:StringVariable" name="b" value="What"/>
-    </declareStatement>
-  </variables>
+  <inputs>
+    <variables xsi:type="constructs:IntegerVariable" name="first" value="2"/>
+    <variables xsi:type="constructs:StringVariable" name="second" value="World"/>
+    <variables xsi:type="constructs:BooleanVariable" name="third" value="true"/>
+  </inputs>
 </puzzle:Puzzle>

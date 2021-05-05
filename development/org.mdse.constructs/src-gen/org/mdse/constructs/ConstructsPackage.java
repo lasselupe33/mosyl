@@ -547,7 +547,7 @@ public interface ConstructsPackage extends EPackage {
 	int RETURN_STATEMENT = 10;
 
 	/**
-	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
+	 * The feature id for the '<em><b>Expression</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -953,10 +953,10 @@ public interface ConstructsPackage extends EPackage {
 	EClass getReturnStatement();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.mdse.constructs.ReturnStatement#getExpression <em>Expression</em>}'.
+	 * Returns the meta object for the reference '{@link org.mdse.constructs.ReturnStatement#getExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Expression</em>'.
+	 * @return the meta object for the reference '<em>Expression</em>'.
 	 * @see org.mdse.constructs.ReturnStatement#getExpression()
 	 * @see #getReturnStatement()
 	 * @generated
@@ -1302,7 +1302,7 @@ public interface ConstructsPackage extends EPackage {
 		EClass RETURN_STATEMENT = eINSTANCE.getReturnStatement();
 
 		/**
-		 * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Expression</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

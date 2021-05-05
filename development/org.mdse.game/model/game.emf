@@ -1,30 +1,28 @@
 @namespace(uri="http://org.mdse/game", prefix="game")
 package game;
 
-import "platform:/resource/org.mdse.puzzle/model/puzzle.ecore";
 import "platform:/resource/org.mdse.constructs/model/constructs.ecore";
+import "platform:/resource/org.mdse.puzzle/model/puzzle.ecore";
 
 class Game {
 	attr String name;
 	attr String description;
 	val Entrypoint[1] entrypoint;
-	
 	val puzzle.UnitTest[*] tests;
 }
 
-class UsedStatement {
-	val UsedStatement[*] nextStatements;
+class GameStatement {
+	val GameStatement nextStatement;
 	val constructs.Statement[1] statement;
 }
 
-class UsedInput {
-	val UsedStatement nextStatement;
-	val puzzle.Input[1] input;
-	val UsedInput nextInput;
+class GameInputs {
+	val GameStatement[1] nextStatement;
+	val puzzle.Inputs[1] inputs;
 }
 
 class Entrypoint {
-	val UsedInput input;
-	val UsedStatement statement;
+	val GameInputs inputs;
+	val GameStatement statement;
 }
 

@@ -6,7 +6,7 @@
     <semanticResources>constructs.emf</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_umgGcJ0xEeuL_aZHJYBWiA">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_updT0J0xEeuL_aZHJYBWiA" name="constructs" repPath="#_uoHQAJ0xEeuL_aZHJYBWiA" changeId="883f7dc7-0c6b-483e-9526-aac4235dacaa">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_updT0J0xEeuL_aZHJYBWiA" name="constructs" repPath="#_uoHQAJ0xEeuL_aZHJYBWiA" changeId="3b2290f3-0cdd-4000-a37b-e3bd0770ecac">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="constructs.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -604,6 +604,16 @@
             <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
           </endLabelStyleDescription>
         </computedStyleDescriptions>
+        <computedStyleDescriptions xmi:type="style:EdgeStyleDescription" xmi:id="_MArGyK2fEeutfoSBtAjFgA" routingStyle="manhattan">
+          <strokeColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          <centerLabelStyleDescription xmi:type="style:CenterLabelStyleDescription" xmi:id="_MArGya2fEeutfoSBtAjFgA" showIcon="false" labelExpression="service:render">
+            <labelFormat>bold</labelFormat>
+            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </centerLabelStyleDescription>
+          <endLabelStyleDescription xmi:type="style:EndLabelStyleDescription" xmi:id="_MArGyq2fEeutfoSBtAjFgA" labelSize="6" showIcon="false" labelExpression="service:eKeysLabel">
+            <labelColor xmi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+          </endLabelStyleDescription>
+        </computedStyleDescriptions>
       </data>
     </ownedAnnotationEntries>
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_blhBcJ00Eeu4fMSkFHpnKw" name="Expression" tooltipText="" incomingEdges="_xV4hDJ01Eeu4fMSkFHpnKw _-Bmlzp01Eeu4fMSkFHpnKw _cBOBhKKXEeufntMpU28_xw _drnGvqKXEeufntMpU28_xw _Y9VkYKKYEeufntMpU28_xw _bn9XkKKYEeufntMpU28_xw _G0zvhq2DEeutfoSBtAjFgA" width="12" height="10">
@@ -996,11 +1006,11 @@
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_-Bmlzp01Eeu4fMSkFHpnKw" name="[1..1] expression" sourceNode="_pbsRoJ01Eeu4fMSkFHpnKw" targetNode="_blhBcJ00Eeu4fMSkFHpnKw">
       <target xmi:type="ecore:EReference" href="constructs.ecore#//ReturnStatement/expression"/>
       <semanticElements xmi:type="ecore:EReference" href="constructs.ecore#//ReturnStatement/expression"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_B6_5Jp02Eeu4fMSkFHpnKw" description="_BQpxEJ01Eeu4fMSkFHpnKw" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_B6_5KJ02Eeu4fMSkFHpnKw" showIcon="false">
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_MArGy62fEeutfoSBtAjFgA" description="_MArGyK2fEeutfoSBtAjFgA" routingStyle="manhattan" strokeColor="0,0,0">
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_MArGza2fEeutfoSBtAjFgA" showIcon="false">
           <labelFormat>bold</labelFormat>
         </centerLabelStyle>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_B6_5J502Eeu4fMSkFHpnKw" labelSize="6" showIcon="false" labelColor="39,76,114"/>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_MArGzK2fEeutfoSBtAjFgA" labelSize="6" showIcon="false" labelColor="39,76,114"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
