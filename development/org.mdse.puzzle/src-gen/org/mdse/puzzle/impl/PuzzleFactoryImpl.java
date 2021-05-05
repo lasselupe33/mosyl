@@ -60,8 +60,8 @@ public class PuzzleFactoryImpl extends EFactoryImpl implements PuzzleFactory {
 			return createPuzzle();
 		case PuzzlePackage.UNIT_TEST:
 			return createUnitTest();
-		case PuzzlePackage.INPUT:
-			return createInput();
+		case PuzzlePackage.INPUTS:
+			return createInputs();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -92,9 +92,9 @@ public class PuzzleFactoryImpl extends EFactoryImpl implements PuzzleFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Input createInput() {
-		InputImpl input = new InputImpl();
-		return input;
+	public Inputs createInputs() {
+		InputsImpl inputs = new InputsImpl();
+		return inputs;
 	}
 
 	/**

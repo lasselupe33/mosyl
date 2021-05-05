@@ -15,15 +15,15 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute puzzle.ecore#//Puzzle/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute puzzle.ecore#//Puzzle/description"/>
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference puzzle.ecore#//Puzzle/tests"/>
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference puzzle.ecore#//Puzzle/inputs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference puzzle.ecore#//Puzzle/variables"/>
     </genClasses>
     <genClasses ecoreClass="puzzle.ecore#//UnitTest">
       <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference puzzle.ecore#//UnitTest/expected"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute puzzle.ecore#//UnitTest/failedMessage"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference puzzle.ecore#//UnitTest/inputs"/>
     </genClasses>
-    <genClasses ecoreClass="puzzle.ecore#//Input">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference puzzle.ecore#//Input/declareStatement"/>
+    <genClasses ecoreClass="puzzle.ecore#//Inputs">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference puzzle.ecore#//Inputs/declareStatement"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

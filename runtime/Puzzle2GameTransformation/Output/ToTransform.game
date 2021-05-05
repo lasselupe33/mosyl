@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<game:Game xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:constructs="http://org.mdse/constructs" xmlns:game="http://org.mdse/game" name="A Puzzle" description="With a nice description">
+  <entrypoint>
+    <input>
+      <input>
+        <declareStatement>
+          <variable xsi:type="constructs:IntegerVariable" name="firstInput" value="23"/>
+        </declareStatement>
+      </input>
+      <nextInput>
+        <input>
+          <declareStatement>
+            <variable xsi:type="constructs:StringVariable" name="Test" value="test"/>
+          </declareStatement>
+        </input>
+        <nextInput>
+          <input>
+            <declareStatement>
+              <variable xsi:type="constructs:StringVariable" name="Sad?" value=":(("/>
+            </declareStatement>
+          </input>
+        </nextInput>
+      </nextInput>
+    </input>
+  </entrypoint>
+  <tests failedMessage="Something went wrong">
+    <expected xsi:type="constructs:BooleanVariable" name="Expected" value="true"/>
+    <inputs>
+      <declareStatement>
+        <variable xsi:type="constructs:StringVariable" name="Sad?" value="Overwritten"/>
+      </declareStatement>
+    </inputs>
+  </tests>
+</game:Game>

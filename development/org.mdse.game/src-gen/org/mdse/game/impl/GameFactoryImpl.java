@@ -57,10 +57,10 @@ public class GameFactoryImpl extends EFactoryImpl implements GameFactory {
 		switch (eClass.getClassifierID()) {
 		case GamePackage.GAME:
 			return createGame();
-		case GamePackage.USED_STATEMENT:
-			return createUsedStatement();
-		case GamePackage.USED_INPUT:
-			return createUsedInput();
+		case GamePackage.GAME_STATEMENT:
+			return createGameStatement();
+		case GamePackage.GAME_INPUTS:
+			return createGameInputs();
 		case GamePackage.ENTRYPOINT:
 			return createEntrypoint();
 		default:
@@ -83,9 +83,9 @@ public class GameFactoryImpl extends EFactoryImpl implements GameFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UsedStatement createUsedStatement() {
-		UsedStatementImpl usedStatement = new UsedStatementImpl();
-		return usedStatement;
+	public GameStatement createGameStatement() {
+		GameStatementImpl gameStatement = new GameStatementImpl();
+		return gameStatement;
 	}
 
 	/**
@@ -93,9 +93,9 @@ public class GameFactoryImpl extends EFactoryImpl implements GameFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UsedInput createUsedInput() {
-		UsedInputImpl usedInput = new UsedInputImpl();
-		return usedInput;
+	public GameInputs createGameInputs() {
+		GameInputsImpl gameInputs = new GameInputsImpl();
+		return gameInputs;
 	}
 
 	/**

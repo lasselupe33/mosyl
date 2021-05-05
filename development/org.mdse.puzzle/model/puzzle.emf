@@ -11,7 +11,7 @@ class Puzzle {
 }
 
 class UnitTest {
-	val constructs.Expression[1] expected;
+	val constructs.Literal[1] expected;
 	attr String failedMessage;
 	val Input[*] inputs;
 }
@@ -19,3 +19,4 @@ class UnitTest {
 class Input {
 	val constructs.DeclareStatement[1] declareStatement;
 }
+

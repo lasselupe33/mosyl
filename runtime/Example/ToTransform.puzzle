@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<puzzle:Puzzle xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:constructs="http://org.mdse/constructs" xmlns:puzzle="http://org.mdse/puzzle" name="A Puzzle" description="With a nice description">
+  <tests failedMessage="Something went wrong">
+    <inputs>
+      <declareStatement>
+        <variable xsi:type="constructs:StringVariable" name="Sad?" value="Overwritten"/>
+      </declareStatement>
+    </inputs>
+  </tests>
+  <inputs>
+    <declareStatement>
+      <variable xsi:type="constructs:IntegerVariable" name="firstInput" value="23"/>
+    </declareStatement>
+  </inputs>
+  <inputs>
+    <declareStatement>
+      <variable xsi:type="constructs:StringVariable" name="Test" value="test"/>
+    </declareStatement>
+  </inputs>
+  <inputs>
+    <declareStatement>
+      <variable xsi:type="constructs:StringVariable" name="Sad?" value=":(("/>
+    </declareStatement>
+  </inputs>
+</puzzle:Puzzle>

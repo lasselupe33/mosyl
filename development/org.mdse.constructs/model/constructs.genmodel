@@ -59,5 +59,15 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference constructs.ecore#//BinaryExpression/expression1"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference constructs.ecore#//BinaryExpression/expression2"/>
     </genClasses>
+    <genClasses ecoreClass="constructs.ecore#//Literal"/>
+    <genClasses ecoreClass="constructs.ecore#//IntergerLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//IntergerLiteral/value"/>
+    </genClasses>
+    <genClasses ecoreClass="constructs.ecore#//StringLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//StringLiteral/value"/>
+    </genClasses>
+    <genClasses ecoreClass="constructs.ecore#//BooleanLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//BooleanLiteral/value"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

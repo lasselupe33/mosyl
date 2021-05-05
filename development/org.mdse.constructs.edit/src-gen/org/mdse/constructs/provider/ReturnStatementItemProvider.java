@@ -172,6 +172,15 @@ public class ReturnStatementItemProvider extends StatementItemProvider {
 
 		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.RETURN_STATEMENT__EXPRESSION,
 				ConstructsFactory.eINSTANCE.createArithmeticExpression()));
+
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.RETURN_STATEMENT__EXPRESSION,
+				ConstructsFactory.eINSTANCE.createIntergerLiteral()));
+
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.RETURN_STATEMENT__EXPRESSION,
+				ConstructsFactory.eINSTANCE.createStringLiteral()));
+
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.RETURN_STATEMENT__EXPRESSION,
+				ConstructsFactory.eINSTANCE.createBooleanLiteral()));
 	}
 
 }

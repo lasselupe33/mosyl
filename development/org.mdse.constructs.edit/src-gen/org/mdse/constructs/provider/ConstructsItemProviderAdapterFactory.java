@@ -257,6 +257,75 @@ public class ConstructsItemProviderAdapterFactory extends ConstructsAdapterFacto
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.mdse.constructs.IntergerLiteral} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected IntergerLiteralItemProvider intergerLiteralItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mdse.constructs.IntergerLiteral}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createIntergerLiteralAdapter() {
+		if (intergerLiteralItemProvider == null) {
+			intergerLiteralItemProvider = new IntergerLiteralItemProvider(this);
+		}
+
+		return intergerLiteralItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.mdse.constructs.StringLiteral} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StringLiteralItemProvider stringLiteralItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mdse.constructs.StringLiteral}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStringLiteralAdapter() {
+		if (stringLiteralItemProvider == null) {
+			stringLiteralItemProvider = new StringLiteralItemProvider(this);
+		}
+
+		return stringLiteralItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.mdse.constructs.BooleanLiteral} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected BooleanLiteralItemProvider booleanLiteralItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mdse.constructs.BooleanLiteral}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createBooleanLiteralAdapter() {
+		if (booleanLiteralItemProvider == null) {
+			booleanLiteralItemProvider = new BooleanLiteralItemProvider(this);
+		}
+
+		return booleanLiteralItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -371,6 +440,12 @@ public class ConstructsItemProviderAdapterFactory extends ConstructsAdapterFacto
 			declareStatementItemProvider.dispose();
 		if (returnStatementItemProvider != null)
 			returnStatementItemProvider.dispose();
+		if (intergerLiteralItemProvider != null)
+			intergerLiteralItemProvider.dispose();
+		if (stringLiteralItemProvider != null)
+			stringLiteralItemProvider.dispose();
+		if (booleanLiteralItemProvider != null)
+			booleanLiteralItemProvider.dispose();
 	}
 
 }

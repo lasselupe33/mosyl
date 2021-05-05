@@ -59,7 +59,6 @@ public class PuzzleItemProvider extends ItemProviderAdapter implements IEditingD
 			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
 			addTestsPropertyDescriptor(object);
-			addInputsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -110,20 +109,6 @@ public class PuzzleItemProvider extends ItemProviderAdapter implements IEditingD
 	}
 
 	/**
-	 * This adds a property descriptor for the Inputs feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addInputsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Puzzle_inputs_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Puzzle_inputs_feature", "_UI_Puzzle_type"),
-						PuzzlePackage.Literals.PUZZLE__INPUTS, true, false, true, null, null, null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -136,7 +121,7 @@ public class PuzzleItemProvider extends ItemProviderAdapter implements IEditingD
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(PuzzlePackage.Literals.PUZZLE__TESTS);
-			childrenFeatures.add(PuzzlePackage.Literals.PUZZLE__INPUTS);
+			childrenFeatures.add(PuzzlePackage.Literals.PUZZLE__VARIABLES);
 		}
 		return childrenFeatures;
 	}
@@ -205,7 +190,7 @@ public class PuzzleItemProvider extends ItemProviderAdapter implements IEditingD
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		case PuzzlePackage.PUZZLE__TESTS:
-		case PuzzlePackage.PUZZLE__INPUTS:
+		case PuzzlePackage.PUZZLE__VARIABLES:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -227,7 +212,7 @@ public class PuzzleItemProvider extends ItemProviderAdapter implements IEditingD
 				createChildParameter(PuzzlePackage.Literals.PUZZLE__TESTS, PuzzleFactory.eINSTANCE.createUnitTest()));
 
 		newChildDescriptors.add(
-				createChildParameter(PuzzlePackage.Literals.PUZZLE__INPUTS, PuzzleFactory.eINSTANCE.createInput()));
+				createChildParameter(PuzzlePackage.Literals.PUZZLE__VARIABLES, PuzzleFactory.eINSTANCE.createInputs()));
 	}
 
 	/**

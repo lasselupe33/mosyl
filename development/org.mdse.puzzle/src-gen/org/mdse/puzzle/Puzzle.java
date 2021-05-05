@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.mdse.puzzle.Puzzle#getName <em>Name</em>}</li>
  *   <li>{@link org.mdse.puzzle.Puzzle#getDescription <em>Description</em>}</li>
  *   <li>{@link org.mdse.puzzle.Puzzle#getTests <em>Tests</em>}</li>
- *   <li>{@link org.mdse.puzzle.Puzzle#getInputs <em>Inputs</em>}</li>
+ *   <li>{@link org.mdse.puzzle.Puzzle#getVariables <em>Variables</em>}</li>
  * </ul>
  *
  * @see org.mdse.puzzle.PuzzlePackage#getPuzzle()
@@ -83,15 +83,25 @@ public interface Puzzle extends EObject {
 	EList<UnitTest> getTests();
 
 	/**
-	 * Returns the value of the '<em><b>Inputs</b></em>' containment reference list.
-	 * The list contents are of type {@link org.mdse.puzzle.Input}.
+	 * Returns the value of the '<em><b>Variables</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Inputs</em>' containment reference list.
-	 * @see org.mdse.puzzle.PuzzlePackage#getPuzzle_Inputs()
+	 * @return the value of the '<em>Variables</em>' containment reference.
+	 * @see #setVariables(Inputs)
+	 * @see org.mdse.puzzle.PuzzlePackage#getPuzzle_Variables()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Input> getInputs();
+	Inputs getVariables();
+
+	/**
+	 * Sets the value of the '{@link org.mdse.puzzle.Puzzle#getVariables <em>Variables</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Variables</em>' containment reference.
+	 * @see #getVariables()
+	 * @generated
+	 */
+	void setVariables(Inputs value);
 
 } // Puzzle

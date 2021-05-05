@@ -6,20 +6,20 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tests" lowerBound="1" upperBound="-1"
         eType="#//UnitTest" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
-        eType="#//Input" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="variables" eType="#//Inputs"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UnitTest">
     <eStructuralFeatures xsi:type="ecore:EReference" name="expected" lowerBound="1"
-        eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//Expression"
+        eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//Literal"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="failedMessage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
-        eType="#//Input" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" eType="#//Inputs"
+        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Input">
+  <eClassifiers xsi:type="ecore:EClass" name="Inputs">
     <eStructuralFeatures xsi:type="ecore:EReference" name="declareStatement" lowerBound="1"
-        eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//DeclareStatement"
+        upperBound="-1" eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//DeclareStatement"
         containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

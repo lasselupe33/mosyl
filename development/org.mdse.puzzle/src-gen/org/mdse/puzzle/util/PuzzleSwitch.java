@@ -80,9 +80,9 @@ public class PuzzleSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case PuzzlePackage.INPUT: {
-			Input input = (Input) theEObject;
-			T result = caseInput(input);
+		case PuzzlePackage.INPUTS: {
+			Inputs inputs = (Inputs) theEObject;
+			T result = caseInputs(inputs);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -123,17 +123,17 @@ public class PuzzleSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Input</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Inputs</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Input</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Inputs</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseInput(Input object) {
+	public T caseInputs(Inputs object) {
 		return null;
 	}
 

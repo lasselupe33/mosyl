@@ -2,11 +2,9 @@
  */
 package org.mdse.puzzle;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
-import org.mdse.constructs.Expression;
+import org.mdse.constructs.Literal;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,12 +30,12 @@ public interface UnitTest extends EObject {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Expected</em>' containment reference.
-	 * @see #setExpected(Expression)
+	 * @see #setExpected(Literal)
 	 * @see org.mdse.puzzle.PuzzlePackage#getUnitTest_Expected()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	Expression getExpected();
+	Literal getExpected();
 
 	/**
 	 * Sets the value of the '{@link org.mdse.puzzle.UnitTest#getExpected <em>Expected</em>}' containment reference.
@@ -47,7 +45,7 @@ public interface UnitTest extends EObject {
 	 * @see #getExpected()
 	 * @generated
 	 */
-	void setExpected(Expression value);
+	void setExpected(Literal value);
 
 	/**
 	 * Returns the value of the '<em><b>Failed Message</b></em>' attribute.
@@ -72,15 +70,25 @@ public interface UnitTest extends EObject {
 	void setFailedMessage(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Inputs</b></em>' containment reference list.
-	 * The list contents are of type {@link org.mdse.puzzle.Input}.
+	 * Returns the value of the '<em><b>Inputs</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Inputs</em>' containment reference list.
+	 * @return the value of the '<em>Inputs</em>' containment reference.
+	 * @see #setInputs(Inputs)
 	 * @see org.mdse.puzzle.PuzzlePackage#getUnitTest_Inputs()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Input> getInputs();
+	Inputs getInputs();
+
+	/**
+	 * Sets the value of the '{@link org.mdse.puzzle.UnitTest#getInputs <em>Inputs</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Inputs</em>' containment reference.
+	 * @see #getInputs()
+	 * @generated
+	 */
+	void setInputs(Inputs value);
 
 } // UnitTest

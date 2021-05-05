@@ -94,13 +94,13 @@ public interface PuzzlePackage extends EPackage {
 	int PUZZLE__TESTS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Inputs</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Variables</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PUZZLE__INPUTS = 3;
+	int PUZZLE__VARIABLES = 3;
 
 	/**
 	 * The number of structural features of the '<em>Puzzle</em>' class.
@@ -149,7 +149,7 @@ public interface PuzzlePackage extends EPackage {
 	int UNIT_TEST__FAILED_MESSAGE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Inputs</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Inputs</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -176,41 +176,41 @@ public interface PuzzlePackage extends EPackage {
 	int UNIT_TEST_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.mdse.puzzle.impl.InputImpl <em>Input</em>}' class.
+	 * The meta object id for the '{@link org.mdse.puzzle.impl.InputsImpl <em>Inputs</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mdse.puzzle.impl.InputImpl
-	 * @see org.mdse.puzzle.impl.PuzzlePackageImpl#getInput()
+	 * @see org.mdse.puzzle.impl.InputsImpl
+	 * @see org.mdse.puzzle.impl.PuzzlePackageImpl#getInputs()
 	 * @generated
 	 */
-	int INPUT = 2;
+	int INPUTS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Declare Statement</b></em>' containment reference.
+	 * The feature id for the '<em><b>Declare Statement</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT__DECLARE_STATEMENT = 0;
+	int INPUTS__DECLARE_STATEMENT = 0;
 
 	/**
-	 * The number of structural features of the '<em>Input</em>' class.
+	 * The number of structural features of the '<em>Inputs</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_FEATURE_COUNT = 1;
+	int INPUTS_FEATURE_COUNT = 1;
 
 	/**
-	 * The number of operations of the '<em>Input</em>' class.
+	 * The number of operations of the '<em>Inputs</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INPUT_OPERATION_COUNT = 0;
+	int INPUTS_OPERATION_COUNT = 0;
 
 	/**
 	 * Returns the meta object for class '{@link org.mdse.puzzle.Puzzle <em>Puzzle</em>}'.
@@ -256,15 +256,15 @@ public interface PuzzlePackage extends EPackage {
 	EReference getPuzzle_Tests();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.mdse.puzzle.Puzzle#getInputs <em>Inputs</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.mdse.puzzle.Puzzle#getVariables <em>Variables</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Inputs</em>'.
-	 * @see org.mdse.puzzle.Puzzle#getInputs()
+	 * @return the meta object for the containment reference '<em>Variables</em>'.
+	 * @see org.mdse.puzzle.Puzzle#getVariables()
 	 * @see #getPuzzle()
 	 * @generated
 	 */
-	EReference getPuzzle_Inputs();
+	EReference getPuzzle_Variables();
 
 	/**
 	 * Returns the meta object for class '{@link org.mdse.puzzle.UnitTest <em>Unit Test</em>}'.
@@ -299,10 +299,10 @@ public interface PuzzlePackage extends EPackage {
 	EAttribute getUnitTest_FailedMessage();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.mdse.puzzle.UnitTest#getInputs <em>Inputs</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.mdse.puzzle.UnitTest#getInputs <em>Inputs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Inputs</em>'.
+	 * @return the meta object for the containment reference '<em>Inputs</em>'.
 	 * @see org.mdse.puzzle.UnitTest#getInputs()
 	 * @see #getUnitTest()
 	 * @generated
@@ -310,25 +310,25 @@ public interface PuzzlePackage extends EPackage {
 	EReference getUnitTest_Inputs();
 
 	/**
-	 * Returns the meta object for class '{@link org.mdse.puzzle.Input <em>Input</em>}'.
+	 * Returns the meta object for class '{@link org.mdse.puzzle.Inputs <em>Inputs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Input</em>'.
-	 * @see org.mdse.puzzle.Input
+	 * @return the meta object for class '<em>Inputs</em>'.
+	 * @see org.mdse.puzzle.Inputs
 	 * @generated
 	 */
-	EClass getInput();
+	EClass getInputs();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.mdse.puzzle.Input#getDeclareStatement <em>Declare Statement</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.mdse.puzzle.Inputs#getDeclareStatement <em>Declare Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Declare Statement</em>'.
-	 * @see org.mdse.puzzle.Input#getDeclareStatement()
-	 * @see #getInput()
+	 * @return the meta object for the containment reference list '<em>Declare Statement</em>'.
+	 * @see org.mdse.puzzle.Inputs#getDeclareStatement()
+	 * @see #getInputs()
 	 * @generated
 	 */
-	EReference getInput_DeclareStatement();
+	EReference getInputs_DeclareStatement();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -388,12 +388,12 @@ public interface PuzzlePackage extends EPackage {
 		EReference PUZZLE__TESTS = eINSTANCE.getPuzzle_Tests();
 
 		/**
-		 * The meta object literal for the '<em><b>Inputs</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Variables</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PUZZLE__INPUTS = eINSTANCE.getPuzzle_Inputs();
+		EReference PUZZLE__VARIABLES = eINSTANCE.getPuzzle_Variables();
 
 		/**
 		 * The meta object literal for the '{@link org.mdse.puzzle.impl.UnitTestImpl <em>Unit Test</em>}' class.
@@ -422,7 +422,7 @@ public interface PuzzlePackage extends EPackage {
 		EAttribute UNIT_TEST__FAILED_MESSAGE = eINSTANCE.getUnitTest_FailedMessage();
 
 		/**
-		 * The meta object literal for the '<em><b>Inputs</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Inputs</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -430,22 +430,22 @@ public interface PuzzlePackage extends EPackage {
 		EReference UNIT_TEST__INPUTS = eINSTANCE.getUnitTest_Inputs();
 
 		/**
-		 * The meta object literal for the '{@link org.mdse.puzzle.impl.InputImpl <em>Input</em>}' class.
+		 * The meta object literal for the '{@link org.mdse.puzzle.impl.InputsImpl <em>Inputs</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.mdse.puzzle.impl.InputImpl
-		 * @see org.mdse.puzzle.impl.PuzzlePackageImpl#getInput()
+		 * @see org.mdse.puzzle.impl.InputsImpl
+		 * @see org.mdse.puzzle.impl.PuzzlePackageImpl#getInputs()
 		 * @generated
 		 */
-		EClass INPUT = eINSTANCE.getInput();
+		EClass INPUTS = eINSTANCE.getInputs();
 
 		/**
-		 * The meta object literal for the '<em><b>Declare Statement</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Declare Statement</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference INPUT__DECLARE_STATEMENT = eINSTANCE.getInput_DeclareStatement();
+		EReference INPUTS__DECLARE_STATEMENT = eINSTANCE.getInputs_DeclareStatement();
 
 	}
 

@@ -72,13 +72,13 @@ public class GameAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseUsedStatement(UsedStatement object) {
-			return createUsedStatementAdapter();
+		public Adapter caseGameStatement(GameStatement object) {
+			return createGameStatementAdapter();
 		}
 
 		@Override
-		public Adapter caseUsedInput(UsedInput object) {
-			return createUsedInputAdapter();
+		public Adapter caseGameInputs(GameInputs object) {
+			return createGameInputsAdapter();
 		}
 
 		@Override
@@ -120,30 +120,30 @@ public class GameAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.mdse.game.UsedStatement <em>Used Statement</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.mdse.game.GameStatement <em>Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.mdse.game.UsedStatement
+	 * @see org.mdse.game.GameStatement
 	 * @generated
 	 */
-	public Adapter createUsedStatementAdapter() {
+	public Adapter createGameStatementAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.mdse.game.UsedInput <em>Used Input</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.mdse.game.GameInputs <em>Inputs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.mdse.game.UsedInput
+	 * @see org.mdse.game.GameInputs
 	 * @generated
 	 */
-	public Adapter createUsedInputAdapter() {
+	public Adapter createGameInputsAdapter() {
 		return null;
 	}
 

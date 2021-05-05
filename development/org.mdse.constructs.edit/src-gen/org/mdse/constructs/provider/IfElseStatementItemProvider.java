@@ -210,6 +210,15 @@ public class IfElseStatementItemProvider extends StatementItemProvider {
 		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__CONDITION,
 				ConstructsFactory.eINSTANCE.createArithmeticExpression()));
 
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__CONDITION,
+				ConstructsFactory.eINSTANCE.createIntergerLiteral()));
+
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__CONDITION,
+				ConstructsFactory.eINSTANCE.createStringLiteral()));
+
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__CONDITION,
+				ConstructsFactory.eINSTANCE.createBooleanLiteral()));
+
 		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__ELSE_STATEMENT,
 				ConstructsFactory.eINSTANCE.createIfElseStatement()));
 

@@ -73,6 +73,12 @@ public class ConstructsFactoryImpl extends EFactoryImpl implements ConstructsFac
 			return createDeclareStatement();
 		case ConstructsPackage.RETURN_STATEMENT:
 			return createReturnStatement();
+		case ConstructsPackage.INTERGER_LITERAL:
+			return createIntergerLiteral();
+		case ConstructsPackage.STRING_LITERAL:
+			return createStringLiteral();
+		case ConstructsPackage.BOOLEAN_LITERAL:
+			return createBooleanLiteral();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -190,6 +196,36 @@ public class ConstructsFactoryImpl extends EFactoryImpl implements ConstructsFac
 	public ReturnStatement createReturnStatement() {
 		ReturnStatementImpl returnStatement = new ReturnStatementImpl();
 		return returnStatement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public IntergerLiteral createIntergerLiteral() {
+		IntergerLiteralImpl intergerLiteral = new IntergerLiteralImpl();
+		return intergerLiteral;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StringLiteral createStringLiteral() {
+		StringLiteralImpl stringLiteral = new StringLiteralImpl();
+		return stringLiteral;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BooleanLiteral createBooleanLiteral() {
+		BooleanLiteralImpl booleanLiteral = new BooleanLiteralImpl();
+		return booleanLiteral;
 	}
 
 	/**

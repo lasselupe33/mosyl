@@ -180,6 +180,48 @@ public class ConstructsSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case ConstructsPackage.LITERAL: {
+			Literal literal = (Literal) theEObject;
+			T result = caseLiteral(literal);
+			if (result == null)
+				result = caseExpression(literal);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ConstructsPackage.INTERGER_LITERAL: {
+			IntergerLiteral intergerLiteral = (IntergerLiteral) theEObject;
+			T result = caseIntergerLiteral(intergerLiteral);
+			if (result == null)
+				result = caseLiteral(intergerLiteral);
+			if (result == null)
+				result = caseExpression(intergerLiteral);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ConstructsPackage.STRING_LITERAL: {
+			StringLiteral stringLiteral = (StringLiteral) theEObject;
+			T result = caseStringLiteral(stringLiteral);
+			if (result == null)
+				result = caseLiteral(stringLiteral);
+			if (result == null)
+				result = caseExpression(stringLiteral);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ConstructsPackage.BOOLEAN_LITERAL: {
+			BooleanLiteral booleanLiteral = (BooleanLiteral) theEObject;
+			T result = caseBooleanLiteral(booleanLiteral);
+			if (result == null)
+				result = caseLiteral(booleanLiteral);
+			if (result == null)
+				result = caseExpression(booleanLiteral);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -362,6 +404,66 @@ public class ConstructsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseBinaryExpression(BinaryExpression object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Literal</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Literal</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLiteral(Literal object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Interger Literal</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Interger Literal</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIntergerLiteral(IntergerLiteral object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>String Literal</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>String Literal</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStringLiteral(StringLiteral object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Boolean Literal</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Boolean Literal</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseBooleanLiteral(BooleanLiteral object) {
 		return null;
 	}
 
