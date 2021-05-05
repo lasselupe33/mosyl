@@ -7,25 +7,36 @@ import "http://org.mdse/puzzle" as puzzle
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 import "http://org.mdse/constructs" as constructs
 
-
 Puzzle returns puzzle::Puzzle:
 	{puzzle::Puzzle}
 	'PUZZLE' '{'
 		'name' '=' name=STRING
 		'description' '=' description=STRING
 		
-		tests+=UnitTest
+		(inputs=Inputs)?
+		
+		(tests+=UnitTest)+
 		
 	'}';
+	
+terminal BOOLEAN returns ecore::EBoolean: ('true' | 'false');
+	
+Inputs returns puzzle::Inputs: 
+	'INPUTS' '{'
+		(variables+=Variable)+
+	'}'
+;
 
 UnitTest returns puzzle::UnitTest:
 	{puzzle::UnitTest}
 	'TEST' '{'
 		/* ... */
 		
-		inputs=Input
+		('INPUTS' '{'
+			inputs+=UnitTestInput
+		'}' )?
 		
-		/*expected= */
+		'EXPECTS' expected=Literal 
 		(
 			'ON_FAIL' '{'
 				'msg' '=' failedMessage=STRING
@@ -34,26 +45,38 @@ UnitTest returns puzzle::UnitTest:
 		
 	'}';
 	
+UnitTestInput returns puzzle::UnitTestInput:
+	variable=[constructs::Variable|ID] '=' overwritingValue=Literal
+;
+	
+Literal returns constructs::Literal:
+	IntergerLiteral|StringLiteral|BooleanLiteral;
+	
+IntergerLiteral returns constructs::IntergerLiteral:
+	{constructs::IntergerLiteral}
+	value=INT;
+
+StringLiteral returns constructs::StringLiteral:
+	{constructs::StringLiteral}
+	value=STRING;
+
+BooleanLiteral returns constructs::BooleanLiteral:
+	{constructs::BooleanLiteral}
+	value=BOOLEAN;
 
 Variable returns constructs::Variable:
-	IntegerVariable;
+	IntegerVariable | StringVariable | BooleanVariable;
 
-Expression returns constructs::Expression:
-	Variable;
 	
 IntegerVariable returns constructs::IntegerVariable:
 	{constructs::IntegerVariable}
 	'int' name=ID '=' value=INT;
-
-
-DeclareStatement returns constructs::DeclareStatement:
-	variable=Variable
-;
-
-Input returns puzzle::Inputs:
-	{puzzle::Inputs}
-	'INPUT' '{'
-		(declareStatement+=DeclareStatement)+
-	'}'
-;
+	
+StringVariable returns constructs::StringVariable:
+	{constructs::StringVariable}
+	'string' name=ID '=' value=STRING;
+	
+BooleanVariable returns constructs::BooleanVariable:
+	{constructs::BooleanVariable}
+	'bool' name=ID '=' value=BOOLEAN;
 
