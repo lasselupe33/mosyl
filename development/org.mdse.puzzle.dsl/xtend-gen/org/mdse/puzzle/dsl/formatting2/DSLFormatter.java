@@ -15,12 +15,13 @@ import org.mdse.constructs.DeclareStatement;
 import org.mdse.constructs.Variable;
 import org.mdse.puzzle.Puzzle;
 import org.mdse.puzzle.UnitTest;
+import org.mdse.puzzle.dsl.services.DSLGrammarAccess;
 
 @SuppressWarnings("all")
 public class DSLFormatter extends AbstractFormatter2 {
   @Inject
   @Extension
-  private /* DSLGrammarAccess */Object _dSLGrammarAccess;
+  private DSLGrammarAccess _dSLGrammarAccess;
   
   protected void _format(final Puzzle puzzle, @Extension final IFormattableDocument document) {
     EList<UnitTest> _tests = puzzle.getTests();
