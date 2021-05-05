@@ -96,49 +96,49 @@ public class GameItemProviderAdapterFactory extends GameAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.mdse.game.UsedStatement} instances.
+	 * This keeps track of the one adapter used for all {@link org.mdse.game.GameStatement} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected UsedStatementItemProvider usedStatementItemProvider;
+	protected GameStatementItemProvider gameStatementItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.mdse.game.UsedStatement}.
+	 * This creates an adapter for a {@link org.mdse.game.GameStatement}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createUsedStatementAdapter() {
-		if (usedStatementItemProvider == null) {
-			usedStatementItemProvider = new UsedStatementItemProvider(this);
+	public Adapter createGameStatementAdapter() {
+		if (gameStatementItemProvider == null) {
+			gameStatementItemProvider = new GameStatementItemProvider(this);
 		}
 
-		return usedStatementItemProvider;
+		return gameStatementItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.mdse.game.UsedInput} instances.
+	 * This keeps track of the one adapter used for all {@link org.mdse.game.GameInputs} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected UsedInputItemProvider usedInputItemProvider;
+	protected GameInputsItemProvider gameInputsItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.mdse.game.UsedInput}.
+	 * This creates an adapter for a {@link org.mdse.game.GameInputs}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createUsedInputAdapter() {
-		if (usedInputItemProvider == null) {
-			usedInputItemProvider = new UsedInputItemProvider(this);
+	public Adapter createGameInputsAdapter() {
+		if (gameInputsItemProvider == null) {
+			gameInputsItemProvider = new GameInputsItemProvider(this);
 		}
 
-		return usedInputItemProvider;
+		return gameInputsItemProvider;
 	}
 
 	/**
@@ -265,10 +265,10 @@ public class GameItemProviderAdapterFactory extends GameAdapterFactory
 	public void dispose() {
 		if (gameItemProvider != null)
 			gameItemProvider.dispose();
-		if (usedStatementItemProvider != null)
-			usedStatementItemProvider.dispose();
-		if (usedInputItemProvider != null)
-			usedInputItemProvider.dispose();
+		if (gameStatementItemProvider != null)
+			gameStatementItemProvider.dispose();
+		if (gameInputsItemProvider != null)
+			gameInputsItemProvider.dispose();
 		if (entrypointItemProvider != null)
 			entrypointItemProvider.dispose();
 	}

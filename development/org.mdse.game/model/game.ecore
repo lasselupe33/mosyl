@@ -9,25 +9,23 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="tests" upperBound="-1"
         eType="ecore:EClass ../../org.mdse.puzzle/model/puzzle.ecore#//UnitTest" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="UsedStatement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nextStatements" upperBound="-1"
-        eType="#//UsedStatement" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GameStatement">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nextStatement" eType="#//GameStatement"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="statement" lowerBound="1"
         eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//Statement"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="UsedInput">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nextStatement" eType="#//UsedStatement"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="input" lowerBound="1" eType="ecore:EClass ../../org.mdse.puzzle/model/puzzle.ecore#//Input"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nextInput" eType="#//UsedInput"
-        containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GameInputs">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nextStatement" lowerBound="1"
+        eType="#//GameStatement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" lowerBound="1"
+        eType="ecore:EClass ../../org.mdse.puzzle/model/puzzle.ecore#//Inputs" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Entrypoint">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="input" eType="#//UsedInput"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" eType="#//GameInputs"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="statement" eType="#//UsedStatement"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statement" eType="#//GameStatement"
         containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

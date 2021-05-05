@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import org.mdse.constructs.ArithmeticExpression;
 import org.mdse.constructs.ArithmeticOperator;
 import org.mdse.constructs.BinaryExpression;
+import org.mdse.constructs.BooleanLiteral;
 import org.mdse.constructs.BooleanVariable;
 import org.mdse.constructs.ComparativeExpression;
 import org.mdse.constructs.ComparativeOperator;
@@ -22,8 +23,11 @@ import org.mdse.constructs.DeclareStatement;
 import org.mdse.constructs.Expression;
 import org.mdse.constructs.IfElseStatement;
 import org.mdse.constructs.IntegerVariable;
+import org.mdse.constructs.IntergerLiteral;
+import org.mdse.constructs.Literal;
 import org.mdse.constructs.ReturnStatement;
 import org.mdse.constructs.Statement;
+import org.mdse.constructs.StringLiteral;
 import org.mdse.constructs.StringVariable;
 import org.mdse.constructs.Variable;
 
@@ -117,6 +121,34 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 * @generated
 	 */
 	private EClass binaryExpressionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass literalEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass intergerLiteralEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass stringLiteralEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass booleanLiteralEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -426,6 +458,69 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getLiteral() {
+		return literalEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getIntergerLiteral() {
+		return intergerLiteralEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIntergerLiteral_Value() {
+		return (EAttribute) intergerLiteralEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStringLiteral() {
+		return stringLiteralEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getStringLiteral_Value() {
+		return (EAttribute) stringLiteralEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBooleanLiteral() {
+		return booleanLiteralEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBooleanLiteral_Value() {
+		return (EAttribute) booleanLiteralEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getComparativeOperator() {
 		return comparativeOperatorEEnum;
 	}
@@ -505,6 +600,17 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 		createEReference(binaryExpressionEClass, BINARY_EXPRESSION__EXPRESSION1);
 		createEReference(binaryExpressionEClass, BINARY_EXPRESSION__EXPRESSION2);
 
+		literalEClass = createEClass(LITERAL);
+
+		intergerLiteralEClass = createEClass(INTERGER_LITERAL);
+		createEAttribute(intergerLiteralEClass, INTERGER_LITERAL__VALUE);
+
+		stringLiteralEClass = createEClass(STRING_LITERAL);
+		createEAttribute(stringLiteralEClass, STRING_LITERAL__VALUE);
+
+		booleanLiteralEClass = createEClass(BOOLEAN_LITERAL);
+		createEAttribute(booleanLiteralEClass, BOOLEAN_LITERAL__VALUE);
+
 		// Create enums
 		comparativeOperatorEEnum = createEEnum(COMPARATIVE_OPERATOR);
 		arithmeticOperatorEEnum = createEEnum(ARITHMETIC_OPERATOR);
@@ -549,6 +655,10 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 		declareStatementEClass.getESuperTypes().add(this.getStatement());
 		returnStatementEClass.getESuperTypes().add(this.getStatement());
 		binaryExpressionEClass.getESuperTypes().add(this.getExpression());
+		literalEClass.getESuperTypes().add(this.getExpression());
+		intergerLiteralEClass.getESuperTypes().add(this.getLiteral());
+		stringLiteralEClass.getESuperTypes().add(this.getLiteral());
+		booleanLiteralEClass.getESuperTypes().add(this.getLiteral());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(expressionEClass, Expression.class, "Expression", IS_ABSTRACT, !IS_INTERFACE,
@@ -621,6 +731,24 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 		initEReference(getBinaryExpression_Expression2(), this.getExpression(), null, "expression2", null, 1, 1,
 				BinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(literalEClass, Literal.class, "Literal", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(intergerLiteralEClass, IntergerLiteral.class, "IntergerLiteral", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getIntergerLiteral_Value(), ecorePackage.getEInt(), "value", "0", 0, 1, IntergerLiteral.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(stringLiteralEClass, StringLiteral.class, "StringLiteral", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getStringLiteral_Value(), ecorePackage.getEString(), "value", "", 0, 1, StringLiteral.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(booleanLiteralEClass, BooleanLiteral.class, "BooleanLiteral", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getBooleanLiteral_Value(), ecorePackage.getEBooleanObject(), "value", "false", 0, 1,
+				BooleanLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(comparativeOperatorEEnum, ComparativeOperator.class, "ComparativeOperator");

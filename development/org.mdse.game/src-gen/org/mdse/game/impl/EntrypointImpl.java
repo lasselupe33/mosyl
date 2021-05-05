@@ -12,9 +12,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.mdse.game.Entrypoint;
+import org.mdse.game.GameInputs;
 import org.mdse.game.GamePackage;
-import org.mdse.game.UsedInput;
-import org.mdse.game.UsedStatement;
+import org.mdse.game.GameStatement;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +24,7 @@ import org.mdse.game.UsedStatement;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.mdse.game.impl.EntrypointImpl#getInput <em>Input</em>}</li>
+ *   <li>{@link org.mdse.game.impl.EntrypointImpl#getInputs <em>Inputs</em>}</li>
  *   <li>{@link org.mdse.game.impl.EntrypointImpl#getStatement <em>Statement</em>}</li>
  * </ul>
  *
@@ -32,14 +32,14 @@ import org.mdse.game.UsedStatement;
  */
 public class EntrypointImpl extends MinimalEObjectImpl.Container implements Entrypoint {
 	/**
-	 * The cached value of the '{@link #getInput() <em>Input</em>}' containment reference.
+	 * The cached value of the '{@link #getInputs() <em>Inputs</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInput()
+	 * @see #getInputs()
 	 * @generated
 	 * @ordered
 	 */
-	protected UsedInput input;
+	protected GameInputs inputs;
 
 	/**
 	 * The cached value of the '{@link #getStatement() <em>Statement</em>}' containment reference.
@@ -49,7 +49,7 @@ public class EntrypointImpl extends MinimalEObjectImpl.Container implements Entr
 	 * @generated
 	 * @ordered
 	 */
-	protected UsedStatement statement;
+	protected GameStatement statement;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -75,8 +75,8 @@ public class EntrypointImpl extends MinimalEObjectImpl.Container implements Entr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UsedInput getInput() {
-		return input;
+	public GameInputs getInputs() {
+		return inputs;
 	}
 
 	/**
@@ -84,12 +84,12 @@ public class EntrypointImpl extends MinimalEObjectImpl.Container implements Entr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetInput(UsedInput newInput, NotificationChain msgs) {
-		UsedInput oldInput = input;
-		input = newInput;
+	public NotificationChain basicSetInputs(GameInputs newInputs, NotificationChain msgs) {
+		GameInputs oldInputs = inputs;
+		inputs = newInputs;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					GamePackage.ENTRYPOINT__INPUT, oldInput, newInput);
+					GamePackage.ENTRYPOINT__INPUTS, oldInputs, newInputs);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -103,20 +103,21 @@ public class EntrypointImpl extends MinimalEObjectImpl.Container implements Entr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInput(UsedInput newInput) {
-		if (newInput != input) {
+	public void setInputs(GameInputs newInputs) {
+		if (newInputs != inputs) {
 			NotificationChain msgs = null;
-			if (input != null)
-				msgs = ((InternalEObject) input).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - GamePackage.ENTRYPOINT__INPUT, null, msgs);
-			if (newInput != null)
-				msgs = ((InternalEObject) newInput).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - GamePackage.ENTRYPOINT__INPUT, null, msgs);
-			msgs = basicSetInput(newInput, msgs);
+			if (inputs != null)
+				msgs = ((InternalEObject) inputs).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GamePackage.ENTRYPOINT__INPUTS, null, msgs);
+			if (newInputs != null)
+				msgs = ((InternalEObject) newInputs).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GamePackage.ENTRYPOINT__INPUTS, null, msgs);
+			msgs = basicSetInputs(newInputs, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.ENTRYPOINT__INPUT, newInput, newInput));
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.ENTRYPOINT__INPUTS, newInputs,
+					newInputs));
 	}
 
 	/**
@@ -124,7 +125,7 @@ public class EntrypointImpl extends MinimalEObjectImpl.Container implements Entr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UsedStatement getStatement() {
+	public GameStatement getStatement() {
 		return statement;
 	}
 
@@ -133,8 +134,8 @@ public class EntrypointImpl extends MinimalEObjectImpl.Container implements Entr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetStatement(UsedStatement newStatement, NotificationChain msgs) {
-		UsedStatement oldStatement = statement;
+	public NotificationChain basicSetStatement(GameStatement newStatement, NotificationChain msgs) {
+		GameStatement oldStatement = statement;
 		statement = newStatement;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
@@ -152,7 +153,7 @@ public class EntrypointImpl extends MinimalEObjectImpl.Container implements Entr
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setStatement(UsedStatement newStatement) {
+	public void setStatement(GameStatement newStatement) {
 		if (newStatement != statement) {
 			NotificationChain msgs = null;
 			if (statement != null)
@@ -177,8 +178,8 @@ public class EntrypointImpl extends MinimalEObjectImpl.Container implements Entr
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case GamePackage.ENTRYPOINT__INPUT:
-			return basicSetInput(null, msgs);
+		case GamePackage.ENTRYPOINT__INPUTS:
+			return basicSetInputs(null, msgs);
 		case GamePackage.ENTRYPOINT__STATEMENT:
 			return basicSetStatement(null, msgs);
 		}
@@ -193,8 +194,8 @@ public class EntrypointImpl extends MinimalEObjectImpl.Container implements Entr
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case GamePackage.ENTRYPOINT__INPUT:
-			return getInput();
+		case GamePackage.ENTRYPOINT__INPUTS:
+			return getInputs();
 		case GamePackage.ENTRYPOINT__STATEMENT:
 			return getStatement();
 		}
@@ -209,11 +210,11 @@ public class EntrypointImpl extends MinimalEObjectImpl.Container implements Entr
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case GamePackage.ENTRYPOINT__INPUT:
-			setInput((UsedInput) newValue);
+		case GamePackage.ENTRYPOINT__INPUTS:
+			setInputs((GameInputs) newValue);
 			return;
 		case GamePackage.ENTRYPOINT__STATEMENT:
-			setStatement((UsedStatement) newValue);
+			setStatement((GameStatement) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -227,11 +228,11 @@ public class EntrypointImpl extends MinimalEObjectImpl.Container implements Entr
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case GamePackage.ENTRYPOINT__INPUT:
-			setInput((UsedInput) null);
+		case GamePackage.ENTRYPOINT__INPUTS:
+			setInputs((GameInputs) null);
 			return;
 		case GamePackage.ENTRYPOINT__STATEMENT:
-			setStatement((UsedStatement) null);
+			setStatement((GameStatement) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -245,8 +246,8 @@ public class EntrypointImpl extends MinimalEObjectImpl.Container implements Entr
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case GamePackage.ENTRYPOINT__INPUT:
-			return input != null;
+		case GamePackage.ENTRYPOINT__INPUTS:
+			return inputs != null;
 		case GamePackage.ENTRYPOINT__STATEMENT:
 			return statement != null;
 		}

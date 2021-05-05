@@ -77,8 +77,8 @@ public class PuzzleAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseInput(Input object) {
-			return createInputAdapter();
+		public Adapter caseInputs(Inputs object) {
+			return createInputsAdapter();
 		}
 
 		@Override
@@ -129,16 +129,16 @@ public class PuzzleAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.mdse.puzzle.Input <em>Input</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.mdse.puzzle.Inputs <em>Inputs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.mdse.puzzle.Input
+	 * @see org.mdse.puzzle.Inputs
 	 * @generated
 	 */
-	public Adapter createInputAdapter() {
+	public Adapter createInputsAdapter() {
 		return null;
 	}
 

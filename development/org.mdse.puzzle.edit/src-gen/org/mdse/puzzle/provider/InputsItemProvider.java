@@ -1,6 +1,6 @@
 /**
  */
-package org.mdse.game.provider;
+package org.mdse.puzzle.provider;
 
 import java.util.Collection;
 import java.util.List;
@@ -12,7 +12,6 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -24,17 +23,16 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.mdse.constructs.ConstructsFactory;
 
-import org.mdse.game.GameFactory;
-import org.mdse.game.GamePackage;
-import org.mdse.game.UsedStatement;
+import org.mdse.puzzle.Inputs;
+import org.mdse.puzzle.PuzzlePackage;
 
 /**
- * This is the item provider adapter for a {@link org.mdse.game.UsedStatement} object.
+ * This is the item provider adapter for a {@link org.mdse.puzzle.Inputs} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class UsedStatementItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+public class InputsItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
 		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -42,7 +40,7 @@ public class UsedStatementItemProvider extends ItemProviderAdapter implements IE
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public UsedStatementItemProvider(AdapterFactory adapterFactory) {
+	public InputsItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -57,24 +55,8 @@ public class UsedStatementItemProvider extends ItemProviderAdapter implements IE
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNextStatementsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Next Statements feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNextStatementsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_UsedStatement_nextStatements_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_UsedStatement_nextStatements_feature",
-								"_UI_UsedStatement_type"),
-						GamePackage.Literals.USED_STATEMENT__NEXT_STATEMENTS, true, false, true, null, null, null));
 	}
 
 	/**
@@ -89,8 +71,7 @@ public class UsedStatementItemProvider extends ItemProviderAdapter implements IE
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(GamePackage.Literals.USED_STATEMENT__NEXT_STATEMENTS);
-			childrenFeatures.add(GamePackage.Literals.USED_STATEMENT__STATEMENT);
+			childrenFeatures.add(PuzzlePackage.Literals.INPUTS__DECLARE_STATEMENT);
 		}
 		return childrenFeatures;
 	}
@@ -109,14 +90,14 @@ public class UsedStatementItemProvider extends ItemProviderAdapter implements IE
 	}
 
 	/**
-	 * This returns UsedStatement.gif.
+	 * This returns Inputs.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/UsedStatement"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Inputs"));
 	}
 
 	/**
@@ -137,7 +118,7 @@ public class UsedStatementItemProvider extends ItemProviderAdapter implements IE
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_UsedStatement_type");
+		return getString("_UI_Inputs_type");
 	}
 
 	/**
@@ -151,9 +132,8 @@ public class UsedStatementItemProvider extends ItemProviderAdapter implements IE
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(UsedStatement.class)) {
-		case GamePackage.USED_STATEMENT__NEXT_STATEMENTS:
-		case GamePackage.USED_STATEMENT__STATEMENT:
+		switch (notification.getFeatureID(Inputs.class)) {
+		case PuzzlePackage.INPUTS__DECLARE_STATEMENT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -171,17 +151,8 @@ public class UsedStatementItemProvider extends ItemProviderAdapter implements IE
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(GamePackage.Literals.USED_STATEMENT__NEXT_STATEMENTS,
-				GameFactory.eINSTANCE.createUsedStatement()));
-
-		newChildDescriptors.add(createChildParameter(GamePackage.Literals.USED_STATEMENT__STATEMENT,
-				ConstructsFactory.eINSTANCE.createIfElseStatement()));
-
-		newChildDescriptors.add(createChildParameter(GamePackage.Literals.USED_STATEMENT__STATEMENT,
+		newChildDescriptors.add(createChildParameter(PuzzlePackage.Literals.INPUTS__DECLARE_STATEMENT,
 				ConstructsFactory.eINSTANCE.createDeclareStatement()));
-
-		newChildDescriptors.add(createChildParameter(GamePackage.Literals.USED_STATEMENT__STATEMENT,
-				ConstructsFactory.eINSTANCE.createReturnStatement()));
 	}
 
 	/**
@@ -192,7 +163,7 @@ public class UsedStatementItemProvider extends ItemProviderAdapter implements IE
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return GameEditPlugin.INSTANCE;
+		return PuzzleEditPlugin.INSTANCE;
 	}
 
 }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <puzzle:Puzzle xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:constructs="http://org.mdse/constructs" xmlns:puzzle="http://org.mdse/puzzle" name="A Puzzle" description="With a nice description">
   <tests failedMessage="Something went wrong">
-    <expected xsi:type="constructs:BooleanVariable" name="Expected" value="true"/>
     <inputs>
       <declareStatement>
         <variable xsi:type="constructs:StringVariable" name="Sad?" value="Overwritten"/>

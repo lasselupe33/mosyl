@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.mdse.puzzle.Input;
+import org.mdse.puzzle.Inputs;
 import org.mdse.puzzle.Puzzle;
 import org.mdse.puzzle.PuzzlePackage;
 import org.mdse.puzzle.UnitTest;
@@ -34,7 +34,7 @@ import org.mdse.puzzle.UnitTest;
  *   <li>{@link org.mdse.puzzle.impl.PuzzleImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.mdse.puzzle.impl.PuzzleImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link org.mdse.puzzle.impl.PuzzleImpl#getTests <em>Tests</em>}</li>
- *   <li>{@link org.mdse.puzzle.impl.PuzzleImpl#getInputs <em>Inputs</em>}</li>
+ *   <li>{@link org.mdse.puzzle.impl.PuzzleImpl#getVariables <em>Variables</em>}</li>
  * </ul>
  *
  * @generated
@@ -91,14 +91,14 @@ public class PuzzleImpl extends MinimalEObjectImpl.Container implements Puzzle {
 	protected EList<UnitTest> tests;
 
 	/**
-	 * The cached value of the '{@link #getInputs() <em>Inputs</em>}' containment reference list.
+	 * The cached value of the '{@link #getVariables() <em>Variables</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInputs()
+	 * @see #getVariables()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Input> inputs;
+	protected Inputs variables;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -179,11 +179,49 @@ public class PuzzleImpl extends MinimalEObjectImpl.Container implements Puzzle {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Input> getInputs() {
-		if (inputs == null) {
-			inputs = new EObjectContainmentEList<Input>(Input.class, this, PuzzlePackage.PUZZLE__INPUTS);
+	public Inputs getVariables() {
+		return variables;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetVariables(Inputs newVariables, NotificationChain msgs) {
+		Inputs oldVariables = variables;
+		variables = newVariables;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					PuzzlePackage.PUZZLE__VARIABLES, oldVariables, newVariables);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
 		}
-		return inputs;
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setVariables(Inputs newVariables) {
+		if (newVariables != variables) {
+			NotificationChain msgs = null;
+			if (variables != null)
+				msgs = ((InternalEObject) variables).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - PuzzlePackage.PUZZLE__VARIABLES, null, msgs);
+			if (newVariables != null)
+				msgs = ((InternalEObject) newVariables).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - PuzzlePackage.PUZZLE__VARIABLES, null, msgs);
+			msgs = basicSetVariables(newVariables, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PuzzlePackage.PUZZLE__VARIABLES, newVariables,
+					newVariables));
 	}
 
 	/**
@@ -196,8 +234,8 @@ public class PuzzleImpl extends MinimalEObjectImpl.Container implements Puzzle {
 		switch (featureID) {
 		case PuzzlePackage.PUZZLE__TESTS:
 			return ((InternalEList<?>) getTests()).basicRemove(otherEnd, msgs);
-		case PuzzlePackage.PUZZLE__INPUTS:
-			return ((InternalEList<?>) getInputs()).basicRemove(otherEnd, msgs);
+		case PuzzlePackage.PUZZLE__VARIABLES:
+			return basicSetVariables(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -216,8 +254,8 @@ public class PuzzleImpl extends MinimalEObjectImpl.Container implements Puzzle {
 			return getDescription();
 		case PuzzlePackage.PUZZLE__TESTS:
 			return getTests();
-		case PuzzlePackage.PUZZLE__INPUTS:
-			return getInputs();
+		case PuzzlePackage.PUZZLE__VARIABLES:
+			return getVariables();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -241,9 +279,8 @@ public class PuzzleImpl extends MinimalEObjectImpl.Container implements Puzzle {
 			getTests().clear();
 			getTests().addAll((Collection<? extends UnitTest>) newValue);
 			return;
-		case PuzzlePackage.PUZZLE__INPUTS:
-			getInputs().clear();
-			getInputs().addAll((Collection<? extends Input>) newValue);
+		case PuzzlePackage.PUZZLE__VARIABLES:
+			setVariables((Inputs) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -266,8 +303,8 @@ public class PuzzleImpl extends MinimalEObjectImpl.Container implements Puzzle {
 		case PuzzlePackage.PUZZLE__TESTS:
 			getTests().clear();
 			return;
-		case PuzzlePackage.PUZZLE__INPUTS:
-			getInputs().clear();
+		case PuzzlePackage.PUZZLE__VARIABLES:
+			setVariables((Inputs) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -287,8 +324,8 @@ public class PuzzleImpl extends MinimalEObjectImpl.Container implements Puzzle {
 			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		case PuzzlePackage.PUZZLE__TESTS:
 			return tests != null && !tests.isEmpty();
-		case PuzzlePackage.PUZZLE__INPUTS:
-			return inputs != null && !inputs.isEmpty();
+		case PuzzlePackage.PUZZLE__VARIABLES:
+			return variables != null;
 		}
 		return super.eIsSet(featureID);
 	}

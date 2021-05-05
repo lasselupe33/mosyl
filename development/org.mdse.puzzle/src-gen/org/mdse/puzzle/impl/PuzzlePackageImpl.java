@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.mdse.constructs.ConstructsPackage;
 
-import org.mdse.puzzle.Input;
+import org.mdse.puzzle.Inputs;
 import org.mdse.puzzle.Puzzle;
 import org.mdse.puzzle.PuzzleFactory;
 import org.mdse.puzzle.PuzzlePackage;
@@ -43,7 +43,7 @@ public class PuzzlePackageImpl extends EPackageImpl implements PuzzlePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass inputEClass = null;
+	private EClass inputsEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -153,7 +153,7 @@ public class PuzzlePackageImpl extends EPackageImpl implements PuzzlePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPuzzle_Inputs() {
+	public EReference getPuzzle_Variables() {
 		return (EReference) puzzleEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -198,8 +198,8 @@ public class PuzzlePackageImpl extends EPackageImpl implements PuzzlePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getInput() {
-		return inputEClass;
+	public EClass getInputs() {
+		return inputsEClass;
 	}
 
 	/**
@@ -207,8 +207,8 @@ public class PuzzlePackageImpl extends EPackageImpl implements PuzzlePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getInput_DeclareStatement() {
-		return (EReference) inputEClass.getEStructuralFeatures().get(0);
+	public EReference getInputs_DeclareStatement() {
+		return (EReference) inputsEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -244,15 +244,15 @@ public class PuzzlePackageImpl extends EPackageImpl implements PuzzlePackage {
 		createEAttribute(puzzleEClass, PUZZLE__NAME);
 		createEAttribute(puzzleEClass, PUZZLE__DESCRIPTION);
 		createEReference(puzzleEClass, PUZZLE__TESTS);
-		createEReference(puzzleEClass, PUZZLE__INPUTS);
+		createEReference(puzzleEClass, PUZZLE__VARIABLES);
 
 		unitTestEClass = createEClass(UNIT_TEST);
 		createEReference(unitTestEClass, UNIT_TEST__EXPECTED);
 		createEAttribute(unitTestEClass, UNIT_TEST__FAILED_MESSAGE);
 		createEReference(unitTestEClass, UNIT_TEST__INPUTS);
 
-		inputEClass = createEClass(INPUT);
-		createEReference(inputEClass, INPUT__DECLARE_STATEMENT);
+		inputsEClass = createEClass(INPUTS);
+		createEReference(inputsEClass, INPUTS__DECLARE_STATEMENT);
 	}
 
 	/**
@@ -298,25 +298,25 @@ public class PuzzlePackageImpl extends EPackageImpl implements PuzzlePackage {
 		initEReference(getPuzzle_Tests(), this.getUnitTest(), null, "tests", null, 1, -1, Puzzle.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEReference(getPuzzle_Inputs(), this.getInput(), null, "inputs", null, 0, -1, Puzzle.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
+		initEReference(getPuzzle_Variables(), this.getInputs(), null, "variables", null, 0, 1, Puzzle.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(unitTestEClass, UnitTest.class, "UnitTest", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getUnitTest_Expected(), theConstructsPackage.getExpression(), null, "expected", null, 1, 1,
+		initEReference(getUnitTest_Expected(), theConstructsPackage.getLiteral(), null, "expected", null, 1, 1,
 				UnitTest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUnitTest_FailedMessage(), ecorePackage.getEString(), "failedMessage", null, 0, 1,
 				UnitTest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEReference(getUnitTest_Inputs(), this.getInput(), null, "inputs", null, 0, -1, UnitTest.class,
+		initEReference(getUnitTest_Inputs(), this.getInputs(), null, "inputs", null, 0, 1, UnitTest.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(inputEClass, Input.class, "Input", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getInput_DeclareStatement(), theConstructsPackage.getDeclareStatement(), null,
-				"declareStatement", null, 1, 1, Input.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
+		initEClass(inputsEClass, Inputs.class, "Inputs", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInputs_DeclareStatement(), theConstructsPackage.getDeclareStatement(), null,
+				"declareStatement", null, 1, -1, Inputs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE,
 				!IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource

@@ -119,26 +119,26 @@ public class PuzzleItemProviderAdapterFactory extends PuzzleAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.mdse.puzzle.Input} instances.
+	 * This keeps track of the one adapter used for all {@link org.mdse.puzzle.Inputs} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected InputItemProvider inputItemProvider;
+	protected InputsItemProvider inputsItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.mdse.puzzle.Input}.
+	 * This creates an adapter for a {@link org.mdse.puzzle.Inputs}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createInputAdapter() {
-		if (inputItemProvider == null) {
-			inputItemProvider = new InputItemProvider(this);
+	public Adapter createInputsAdapter() {
+		if (inputsItemProvider == null) {
+			inputsItemProvider = new InputsItemProvider(this);
 		}
 
-		return inputItemProvider;
+		return inputsItemProvider;
 	}
 
 	/**
@@ -244,8 +244,8 @@ public class PuzzleItemProviderAdapterFactory extends PuzzleAdapterFactory
 			puzzleItemProvider.dispose();
 		if (unitTestItemProvider != null)
 			unitTestItemProvider.dispose();
-		if (inputItemProvider != null)
-			inputItemProvider.dispose();
+		if (inputsItemProvider != null)
+			inputsItemProvider.dispose();
 	}
 
 }

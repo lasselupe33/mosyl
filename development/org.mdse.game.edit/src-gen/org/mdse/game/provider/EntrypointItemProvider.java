@@ -55,24 +55,24 @@ public class EntrypointItemProvider extends ItemProviderAdapter implements IEdit
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addInputPropertyDescriptor(object);
+			addInputsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Input feature.
+	 * This adds a property descriptor for the Inputs feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addInputPropertyDescriptor(Object object) {
+	protected void addInputsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Entrypoint_input_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Entrypoint_input_feature",
+						getResourceLocator(), getString("_UI_Entrypoint_inputs_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Entrypoint_inputs_feature",
 								"_UI_Entrypoint_type"),
-						GamePackage.Literals.ENTRYPOINT__INPUT, true, false, true, null, null, null));
+						GamePackage.Literals.ENTRYPOINT__INPUTS, true, false, true, null, null, null));
 	}
 
 	/**
@@ -87,7 +87,7 @@ public class EntrypointItemProvider extends ItemProviderAdapter implements IEdit
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(GamePackage.Literals.ENTRYPOINT__INPUT);
+			childrenFeatures.add(GamePackage.Literals.ENTRYPOINT__INPUTS);
 			childrenFeatures.add(GamePackage.Literals.ENTRYPOINT__STATEMENT);
 		}
 		return childrenFeatures;
@@ -150,7 +150,7 @@ public class EntrypointItemProvider extends ItemProviderAdapter implements IEdit
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Entrypoint.class)) {
-		case GamePackage.ENTRYPOINT__INPUT:
+		case GamePackage.ENTRYPOINT__INPUTS:
 		case GamePackage.ENTRYPOINT__STATEMENT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
@@ -169,11 +169,11 @@ public class EntrypointItemProvider extends ItemProviderAdapter implements IEdit
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(
-				createChildParameter(GamePackage.Literals.ENTRYPOINT__INPUT, GameFactory.eINSTANCE.createUsedInput()));
+		newChildDescriptors.add(createChildParameter(GamePackage.Literals.ENTRYPOINT__INPUTS,
+				GameFactory.eINSTANCE.createGameInputs()));
 
 		newChildDescriptors.add(createChildParameter(GamePackage.Literals.ENTRYPOINT__STATEMENT,
-				GameFactory.eINSTANCE.createUsedStatement()));
+				GameFactory.eINSTANCE.createGameStatement()));
 	}
 
 	/**

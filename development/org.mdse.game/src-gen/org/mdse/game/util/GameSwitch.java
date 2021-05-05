@@ -73,16 +73,16 @@ public class GameSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GamePackage.USED_STATEMENT: {
-			UsedStatement usedStatement = (UsedStatement) theEObject;
-			T result = caseUsedStatement(usedStatement);
+		case GamePackage.GAME_STATEMENT: {
+			GameStatement gameStatement = (GameStatement) theEObject;
+			T result = caseGameStatement(gameStatement);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GamePackage.USED_INPUT: {
-			UsedInput usedInput = (UsedInput) theEObject;
-			T result = caseUsedInput(usedInput);
+		case GamePackage.GAME_INPUTS: {
+			GameInputs gameInputs = (GameInputs) theEObject;
+			T result = caseGameInputs(gameInputs);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -115,32 +115,32 @@ public class GameSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Used Statement</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Statement</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Used Statement</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Statement</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseUsedStatement(UsedStatement object) {
+	public T caseGameStatement(GameStatement object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Used Input</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Inputs</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Used Input</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Inputs</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseUsedInput(UsedInput object) {
+	public T caseGameInputs(GameInputs object) {
 		return null;
 	}
 

@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.mdse.game.Entrypoint#getInput <em>Input</em>}</li>
+ *   <li>{@link org.mdse.game.Entrypoint#getInputs <em>Inputs</em>}</li>
  *   <li>{@link org.mdse.game.Entrypoint#getStatement <em>Statement</em>}</li>
  * </ul>
  *
@@ -23,38 +23,38 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Entrypoint extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Input</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Inputs</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input</em>' containment reference.
-	 * @see #setInput(UsedInput)
-	 * @see org.mdse.game.GamePackage#getEntrypoint_Input()
+	 * @return the value of the '<em>Inputs</em>' containment reference.
+	 * @see #setInputs(GameInputs)
+	 * @see org.mdse.game.GamePackage#getEntrypoint_Inputs()
 	 * @model containment="true"
 	 * @generated
 	 */
-	UsedInput getInput();
+	GameInputs getInputs();
 
 	/**
-	 * Sets the value of the '{@link org.mdse.game.Entrypoint#getInput <em>Input</em>}' containment reference.
+	 * Sets the value of the '{@link org.mdse.game.Entrypoint#getInputs <em>Inputs</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Input</em>' containment reference.
-	 * @see #getInput()
+	 * @param value the new value of the '<em>Inputs</em>' containment reference.
+	 * @see #getInputs()
 	 * @generated
 	 */
-	void setInput(UsedInput value);
+	void setInputs(GameInputs value);
 
 	/**
 	 * Returns the value of the '<em><b>Statement</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Statement</em>' containment reference.
-	 * @see #setStatement(UsedStatement)
+	 * @see #setStatement(GameStatement)
 	 * @see org.mdse.game.GamePackage#getEntrypoint_Statement()
 	 * @model containment="true"
 	 * @generated
 	 */
-	UsedStatement getStatement();
+	GameStatement getStatement();
 
 	/**
 	 * Sets the value of the '{@link org.mdse.game.Entrypoint#getStatement <em>Statement</em>}' containment reference.
@@ -64,6 +64,6 @@ public interface Entrypoint extends EObject {
 	 * @see #getStatement()
 	 * @generated
 	 */
-	void setStatement(UsedStatement value);
+	void setStatement(GameStatement value);
 
 } // Entrypoint

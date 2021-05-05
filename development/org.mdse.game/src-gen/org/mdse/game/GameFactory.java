@@ -31,22 +31,22 @@ public interface GameFactory extends EFactory {
 	Game createGame();
 
 	/**
-	 * Returns a new object of class '<em>Used Statement</em>'.
+	 * Returns a new object of class '<em>Statement</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Used Statement</em>'.
+	 * @return a new object of class '<em>Statement</em>'.
 	 * @generated
 	 */
-	UsedStatement createUsedStatement();
+	GameStatement createGameStatement();
 
 	/**
-	 * Returns a new object of class '<em>Used Input</em>'.
+	 * Returns a new object of class '<em>Inputs</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Used Input</em>'.
+	 * @return a new object of class '<em>Inputs</em>'.
 	 * @generated
 	 */
-	UsedInput createUsedInput();
+	GameInputs createGameInputs();
 
 	/**
 	 * Returns a new object of class '<em>Entrypoint</em>'.
