@@ -2,25 +2,22 @@
 <game:Game xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:constructs="http://org.mdse/constructs" xmlns:game="http://org.mdse/game">
   <entrypoint>
     <inputs>
+      <nextStatement>
+        <nextStatement>
+          <statement xsi:type="constructs:ReturnStatement" expression="//@entrypoint/@inputs/@nextStatement/@statement/@variable"/>
+        </nextStatement>
+        <statement xsi:type="constructs:DeclareStatement">
+          <variable xsi:type="constructs:IntegerVariable" name="a" value="2"/>
+        </statement>
+      </nextStatement>
       <inputs>
-        <declareStatement>
-          <variable xsi:type="constructs:BooleanVariable" name="a"/>
-        </declareStatement>
-        <declareStatement>
-          <variable xsi:type="constructs:StringVariable" name="b" value="What"/>
-        </declareStatement>
+        <variables xsi:type="constructs:IntegerVariable" name="first" value="2"/>
+        <variables xsi:type="constructs:StringVariable" name="second" value="World"/>
+        <variables xsi:type="constructs:BooleanVariable" name="third" value="true"/>
       </inputs>
     </inputs>
   </entrypoint>
-  <tests failedMessage="Some message">
-    <expected xsi:type="constructs:IntergerLiteral" value="2"/>
-    <inputs>
-      <declareStatement>
-        <variable xsi:type="constructs:IntegerVariable" name="a" value="2"/>
-      </declareStatement>
-      <declareStatement>
-        <variable xsi:type="constructs:StringVariable" name="b" value="Hello"/>
-      </declareStatement>
-    </inputs>
+  <tests failedMessage="Hello world">
+    <expected xsi:type="constructs:StringLiteral" value="Hello"/>
   </tests>
 </game:Game>
