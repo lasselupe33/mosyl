@@ -13,8 +13,8 @@ mapping MMPuzzle::Puzzle :: Puzzle2Game() : MMGame::Game {
 	description := self.description;
 	tests := self.tests;
 	
-	if (self.variables->size() > 0) {	
-		entrypoint := self.variables.map Inputs2Entrypoint();
+	if (self.inputs != null) {	
+		entrypoint := self.inputs.map Inputs2Entrypoint();
 	}
 	
 	// if (self.inputs->size() > 0) {
@@ -31,4 +31,5 @@ mapping MMPuzzle::Inputs :: Inputs2Entrypoint() : MMGame::Entrypoint {
 
 mapping MMPuzzle::Inputs :: Inputs2GameInputs() : MMGame::GameInputs {
 	inputs := self;
+	nextStatement := null;
 }
