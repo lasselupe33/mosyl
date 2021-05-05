@@ -23,9 +23,9 @@ UnitTest returns puzzle::UnitTest:
 	'TEST' '{'
 		/* ... */
 		
-		input=Input
+		inputs=Input
 		
-		expected=Expression
+		/*expected= */
 		(
 			'ON_FAIL' '{'
 				'msg' '=' failedMessage=STRING
@@ -50,10 +50,10 @@ DeclareStatement returns constructs::DeclareStatement:
 	variable=Variable
 ;
 
-Input returns puzzle::Input:
-	{puzzle::Input}
+Input returns puzzle::Inputs:
+	{puzzle::Inputs}
 	'INPUT' '{'
-		(declareStatements+=DeclareStatement)+
+		(declareStatement+=DeclareStatement)+
 	'}'
 ;
 
