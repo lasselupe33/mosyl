@@ -23,5 +23,12 @@
       </nextInput>
     </input>
   </entrypoint>
-  <tests failedMessage="Something went wrong"/>
+  <tests failedMessage="Something went wrong">
+    <expected xsi:type="constructs:BooleanVariable" name="Expected" value="true"/>
+    <inputs>
+      <declareStatement>
+        <variable xsi:type="constructs:StringVariable" name="Sad?" value="Overwritten"/>
+      </declareStatement>
+    </inputs>
+  </tests>
 </game:Game>
