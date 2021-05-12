@@ -69,5 +69,9 @@
     <genClasses ecoreClass="constructs.ecore#//BooleanLiteral">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//BooleanLiteral/value"/>
     </genClasses>
+    <genClasses ecoreClass="constructs.ecore#//SetStatement">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference constructs.ecore#//SetStatement/variable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//SetStatement/newValue"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

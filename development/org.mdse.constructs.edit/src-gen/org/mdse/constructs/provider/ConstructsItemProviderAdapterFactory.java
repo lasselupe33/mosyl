@@ -326,6 +326,29 @@ public class ConstructsItemProviderAdapterFactory extends ConstructsAdapterFacto
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.mdse.constructs.SetStatement} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected SetStatementItemProvider setStatementItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mdse.constructs.SetStatement}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createSetStatementAdapter() {
+		if (setStatementItemProvider == null) {
+			setStatementItemProvider = new SetStatementItemProvider(this);
+		}
+
+		return setStatementItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -446,6 +469,8 @@ public class ConstructsItemProviderAdapterFactory extends ConstructsAdapterFacto
 			stringLiteralItemProvider.dispose();
 		if (booleanLiteralItemProvider != null)
 			booleanLiteralItemProvider.dispose();
+		if (setStatementItemProvider != null)
+			setStatementItemProvider.dispose();
 	}
 
 }

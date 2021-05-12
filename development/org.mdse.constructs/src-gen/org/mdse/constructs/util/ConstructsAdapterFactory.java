@@ -147,6 +147,11 @@ public class ConstructsAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseSetStatement(SetStatement object) {
+			return createSetStatementAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -386,6 +391,20 @@ public class ConstructsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createBooleanLiteralAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mdse.constructs.SetStatement <em>Set Statement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mdse.constructs.SetStatement
+	 * @generated
+	 */
+	public Adapter createSetStatementAdapter() {
 		return null;
 	}
 
