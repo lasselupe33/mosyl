@@ -52,8 +52,8 @@ UnitTestInput returns puzzle::UnitTestInput:
 Literal returns constructs::Literal:
 	IntergerLiteral|StringLiteral|BooleanLiteral;
 	
-IntergerLiteral returns constructs::IntergerLiteral:
-	{constructs::IntergerLiteral}
+IntergerLiteral returns constructs::IntegerLiteral:
+	{constructs::IntegerLiteral}
 	value=REALINT;
 
 StringLiteral returns constructs::StringLiteral:

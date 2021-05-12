@@ -10,9 +10,9 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
 import org.mdse.constructs.ConstructsPackage;
 import org.mdse.constructs.IntegerVariable;
 
@@ -62,7 +62,7 @@ public class IntegerVariableItemProvider extends VariableItemProvider {
 						getString("_UI_PropertyDescriptor_description", "_UI_IntegerVariable_value_feature",
 								"_UI_IntegerVariable_type"),
 						ConstructsPackage.Literals.INTEGER_VARIABLE__VALUE, true, false, false,
-						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**

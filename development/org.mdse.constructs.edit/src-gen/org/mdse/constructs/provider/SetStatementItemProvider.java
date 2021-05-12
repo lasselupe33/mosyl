@@ -17,9 +17,12 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.mdse.constructs.ConstructsPackage;
+import org.mdse.constructs.SetStatement;
 
 /**
  * This is the item provider adapter for a {@link org.mdse.constructs.SetStatement} object.
@@ -51,6 +54,7 @@ public class SetStatementItemProvider extends ItemProviderAdapter implements IEd
 			super.getPropertyDescriptors(object);
 
 			addVariablePropertyDescriptor(object);
+			addNewValuePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -68,6 +72,22 @@ public class SetStatementItemProvider extends ItemProviderAdapter implements IEd
 						getString("_UI_PropertyDescriptor_description", "_UI_SetStatement_variable_feature",
 								"_UI_SetStatement_type"),
 						ConstructsPackage.Literals.SET_STATEMENT__VARIABLE, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the New Value feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNewValuePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_SetStatement_newValue_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_SetStatement_newValue_feature",
+								"_UI_SetStatement_type"),
+						ConstructsPackage.Literals.SET_STATEMENT__NEW_VALUE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -99,7 +119,10 @@ public class SetStatementItemProvider extends ItemProviderAdapter implements IEd
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_SetStatement_type");
+		Object labelValue = ((SetStatement) object).getNewValue();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ? getString("_UI_SetStatement_type")
+				: getString("_UI_SetStatement_type") + " " + label;
 	}
 
 	/**
@@ -112,6 +135,12 @@ public class SetStatementItemProvider extends ItemProviderAdapter implements IEd
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(SetStatement.class)) {
+		case ConstructsPackage.SET_STATEMENT__NEW_VALUE:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
+		}
 		super.notifyChanged(notification);
 	}
 

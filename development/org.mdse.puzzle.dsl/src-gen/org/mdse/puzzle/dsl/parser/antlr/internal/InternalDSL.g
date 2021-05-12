@@ -296,7 +296,7 @@ ruleUnitTest returns [EObject current=null]
 						afterParserOrEnumRuleCall();
 					}
 				)
-			)
+			)+
 			otherlv_6='}'
 			{
 				newLeafNode(otherlv_6, grammarAccess.getUnitTestAccess().getRightCurlyBracketKeyword_3_3());
@@ -491,15 +491,15 @@ ruleIntergerLiteral returns [EObject current=null]
 		(
 			{
 				$current = forceCreateModelElement(
-					grammarAccess.getIntergerLiteralAccess().getIntergerLiteralAction_0(),
+					grammarAccess.getIntergerLiteralAccess().getIntegerLiteralAction_0(),
 					$current);
 			}
 		)
 		(
 			(
-				lv_value_1_0=RULE_INT
+				lv_value_1_0=RULE_REALINT
 				{
-					newLeafNode(lv_value_1_0, grammarAccess.getIntergerLiteralAccess().getValueINTTerminalRuleCall_1_0());
+					newLeafNode(lv_value_1_0, grammarAccess.getIntergerLiteralAccess().getValueREALINTTerminalRuleCall_1_0());
 				}
 				{
 					if ($current==null) {
@@ -509,7 +509,7 @@ ruleIntergerLiteral returns [EObject current=null]
 						$current,
 						"value",
 						lv_value_1_0,
-						"org.eclipse.xtext.common.Terminals.INT");
+						"org.mdse.puzzle.dsl.DSL.REALINT");
 				}
 			)
 		)
@@ -700,9 +700,9 @@ ruleIntegerVariable returns [EObject current=null]
 		}
 		(
 			(
-				lv_value_4_0=RULE_INT
+				lv_value_4_0=RULE_REALINT
 				{
-					newLeafNode(lv_value_4_0, grammarAccess.getIntegerVariableAccess().getValueINTTerminalRuleCall_4_0());
+					newLeafNode(lv_value_4_0, grammarAccess.getIntegerVariableAccess().getValueREALINTTerminalRuleCall_4_0());
 				}
 				{
 					if ($current==null) {
@@ -712,7 +712,7 @@ ruleIntegerVariable returns [EObject current=null]
 						$current,
 						"value",
 						lv_value_4_0,
-						"org.eclipse.xtext.common.Terminals.INT");
+						"org.mdse.puzzle.dsl.DSL.REALINT");
 				}
 			)
 		)
@@ -861,9 +861,11 @@ ruleBooleanVariable returns [EObject current=null]
 
 RULE_BOOLEAN : ('true'|'false');
 
+RULE_REALINT : '-'? RULE_INT;
+
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
-RULE_INT : ('0'..'9')+;
+fragment RULE_INT : ('0'..'9')+;
 
 RULE_STRING : ('"' ('\\' .|~(('\\'|'"')))* '"'|'\'' ('\\' .|~(('\\'|'\'')))* '\'');
 

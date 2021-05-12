@@ -189,13 +189,13 @@ public class ConstructsSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case ConstructsPackage.INTERGER_LITERAL: {
-			IntergerLiteral intergerLiteral = (IntergerLiteral) theEObject;
-			T result = caseIntergerLiteral(intergerLiteral);
+		case ConstructsPackage.INTEGER_LITERAL: {
+			IntegerLiteral integerLiteral = (IntegerLiteral) theEObject;
+			T result = caseIntegerLiteral(integerLiteral);
 			if (result == null)
-				result = caseLiteral(intergerLiteral);
+				result = caseLiteral(integerLiteral);
 			if (result == null)
-				result = caseExpression(intergerLiteral);
+				result = caseExpression(integerLiteral);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -430,17 +430,17 @@ public class ConstructsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Interger Literal</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Integer Literal</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Interger Literal</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Integer Literal</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIntergerLiteral(IntergerLiteral object) {
+	public T caseIntegerLiteral(IntegerLiteral object) {
 		return null;
 	}
 

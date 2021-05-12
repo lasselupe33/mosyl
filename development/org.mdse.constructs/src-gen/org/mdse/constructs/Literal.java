@@ -13,4 +13,12 @@ package org.mdse.constructs;
  * @generated
  */
 public interface Literal extends Expression {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation"
+	 * @generated
+	 */
+	Object getValue();
+
 } // Literal

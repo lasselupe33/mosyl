@@ -5,6 +5,7 @@ package org.mdse.constructs;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -114,13 +115,22 @@ public interface ConstructsPackage extends EPackage {
 	int VARIABLE_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Get Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE___GET_VALUE = EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
 	 * The number of operations of the '<em>Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+	int VARIABLE_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.mdse.constructs.impl.IntegerVariableImpl <em>Integer Variable</em>}' class.
@@ -158,6 +168,15 @@ public interface ConstructsPackage extends EPackage {
 	 * @ordered
 	 */
 	int INTEGER_VARIABLE_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEGER_VARIABLE___GET_VALUE = VARIABLE___GET_VALUE;
 
 	/**
 	 * The number of operations of the '<em>Integer Variable</em>' class.
@@ -206,6 +225,15 @@ public interface ConstructsPackage extends EPackage {
 	int STRING_VARIABLE_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Get Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_VARIABLE___GET_VALUE = VARIABLE___GET_VALUE;
+
+	/**
 	 * The number of operations of the '<em>String Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -250,6 +278,15 @@ public interface ConstructsPackage extends EPackage {
 	 * @ordered
 	 */
 	int BOOLEAN_VARIABLE_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_VARIABLE___GET_VALUE = VARIABLE___GET_VALUE;
 
 	/**
 	 * The number of operations of the '<em>Boolean Variable</em>' class.
@@ -593,23 +630,32 @@ public interface ConstructsPackage extends EPackage {
 	int LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Get Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LITERAL___GET_VALUE = EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
 	 * The number of operations of the '<em>Literal</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LITERAL_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+	int LITERAL_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link org.mdse.constructs.impl.IntergerLiteralImpl <em>Interger Literal</em>}' class.
+	 * The meta object id for the '{@link org.mdse.constructs.impl.IntegerLiteralImpl <em>Integer Literal</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mdse.constructs.impl.IntergerLiteralImpl
-	 * @see org.mdse.constructs.impl.ConstructsPackageImpl#getIntergerLiteral()
+	 * @see org.mdse.constructs.impl.IntegerLiteralImpl
+	 * @see org.mdse.constructs.impl.ConstructsPackageImpl#getIntegerLiteral()
 	 * @generated
 	 */
-	int INTERGER_LITERAL = 13;
+	int INTEGER_LITERAL = 13;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -618,25 +664,34 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERGER_LITERAL__VALUE = LITERAL_FEATURE_COUNT + 0;
+	int INTEGER_LITERAL__VALUE = LITERAL_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Interger Literal</em>' class.
+	 * The number of structural features of the '<em>Integer Literal</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERGER_LITERAL_FEATURE_COUNT = LITERAL_FEATURE_COUNT + 1;
+	int INTEGER_LITERAL_FEATURE_COUNT = LITERAL_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Interger Literal</em>' class.
+	 * The operation id for the '<em>Get Value</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERGER_LITERAL_OPERATION_COUNT = LITERAL_OPERATION_COUNT + 0;
+	int INTEGER_LITERAL___GET_VALUE = LITERAL___GET_VALUE;
+
+	/**
+	 * The number of operations of the '<em>Integer Literal</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEGER_LITERAL_OPERATION_COUNT = LITERAL_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.mdse.constructs.impl.StringLiteralImpl <em>String Literal</em>}' class.
@@ -665,6 +720,15 @@ public interface ConstructsPackage extends EPackage {
 	 * @ordered
 	 */
 	int STRING_LITERAL_FEATURE_COUNT = LITERAL_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Get Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_LITERAL___GET_VALUE = LITERAL___GET_VALUE;
 
 	/**
 	 * The number of operations of the '<em>String Literal</em>' class.
@@ -704,6 +768,15 @@ public interface ConstructsPackage extends EPackage {
 	int BOOLEAN_LITERAL_FEATURE_COUNT = LITERAL_FEATURE_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Get Value</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_LITERAL___GET_VALUE = LITERAL___GET_VALUE;
+
+	/**
 	 * The number of operations of the '<em>Boolean Literal</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -732,13 +805,22 @@ public interface ConstructsPackage extends EPackage {
 	int SET_STATEMENT__VARIABLE = 0;
 
 	/**
+	 * The feature id for the '<em><b>New Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_STATEMENT__NEW_VALUE = 1;
+
+	/**
 	 * The number of structural features of the '<em>Set Statement</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SET_STATEMENT_FEATURE_COUNT = 1;
+	int SET_STATEMENT_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Set Statement</em>' class.
@@ -799,6 +881,16 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getVariable_Name();
+
+	/**
+	 * Returns the meta object for the '{@link org.mdse.constructs.Variable#getValue() <em>Get Value</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Value</em>' operation.
+	 * @see org.mdse.constructs.Variable#getValue()
+	 * @generated
+	 */
+	EOperation getVariable__GetValue();
 
 	/**
 	 * Returns the meta object for class '{@link org.mdse.constructs.IntegerVariable <em>Integer Variable</em>}'.
@@ -1043,25 +1135,35 @@ public interface ConstructsPackage extends EPackage {
 	EClass getLiteral();
 
 	/**
-	 * Returns the meta object for class '{@link org.mdse.constructs.IntergerLiteral <em>Interger Literal</em>}'.
+	 * Returns the meta object for the '{@link org.mdse.constructs.Literal#getValue() <em>Get Value</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Interger Literal</em>'.
-	 * @see org.mdse.constructs.IntergerLiteral
+	 * @return the meta object for the '<em>Get Value</em>' operation.
+	 * @see org.mdse.constructs.Literal#getValue()
 	 * @generated
 	 */
-	EClass getIntergerLiteral();
+	EOperation getLiteral__GetValue();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.mdse.constructs.IntergerLiteral#getValue <em>Value</em>}'.
+	 * Returns the meta object for class '{@link org.mdse.constructs.IntegerLiteral <em>Integer Literal</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Integer Literal</em>'.
+	 * @see org.mdse.constructs.IntegerLiteral
+	 * @generated
+	 */
+	EClass getIntegerLiteral();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mdse.constructs.IntegerLiteral#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see org.mdse.constructs.IntergerLiteral#getValue()
-	 * @see #getIntergerLiteral()
+	 * @see org.mdse.constructs.IntegerLiteral#getValue()
+	 * @see #getIntegerLiteral()
 	 * @generated
 	 */
-	EAttribute getIntergerLiteral_Value();
+	EAttribute getIntegerLiteral_Value();
 
 	/**
 	 * Returns the meta object for class '{@link org.mdse.constructs.StringLiteral <em>String Literal</em>}'.
@@ -1125,6 +1227,17 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSetStatement_Variable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mdse.constructs.SetStatement#getNewValue <em>New Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>New Value</em>'.
+	 * @see org.mdse.constructs.SetStatement#getNewValue()
+	 * @see #getSetStatement()
+	 * @generated
+	 */
+	EAttribute getSetStatement_NewValue();
 
 	/**
 	 * Returns the meta object for enum '{@link org.mdse.constructs.ComparativeOperator <em>Comparative Operator</em>}'.
@@ -1196,6 +1309,14 @@ public interface ConstructsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute VARIABLE__NAME = eINSTANCE.getVariable_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Value</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation VARIABLE___GET_VALUE = eINSTANCE.getVariable__GetValue();
 
 		/**
 		 * The meta object literal for the '{@link org.mdse.constructs.impl.IntegerVariableImpl <em>Integer Variable</em>}' class.
@@ -1404,14 +1525,22 @@ public interface ConstructsPackage extends EPackage {
 		EClass LITERAL = eINSTANCE.getLiteral();
 
 		/**
-		 * The meta object literal for the '{@link org.mdse.constructs.impl.IntergerLiteralImpl <em>Interger Literal</em>}' class.
+		 * The meta object literal for the '<em><b>Get Value</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.mdse.constructs.impl.IntergerLiteralImpl
-		 * @see org.mdse.constructs.impl.ConstructsPackageImpl#getIntergerLiteral()
 		 * @generated
 		 */
-		EClass INTERGER_LITERAL = eINSTANCE.getIntergerLiteral();
+		EOperation LITERAL___GET_VALUE = eINSTANCE.getLiteral__GetValue();
+
+		/**
+		 * The meta object literal for the '{@link org.mdse.constructs.impl.IntegerLiteralImpl <em>Integer Literal</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mdse.constructs.impl.IntegerLiteralImpl
+		 * @see org.mdse.constructs.impl.ConstructsPackageImpl#getIntegerLiteral()
+		 * @generated
+		 */
+		EClass INTEGER_LITERAL = eINSTANCE.getIntegerLiteral();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -1419,7 +1548,7 @@ public interface ConstructsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute INTERGER_LITERAL__VALUE = eINSTANCE.getIntergerLiteral_Value();
+		EAttribute INTEGER_LITERAL__VALUE = eINSTANCE.getIntegerLiteral_Value();
 
 		/**
 		 * The meta object literal for the '{@link org.mdse.constructs.impl.StringLiteralImpl <em>String Literal</em>}' class.
@@ -1474,6 +1603,14 @@ public interface ConstructsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SET_STATEMENT__VARIABLE = eINSTANCE.getSetStatement_Variable();
+
+		/**
+		 * The meta object literal for the '<em><b>New Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SET_STATEMENT__NEW_VALUE = eINSTANCE.getSetStatement_NewValue();
 
 		/**
 		 * The meta object literal for the '{@link org.mdse.constructs.ComparativeOperator <em>Comparative Operator</em>}' enum.

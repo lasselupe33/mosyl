@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.mdse.constructs.SetStatement#getVariable <em>Variable</em>}</li>
+ *   <li>{@link org.mdse.constructs.SetStatement#getNewValue <em>New Value</em>}</li>
  * </ul>
  *
  * @see org.mdse.constructs.ConstructsPackage#getSetStatement()
@@ -42,5 +43,27 @@ public interface SetStatement extends EObject {
 	 * @generated
 	 */
 	void setVariable(Variable value);
+
+	/**
+	 * Returns the value of the '<em><b>New Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>New Value</em>' attribute.
+	 * @see #setNewValue(Object)
+	 * @see org.mdse.constructs.ConstructsPackage#getSetStatement_NewValue()
+	 * @model
+	 * @generated
+	 */
+	Object getNewValue();
+
+	/**
+	 * Sets the value of the '{@link org.mdse.constructs.SetStatement#getNewValue <em>New Value</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>New Value</em>' attribute.
+	 * @see #getNewValue()
+	 * @generated
+	 */
+	void setNewValue(Object value);
 
 } // SetStatement

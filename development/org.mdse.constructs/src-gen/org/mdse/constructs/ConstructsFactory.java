@@ -94,13 +94,13 @@ public interface ConstructsFactory extends EFactory {
 	ReturnStatement createReturnStatement();
 
 	/**
-	 * Returns a new object of class '<em>Interger Literal</em>'.
+	 * Returns a new object of class '<em>Integer Literal</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Interger Literal</em>'.
+	 * @return a new object of class '<em>Integer Literal</em>'.
 	 * @generated
 	 */
-	IntergerLiteral createIntergerLiteral();
+	IntegerLiteral createIntegerLiteral();
 
 	/**
 	 * Returns a new object of class '<em>String Literal</em>'.

@@ -211,7 +211,7 @@ public class IfElseStatementItemProvider extends StatementItemProvider {
 				ConstructsFactory.eINSTANCE.createArithmeticExpression()));
 
 		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__CONDITION,
-				ConstructsFactory.eINSTANCE.createIntergerLiteral()));
+				ConstructsFactory.eINSTANCE.createIntegerLiteral()));
 
 		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__CONDITION,
 				ConstructsFactory.eINSTANCE.createStringLiteral()));

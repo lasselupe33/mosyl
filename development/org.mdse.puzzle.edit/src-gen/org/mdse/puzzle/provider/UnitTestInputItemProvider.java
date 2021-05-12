@@ -169,7 +169,7 @@ public class UnitTestInputItemProvider extends ItemProviderAdapter implements IE
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(PuzzlePackage.Literals.UNIT_TEST_INPUT__OVERWRITING_VALUE,
-				ConstructsFactory.eINSTANCE.createIntergerLiteral()));
+				ConstructsFactory.eINSTANCE.createIntegerLiteral()));
 
 		newChildDescriptors.add(createChildParameter(PuzzlePackage.Literals.UNIT_TEST_INPUT__OVERWRITING_VALUE,
 				ConstructsFactory.eINSTANCE.createStringLiteral()));

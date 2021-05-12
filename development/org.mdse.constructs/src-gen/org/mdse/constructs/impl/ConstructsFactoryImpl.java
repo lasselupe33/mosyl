@@ -73,8 +73,8 @@ public class ConstructsFactoryImpl extends EFactoryImpl implements ConstructsFac
 			return createDeclareStatement();
 		case ConstructsPackage.RETURN_STATEMENT:
 			return createReturnStatement();
-		case ConstructsPackage.INTERGER_LITERAL:
-			return createIntergerLiteral();
+		case ConstructsPackage.INTEGER_LITERAL:
+			return createIntegerLiteral();
 		case ConstructsPackage.STRING_LITERAL:
 			return createStringLiteral();
 		case ConstructsPackage.BOOLEAN_LITERAL:
@@ -205,9 +205,9 @@ public class ConstructsFactoryImpl extends EFactoryImpl implements ConstructsFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IntergerLiteral createIntergerLiteral() {
-		IntergerLiteralImpl intergerLiteral = new IntergerLiteralImpl();
-		return intergerLiteral;
+	public IntegerLiteral createIntegerLiteral() {
+		IntegerLiteralImpl integerLiteral = new IntegerLiteralImpl();
+		return integerLiteral;
 	}
 
 	/**

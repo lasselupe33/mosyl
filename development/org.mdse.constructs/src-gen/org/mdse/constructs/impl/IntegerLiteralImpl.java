@@ -9,22 +9,22 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.mdse.constructs.ConstructsPackage;
-import org.mdse.constructs.IntergerLiteral;
+import org.mdse.constructs.IntegerLiteral;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Interger Literal</b></em>'.
+ * An implementation of the model object '<em><b>Integer Literal</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.mdse.constructs.impl.IntergerLiteralImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link org.mdse.constructs.impl.IntegerLiteralImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class IntergerLiteralImpl extends LiteralImpl implements IntergerLiteral {
+public class IntegerLiteralImpl extends LiteralImpl implements IntegerLiteral {
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -33,7 +33,7 @@ public class IntergerLiteralImpl extends LiteralImpl implements IntergerLiteral 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int VALUE_EDEFAULT = 0;
+	protected static final Integer VALUE_EDEFAULT = new Integer(0);
 
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -43,14 +43,14 @@ public class IntergerLiteralImpl extends LiteralImpl implements IntergerLiteral 
 	 * @generated
 	 * @ordered
 	 */
-	protected int value = VALUE_EDEFAULT;
+	protected Integer value = VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IntergerLiteralImpl() {
+	protected IntegerLiteralImpl() {
 		super();
 	}
 
@@ -61,7 +61,7 @@ public class IntergerLiteralImpl extends LiteralImpl implements IntergerLiteral 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ConstructsPackage.Literals.INTERGER_LITERAL;
+		return ConstructsPackage.Literals.INTEGER_LITERAL;
 	}
 
 	/**
@@ -69,7 +69,7 @@ public class IntergerLiteralImpl extends LiteralImpl implements IntergerLiteral 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getValue() {
+	public Integer getValue() {
 		return value;
 	}
 
@@ -78,11 +78,11 @@ public class IntergerLiteralImpl extends LiteralImpl implements IntergerLiteral 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(int newValue) {
-		int oldValue = value;
+	public void setValue(Integer newValue) {
+		Integer oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ConstructsPackage.INTERGER_LITERAL__VALUE, oldValue,
+			eNotify(new ENotificationImpl(this, Notification.SET, ConstructsPackage.INTEGER_LITERAL__VALUE, oldValue,
 					value));
 	}
 
@@ -94,7 +94,7 @@ public class IntergerLiteralImpl extends LiteralImpl implements IntergerLiteral 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case ConstructsPackage.INTERGER_LITERAL__VALUE:
+		case ConstructsPackage.INTEGER_LITERAL__VALUE:
 			return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -108,7 +108,7 @@ public class IntergerLiteralImpl extends LiteralImpl implements IntergerLiteral 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case ConstructsPackage.INTERGER_LITERAL__VALUE:
+		case ConstructsPackage.INTEGER_LITERAL__VALUE:
 			setValue((Integer) newValue);
 			return;
 		}
@@ -123,7 +123,7 @@ public class IntergerLiteralImpl extends LiteralImpl implements IntergerLiteral 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case ConstructsPackage.INTERGER_LITERAL__VALUE:
+		case ConstructsPackage.INTEGER_LITERAL__VALUE:
 			setValue(VALUE_EDEFAULT);
 			return;
 		}
@@ -138,8 +138,8 @@ public class IntergerLiteralImpl extends LiteralImpl implements IntergerLiteral 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case ConstructsPackage.INTERGER_LITERAL__VALUE:
-			return value != VALUE_EDEFAULT;
+		case ConstructsPackage.INTEGER_LITERAL__VALUE:
+			return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -161,4 +161,4 @@ public class IntergerLiteralImpl extends LiteralImpl implements IntergerLiteral 
 		return result.toString();
 	}
 
-} //IntergerLiteralImpl
+} //IntegerLiteralImpl
