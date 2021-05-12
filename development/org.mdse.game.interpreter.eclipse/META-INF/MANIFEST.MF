@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: FSM Interpreter Eclipse Integration
+Bundle-SymbolicName: org.mdse.game.interpreter.eclipse;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: org.mdse.game.interpreter.eclipse
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.eclipse.debug.core;bundle-version="3.0.0",
+ org.eclipse.debug.ui;bundle-version="3.0.0",
+ org.eclipse.ui;bundle-version="3.0.0",
+ org.eclipse.ui.console;bundle-version="3.0.0",
+ org.eclipse.core.runtime;bundle-version="3.0.0",
+ org.mdse.game,
+ org.mdse.game.interpreter,
+ org.eclipse.emf.edit

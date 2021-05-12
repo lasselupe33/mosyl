@@ -4,7 +4,7 @@
     <semanticResources>ToTransform.game</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_-9eEMK2gEeu0ZvQqMVcM2Q">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game%20Viewpoint']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_B20P4K2hEeu0ZvQqMVcM2Q" name="new Game Diagram Description" repPath="#_B2W84K2hEeu0ZvQqMVcM2Q" changeId="88e773dc-5eec-4465-bd78-0e31689f1fd5">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_B20P4K2hEeu0ZvQqMVcM2Q" name="new Game Diagram Description" repPath="#_B2W84K2hEeu0ZvQqMVcM2Q" changeId="5130d6af-9c50-4ffe-88bf-900012098d54">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game%20Viewpoint']/@ownedRepresentations[name='Game%20Diagram%20Description']"/>
         <target xmi:type="game:Game" href="ToTransform.game#/"/>
       </ownedRepresentationDescriptors>
@@ -61,14 +61,17 @@
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_B38RQK2hEeu0ZvQqMVcM2Q" source="DANNOTATION_CUSTOMIZATION_KEY">
       <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_B384UK2hEeu0ZvQqMVcM2Q"/>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_B3gzcK2hEeu0ZvQqMVcM2Q">
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_B3gzcK2hEeu0ZvQqMVcM2Q" name="Inputs">
       <target xmi:type="puzzle:Inputs" href="ToTransform.game#//@entrypoint/@inputs/@inputs"/>
       <semanticElements xmi:type="puzzle:Inputs" href="ToTransform.game#//@entrypoint/@inputs/@inputs"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_vPWz0LL2EeuGSdQYXmn-WQ" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="253,206,137" foregroundColor="253,206,137">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game%20Viewpoint']/@ownedRepresentations[name='Game%20Diagram%20Description']/@defaultLayer/@containerMappings[name='Inputs%20Container']/@style"/>
+      </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game%20Viewpoint']/@ownedRepresentations[name='Game%20Diagram%20Description']/@defaultLayer/@containerMappings[name='Inputs%20Container']"/>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_Pq84sK2iEeuJncY3Bh2sEw" name="2" width="12" height="8" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_Pq84sK2iEeuJncY3Bh2sEw" name="first = 2" width="12" height="8" resizeKind="NSEW">
         <target xmi:type="constructs:IntegerVariable" href="ToTransform.game#//@entrypoint/@inputs/@inputs/@variables.0"/>
         <semanticElements xmi:type="constructs:IntegerVariable" href="ToTransform.game#//@entrypoint/@inputs/@inputs/@variables.0"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -79,7 +82,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game%20Viewpoint']/@ownedRepresentations[name='Game%20Diagram%20Description']/@defaultLayer/@containerMappings[name='Inputs%20Container']/@subNodeMappings[name='Input']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_Pq_U8a2iEeuJncY3Bh2sEw" name="World" width="12" height="8" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_Pq_U8a2iEeuJncY3Bh2sEw" name="second = World" width="12" height="8" resizeKind="NSEW">
         <target xmi:type="constructs:StringVariable" href="ToTransform.game#//@entrypoint/@inputs/@inputs/@variables.1"/>
         <semanticElements xmi:type="constructs:StringVariable" href="ToTransform.game#//@entrypoint/@inputs/@inputs/@variables.1"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -90,7 +93,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game%20Viewpoint']/@ownedRepresentations[name='Game%20Diagram%20Description']/@defaultLayer/@containerMappings[name='Inputs%20Container']/@subNodeMappings[name='Input']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" uid="_Pq_8Aa2iEeuJncY3Bh2sEw" name="true" width="12" height="8" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_Pq_8Aa2iEeuJncY3Bh2sEw" name="third = true" width="12" height="8" resizeKind="NSEW">
         <target xmi:type="constructs:BooleanVariable" href="ToTransform.game#//@entrypoint/@inputs/@inputs/@variables.2"/>
         <semanticElements xmi:type="constructs:BooleanVariable" href="ToTransform.game#//@entrypoint/@inputs/@inputs/@variables.2"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>

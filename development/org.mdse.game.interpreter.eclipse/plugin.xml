@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <!--
+     <extension
+         point="org.eclipse.debug.core.launchConfigurationTypes">
+      <launchConfigurationType
+            id="org.mdse.fsm.interpreter.eclipse.launch.FSMLaunchDelegateType"
+            modes="run, debug"
+            name="FSM Launch"
+            delegate="org.mdse.fsm.interpreter.eclipse.launch.FSMLaunchDelegate"/>
+   </extension>
+   
+   <extension
+         point="org.eclipse.debug.ui.launchConfigurationTabGroups">
+      <launchConfigurationTabGroup
+            class="org.xtext.builddsl.ui.launch.BuildDSLLaunchTabGroup"
+            id="org.xtext.builddsl.ui.BuildLaunchConfigurationTabGroup"
+            type="org.xtext.builddsl.ui.BuildLaunchConfigurationType">
+            <launchMode 
+                  mode="debug"
+                  perspective="org.eclipse.debug.ui.DebugPerspective"
+                  description="Debug a Build File">
+            </launchMode>
+            <launchMode
+                  mode="run"
+                  description="Run a Build File">
+            </launchMode>
+      </launchConfigurationTabGroup>
+   </extension>
+
+   <extension
+         point="org.eclipse.debug.ui.launchConfigurationTypeImages">
+      <launchConfigurationTypeImage
+            configTypeID="org.xtext.builddsl.ui.BuildLaunchConfigurationType"
+            icon="icons/buildlaunch16.gif"
+            id="org.xtext.builddsl.ui.BuildLaunchConfigurationTypeImage"/>
+   </extension>
+   -->
+
+   <extension
+         point="org.eclipse.debug.ui.launchShortcuts">
+      <shortcut
+            class="org.mdse.game.interpreter.eclipse.launch.GameLaunchShortcut"
+            description="Executes a Game model (Game)"
+            icon="icons/FSM16.gif"
+            id="org.mdse.game.interpreter.eclipse.launch.GameLaunchShortcutType"
+            label="Execute Game"
+            modes="run">
+          <contextualLaunch>
+           <enablement>
+             <with variable="selection">
+               <count value="1"/>
+               <iterate
+                     ifEmpty="false"
+                     operator="and">
+                  <adapt type="org.eclipse.core.resources.IFile"/>
+                    <test property="org.eclipse.debug.ui.matchesPattern"
+                          value="*.game"/>
+               </iterate>
+             </with>
+           </enablement>
+           <contextLabel
+              mode="run"
+              label="Game"/>
+         </contextualLaunch>
+      </shortcut>
+   </extension>
+</plugin>
