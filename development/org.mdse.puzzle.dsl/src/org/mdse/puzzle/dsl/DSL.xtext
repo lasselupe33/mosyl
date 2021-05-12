@@ -20,6 +20,7 @@ Puzzle returns puzzle::Puzzle:
 	'}';
 	
 terminal BOOLEAN returns ecore::EBoolean: ('true' | 'false');
+terminal REALINT returns ecore::EInt: '-'? INT;
 	
 Inputs returns puzzle::Inputs: 
 	'INPUTS' '{'
@@ -30,10 +31,9 @@ Inputs returns puzzle::Inputs:
 UnitTest returns puzzle::UnitTest:
 	{puzzle::UnitTest}
 	'TEST' '{'
-		/* ... */
 		
 		('INPUTS' '{'
-			inputs+=UnitTestInput
+			(inputs+=UnitTestInput)+
 		'}' )?
 		
 		'EXPECTS' expected=Literal 
@@ -54,7 +54,7 @@ Literal returns constructs::Literal:
 	
 IntergerLiteral returns constructs::IntergerLiteral:
 	{constructs::IntergerLiteral}
-	value=INT;
+	value=REALINT;
 
 StringLiteral returns constructs::StringLiteral:
 	{constructs::StringLiteral}
@@ -70,7 +70,7 @@ Variable returns constructs::Variable:
 	
 IntegerVariable returns constructs::IntegerVariable:
 	{constructs::IntegerVariable}
-	'int' name=ID '=' value=INT;
+	'int' name=ID '=' value=REALINT;
 	
 StringVariable returns constructs::StringVariable:
 	{constructs::StringVariable}
