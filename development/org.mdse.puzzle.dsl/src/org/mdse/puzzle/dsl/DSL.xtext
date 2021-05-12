@@ -30,10 +30,9 @@ Inputs returns puzzle::Inputs:
 UnitTest returns puzzle::UnitTest:
 	{puzzle::UnitTest}
 	'TEST' '{'
-		/* ... */
 		
 		('INPUTS' '{'
-			inputs+=UnitTestInput
+			(inputs+=UnitTestInput)+
 		'}' )?
 		
 		'EXPECTS' expected=Literal 
