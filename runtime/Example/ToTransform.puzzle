@@ -1,11 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<puzzle:Puzzle xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:constructs="http://org.mdse/constructs" xmlns:puzzle="http://org.mdse/puzzle">
-  <tests failedMessage="Hello world">
-    <expected xsi:type="constructs:StringLiteral" value="Hello"/>
-  </tests>
-  <inputs>
-    <variables xsi:type="constructs:IntegerVariable" name="first" value="2"/>
-    <variables xsi:type="constructs:StringVariable" name="second" value="World"/>
-    <variables xsi:type="constructs:BooleanVariable" name="third" value="true"/>
-  </inputs>
-</puzzle:Puzzle>
+PUZZLE {
+	name = "My puzzle"
+	description = "Some description"
+	
+	INPUTS {
+		int myVar = 2
+		bool boolVar = true
+		string stringVar = "Hello"
+	}
+	
+	TEST {
+		INPUTS {
+			myVar = 5
+		}
+		
+		EXPECTS 5
+		
+		ON_FAIL {
+			msg = "Expected 5"
+		}
+	}
+	
+	TEST {
+		INPUTS {
+			boolVar = 5
+		}
+		
+		EXPECTS false
+		
+		ON_FAIL {
+			msg = "Expected false"
+		}
+	}
+}

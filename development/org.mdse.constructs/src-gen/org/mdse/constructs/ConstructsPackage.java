@@ -713,6 +713,43 @@ public interface ConstructsPackage extends EPackage {
 	int BOOLEAN_LITERAL_OPERATION_COUNT = LITERAL_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link org.mdse.constructs.impl.SetStatementImpl <em>Set Statement</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mdse.constructs.impl.SetStatementImpl
+	 * @see org.mdse.constructs.impl.ConstructsPackageImpl#getSetStatement()
+	 * @generated
+	 */
+	int SET_STATEMENT = 16;
+
+	/**
+	 * The feature id for the '<em><b>Variable</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_STATEMENT__VARIABLE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Set Statement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_STATEMENT_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Set Statement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SET_STATEMENT_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link org.mdse.constructs.ComparativeOperator <em>Comparative Operator</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -720,7 +757,7 @@ public interface ConstructsPackage extends EPackage {
 	 * @see org.mdse.constructs.impl.ConstructsPackageImpl#getComparativeOperator()
 	 * @generated
 	 */
-	int COMPARATIVE_OPERATOR = 16;
+	int COMPARATIVE_OPERATOR = 17;
 
 	/**
 	 * The meta object id for the '{@link org.mdse.constructs.ArithmeticOperator <em>Arithmetic Operator</em>}' enum.
@@ -730,7 +767,7 @@ public interface ConstructsPackage extends EPackage {
 	 * @see org.mdse.constructs.impl.ConstructsPackageImpl#getArithmeticOperator()
 	 * @generated
 	 */
-	int ARITHMETIC_OPERATOR = 17;
+	int ARITHMETIC_OPERATOR = 18;
 
 	/**
 	 * Returns the meta object for class '{@link org.mdse.constructs.Expression <em>Expression</em>}'.
@@ -1069,6 +1106,27 @@ public interface ConstructsPackage extends EPackage {
 	EAttribute getBooleanLiteral_Value();
 
 	/**
+	 * Returns the meta object for class '{@link org.mdse.constructs.SetStatement <em>Set Statement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Set Statement</em>'.
+	 * @see org.mdse.constructs.SetStatement
+	 * @generated
+	 */
+	EClass getSetStatement();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.mdse.constructs.SetStatement#getVariable <em>Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Variable</em>'.
+	 * @see org.mdse.constructs.SetStatement#getVariable()
+	 * @see #getSetStatement()
+	 * @generated
+	 */
+	EReference getSetStatement_Variable();
+
+	/**
 	 * Returns the meta object for enum '{@link org.mdse.constructs.ComparativeOperator <em>Comparative Operator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1398,6 +1456,24 @@ public interface ConstructsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute BOOLEAN_LITERAL__VALUE = eINSTANCE.getBooleanLiteral_Value();
+
+		/**
+		 * The meta object literal for the '{@link org.mdse.constructs.impl.SetStatementImpl <em>Set Statement</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mdse.constructs.impl.SetStatementImpl
+		 * @see org.mdse.constructs.impl.ConstructsPackageImpl#getSetStatement()
+		 * @generated
+		 */
+		EClass SET_STATEMENT = eINSTANCE.getSetStatement();
+
+		/**
+		 * The meta object literal for the '<em><b>Variable</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SET_STATEMENT__VARIABLE = eINSTANCE.getSetStatement_Variable();
 
 		/**
 		 * The meta object literal for the '{@link org.mdse.constructs.ComparativeOperator <em>Comparative Operator</em>}' enum.

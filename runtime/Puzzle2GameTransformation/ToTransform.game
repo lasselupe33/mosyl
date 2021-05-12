@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<game:Game xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:constructs="http://org.mdse/constructs" xmlns:game="http://org.mdse/game">
+<game:Game xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:constructs="http://org.mdse/constructs" xmlns:game="http://org.mdse/game" name="My puzzle" description="Some description">
   <entrypoint>
     <inputs>
       <nextStatement>
-        <nextStatement>
-          <statement xsi:type="constructs:ReturnStatement" expression="//@entrypoint/@inputs/@nextStatement/@statement/@variable"/>
-        </nextStatement>
-        <statement xsi:type="constructs:DeclareStatement">
-          <variable xsi:type="constructs:IntegerVariable" name="a" value="2"/>
+        <statement xsi:type="constructs:ReturnStatement">
+          <expression xsi:type="constructs:StringVariable" href="../Example/ToTransform.puzzle#//@inputs/@variables.2"/>
         </statement>
       </nextStatement>
       <inputs>
-        <variables xsi:type="constructs:IntegerVariable" name="first" value="2"/>
-        <variables xsi:type="constructs:StringVariable" name="second" value="World"/>
-        <variables xsi:type="constructs:BooleanVariable" name="third" value="true"/>
+        <variables xsi:type="constructs:IntegerVariable" name="myVar" value="2"/>
+        <variables xsi:type="constructs:BooleanVariable" name="boolVar" value="true"/>
+        <variables xsi:type="constructs:StringVariable" name="stringVar" value="Hello"/>
       </inputs>
     </inputs>
   </entrypoint>
-  <tests failedMessage="Hello world">
-    <expected xsi:type="constructs:StringLiteral" value="Hello"/>
+  <tests failedMessage="Expected 5">
+    <expected xsi:type="constructs:IntergerLiteral" value="5"/>
+    <inputs>
+      <variable xsi:type="constructs:IntegerVariable" href="../Example/ToTransform.puzzle#//@inputs/@variables.0"/>
+      <overwritingValue xsi:type="constructs:IntergerLiteral" value="5"/>
+    </inputs>
+  </tests>
+  <tests failedMessage="Expected false">
+    <expected xsi:type="constructs:BooleanLiteral"/>
+    <inputs>
+      <variable xsi:type="constructs:BooleanVariable" href="../Example/ToTransform.puzzle#//@inputs/@variables.1"/>
+      <overwritingValue xsi:type="constructs:IntergerLiteral" value="5"/>
+    </inputs>
   </tests>
 </game:Game>

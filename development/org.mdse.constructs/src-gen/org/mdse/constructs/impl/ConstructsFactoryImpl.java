@@ -79,6 +79,8 @@ public class ConstructsFactoryImpl extends EFactoryImpl implements ConstructsFac
 			return createStringLiteral();
 		case ConstructsPackage.BOOLEAN_LITERAL:
 			return createBooleanLiteral();
+		case ConstructsPackage.SET_STATEMENT:
+			return createSetStatement();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -226,6 +228,16 @@ public class ConstructsFactoryImpl extends EFactoryImpl implements ConstructsFac
 	public BooleanLiteral createBooleanLiteral() {
 		BooleanLiteralImpl booleanLiteral = new BooleanLiteralImpl();
 		return booleanLiteral;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public SetStatement createSetStatement() {
+		SetStatementImpl setStatement = new SetStatementImpl();
+		return setStatement;
 	}
 
 	/**

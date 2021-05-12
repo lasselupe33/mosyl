@@ -26,6 +26,7 @@ import org.mdse.constructs.IntegerVariable;
 import org.mdse.constructs.IntergerLiteral;
 import org.mdse.constructs.Literal;
 import org.mdse.constructs.ReturnStatement;
+import org.mdse.constructs.SetStatement;
 import org.mdse.constructs.Statement;
 import org.mdse.constructs.StringLiteral;
 import org.mdse.constructs.StringVariable;
@@ -149,6 +150,13 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 * @generated
 	 */
 	private EClass booleanLiteralEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass setStatementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -521,6 +529,24 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getSetStatement() {
+		return setStatementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSetStatement_Variable() {
+		return (EReference) setStatementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getComparativeOperator() {
 		return comparativeOperatorEEnum;
 	}
@@ -610,6 +636,9 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 
 		booleanLiteralEClass = createEClass(BOOLEAN_LITERAL);
 		createEAttribute(booleanLiteralEClass, BOOLEAN_LITERAL__VALUE);
+
+		setStatementEClass = createEClass(SET_STATEMENT);
+		createEReference(setStatementEClass, SET_STATEMENT__VARIABLE);
 
 		// Create enums
 		comparativeOperatorEEnum = createEEnum(COMPARATIVE_OPERATOR);
@@ -749,6 +778,12 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 		initEAttribute(getBooleanLiteral_Value(), ecorePackage.getEBooleanObject(), "value", "false", 0, 1,
 				BooleanLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+
+		initEClass(setStatementEClass, SetStatement.class, "SetStatement", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getSetStatement_Variable(), this.getVariable(), null, "variable", null, 1, 1, SetStatement.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(comparativeOperatorEEnum, ComparativeOperator.class, "ComparativeOperator");

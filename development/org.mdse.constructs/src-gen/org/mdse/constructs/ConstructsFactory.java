@@ -121,6 +121,15 @@ public interface ConstructsFactory extends EFactory {
 	BooleanLiteral createBooleanLiteral();
 
 	/**
+	 * Returns a new object of class '<em>Set Statement</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Set Statement</em>'.
+	 * @generated
+	 */
+	SetStatement createSetStatement();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
