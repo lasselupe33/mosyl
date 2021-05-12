@@ -3,9 +3,9 @@
   <ownedViewpoints name="Game Viewpoint" modelFileExtension="game">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Game Diagram Description" domainClass="game.Game" enablePopupBars="true">
       <defaultLayer name="Default">
-        <containerMappings name="Inputs Container" domainClass="puzzle.Inputs">
-          <subNodeMappings name="Input" semanticCandidatesExpression="feature:eAllContents" domainClass="constructs.Variable">
-            <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="[name + ' = ' + value/]" labelPosition="node" resizeKind="NSEW" width="12" height="8">
+        <containerMappings name="Inputs Container" domainClass="puzzle::Inputs">
+          <subNodeMappings name="Input" semanticCandidatesExpression="feature:eAllContents" domainClass="constructs::Variable">
+            <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="aql:self.name + ' = ' +  self.value" labelPosition="node" resizeKind="NSEW" width="12" height="8">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -16,6 +16,36 @@
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Return Container" domainClass="constructs::ReturnStatement">
+          <subNodeMappings name="Return" semanticCandidatesExpression="feature:eAllContents" domainClass="constructs::ReturnStatement">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql:self.expression" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="['Return'/]">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Declare Statement Container" domainClass="constructs::DeclareStatement">
+          <subNodeMappings name="Declare Statement" semanticCandidatesExpression="feature:eAllContents" domainClass="constructs::Variable">
+            <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="aql:self.name + ' = ' + self.value" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="['Define variable'/]">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
           </style>
         </containerMappings>
       </defaultLayer>
