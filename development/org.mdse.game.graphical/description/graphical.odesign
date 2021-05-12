@@ -35,7 +35,7 @@
         </containerMappings>
         <containerMappings name="Declare Statement Container" domainClass="constructs::DeclareStatement">
           <subNodeMappings name="Declare Statement" semanticCandidatesExpression="feature:eAllContents" domainClass="constructs::Variable">
-            <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="aql:self.name + ' = ' + self.value" labelPosition="node" resizeKind="NSEW">
+            <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="aql:self.name + ' = ' + self.value" labelPosition="node" resizeKind="NSEW" width="12" height="8">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
