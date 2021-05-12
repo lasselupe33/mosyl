@@ -174,7 +174,7 @@ public class DSLGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		//UnitTest puzzle::UnitTest:
 		//	{puzzle::UnitTest}
 		//	'TEST' '{' ('INPUTS' '{'
-		//	inputs+=UnitTestInput
+		//	inputs+=UnitTestInput+
 		//	'}')?
 		//	'EXPECTS' expected=Literal ('ON_FAIL' '{'
 		//	'msg' '=' failedMessage=STRING
@@ -184,7 +184,7 @@ public class DSLGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		
 		//{puzzle::UnitTest}
 		//'TEST' '{' ('INPUTS' '{'
-		//inputs+=UnitTestInput
+		//inputs+=UnitTestInput+
 		//'}')?
 		//'EXPECTS' expected=Literal ('ON_FAIL' '{'
 		//'msg' '=' failedMessage=STRING
@@ -202,7 +202,7 @@ public class DSLGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
 		//('INPUTS' '{'
-		//inputs+=UnitTestInput
+		//inputs+=UnitTestInput+
 		//'}')?
 		public Group getGroup_3() { return cGroup_3; }
 		
@@ -212,7 +212,7 @@ public class DSLGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3_1() { return cLeftCurlyBracketKeyword_3_1; }
 		
-		//inputs+=UnitTestInput
+		//inputs+=UnitTestInput+
 		public Assignment getInputsAssignment_3_2() { return cInputsAssignment_3_2; }
 		
 		//UnitTestInput
@@ -320,25 +320,25 @@ public class DSLGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	public class IntergerLiteralElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.mdse.puzzle.dsl.DSL.IntergerLiteral");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cIntergerLiteralAction_0 = (Action)cGroup.eContents().get(0);
+		private final Action cIntegerLiteralAction_0 = (Action)cGroup.eContents().get(0);
 		private final Assignment cValueAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cValueINTTerminalRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
+		private final RuleCall cValueREALINTTerminalRuleCall_1_0 = (RuleCall)cValueAssignment_1.eContents().get(0);
 		
-		//IntergerLiteral constructs::IntergerLiteral:
-		//	{constructs::IntergerLiteral} value=INT;
+		//IntergerLiteral constructs::IntegerLiteral:
+		//	{constructs::IntegerLiteral} value=REALINT;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{constructs::IntergerLiteral} value=INT
+		//{constructs::IntegerLiteral} value=REALINT
 		public Group getGroup() { return cGroup; }
 		
-		//{constructs::IntergerLiteral}
-		public Action getIntergerLiteralAction_0() { return cIntergerLiteralAction_0; }
+		//{constructs::IntegerLiteral}
+		public Action getIntegerLiteralAction_0() { return cIntegerLiteralAction_0; }
 		
-		//value=INT
+		//value=REALINT
 		public Assignment getValueAssignment_1() { return cValueAssignment_1; }
 		
-		//INT
-		public RuleCall getValueINTTerminalRuleCall_1_0() { return cValueINTTerminalRuleCall_1_0; }
+		//REALINT
+		public RuleCall getValueREALINTTerminalRuleCall_1_0() { return cValueREALINTTerminalRuleCall_1_0; }
 	}
 	public class StringLiteralElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.mdse.puzzle.dsl.DSL.StringLiteral");
@@ -418,15 +418,15 @@ public class DSLGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Keyword cEqualsSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cValueAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cValueINTTerminalRuleCall_4_0 = (RuleCall)cValueAssignment_4.eContents().get(0);
+		private final RuleCall cValueREALINTTerminalRuleCall_4_0 = (RuleCall)cValueAssignment_4.eContents().get(0);
 		
 		//IntegerVariable constructs::IntegerVariable:
 		//	{constructs::IntegerVariable}
-		//	'int' name=ID '=' value=INT;
+		//	'int' name=ID '=' value=REALINT;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{constructs::IntegerVariable}
-		//'int' name=ID '=' value=INT
+		//'int' name=ID '=' value=REALINT
 		public Group getGroup() { return cGroup; }
 		
 		//{constructs::IntegerVariable}
@@ -444,11 +444,11 @@ public class DSLGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		//'='
 		public Keyword getEqualsSignKeyword_3() { return cEqualsSignKeyword_3; }
 		
-		//value=INT
+		//value=REALINT
 		public Assignment getValueAssignment_4() { return cValueAssignment_4; }
 		
-		//INT
-		public RuleCall getValueINTTerminalRuleCall_4_0() { return cValueINTTerminalRuleCall_4_0; }
+		//REALINT
+		public RuleCall getValueREALINTTerminalRuleCall_4_0() { return cValueREALINTTerminalRuleCall_4_0; }
 	}
 	public class StringVariableElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.mdse.puzzle.dsl.DSL.StringVariable");
@@ -536,6 +536,7 @@ public class DSLGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	
 	private final PuzzleElements pPuzzle;
 	private final TerminalRule tBOOLEAN;
+	private final TerminalRule tREALINT;
 	private final InputsElements pInputs;
 	private final UnitTestElements pUnitTest;
 	private final UnitTestInputElements pUnitTestInput;
@@ -559,6 +560,7 @@ public class DSLGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		this.gaTerminals = gaTerminals;
 		this.pPuzzle = new PuzzleElements();
 		this.tBOOLEAN = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.mdse.puzzle.dsl.DSL.BOOLEAN");
+		this.tREALINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "org.mdse.puzzle.dsl.DSL.REALINT");
 		this.pInputs = new InputsElements();
 		this.pUnitTest = new UnitTestElements();
 		this.pUnitTestInput = new UnitTestInputElements();
@@ -621,6 +623,12 @@ public class DSLGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		return tBOOLEAN;
 	}
 	
+	//terminal REALINT returns ecore::EInt:
+	//	'-'? INT;
+	public TerminalRule getREALINTRule() {
+		return tREALINT;
+	}
+	
 	//Inputs puzzle::Inputs:
 	//	'INPUTS' '{'
 	//	variables+=Variable+
@@ -636,7 +644,7 @@ public class DSLGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	//UnitTest puzzle::UnitTest:
 	//	{puzzle::UnitTest}
 	//	'TEST' '{' ('INPUTS' '{'
-	//	inputs+=UnitTestInput
+	//	inputs+=UnitTestInput+
 	//	'}')?
 	//	'EXPECTS' expected=Literal ('ON_FAIL' '{'
 	//	'msg' '=' failedMessage=STRING
@@ -670,8 +678,8 @@ public class DSLGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 		return getLiteralAccess().getRule();
 	}
 	
-	//IntergerLiteral constructs::IntergerLiteral:
-	//	{constructs::IntergerLiteral} value=INT;
+	//IntergerLiteral constructs::IntegerLiteral:
+	//	{constructs::IntegerLiteral} value=REALINT;
 	public IntergerLiteralElements getIntergerLiteralAccess() {
 		return pIntergerLiteral;
 	}
@@ -712,7 +720,7 @@ public class DSLGrammarAccess extends AbstractElementFinder.AbstractGrammarEleme
 	
 	//IntegerVariable constructs::IntegerVariable:
 	//	{constructs::IntegerVariable}
-	//	'int' name=ID '=' value=INT;
+	//	'int' name=ID '=' value=REALINT;
 	public IntegerVariableElements getIntegerVariableAccess() {
 		return pIntegerVariable;
 	}

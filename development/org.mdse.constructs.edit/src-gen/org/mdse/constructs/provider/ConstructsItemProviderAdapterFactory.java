@@ -257,26 +257,26 @@ public class ConstructsItemProviderAdapterFactory extends ConstructsAdapterFacto
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.mdse.constructs.IntergerLiteral} instances.
+	 * This keeps track of the one adapter used for all {@link org.mdse.constructs.IntegerLiteral} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected IntergerLiteralItemProvider intergerLiteralItemProvider;
+	protected IntegerLiteralItemProvider integerLiteralItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link org.mdse.constructs.IntergerLiteral}.
+	 * This creates an adapter for a {@link org.mdse.constructs.IntegerLiteral}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createIntergerLiteralAdapter() {
-		if (intergerLiteralItemProvider == null) {
-			intergerLiteralItemProvider = new IntergerLiteralItemProvider(this);
+	public Adapter createIntegerLiteralAdapter() {
+		if (integerLiteralItemProvider == null) {
+			integerLiteralItemProvider = new IntegerLiteralItemProvider(this);
 		}
 
-		return intergerLiteralItemProvider;
+		return integerLiteralItemProvider;
 	}
 
 	/**
@@ -346,6 +346,29 @@ public class ConstructsItemProviderAdapterFactory extends ConstructsAdapterFacto
 		}
 
 		return setStatementItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link org.mdse.constructs.VariableReference} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VariableReferenceItemProvider variableReferenceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mdse.constructs.VariableReference}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVariableReferenceAdapter() {
+		if (variableReferenceItemProvider == null) {
+			variableReferenceItemProvider = new VariableReferenceItemProvider(this);
+		}
+
+		return variableReferenceItemProvider;
 	}
 
 	/**
@@ -463,14 +486,16 @@ public class ConstructsItemProviderAdapterFactory extends ConstructsAdapterFacto
 			declareStatementItemProvider.dispose();
 		if (returnStatementItemProvider != null)
 			returnStatementItemProvider.dispose();
-		if (intergerLiteralItemProvider != null)
-			intergerLiteralItemProvider.dispose();
+		if (integerLiteralItemProvider != null)
+			integerLiteralItemProvider.dispose();
 		if (stringLiteralItemProvider != null)
 			stringLiteralItemProvider.dispose();
 		if (booleanLiteralItemProvider != null)
 			booleanLiteralItemProvider.dispose();
 		if (setStatementItemProvider != null)
 			setStatementItemProvider.dispose();
+		if (variableReferenceItemProvider != null)
+			variableReferenceItemProvider.dispose();
 	}
 
 }

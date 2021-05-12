@@ -3,8 +3,11 @@
 package org.mdse.constructs.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.mdse.constructs.ConstructsPackage;
 import org.mdse.constructs.IntegerVariable;
 
@@ -30,7 +33,8 @@ public class IntegerVariableImpl extends VariableImpl implements IntegerVariable
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int VALUE_EDEFAULT = 0;
+	protected static final Integer VALUE_EDEFAULT = new Integer(0);
+
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -39,7 +43,7 @@ public class IntegerVariableImpl extends VariableImpl implements IntegerVariable
 	 * @generated
 	 * @ordered
 	 */
-	protected int value = VALUE_EDEFAULT;
+	protected Integer value = VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -65,7 +69,7 @@ public class IntegerVariableImpl extends VariableImpl implements IntegerVariable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getValue() {
+	public Integer getValue() {
 		return value;
 	}
 
@@ -74,8 +78,8 @@ public class IntegerVariableImpl extends VariableImpl implements IntegerVariable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(int newValue) {
-		int oldValue = value;
+	public void setValue(Integer newValue) {
+		Integer oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ConstructsPackage.INTEGER_VARIABLE__VALUE, oldValue,
@@ -135,7 +139,7 @@ public class IntegerVariableImpl extends VariableImpl implements IntegerVariable
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case ConstructsPackage.INTEGER_VARIABLE__VALUE:
-			return value != VALUE_EDEFAULT;
+			return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 		}
 		return super.eIsSet(featureID);
 	}

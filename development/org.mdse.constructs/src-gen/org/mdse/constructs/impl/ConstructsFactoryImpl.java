@@ -73,14 +73,16 @@ public class ConstructsFactoryImpl extends EFactoryImpl implements ConstructsFac
 			return createDeclareStatement();
 		case ConstructsPackage.RETURN_STATEMENT:
 			return createReturnStatement();
-		case ConstructsPackage.INTERGER_LITERAL:
-			return createIntergerLiteral();
+		case ConstructsPackage.INTEGER_LITERAL:
+			return createIntegerLiteral();
 		case ConstructsPackage.STRING_LITERAL:
 			return createStringLiteral();
 		case ConstructsPackage.BOOLEAN_LITERAL:
 			return createBooleanLiteral();
 		case ConstructsPackage.SET_STATEMENT:
 			return createSetStatement();
+		case ConstructsPackage.VARIABLE_REFERENCE:
+			return createVariableReference();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -205,9 +207,9 @@ public class ConstructsFactoryImpl extends EFactoryImpl implements ConstructsFac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IntergerLiteral createIntergerLiteral() {
-		IntergerLiteralImpl intergerLiteral = new IntergerLiteralImpl();
-		return intergerLiteral;
+	public IntegerLiteral createIntegerLiteral() {
+		IntegerLiteralImpl integerLiteral = new IntegerLiteralImpl();
+		return integerLiteral;
 	}
 
 	/**
@@ -238,6 +240,16 @@ public class ConstructsFactoryImpl extends EFactoryImpl implements ConstructsFac
 	public SetStatement createSetStatement() {
 		SetStatementImpl setStatement = new SetStatementImpl();
 		return setStatement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VariableReference createVariableReference() {
+		VariableReferenceImpl variableReference = new VariableReferenceImpl();
+		return variableReference;
 	}
 
 	/**

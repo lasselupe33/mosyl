@@ -17,8 +17,8 @@ import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransi
 import org.mdse.constructs.BooleanLiteral;
 import org.mdse.constructs.BooleanVariable;
 import org.mdse.constructs.ConstructsPackage;
+import org.mdse.constructs.IntegerLiteral;
 import org.mdse.constructs.IntegerVariable;
-import org.mdse.constructs.IntergerLiteral;
 import org.mdse.constructs.StringLiteral;
 import org.mdse.constructs.StringVariable;
 import org.mdse.puzzle.Inputs;
@@ -48,11 +48,11 @@ public class DSLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case ConstructsPackage.BOOLEAN_VARIABLE:
 				sequence_BooleanVariable(context, (BooleanVariable) semanticObject); 
 				return; 
+			case ConstructsPackage.INTEGER_LITERAL:
+				sequence_IntergerLiteral(context, (IntegerLiteral) semanticObject); 
+				return; 
 			case ConstructsPackage.INTEGER_VARIABLE:
 				sequence_IntegerVariable(context, (IntegerVariable) semanticObject); 
-				return; 
-			case ConstructsPackage.INTERGER_LITERAL:
-				sequence_IntergerLiteral(context, (IntergerLiteral) semanticObject); 
 				return; 
 			case ConstructsPackage.STRING_LITERAL:
 				sequence_StringLiteral(context, (StringLiteral) semanticObject); 
@@ -139,7 +139,7 @@ public class DSLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     IntegerVariable returns IntegerVariable
 	 *
 	 * Constraint:
-	 *     (name=ID value=INT)
+	 *     (name=ID value=REALINT)
 	 */
 	protected void sequence_IntegerVariable(ISerializationContext context, IntegerVariable semanticObject) {
 		if (errorAcceptor != null) {
@@ -150,26 +150,26 @@ public class DSLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getIntegerVariableAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getIntegerVariableAccess().getValueINTTerminalRuleCall_4_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getIntegerVariableAccess().getValueREALINTTerminalRuleCall_4_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     Literal returns IntergerLiteral
-	 *     IntergerLiteral returns IntergerLiteral
+	 *     Literal returns IntegerLiteral
+	 *     IntergerLiteral returns IntegerLiteral
 	 *
 	 * Constraint:
-	 *     value=INT
+	 *     value=REALINT
 	 */
-	protected void sequence_IntergerLiteral(ISerializationContext context, IntergerLiteral semanticObject) {
+	protected void sequence_IntergerLiteral(ISerializationContext context, IntegerLiteral semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, ConstructsPackage.Literals.INTERGER_LITERAL__VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ConstructsPackage.Literals.INTERGER_LITERAL__VALUE));
+			if (transientValues.isValueTransient(semanticObject, ConstructsPackage.Literals.INTEGER_LITERAL__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ConstructsPackage.Literals.INTEGER_LITERAL__VALUE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getIntergerLiteralAccess().getValueINTTerminalRuleCall_1_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getIntergerLiteralAccess().getValueREALINTTerminalRuleCall_1_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
@@ -253,7 +253,7 @@ public class DSLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     UnitTest returns UnitTest
 	 *
 	 * Constraint:
-	 *     (inputs+=UnitTestInput? expected=Literal failedMessage=STRING?)
+	 *     (inputs+=UnitTestInput* expected=Literal failedMessage=STRING?)
 	 */
 	protected void sequence_UnitTest(ISerializationContext context, UnitTest semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

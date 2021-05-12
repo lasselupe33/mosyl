@@ -3,8 +3,11 @@
 package org.mdse.constructs.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.mdse.constructs.BooleanVariable;
 import org.mdse.constructs.ConstructsPackage;
 
@@ -31,6 +34,7 @@ public class BooleanVariableImpl extends VariableImpl implements BooleanVariable
 	 * @ordered
 	 */
 	protected static final Boolean VALUE_EDEFAULT = Boolean.FALSE;
+
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->

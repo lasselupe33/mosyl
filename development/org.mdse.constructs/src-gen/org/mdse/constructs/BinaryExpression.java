@@ -2,8 +2,6 @@
  */
 package org.mdse.constructs;
 
-import org.eclipse.emf.common.util.EList;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Binary Expression</b></em>'.
@@ -23,16 +21,26 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface BinaryExpression extends Expression {
 	/**
-	 * Returns the value of the '<em><b>Expression1</b></em>' containment reference list.
-	 * The list contents are of type {@link org.mdse.constructs.Expression}.
+	 * Returns the value of the '<em><b>Expression1</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Expression1</em>' containment reference list.
+	 * @return the value of the '<em>Expression1</em>' containment reference.
+	 * @see #setExpression1(Expression)
 	 * @see org.mdse.constructs.ConstructsPackage#getBinaryExpression_Expression1()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<Expression> getExpression1();
+	Expression getExpression1();
+
+	/**
+	 * Sets the value of the '{@link org.mdse.constructs.BinaryExpression#getExpression1 <em>Expression1</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Expression1</em>' containment reference.
+	 * @see #getExpression1()
+	 * @generated
+	 */
+	void setExpression1(Expression value);
 
 	/**
 	 * Returns the value of the '<em><b>Expression2</b></em>' containment reference.

@@ -159,13 +159,16 @@ public class BinaryExpressionItemProvider extends ExpressionItemProvider {
 				ConstructsFactory.eINSTANCE.createArithmeticExpression()));
 
 		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.BINARY_EXPRESSION__EXPRESSION1,
-				ConstructsFactory.eINSTANCE.createIntergerLiteral()));
+				ConstructsFactory.eINSTANCE.createIntegerLiteral()));
 
 		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.BINARY_EXPRESSION__EXPRESSION1,
 				ConstructsFactory.eINSTANCE.createStringLiteral()));
 
 		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.BINARY_EXPRESSION__EXPRESSION1,
 				ConstructsFactory.eINSTANCE.createBooleanLiteral()));
+
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.BINARY_EXPRESSION__EXPRESSION1,
+				ConstructsFactory.eINSTANCE.createVariableReference()));
 
 		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.BINARY_EXPRESSION__EXPRESSION2,
 				ConstructsFactory.eINSTANCE.createIntegerVariable()));
@@ -183,13 +186,16 @@ public class BinaryExpressionItemProvider extends ExpressionItemProvider {
 				ConstructsFactory.eINSTANCE.createArithmeticExpression()));
 
 		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.BINARY_EXPRESSION__EXPRESSION2,
-				ConstructsFactory.eINSTANCE.createIntergerLiteral()));
+				ConstructsFactory.eINSTANCE.createIntegerLiteral()));
 
 		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.BINARY_EXPRESSION__EXPRESSION2,
 				ConstructsFactory.eINSTANCE.createStringLiteral()));
 
 		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.BINARY_EXPRESSION__EXPRESSION2,
 				ConstructsFactory.eINSTANCE.createBooleanLiteral()));
+
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.BINARY_EXPRESSION__EXPRESSION2,
+				ConstructsFactory.eINSTANCE.createVariableReference()));
 	}
 
 	/**

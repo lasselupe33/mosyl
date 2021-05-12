@@ -27,6 +27,7 @@
     <genClasses ecoreClass="constructs.ecore#//Expression"/>
     <genClasses ecoreClass="constructs.ecore#//Variable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//Variable/name"/>
+      <genOperations ecoreOperation="constructs.ecore#//Variable/getValue"/>
     </genClasses>
     <genClasses ecoreClass="constructs.ecore#//IntegerVariable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//IntegerVariable/value"/>
@@ -59,9 +60,11 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference constructs.ecore#//BinaryExpression/expression1"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference constructs.ecore#//BinaryExpression/expression2"/>
     </genClasses>
-    <genClasses ecoreClass="constructs.ecore#//Literal"/>
-    <genClasses ecoreClass="constructs.ecore#//IntergerLiteral">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//IntergerLiteral/value"/>
+    <genClasses ecoreClass="constructs.ecore#//Literal">
+      <genOperations ecoreOperation="constructs.ecore#//Literal/getValue"/>
+    </genClasses>
+    <genClasses ecoreClass="constructs.ecore#//IntegerLiteral">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//IntegerLiteral/value"/>
     </genClasses>
     <genClasses ecoreClass="constructs.ecore#//StringLiteral">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//StringLiteral/value"/>
@@ -71,7 +74,10 @@
     </genClasses>
     <genClasses ecoreClass="constructs.ecore#//SetStatement">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference constructs.ecore#//SetStatement/variable"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//SetStatement/newValue"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference constructs.ecore#//SetStatement/newValue"/>
+    </genClasses>
+    <genClasses ecoreClass="constructs.ecore#//VariableReference">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference constructs.ecore#//VariableReference/variable"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

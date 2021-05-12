@@ -41,4 +41,12 @@ public interface Variable extends Expression {
 	 */
 	void setName(String value);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation"
+	 * @generated
+	 */
+	Object getValue();
+
 } // Variable

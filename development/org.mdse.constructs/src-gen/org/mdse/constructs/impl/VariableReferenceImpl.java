@@ -10,39 +10,39 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.mdse.constructs.ConstructsPackage;
-import org.mdse.constructs.Expression;
-import org.mdse.constructs.ReturnStatement;
+import org.mdse.constructs.Variable;
+import org.mdse.constructs.VariableReference;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Return Statement</b></em>'.
+ * An implementation of the model object '<em><b>Variable Reference</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.mdse.constructs.impl.ReturnStatementImpl#getExpression <em>Expression</em>}</li>
+ *   <li>{@link org.mdse.constructs.impl.VariableReferenceImpl#getVariable <em>Variable</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ReturnStatementImpl extends StatementImpl implements ReturnStatement {
+public class VariableReferenceImpl extends ExpressionImpl implements VariableReference {
 	/**
-	 * The cached value of the '{@link #getExpression() <em>Expression</em>}' reference.
+	 * The cached value of the '{@link #getVariable() <em>Variable</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getExpression()
+	 * @see #getVariable()
 	 * @generated
 	 * @ordered
 	 */
-	protected Expression expression;
+	protected Variable variable;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ReturnStatementImpl() {
+	protected VariableReferenceImpl() {
 		super();
 	}
 
@@ -53,7 +53,7 @@ public class ReturnStatementImpl extends StatementImpl implements ReturnStatemen
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ConstructsPackage.Literals.RETURN_STATEMENT;
+		return ConstructsPackage.Literals.VARIABLE_REFERENCE;
 	}
 
 	/**
@@ -61,17 +61,17 @@ public class ReturnStatementImpl extends StatementImpl implements ReturnStatemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Expression getExpression() {
-		if (expression != null && expression.eIsProxy()) {
-			InternalEObject oldExpression = (InternalEObject) expression;
-			expression = (Expression) eResolveProxy(oldExpression);
-			if (expression != oldExpression) {
+	public Variable getVariable() {
+		if (variable != null && variable.eIsProxy()) {
+			InternalEObject oldVariable = (InternalEObject) variable;
+			variable = (Variable) eResolveProxy(oldVariable);
+			if (variable != oldVariable) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							ConstructsPackage.RETURN_STATEMENT__EXPRESSION, oldExpression, expression));
+							ConstructsPackage.VARIABLE_REFERENCE__VARIABLE, oldVariable, variable));
 			}
 		}
-		return expression;
+		return variable;
 	}
 
 	/**
@@ -79,8 +79,8 @@ public class ReturnStatementImpl extends StatementImpl implements ReturnStatemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Expression basicGetExpression() {
-		return expression;
+	public Variable basicGetVariable() {
+		return variable;
 	}
 
 	/**
@@ -88,12 +88,12 @@ public class ReturnStatementImpl extends StatementImpl implements ReturnStatemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setExpression(Expression newExpression) {
-		Expression oldExpression = expression;
-		expression = newExpression;
+	public void setVariable(Variable newVariable) {
+		Variable oldVariable = variable;
+		variable = newVariable;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ConstructsPackage.RETURN_STATEMENT__EXPRESSION,
-					oldExpression, expression));
+			eNotify(new ENotificationImpl(this, Notification.SET, ConstructsPackage.VARIABLE_REFERENCE__VARIABLE,
+					oldVariable, variable));
 	}
 
 	/**
@@ -104,10 +104,10 @@ public class ReturnStatementImpl extends StatementImpl implements ReturnStatemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case ConstructsPackage.RETURN_STATEMENT__EXPRESSION:
+		case ConstructsPackage.VARIABLE_REFERENCE__VARIABLE:
 			if (resolve)
-				return getExpression();
-			return basicGetExpression();
+				return getVariable();
+			return basicGetVariable();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -120,8 +120,8 @@ public class ReturnStatementImpl extends StatementImpl implements ReturnStatemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case ConstructsPackage.RETURN_STATEMENT__EXPRESSION:
-			setExpression((Expression) newValue);
+		case ConstructsPackage.VARIABLE_REFERENCE__VARIABLE:
+			setVariable((Variable) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -135,8 +135,8 @@ public class ReturnStatementImpl extends StatementImpl implements ReturnStatemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case ConstructsPackage.RETURN_STATEMENT__EXPRESSION:
-			setExpression((Expression) null);
+		case ConstructsPackage.VARIABLE_REFERENCE__VARIABLE:
+			setVariable((Variable) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -150,10 +150,10 @@ public class ReturnStatementImpl extends StatementImpl implements ReturnStatemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case ConstructsPackage.RETURN_STATEMENT__EXPRESSION:
-			return expression != null;
+		case ConstructsPackage.VARIABLE_REFERENCE__VARIABLE:
+			return variable != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //ReturnStatementImpl
+} //VariableReferenceImpl

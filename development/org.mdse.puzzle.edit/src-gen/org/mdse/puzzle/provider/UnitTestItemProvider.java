@@ -208,7 +208,7 @@ public class UnitTestItemProvider extends ItemProviderAdapter implements IEditin
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(PuzzlePackage.Literals.UNIT_TEST__EXPECTED,
-				ConstructsFactory.eINSTANCE.createIntergerLiteral()));
+				ConstructsFactory.eINSTANCE.createIntegerLiteral()));
 
 		newChildDescriptors.add(createChildParameter(PuzzlePackage.Literals.UNIT_TEST__EXPECTED,
 				ConstructsFactory.eINSTANCE.createStringLiteral()));

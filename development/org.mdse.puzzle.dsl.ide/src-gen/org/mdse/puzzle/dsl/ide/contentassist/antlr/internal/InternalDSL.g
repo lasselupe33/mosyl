@@ -1137,9 +1137,16 @@ rule__UnitTest__Group_3__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getUnitTestAccess().getInputsAssignment_3_2()); }
-	(rule__UnitTest__InputsAssignment_3_2)
-	{ after(grammarAccess.getUnitTestAccess().getInputsAssignment_3_2()); }
+	(
+		{ before(grammarAccess.getUnitTestAccess().getInputsAssignment_3_2()); }
+		(rule__UnitTest__InputsAssignment_3_2)
+		{ after(grammarAccess.getUnitTestAccess().getInputsAssignment_3_2()); }
+	)
+	(
+		{ before(grammarAccess.getUnitTestAccess().getInputsAssignment_3_2()); }
+		(rule__UnitTest__InputsAssignment_3_2)*
+		{ after(grammarAccess.getUnitTestAccess().getInputsAssignment_3_2()); }
+	)
 )
 ;
 finally {
@@ -1434,9 +1441,9 @@ rule__IntergerLiteral__Group__0__Impl
 	}
 :
 (
-	{ before(grammarAccess.getIntergerLiteralAccess().getIntergerLiteralAction_0()); }
+	{ before(grammarAccess.getIntergerLiteralAccess().getIntegerLiteralAction_0()); }
 	()
-	{ after(grammarAccess.getIntergerLiteralAccess().getIntergerLiteralAction_0()); }
+	{ after(grammarAccess.getIntergerLiteralAccess().getIntegerLiteralAction_0()); }
 )
 ;
 finally {
@@ -2143,9 +2150,9 @@ rule__IntergerLiteral__ValueAssignment_1
 	}
 :
 	(
-		{ before(grammarAccess.getIntergerLiteralAccess().getValueINTTerminalRuleCall_1_0()); }
-		RULE_INT
-		{ after(grammarAccess.getIntergerLiteralAccess().getValueINTTerminalRuleCall_1_0()); }
+		{ before(grammarAccess.getIntergerLiteralAccess().getValueREALINTTerminalRuleCall_1_0()); }
+		RULE_REALINT
+		{ after(grammarAccess.getIntergerLiteralAccess().getValueREALINTTerminalRuleCall_1_0()); }
 	)
 ;
 finally {
@@ -2203,9 +2210,9 @@ rule__IntegerVariable__ValueAssignment_4
 	}
 :
 	(
-		{ before(grammarAccess.getIntegerVariableAccess().getValueINTTerminalRuleCall_4_0()); }
-		RULE_INT
-		{ after(grammarAccess.getIntegerVariableAccess().getValueINTTerminalRuleCall_4_0()); }
+		{ before(grammarAccess.getIntegerVariableAccess().getValueREALINTTerminalRuleCall_4_0()); }
+		RULE_REALINT
+		{ after(grammarAccess.getIntegerVariableAccess().getValueREALINTTerminalRuleCall_4_0()); }
 	)
 ;
 finally {
@@ -2274,9 +2281,11 @@ finally {
 
 RULE_BOOLEAN : ('true'|'false');
 
+RULE_REALINT : '-'? RULE_INT;
+
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
-RULE_INT : ('0'..'9')+;
+fragment RULE_INT : ('0'..'9')+;
 
 RULE_STRING : ('"' ('\\' .|~(('\\'|'"')))* '"'|'\'' ('\\' .|~(('\\'|'\'')))* '\'');
 

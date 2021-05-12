@@ -132,8 +132,8 @@ public class ConstructsAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseIntergerLiteral(IntergerLiteral object) {
-			return createIntergerLiteralAdapter();
+		public Adapter caseIntegerLiteral(IntegerLiteral object) {
+			return createIntegerLiteralAdapter();
 		}
 
 		@Override
@@ -149,6 +149,11 @@ public class ConstructsAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseSetStatement(SetStatement object) {
 			return createSetStatementAdapter();
+		}
+
+		@Override
+		public Adapter caseVariableReference(VariableReference object) {
+			return createVariableReferenceAdapter();
 		}
 
 		@Override
@@ -353,16 +358,16 @@ public class ConstructsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.mdse.constructs.IntergerLiteral <em>Interger Literal</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.mdse.constructs.IntegerLiteral <em>Integer Literal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.mdse.constructs.IntergerLiteral
+	 * @see org.mdse.constructs.IntegerLiteral
 	 * @generated
 	 */
-	public Adapter createIntergerLiteralAdapter() {
+	public Adapter createIntegerLiteralAdapter() {
 		return null;
 	}
 
@@ -405,6 +410,20 @@ public class ConstructsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSetStatementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mdse.constructs.VariableReference <em>Variable Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mdse.constructs.VariableReference
+	 * @generated
+	 */
+	public Adapter createVariableReferenceAdapter() {
 		return null;
 	}
 

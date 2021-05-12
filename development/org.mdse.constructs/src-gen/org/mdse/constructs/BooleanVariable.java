@@ -19,7 +19,6 @@ package org.mdse.constructs;
  * @generated
  */
 public interface BooleanVariable extends Variable {
-
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * The default value is <code>"false"</code>.

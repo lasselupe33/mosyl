@@ -19,19 +19,18 @@ package org.mdse.constructs;
  * @generated
  */
 public interface IntegerVariable extends Variable {
-
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * The default value is <code>"0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see #setValue(int)
+	 * @see #setValue(Integer)
 	 * @see org.mdse.constructs.ConstructsPackage#getIntegerVariable_Value()
 	 * @model default="0"
 	 * @generated
 	 */
-	int getValue();
+	Integer getValue();
 
 	/**
 	 * Sets the value of the '{@link org.mdse.constructs.IntegerVariable#getValue <em>Value</em>}' attribute.
@@ -41,6 +40,6 @@ public interface IntegerVariable extends Variable {
 	 * @see #getValue()
 	 * @generated
 	 */
-	void setValue(int value);
+	void setValue(Integer value);
 
 } // IntegerVariable

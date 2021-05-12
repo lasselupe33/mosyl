@@ -10,26 +10,23 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.mdse.constructs.ConstructsPackage;
-import org.mdse.constructs.IntergerLiteral;
 
 /**
- * This is the item provider adapter for a {@link org.mdse.constructs.IntergerLiteral} object.
+ * This is the item provider adapter for a {@link org.mdse.constructs.VariableReference} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class IntergerLiteralItemProvider extends LiteralItemProvider {
+public class VariableReferenceItemProvider extends ExpressionItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IntergerLiteralItemProvider(AdapterFactory adapterFactory) {
+	public VariableReferenceItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -44,36 +41,35 @@ public class IntergerLiteralItemProvider extends LiteralItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addValuePropertyDescriptor(object);
+			addVariablePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Value feature.
+	 * This adds a property descriptor for the Variable feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addValuePropertyDescriptor(Object object) {
+	protected void addVariablePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_IntergerLiteral_value_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_IntergerLiteral_value_feature",
-								"_UI_IntergerLiteral_type"),
-						ConstructsPackage.Literals.INTERGER_LITERAL__VALUE, true, false, false,
-						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+						getResourceLocator(), getString("_UI_VariableReference_variable_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_VariableReference_variable_feature",
+								"_UI_VariableReference_type"),
+						ConstructsPackage.Literals.VARIABLE_REFERENCE__VARIABLE, true, false, true, null, null, null));
 	}
 
 	/**
-	 * This returns IntergerLiteral.gif.
+	 * This returns VariableReference.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/IntergerLiteral"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/VariableReference"));
 	}
 
 	/**
@@ -94,8 +90,7 @@ public class IntergerLiteralItemProvider extends LiteralItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		IntergerLiteral intergerLiteral = (IntergerLiteral) object;
-		return getString("_UI_IntergerLiteral_type") + " " + intergerLiteral.getValue();
+		return getString("_UI_VariableReference_type");
 	}
 
 	/**
@@ -108,12 +103,6 @@ public class IntergerLiteralItemProvider extends LiteralItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(IntergerLiteral.class)) {
-		case ConstructsPackage.INTERGER_LITERAL__VALUE:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-			return;
-		}
 		super.notifyChanged(notification);
 	}
 

@@ -10,23 +10,26 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import org.mdse.constructs.ConstructsPackage;
+import org.mdse.constructs.IntegerLiteral;
 
 /**
- * This is the item provider adapter for a {@link org.mdse.constructs.ReturnStatement} object.
+ * This is the item provider adapter for a {@link org.mdse.constructs.IntegerLiteral} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ReturnStatementItemProvider extends StatementItemProvider {
+public class IntegerLiteralItemProvider extends LiteralItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ReturnStatementItemProvider(AdapterFactory adapterFactory) {
+	public IntegerLiteralItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -41,35 +44,36 @@ public class ReturnStatementItemProvider extends StatementItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addExpressionPropertyDescriptor(object);
+			addValuePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Expression feature.
+	 * This adds a property descriptor for the Value feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addExpressionPropertyDescriptor(Object object) {
+	protected void addValuePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_ReturnStatement_expression_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_ReturnStatement_expression_feature",
-								"_UI_ReturnStatement_type"),
-						ConstructsPackage.Literals.RETURN_STATEMENT__EXPRESSION, true, false, true, null, null, null));
+						getResourceLocator(), getString("_UI_IntegerLiteral_value_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_IntegerLiteral_value_feature",
+								"_UI_IntegerLiteral_type"),
+						ConstructsPackage.Literals.INTEGER_LITERAL__VALUE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This returns ReturnStatement.gif.
+	 * This returns IntegerLiteral.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ReturnStatement"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/IntegerLiteral"));
 	}
 
 	/**
@@ -90,7 +94,10 @@ public class ReturnStatementItemProvider extends StatementItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ReturnStatement_type");
+		Integer labelValue = ((IntegerLiteral) object).getValue();
+		String label = labelValue == null ? null : labelValue.toString();
+		return label == null || label.length() == 0 ? getString("_UI_IntegerLiteral_type")
+				: getString("_UI_IntegerLiteral_type") + " " + label;
 	}
 
 	/**
@@ -103,6 +110,12 @@ public class ReturnStatementItemProvider extends StatementItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(IntegerLiteral.class)) {
+		case ConstructsPackage.INTEGER_LITERAL__VALUE:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
+		}
 		super.notifyChanged(notification);
 	}
 

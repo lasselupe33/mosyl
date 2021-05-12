@@ -3,8 +3,11 @@
 package org.mdse.constructs.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.mdse.constructs.ConstructsPackage;
 import org.mdse.constructs.StringVariable;
 
@@ -31,6 +34,7 @@ public class StringVariableImpl extends VariableImpl implements StringVariable {
 	 * @ordered
 	 */
 	protected static final String VALUE_EDEFAULT = "";
+
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
