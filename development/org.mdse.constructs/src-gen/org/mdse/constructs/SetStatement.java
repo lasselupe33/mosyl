@@ -45,25 +45,25 @@ public interface SetStatement extends EObject {
 	void setVariable(Variable value);
 
 	/**
-	 * Returns the value of the '<em><b>New Value</b></em>' attribute.
+	 * Returns the value of the '<em><b>New Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>New Value</em>' attribute.
-	 * @see #setNewValue(Object)
+	 * @return the value of the '<em>New Value</em>' containment reference.
+	 * @see #setNewValue(Literal)
 	 * @see org.mdse.constructs.ConstructsPackage#getSetStatement_NewValue()
-	 * @model
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	Object getNewValue();
+	Literal getNewValue();
 
 	/**
-	 * Sets the value of the '{@link org.mdse.constructs.SetStatement#getNewValue <em>New Value</em>}' attribute.
+	 * Sets the value of the '{@link org.mdse.constructs.SetStatement#getNewValue <em>New Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>New Value</em>' attribute.
+	 * @param value the new value of the '<em>New Value</em>' containment reference.
 	 * @see #getNewValue()
 	 * @generated
 	 */
-	void setNewValue(Object value);
+	void setNewValue(Literal value);
 
 } // SetStatement

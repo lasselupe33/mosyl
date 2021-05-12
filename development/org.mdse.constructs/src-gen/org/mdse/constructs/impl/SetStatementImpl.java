@@ -4,6 +4,7 @@ package org.mdse.constructs.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -11,6 +12,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.mdse.constructs.ConstructsPackage;
+import org.mdse.constructs.Literal;
 import org.mdse.constructs.SetStatement;
 import org.mdse.constructs.Variable;
 
@@ -40,24 +42,14 @@ public class SetStatementImpl extends MinimalEObjectImpl.Container implements Se
 	protected Variable variable;
 
 	/**
-	 * The default value of the '{@link #getNewValue() <em>New Value</em>}' attribute.
+	 * The cached value of the '{@link #getNewValue() <em>New Value</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getNewValue()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Object NEW_VALUE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getNewValue() <em>New Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getNewValue()
-	 * @generated
-	 * @ordered
-	 */
-	protected Object newValue = NEW_VALUE_EDEFAULT;
+	protected Literal newValue;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -123,7 +115,7 @@ public class SetStatementImpl extends MinimalEObjectImpl.Container implements Se
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object getNewValue() {
+	public Literal getNewValue() {
 		return newValue;
 	}
 
@@ -132,12 +124,54 @@ public class SetStatementImpl extends MinimalEObjectImpl.Container implements Se
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNewValue(Object newNewValue) {
-		Object oldNewValue = newValue;
+	public NotificationChain basicSetNewValue(Literal newNewValue, NotificationChain msgs) {
+		Literal oldNewValue = newValue;
 		newValue = newNewValue;
-		if (eNotificationRequired())
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					ConstructsPackage.SET_STATEMENT__NEW_VALUE, oldNewValue, newNewValue);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNewValue(Literal newNewValue) {
+		if (newNewValue != newValue) {
+			NotificationChain msgs = null;
+			if (newValue != null)
+				msgs = ((InternalEObject) newValue).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - ConstructsPackage.SET_STATEMENT__NEW_VALUE, null, msgs);
+			if (newNewValue != null)
+				msgs = ((InternalEObject) newNewValue).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - ConstructsPackage.SET_STATEMENT__NEW_VALUE, null, msgs);
+			msgs = basicSetNewValue(newNewValue, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ConstructsPackage.SET_STATEMENT__NEW_VALUE,
-					oldNewValue, newValue));
+					newNewValue, newNewValue));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case ConstructsPackage.SET_STATEMENT__NEW_VALUE:
+			return basicSetNewValue(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -170,7 +204,7 @@ public class SetStatementImpl extends MinimalEObjectImpl.Container implements Se
 			setVariable((Variable) newValue);
 			return;
 		case ConstructsPackage.SET_STATEMENT__NEW_VALUE:
-			setNewValue(newValue);
+			setNewValue((Literal) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -188,7 +222,7 @@ public class SetStatementImpl extends MinimalEObjectImpl.Container implements Se
 			setVariable((Variable) null);
 			return;
 		case ConstructsPackage.SET_STATEMENT__NEW_VALUE:
-			setNewValue(NEW_VALUE_EDEFAULT);
+			setNewValue((Literal) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -205,26 +239,9 @@ public class SetStatementImpl extends MinimalEObjectImpl.Container implements Se
 		case ConstructsPackage.SET_STATEMENT__VARIABLE:
 			return variable != null;
 		case ConstructsPackage.SET_STATEMENT__NEW_VALUE:
-			return NEW_VALUE_EDEFAULT == null ? newValue != null : !NEW_VALUE_EDEFAULT.equals(newValue);
+			return newValue != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (newValue: ");
-		result.append(newValue);
-		result.append(')');
-		return result.toString();
 	}
 
 } //SetStatementImpl

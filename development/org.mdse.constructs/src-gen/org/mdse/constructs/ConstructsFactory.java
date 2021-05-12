@@ -130,6 +130,15 @@ public interface ConstructsFactory extends EFactory {
 	SetStatement createSetStatement();
 
 	/**
+	 * Returns a new object of class '<em>Variable Reference</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Variable Reference</em>'.
+	 * @generated
+	 */
+	VariableReference createVariableReference();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -308,7 +308,7 @@ public interface ConstructsPackage extends EPackage {
 	int BINARY_EXPRESSION = 11;
 
 	/**
-	 * The feature id for the '<em><b>Expression1</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Expression1</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -354,7 +354,7 @@ public interface ConstructsPackage extends EPackage {
 	int COMPARATIVE_EXPRESSION = 5;
 
 	/**
-	 * The feature id for the '<em><b>Expression1</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Expression1</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -409,7 +409,7 @@ public interface ConstructsPackage extends EPackage {
 	int ARITHMETIC_EXPRESSION = 6;
 
 	/**
-	 * The feature id for the '<em><b>Expression1</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Expression1</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -805,7 +805,7 @@ public interface ConstructsPackage extends EPackage {
 	int SET_STATEMENT__VARIABLE = 0;
 
 	/**
-	 * The feature id for the '<em><b>New Value</b></em>' attribute.
+	 * The feature id for the '<em><b>New Value</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -832,6 +832,43 @@ public interface ConstructsPackage extends EPackage {
 	int SET_STATEMENT_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link org.mdse.constructs.impl.VariableReferenceImpl <em>Variable Reference</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mdse.constructs.impl.VariableReferenceImpl
+	 * @see org.mdse.constructs.impl.ConstructsPackageImpl#getVariableReference()
+	 * @generated
+	 */
+	int VARIABLE_REFERENCE = 17;
+
+	/**
+	 * The feature id for the '<em><b>Variable</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_REFERENCE__VARIABLE = EXPRESSION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Variable Reference</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_REFERENCE_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Variable Reference</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_REFERENCE_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link org.mdse.constructs.ComparativeOperator <em>Comparative Operator</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -839,7 +876,7 @@ public interface ConstructsPackage extends EPackage {
 	 * @see org.mdse.constructs.impl.ConstructsPackageImpl#getComparativeOperator()
 	 * @generated
 	 */
-	int COMPARATIVE_OPERATOR = 17;
+	int COMPARATIVE_OPERATOR = 18;
 
 	/**
 	 * The meta object id for the '{@link org.mdse.constructs.ArithmeticOperator <em>Arithmetic Operator</em>}' enum.
@@ -849,7 +886,7 @@ public interface ConstructsPackage extends EPackage {
 	 * @see org.mdse.constructs.impl.ConstructsPackageImpl#getArithmeticOperator()
 	 * @generated
 	 */
-	int ARITHMETIC_OPERATOR = 18;
+	int ARITHMETIC_OPERATOR = 19;
 
 	/**
 	 * Returns the meta object for class '{@link org.mdse.constructs.Expression <em>Expression</em>}'.
@@ -1103,10 +1140,10 @@ public interface ConstructsPackage extends EPackage {
 	EClass getBinaryExpression();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.mdse.constructs.BinaryExpression#getExpression1 <em>Expression1</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.mdse.constructs.BinaryExpression#getExpression1 <em>Expression1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Expression1</em>'.
+	 * @return the meta object for the containment reference '<em>Expression1</em>'.
 	 * @see org.mdse.constructs.BinaryExpression#getExpression1()
 	 * @see #getBinaryExpression()
 	 * @generated
@@ -1229,15 +1266,36 @@ public interface ConstructsPackage extends EPackage {
 	EReference getSetStatement_Variable();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.mdse.constructs.SetStatement#getNewValue <em>New Value</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.mdse.constructs.SetStatement#getNewValue <em>New Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>New Value</em>'.
+	 * @return the meta object for the containment reference '<em>New Value</em>'.
 	 * @see org.mdse.constructs.SetStatement#getNewValue()
 	 * @see #getSetStatement()
 	 * @generated
 	 */
-	EAttribute getSetStatement_NewValue();
+	EReference getSetStatement_NewValue();
+
+	/**
+	 * Returns the meta object for class '{@link org.mdse.constructs.VariableReference <em>Variable Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Variable Reference</em>'.
+	 * @see org.mdse.constructs.VariableReference
+	 * @generated
+	 */
+	EClass getVariableReference();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.mdse.constructs.VariableReference#getVariable <em>Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Variable</em>'.
+	 * @see org.mdse.constructs.VariableReference#getVariable()
+	 * @see #getVariableReference()
+	 * @generated
+	 */
+	EReference getVariableReference_Variable();
 
 	/**
 	 * Returns the meta object for enum '{@link org.mdse.constructs.ComparativeOperator <em>Comparative Operator</em>}'.
@@ -1499,7 +1557,7 @@ public interface ConstructsPackage extends EPackage {
 		EClass BINARY_EXPRESSION = eINSTANCE.getBinaryExpression();
 
 		/**
-		 * The meta object literal for the '<em><b>Expression1</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Expression1</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1605,12 +1663,30 @@ public interface ConstructsPackage extends EPackage {
 		EReference SET_STATEMENT__VARIABLE = eINSTANCE.getSetStatement_Variable();
 
 		/**
-		 * The meta object literal for the '<em><b>New Value</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>New Value</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SET_STATEMENT__NEW_VALUE = eINSTANCE.getSetStatement_NewValue();
+		EReference SET_STATEMENT__NEW_VALUE = eINSTANCE.getSetStatement_NewValue();
+
+		/**
+		 * The meta object literal for the '{@link org.mdse.constructs.impl.VariableReferenceImpl <em>Variable Reference</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mdse.constructs.impl.VariableReferenceImpl
+		 * @see org.mdse.constructs.impl.ConstructsPackageImpl#getVariableReference()
+		 * @generated
+		 */
+		EClass VARIABLE_REFERENCE = eINSTANCE.getVariableReference();
+
+		/**
+		 * The meta object literal for the '<em><b>Variable</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VARIABLE_REFERENCE__VARIABLE = eINSTANCE.getVariableReference_Variable();
 
 		/**
 		 * The meta object literal for the '{@link org.mdse.constructs.ComparativeOperator <em>Comparative Operator</em>}' enum.

@@ -6,7 +6,7 @@
     <semanticResources>platform:/resource/org.mdse.game/model/game.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_SXdrkJ02Eeu4fMSkFHpnKw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_SX5wcJ02Eeu4fMSkFHpnKw" name="puzzle" repPath="#_SXwmgJ02Eeu4fMSkFHpnKw" changeId="1c3f68d3-277f-46c0-8839-50ed4c8a8e98">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_SX5wcJ02Eeu4fMSkFHpnKw" name="puzzle" repPath="#_SXwmgJ02Eeu4fMSkFHpnKw" changeId="7917a971-6526-4dc2-ba73-1873bebd0636">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="puzzle.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -155,17 +155,17 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_3gedQK2XEeutfoSBtAjFgA" type="4001" element="_3gay7K2XEeutfoSBtAjFgA" source="_vbB7QKKCEeufntMpU28_xw" target="_zAzM8K2XEeutfoSBtAjFgA">
           <children xmi:type="notation:Node" xmi:id="_3gfEUK2XEeutfoSBtAjFgA" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3gfEUa2XEeutfoSBtAjFgA" y="-35"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3gfEUa2XEeutfoSBtAjFgA" x="-8" y="-42"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_3gfEUq2XEeutfoSBtAjFgA" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3gfEU62XEeutfoSBtAjFgA" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3gfEU62XEeutfoSBtAjFgA" x="2" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_3gfEVK2XEeutfoSBtAjFgA" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3gfEVa2XEeutfoSBtAjFgA" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3gfEVa2XEeutfoSBtAjFgA" x="-2" y="10"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_3gedQa2XEeutfoSBtAjFgA" routing="Rectilinear"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_3gedQq2XEeutfoSBtAjFgA" fontColor="7490599" fontName=".AppleSystemUIFont" fontHeight="8"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3gedQ62XEeutfoSBtAjFgA" points="[18, 0, 18, -62]$[18, 62, 18, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3gedQ62XEeutfoSBtAjFgA" points="[13, 0, 0, -62]$[13, 62, 0, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3gfEVq2XEeutfoSBtAjFgA" id="(0.3389830508474576,1.0)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_3gfEV62XEeutfoSBtAjFgA" id="(0.3389830508474576,0.0)"/>
         </edges>

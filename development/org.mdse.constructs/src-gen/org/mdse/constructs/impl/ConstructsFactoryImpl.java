@@ -81,6 +81,8 @@ public class ConstructsFactoryImpl extends EFactoryImpl implements ConstructsFac
 			return createBooleanLiteral();
 		case ConstructsPackage.SET_STATEMENT:
 			return createSetStatement();
+		case ConstructsPackage.VARIABLE_REFERENCE:
+			return createVariableReference();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -238,6 +240,16 @@ public class ConstructsFactoryImpl extends EFactoryImpl implements ConstructsFac
 	public SetStatement createSetStatement() {
 		SetStatementImpl setStatement = new SetStatementImpl();
 		return setStatement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VariableReference createVariableReference() {
+		VariableReferenceImpl variableReference = new VariableReferenceImpl();
+		return variableReference;
 	}
 
 	/**

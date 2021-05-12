@@ -152,6 +152,11 @@ public class ConstructsAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseVariableReference(VariableReference object) {
+			return createVariableReferenceAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -405,6 +410,20 @@ public class ConstructsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSetStatementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mdse.constructs.VariableReference <em>Variable Reference</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mdse.constructs.VariableReference
+	 * @generated
+	 */
+	public Adapter createVariableReferenceAdapter() {
 		return null;
 	}
 

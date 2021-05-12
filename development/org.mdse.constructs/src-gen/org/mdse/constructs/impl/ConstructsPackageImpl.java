@@ -32,6 +32,7 @@ import org.mdse.constructs.Statement;
 import org.mdse.constructs.StringLiteral;
 import org.mdse.constructs.StringVariable;
 import org.mdse.constructs.Variable;
+import org.mdse.constructs.VariableReference;
 
 /**
  * <!-- begin-user-doc -->
@@ -158,6 +159,13 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 * @generated
 	 */
 	private EClass setStatementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass variableReferenceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -566,8 +574,26 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getSetStatement_NewValue() {
-		return (EAttribute) setStatementEClass.getEStructuralFeatures().get(1);
+	public EReference getSetStatement_NewValue() {
+		return (EReference) setStatementEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVariableReference() {
+		return variableReferenceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVariableReference_Variable() {
+		return (EReference) variableReferenceEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -669,7 +695,10 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 
 		setStatementEClass = createEClass(SET_STATEMENT);
 		createEReference(setStatementEClass, SET_STATEMENT__VARIABLE);
-		createEAttribute(setStatementEClass, SET_STATEMENT__NEW_VALUE);
+		createEReference(setStatementEClass, SET_STATEMENT__NEW_VALUE);
+
+		variableReferenceEClass = createEClass(VARIABLE_REFERENCE);
+		createEReference(variableReferenceEClass, VARIABLE_REFERENCE__VARIABLE);
 
 		// Create enums
 		comparativeOperatorEEnum = createEEnum(COMPARATIVE_OPERATOR);
@@ -719,6 +748,7 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 		integerLiteralEClass.getESuperTypes().add(this.getLiteral());
 		stringLiteralEClass.getESuperTypes().add(this.getLiteral());
 		booleanLiteralEClass.getESuperTypes().add(this.getLiteral());
+		variableReferenceEClass.getESuperTypes().add(this.getExpression());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(expressionEClass, Expression.class, "Expression", IS_ABSTRACT, !IS_INTERFACE,
@@ -788,7 +818,7 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 
 		initEClass(binaryExpressionEClass, BinaryExpression.class, "BinaryExpression", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBinaryExpression_Expression1(), this.getExpression(), null, "expression1", null, 1, -1,
+		initEReference(getBinaryExpression_Expression1(), this.getExpression(), null, "expression1", null, 1, 1,
 				BinaryExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBinaryExpression_Expression2(), this.getExpression(), null, "expression2", null, 1, 1,
@@ -821,9 +851,15 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 		initEReference(getSetStatement_Variable(), this.getVariable(), null, "variable", null, 1, 1, SetStatement.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getSetStatement_NewValue(), ecorePackage.getEJavaObject(), "newValue", null, 0, 1,
-				SetStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
+		initEReference(getSetStatement_NewValue(), this.getLiteral(), null, "newValue", null, 1, 1, SetStatement.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(variableReferenceEClass, VariableReference.class, "VariableReference", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVariableReference_Variable(), this.getVariable(), null, "variable", null, 1, 1,
+				VariableReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(comparativeOperatorEEnum, ComparativeOperator.class, "ComparativeOperator");

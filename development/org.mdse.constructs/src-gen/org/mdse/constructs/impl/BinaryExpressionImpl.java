@@ -2,21 +2,12 @@
  */
 package org.mdse.constructs.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
 import org.mdse.constructs.BinaryExpression;
 import org.mdse.constructs.ConstructsPackage;
 import org.mdse.constructs.Expression;
@@ -37,14 +28,14 @@ import org.mdse.constructs.Expression;
  */
 public abstract class BinaryExpressionImpl extends ExpressionImpl implements BinaryExpression {
 	/**
-	 * The cached value of the '{@link #getExpression1() <em>Expression1</em>}' containment reference list.
+	 * The cached value of the '{@link #getExpression1() <em>Expression1</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getExpression1()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Expression> expression1;
+	protected Expression expression1;
 
 	/**
 	 * The cached value of the '{@link #getExpression2() <em>Expression2</em>}' containment reference.
@@ -80,12 +71,49 @@ public abstract class BinaryExpressionImpl extends ExpressionImpl implements Bin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Expression> getExpression1() {
-		if (expression1 == null) {
-			expression1 = new EObjectContainmentEList<Expression>(Expression.class, this,
-					ConstructsPackage.BINARY_EXPRESSION__EXPRESSION1);
-		}
+	public Expression getExpression1() {
 		return expression1;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetExpression1(Expression newExpression1, NotificationChain msgs) {
+		Expression oldExpression1 = expression1;
+		expression1 = newExpression1;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					ConstructsPackage.BINARY_EXPRESSION__EXPRESSION1, oldExpression1, newExpression1);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setExpression1(Expression newExpression1) {
+		if (newExpression1 != expression1) {
+			NotificationChain msgs = null;
+			if (expression1 != null)
+				msgs = ((InternalEObject) expression1).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - ConstructsPackage.BINARY_EXPRESSION__EXPRESSION1, null, msgs);
+			if (newExpression1 != null)
+				msgs = ((InternalEObject) newExpression1).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - ConstructsPackage.BINARY_EXPRESSION__EXPRESSION1, null, msgs);
+			msgs = basicSetExpression1(newExpression1, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ConstructsPackage.BINARY_EXPRESSION__EXPRESSION1,
+					newExpression1, newExpression1));
 	}
 
 	/**
@@ -147,7 +175,7 @@ public abstract class BinaryExpressionImpl extends ExpressionImpl implements Bin
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case ConstructsPackage.BINARY_EXPRESSION__EXPRESSION1:
-			return ((InternalEList<?>) getExpression1()).basicRemove(otherEnd, msgs);
+			return basicSetExpression1(null, msgs);
 		case ConstructsPackage.BINARY_EXPRESSION__EXPRESSION2:
 			return basicSetExpression2(null, msgs);
 		}
@@ -180,8 +208,7 @@ public abstract class BinaryExpressionImpl extends ExpressionImpl implements Bin
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case ConstructsPackage.BINARY_EXPRESSION__EXPRESSION1:
-			getExpression1().clear();
-			getExpression1().addAll((Collection<? extends Expression>) newValue);
+			setExpression1((Expression) newValue);
 			return;
 		case ConstructsPackage.BINARY_EXPRESSION__EXPRESSION2:
 			setExpression2((Expression) newValue);
@@ -199,7 +226,7 @@ public abstract class BinaryExpressionImpl extends ExpressionImpl implements Bin
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case ConstructsPackage.BINARY_EXPRESSION__EXPRESSION1:
-			getExpression1().clear();
+			setExpression1((Expression) null);
 			return;
 		case ConstructsPackage.BINARY_EXPRESSION__EXPRESSION2:
 			setExpression2((Expression) null);
@@ -217,7 +244,7 @@ public abstract class BinaryExpressionImpl extends ExpressionImpl implements Bin
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case ConstructsPackage.BINARY_EXPRESSION__EXPRESSION1:
-			return expression1 != null && !expression1.isEmpty();
+			return expression1 != null;
 		case ConstructsPackage.BINARY_EXPRESSION__EXPRESSION2:
 			return expression2 != null;
 		}

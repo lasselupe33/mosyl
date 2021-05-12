@@ -349,6 +349,29 @@ public class ConstructsItemProviderAdapterFactory extends ConstructsAdapterFacto
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link org.mdse.constructs.VariableReference} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VariableReferenceItemProvider variableReferenceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link org.mdse.constructs.VariableReference}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVariableReferenceAdapter() {
+		if (variableReferenceItemProvider == null) {
+			variableReferenceItemProvider = new VariableReferenceItemProvider(this);
+		}
+
+		return variableReferenceItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -471,6 +494,8 @@ public class ConstructsItemProviderAdapterFactory extends ConstructsAdapterFacto
 			booleanLiteralItemProvider.dispose();
 		if (setStatementItemProvider != null)
 			setStatementItemProvider.dispose();
+		if (variableReferenceItemProvider != null)
+			variableReferenceItemProvider.dispose();
 	}
 
 }
