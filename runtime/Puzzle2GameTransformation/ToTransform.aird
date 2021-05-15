@@ -4,7 +4,7 @@
     <semanticResources>ToTransform.game</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_K_-joLV_EeuUCu-9jFnV4Q">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game%20Viewpoint']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Me_fUbV_EeuUCu-9jFnV4Q" name="new Game Diagram Description" repPath="#_Me9qILV_EeuUCu-9jFnV4Q" changeId="3ad1be3f-bb0e-49b4-8a9d-d2809c9ddbb8">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_Me_fUbV_EeuUCu-9jFnV4Q" name="new Game Diagram Description" repPath="#_Me9qILV_EeuUCu-9jFnV4Q" changeId="398d8020-6c78-4365-85ac-2ada04c79e2f">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game%20Viewpoint']/@ownedRepresentations[name='Game%20Diagram%20Description']"/>
         <target xmi:type="game:Game" href="ToTransform.game#/"/>
       </ownedRepresentationDescriptors>
@@ -53,7 +53,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_MfbkMrV_EeuUCu-9jFnV4Q"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_Mfa9IbV_EeuUCu-9jFnV4Q" fontName=".AppleSystemUIFont" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Mfa9IrV_EeuUCu-9jFnV4Q"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Mfa9IrV_EeuUCu-9jFnV4Q" x="-292" y="-4"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_WaCzMLV_EeuUCu-9jFnV4Q" type="2002" element="_WZXdxrV_EeuUCu-9jFnV4Q">
           <children xmi:type="notation:Node" xmi:id="_WaCzM7V_EeuUCu-9jFnV4Q" type="5006"/>
@@ -73,7 +73,16 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_WaCzNrV_EeuUCu-9jFnV4Q"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_WaCzMbV_EeuUCu-9jFnV4Q" fontName=".AppleSystemUIFont" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WaCzMrV_EeuUCu-9jFnV4Q"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WaCzMrV_EeuUCu-9jFnV4Q" x="-144" y="152"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_EKNTwLWBEeuEM4Cb7qc3qg" type="2002" element="_EJ38kbWBEeuEM4Cb7qc3qg">
+          <children xmi:type="notation:Node" xmi:id="_EKSMQLWBEeuEM4Cb7qc3qg" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_EKSzULWBEeuEM4Cb7qc3qg" type="7001">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_EKSzUbWBEeuEM4Cb7qc3qg"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_EKSzUrWBEeuEM4Cb7qc3qg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_EKNTwbWBEeuEM4Cb7qc3qg" fontName=".AppleSystemUIFont" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EKNTwrWBEeuEM4Cb7qc3qg" x="-144" y="328"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_Me_fVLV_EeuUCu-9jFnV4Q"/>
       </data>
@@ -84,6 +93,9 @@
     <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_MfAGYLV_EeuUCu-9jFnV4Q" name="Inputs">
       <target xmi:type="puzzle:Inputs" href="ToTransform.game#//@entrypoint/@inputs/@inputs"/>
       <semanticElements xmi:type="puzzle:Inputs" href="ToTransform.game#//@entrypoint/@inputs/@inputs"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_MfOI0LV_EeuUCu-9jFnV4Q" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="253,206,137" foregroundColor="253,206,137">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game%20Viewpoint']/@ownedRepresentations[name='Game%20Diagram%20Description']/@defaultLayer/@containerMappings[name='Inputs%20Container']/@style"/>
       </ownedStyle>
@@ -116,6 +128,9 @@
     <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_WZXdxrV_EeuUCu-9jFnV4Q" name="Define variable">
       <target xmi:type="constructs:DeclareStatement" href="ToTransform.game#//@entrypoint/@inputs/@nextStatement/@statement"/>
       <semanticElements xmi:type="constructs:DeclareStatement" href="ToTransform.game#//@entrypoint/@inputs/@nextStatement/@statement"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_WZeLcLV_EeuUCu-9jFnV4Q" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game%20Viewpoint']/@ownedRepresentations[name='Game%20Diagram%20Description']/@defaultLayer/@containerMappings[name='Declare%20Statement%20Container']/@style"/>
       </ownedStyle>
@@ -128,6 +143,17 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game%20Viewpoint']/@ownedRepresentations[name='Game%20Diagram%20Description']/@defaultLayer/@containerMappings[name='Declare%20Statement%20Container']/@subNodeMappings[name='Declare%20Statement']"/>
       </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_EJ38kbWBEeuEM4Cb7qc3qg" name="Return">
+      <target xmi:type="constructs:ReturnStatement" href="ToTransform.game#//@entrypoint/@inputs/@nextStatement/@nextStatement/@nextStatement/@statement"/>
+      <semanticElements xmi:type="constructs:ReturnStatement" href="ToTransform.game#//@entrypoint/@inputs/@nextStatement/@nextStatement/@nextStatement/@statement"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_EJ-qQLWBEeuEM4Cb7qc3qg" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="255,245,181" foregroundColor="255,245,181">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game%20Viewpoint']/@ownedRepresentations[name='Game%20Diagram%20Description']/@defaultLayer/@containerMappings[name='Return%20Container']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game%20Viewpoint']/@ownedRepresentations[name='Game%20Diagram%20Description']/@defaultLayer/@containerMappings[name='Return%20Container']"/>
     </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game%20Viewpoint']/@ownedRepresentations[name='Game%20Diagram%20Description']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_Me9qIbV_EeuUCu-9jFnV4Q"/>

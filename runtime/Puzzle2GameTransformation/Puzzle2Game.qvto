@@ -1,5 +1,6 @@
 modeltype MMPuzzle uses "http://org.mdse/puzzle";
 modeltype MMGame uses "http://org.mdse/game";
+modeltype MMConstructs uses "http://org.mdse/constructs";
 
 transformation Puzzle2Game(in source :  MMPuzzle, out target : MMGame);
 
@@ -11,18 +12,22 @@ main() {
 mapping MMPuzzle::Puzzle :: Puzzle2Game() : MMGame::Game {
 	name := self.name;
 	description := self.description;
-	tests := self.tests;
+	tests := self.tests.map UnitTest2Test();
 	
 	if (self.inputs != null) {	
 		entrypoint := self.inputs.map Inputs2Entrypoint();
 	}
-	
-	// if (self.inputs->size() > 0) {
-	//	var rest = self.inputs->asSequence()->subSequence(2, self.inputs->size());
-	//	entrypoint := self.inputs->first().map
-	//		Input2Entrypoint(rest);
-	//}
-	
+}
+
+mapping MMPuzzle::UnitTest :: UnitTest2Test() : MMPuzzle::UnitTest {
+	inputs := self.inputs.map UnitTestInput2UnitTestInput();
+	expected := self.expected;
+	failedMessage := self.failedMessage;
+}
+
+mapping MMPuzzle::UnitTestInput :: UnitTestInput2UnitTestInput() : MMPuzzle::UnitTestInput {
+	overwritingValue := self.overwritingValue;
+	variable := self.variable;
 }
 
 mapping MMPuzzle::Inputs :: Inputs2Entrypoint() : MMGame::Entrypoint {
