@@ -196,15 +196,6 @@ public class IfElseStatementItemProvider extends StatementItemProvider {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__CONDITION,
-				ConstructsFactory.eINSTANCE.createIntegerVariable()));
-
-		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__CONDITION,
-				ConstructsFactory.eINSTANCE.createStringVariable()));
-
-		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__CONDITION,
-				ConstructsFactory.eINSTANCE.createBooleanVariable()));
-
-		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__CONDITION,
 				ConstructsFactory.eINSTANCE.createComparativeExpression()));
 
 		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__CONDITION,
@@ -231,6 +222,9 @@ public class IfElseStatementItemProvider extends StatementItemProvider {
 		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__ELSE_STATEMENT,
 				ConstructsFactory.eINSTANCE.createReturnStatement()));
 
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__ELSE_STATEMENT,
+				ConstructsFactory.eINSTANCE.createSetStatement()));
+
 		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__IF_STATEMENT,
 				ConstructsFactory.eINSTANCE.createIfElseStatement()));
 
@@ -239,6 +233,9 @@ public class IfElseStatementItemProvider extends StatementItemProvider {
 
 		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__IF_STATEMENT,
 				ConstructsFactory.eINSTANCE.createReturnStatement()));
+
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.IF_ELSE_STATEMENT__IF_STATEMENT,
+				ConstructsFactory.eINSTANCE.createSetStatement()));
 	}
 
 	/**

@@ -77,8 +77,6 @@ public class ConstructsSwitch<T> extends Switch<T> {
 			Variable variable = (Variable) theEObject;
 			T result = caseVariable(variable);
 			if (result == null)
-				result = caseExpression(variable);
-			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -87,8 +85,6 @@ public class ConstructsSwitch<T> extends Switch<T> {
 			T result = caseIntegerVariable(integerVariable);
 			if (result == null)
 				result = caseVariable(integerVariable);
-			if (result == null)
-				result = caseExpression(integerVariable);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -99,8 +95,6 @@ public class ConstructsSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseVariable(stringVariable);
 			if (result == null)
-				result = caseExpression(stringVariable);
-			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -109,8 +103,6 @@ public class ConstructsSwitch<T> extends Switch<T> {
 			T result = caseBooleanVariable(booleanVariable);
 			if (result == null)
 				result = caseVariable(booleanVariable);
-			if (result == null)
-				result = caseExpression(booleanVariable);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -225,6 +217,8 @@ public class ConstructsSwitch<T> extends Switch<T> {
 		case ConstructsPackage.SET_STATEMENT: {
 			SetStatement setStatement = (SetStatement) theEObject;
 			T result = caseSetStatement(setStatement);
+			if (result == null)
+				result = caseStatement(setStatement);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;

@@ -9,8 +9,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.mdse.constructs.ConstructsPackage;
 import org.mdse.constructs.Literal;
 import org.mdse.constructs.SetStatement;
@@ -30,7 +28,7 @@ import org.mdse.constructs.Variable;
  *
  * @generated
  */
-public class SetStatementImpl extends MinimalEObjectImpl.Container implements SetStatement {
+public class SetStatementImpl extends StatementImpl implements SetStatement {
 	/**
 	 * The cached value of the '{@link #getVariable() <em>Variable</em>}' reference.
 	 * <!-- begin-user-doc -->

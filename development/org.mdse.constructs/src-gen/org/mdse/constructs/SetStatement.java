@@ -2,8 +2,6 @@
  */
 package org.mdse.constructs;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Set Statement</b></em>'.
@@ -21,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface SetStatement extends EObject {
+public interface SetStatement extends Statement {
 	/**
 	 * Returns the value of the '<em><b>Variable</b></em>' reference.
 	 * <!-- begin-user-doc -->

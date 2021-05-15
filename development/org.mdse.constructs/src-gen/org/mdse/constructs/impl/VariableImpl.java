@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.mdse.constructs.ConstructsPackage;
 import org.mdse.constructs.Variable;
 
@@ -28,7 +29,7 @@ import org.mdse.constructs.Variable;
  *
  * @generated
  */
-public abstract class VariableImpl extends ExpressionImpl implements Variable {
+public abstract class VariableImpl extends MinimalEObjectImpl.Container implements Variable {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->

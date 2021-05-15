@@ -2,7 +2,7 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="constructs" nsURI="http://org.mdse/constructs" nsPrefix="constructs">
   <eClassifiers xsi:type="ecore:EClass" name="Expression" abstract="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Variable" abstract="true" eSuperTypes="#//Expression">
+  <eClassifiers xsi:type="ecore:EClass" name="Variable" abstract="true">
     <eOperations name="getValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EJavaObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -53,7 +53,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ReturnStatement" eSuperTypes="#//Statement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="expression" lowerBound="1"
-        eType="#//Expression"/>
+        eType="#//Expression" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BinaryExpression" abstract="true" eSuperTypes="#//Expression">
     <eStructuralFeatures xsi:type="ecore:EReference" name="expression1" lowerBound="1"
@@ -76,7 +76,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBooleanObject"
         defaultValueLiteral="false"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SetStatement">
+  <eClassifiers xsi:type="ecore:EClass" name="SetStatement" eSuperTypes="#//Statement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
         eType="#//Variable"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="newValue" lowerBound="1"

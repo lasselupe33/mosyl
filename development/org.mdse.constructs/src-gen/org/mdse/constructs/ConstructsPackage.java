@@ -103,7 +103,7 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE__NAME = EXPRESSION_FEATURE_COUNT + 0;
+	int VARIABLE__NAME = 0;
 
 	/**
 	 * The number of structural features of the '<em>Variable</em>' class.
@@ -112,7 +112,7 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
+	int VARIABLE_FEATURE_COUNT = 1;
 
 	/**
 	 * The operation id for the '<em>Get Value</em>' operation.
@@ -121,7 +121,7 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE___GET_VALUE = EXPRESSION_OPERATION_COUNT + 0;
+	int VARIABLE___GET_VALUE = 0;
 
 	/**
 	 * The number of operations of the '<em>Variable</em>' class.
@@ -130,7 +130,7 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 1;
+	int VARIABLE_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link org.mdse.constructs.impl.IntegerVariableImpl <em>Integer Variable</em>}' class.
@@ -584,7 +584,7 @@ public interface ConstructsPackage extends EPackage {
 	int RETURN_STATEMENT = 10;
 
 	/**
-	 * The feature id for the '<em><b>Expression</b></em>' reference.
+	 * The feature id for the '<em><b>Expression</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -802,7 +802,7 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_STATEMENT__VARIABLE = 0;
+	int SET_STATEMENT__VARIABLE = STATEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>New Value</b></em>' containment reference.
@@ -811,7 +811,7 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_STATEMENT__NEW_VALUE = 1;
+	int SET_STATEMENT__NEW_VALUE = STATEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Set Statement</em>' class.
@@ -820,7 +820,7 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_STATEMENT_FEATURE_COUNT = 2;
+	int SET_STATEMENT_FEATURE_COUNT = STATEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Set Statement</em>' class.
@@ -829,7 +829,7 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SET_STATEMENT_OPERATION_COUNT = 0;
+	int SET_STATEMENT_OPERATION_COUNT = STATEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link org.mdse.constructs.impl.VariableReferenceImpl <em>Variable Reference</em>}' class.
@@ -1119,10 +1119,10 @@ public interface ConstructsPackage extends EPackage {
 	EClass getReturnStatement();
 
 	/**
-	 * Returns the meta object for the reference '{@link org.mdse.constructs.ReturnStatement#getExpression <em>Expression</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.mdse.constructs.ReturnStatement#getExpression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Expression</em>'.
+	 * @return the meta object for the containment reference '<em>Expression</em>'.
 	 * @see org.mdse.constructs.ReturnStatement#getExpression()
 	 * @see #getReturnStatement()
 	 * @generated
@@ -1539,7 +1539,7 @@ public interface ConstructsPackage extends EPackage {
 		EClass RETURN_STATEMENT = eINSTANCE.getReturnStatement();
 
 		/**
-		 * The meta object literal for the '<em><b>Expression</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Expression</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

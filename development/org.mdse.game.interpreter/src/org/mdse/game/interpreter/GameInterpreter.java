@@ -186,10 +186,6 @@ public class GameInterpreter {
 			return ((Literal) expression).getValue();
 		}
 		
-		if (expression instanceof Variable) {
-			return variables.get(((Variable) expression).getName()).getValue();
-		}
-		
 		if (expression instanceof VariableReference) {
 			Variable var = ((VariableReference) expression).getVariable();
 			

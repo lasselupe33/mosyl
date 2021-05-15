@@ -2,6 +2,8 @@
  */
 package org.mdse.constructs;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Variable</b></em>'.
@@ -18,7 +20,7 @@ package org.mdse.constructs;
  * @model abstract="true"
  * @generated
  */
-public interface Variable extends Expression {
+public interface Variable extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
