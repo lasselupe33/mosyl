@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" name="graphical" version="12.0.0.2017041100">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="graphical" version="12.0.0.2017041100">
   <ownedViewpoints name="Game Viewpoint" modelFileExtension="game">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Game Diagram Description" domainClass="game.Game" enablePopupBars="true">
       <defaultLayer name="Default">
@@ -19,8 +19,8 @@
           </style>
         </containerMappings>
         <containerMappings name="Return Container" domainClass="constructs::ReturnStatement">
-          <subNodeMappings name="Return" semanticCandidatesExpression="feature:eAllContents" domainClass="constructs::ReturnStatement">
-            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql:self.expression" labelPosition="node" resizeKind="NSEW">
+          <subNodeMappings name="VariableReference" semanticCandidatesExpression="feature:eAllContents" domainClass="constructs::VariableReference">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql:self.variable.name" labelPosition="node" resizeKind="NSEW" width="12" height="8">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -36,18 +36,27 @@
         <containerMappings name="Declare Statement Container" domainClass="constructs::DeclareStatement">
           <subNodeMappings name="Declare Statement" semanticCandidatesExpression="feature:eAllContents" domainClass="constructs::Variable">
             <style xsi:type="style:SquareDescription" labelSize="12" labelExpression="aql:self.name + ' = ' + self.value" labelPosition="node" resizeKind="NSEW" width="12" height="8">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
             </style>
           </subNodeMappings>
           <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="['Define variable'/]">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
           </style>
         </containerMappings>
+        <toolSections>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create new" nodeMappings="//@ownedViewpoints[name='Game%20Viewpoint']/@ownedRepresentations[name='Game%20Diagram%20Description']/@defaultLayer/@containerMappings[name='Return%20Container']/@subNodeMappings[name='VariableReference']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:CreateInstance" typeName="constructs.VariableReference" referenceName="expression"/>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
       </defaultLayer>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="org.mdse.game.graphical.Services"/>
