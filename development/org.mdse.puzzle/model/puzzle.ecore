@@ -43,7 +43,7 @@
       <details key="constraints" value="NoCrossTypes"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="NoCrossTypes" value="Tuple {&#xA;&#x9;message : String = variable.name&#xA;&#x9;&#x9;&#x9;+ ' expected type '&#xA;&#x9;&#x9;&#x9;+ variable.getValue().oclType().toString()&#xA;&#x9;&#x9;&#x9;+ ' but got type '&#xA;&#x9;&#x9;&#x9;+ overwritingValue.oclType().toString(),&#xA;&#x9;status : Boolean = variable.getType() = overwritingValue.getType()&#xA;}.status"/>
+      <details key="NoCrossTypes" value="Tuple {&#xA;&#x9;message : String = variable.name&#xA;&#x9;&#x9;&#x9;+ ' expected type '&#xA;&#x9;&#x9;&#x9;+ variable.getType().toString()&#xA;&#x9;&#x9;&#x9;+ ' but got type '&#xA;&#x9;&#x9;&#x9;+ overwritingValue.getType().toString(),&#xA;&#x9;status : Boolean = variable.getType() = overwritingValue.getType()&#xA;}.status"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
         eType="ecore:EClass &_1;#//Variable"/>
