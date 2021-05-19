@@ -4,6 +4,7 @@
     <semanticResources>platform:/resource/org.mdse.constructs/model/constructs.ecore</semanticResources>
     <semanticResources>puzzle.ecore</semanticResources>
     <semanticResources>platform:/resource/org.mdse.game/model/game.ecore</semanticResources>
+    <semanticResources>platform:/plugin/org.eclipse.ocl.pivot/model-gen/oclstdlib.ecore</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_SXdrkJ02Eeu4fMSkFHpnKw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_SX5wcJ02Eeu4fMSkFHpnKw" name="puzzle" repPath="#_SXwmgJ02Eeu4fMSkFHpnKw" changeId="7917a971-6526-4dc2-ba73-1873bebd0636">
