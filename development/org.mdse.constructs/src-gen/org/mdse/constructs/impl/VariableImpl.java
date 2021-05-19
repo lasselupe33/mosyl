@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.mdse.constructs.ConstructsPackage;
+import org.mdse.constructs.Type;
 import org.mdse.constructs.Variable;
 
 /**
@@ -106,6 +107,17 @@ public abstract class VariableImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Type getType() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -169,6 +181,8 @@ public abstract class VariableImpl extends MinimalEObjectImpl.Container implemen
 		switch (operationID) {
 		case ConstructsPackage.VARIABLE___GET_VALUE:
 			return getValue();
+		case ConstructsPackage.VARIABLE___GET_TYPE:
+			return getType();
 		}
 		return super.eInvoke(operationID, arguments);
 	}

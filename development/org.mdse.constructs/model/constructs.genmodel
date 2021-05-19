@@ -24,25 +24,38 @@
       <genEnumLiterals ecoreEnumLiteral="constructs.ecore#//ArithmeticOperator/Multiply"/>
       <genEnumLiterals ecoreEnumLiteral="constructs.ecore#//ArithmeticOperator/Divide"/>
     </genEnums>
-    <genClasses ecoreClass="constructs.ecore#//Expression"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="constructs.ecore#//Type">
+      <genEnumLiterals ecoreEnumLiteral="constructs.ecore#//Type/Integer"/>
+      <genEnumLiterals ecoreEnumLiteral="constructs.ecore#//Type/Boolean"/>
+      <genEnumLiterals ecoreEnumLiteral="constructs.ecore#//Type/String"/>
+    </genEnums>
+    <genClasses ecoreClass="constructs.ecore#//Expression">
+      <genOperations ecoreOperation="constructs.ecore#//Expression/getType"/>
+    </genClasses>
     <genClasses ecoreClass="constructs.ecore#//Variable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//Variable/name"/>
       <genOperations ecoreOperation="constructs.ecore#//Variable/getValue"/>
+      <genOperations ecoreOperation="constructs.ecore#//Variable/getType"/>
     </genClasses>
     <genClasses ecoreClass="constructs.ecore#//IntegerVariable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//IntegerVariable/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//IntegerVariable/type"/>
     </genClasses>
     <genClasses ecoreClass="constructs.ecore#//StringVariable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//StringVariable/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//StringVariable/type"/>
     </genClasses>
     <genClasses ecoreClass="constructs.ecore#//BooleanVariable">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//BooleanVariable/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//BooleanVariable/type"/>
     </genClasses>
     <genClasses ecoreClass="constructs.ecore#//ComparativeExpression">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//ComparativeExpression/operator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//ComparativeExpression/type"/>
     </genClasses>
     <genClasses ecoreClass="constructs.ecore#//ArithmeticExpression">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//ArithmeticExpression/operator"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//ArithmeticExpression/type"/>
     </genClasses>
     <genClasses ecoreClass="constructs.ecore#//Statement"/>
     <genClasses ecoreClass="constructs.ecore#//IfElseStatement">
@@ -65,12 +78,15 @@
     </genClasses>
     <genClasses ecoreClass="constructs.ecore#//IntegerLiteral">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//IntegerLiteral/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//IntegerLiteral/type"/>
     </genClasses>
     <genClasses ecoreClass="constructs.ecore#//StringLiteral">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//StringLiteral/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//StringLiteral/type"/>
     </genClasses>
     <genClasses ecoreClass="constructs.ecore#//BooleanLiteral">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//BooleanLiteral/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute constructs.ecore#//BooleanLiteral/type"/>
     </genClasses>
     <genClasses ecoreClass="constructs.ecore#//SetStatement">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference constructs.ecore#//SetStatement/variable"/>
@@ -78,6 +94,8 @@
     </genClasses>
     <genClasses ecoreClass="constructs.ecore#//VariableReference">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference constructs.ecore#//VariableReference/variable"/>
+      <genOperations ecoreOperation="constructs.ecore#//VariableReference/getType"
+          body="return this.variable.getType();"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

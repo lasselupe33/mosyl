@@ -45,6 +45,7 @@ public class IntegerLiteralItemProvider extends LiteralItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addValuePropertyDescriptor(object);
+			addTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -62,6 +63,22 @@ public class IntegerLiteralItemProvider extends LiteralItemProvider {
 						getString("_UI_PropertyDescriptor_description", "_UI_IntegerLiteral_value_feature",
 								"_UI_IntegerLiteral_type"),
 						ConstructsPackage.Literals.INTEGER_LITERAL__VALUE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_IntegerLiteral_type_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_IntegerLiteral_type_feature",
+								"_UI_IntegerLiteral_type"),
+						ConstructsPackage.Literals.INTEGER_LITERAL__TYPE, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -113,6 +130,7 @@ public class IntegerLiteralItemProvider extends LiteralItemProvider {
 
 		switch (notification.getFeatureID(IntegerLiteral.class)) {
 		case ConstructsPackage.INTEGER_LITERAL__VALUE:
+		case ConstructsPackage.INTEGER_LITERAL__TYPE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

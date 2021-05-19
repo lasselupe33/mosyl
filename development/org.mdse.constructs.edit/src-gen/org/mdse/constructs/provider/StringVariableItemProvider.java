@@ -45,6 +45,7 @@ public class StringVariableItemProvider extends VariableItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addValuePropertyDescriptor(object);
+			addTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -62,6 +63,22 @@ public class StringVariableItemProvider extends VariableItemProvider {
 						getString("_UI_PropertyDescriptor_description", "_UI_StringVariable_value_feature",
 								"_UI_StringVariable_type"),
 						ConstructsPackage.Literals.STRING_VARIABLE__VALUE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_StringVariable_type_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_StringVariable_type_feature",
+								"_UI_StringVariable_type"),
+						ConstructsPackage.Literals.STRING_VARIABLE__TYPE, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -112,6 +129,7 @@ public class StringVariableItemProvider extends VariableItemProvider {
 
 		switch (notification.getFeatureID(StringVariable.class)) {
 		case ConstructsPackage.STRING_VARIABLE__VALUE:
+		case ConstructsPackage.STRING_VARIABLE__TYPE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
