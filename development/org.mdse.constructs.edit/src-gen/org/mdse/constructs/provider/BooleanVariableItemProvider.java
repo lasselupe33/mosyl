@@ -45,6 +45,7 @@ public class BooleanVariableItemProvider extends VariableItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addValuePropertyDescriptor(object);
+			addTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -62,6 +63,22 @@ public class BooleanVariableItemProvider extends VariableItemProvider {
 						getString("_UI_PropertyDescriptor_description", "_UI_BooleanVariable_value_feature",
 								"_UI_BooleanVariable_type"),
 						ConstructsPackage.Literals.BOOLEAN_VARIABLE__VALUE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_BooleanVariable_type_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_BooleanVariable_type_feature",
+								"_UI_BooleanVariable_type"),
+						ConstructsPackage.Literals.BOOLEAN_VARIABLE__TYPE, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -112,6 +129,7 @@ public class BooleanVariableItemProvider extends VariableItemProvider {
 
 		switch (notification.getFeatureID(BooleanVariable.class)) {
 		case ConstructsPackage.BOOLEAN_VARIABLE__VALUE:
+		case ConstructsPackage.BOOLEAN_VARIABLE__TYPE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

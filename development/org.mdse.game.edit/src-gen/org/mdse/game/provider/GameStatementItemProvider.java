@@ -182,6 +182,9 @@ public class GameStatementItemProvider extends ItemProviderAdapter implements IE
 
 		newChildDescriptors.add(createChildParameter(GamePackage.Literals.GAME_STATEMENT__STATEMENT,
 				ConstructsFactory.eINSTANCE.createReturnStatement()));
+
+		newChildDescriptors.add(createChildParameter(GamePackage.Literals.GAME_STATEMENT__STATEMENT,
+				ConstructsFactory.eINSTANCE.createSetStatement()));
 	}
 
 	/**

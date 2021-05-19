@@ -100,6 +100,8 @@ public class ConstructsFactoryImpl extends EFactoryImpl implements ConstructsFac
 			return createComparativeOperatorFromString(eDataType, initialValue);
 		case ConstructsPackage.ARITHMETIC_OPERATOR:
 			return createArithmeticOperatorFromString(eDataType, initialValue);
+		case ConstructsPackage.TYPE:
+			return createTypeFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -117,6 +119,8 @@ public class ConstructsFactoryImpl extends EFactoryImpl implements ConstructsFac
 			return convertComparativeOperatorToString(eDataType, instanceValue);
 		case ConstructsPackage.ARITHMETIC_OPERATOR:
 			return convertArithmeticOperatorToString(eDataType, instanceValue);
+		case ConstructsPackage.TYPE:
+			return convertTypeToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -293,6 +297,28 @@ public class ConstructsFactoryImpl extends EFactoryImpl implements ConstructsFac
 	 * @generated
 	 */
 	public String convertArithmeticOperatorToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Type createTypeFromString(EDataType eDataType, String initialValue) {
+		Type result = Type.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

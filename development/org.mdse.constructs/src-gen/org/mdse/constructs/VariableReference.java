@@ -41,4 +41,12 @@ public interface VariableReference extends Expression {
 	 */
 	void setVariable(Variable value);
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation"
+	 * @generated
+	 */
+	Type getType();
+
 } // VariableReference

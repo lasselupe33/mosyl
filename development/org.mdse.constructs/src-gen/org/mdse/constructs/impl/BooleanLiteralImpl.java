@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.mdse.constructs.BooleanLiteral;
 import org.mdse.constructs.ConstructsPackage;
+import org.mdse.constructs.Type;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,6 +21,7 @@ import org.mdse.constructs.ConstructsPackage;
  * </p>
  * <ul>
  *   <li>{@link org.mdse.constructs.impl.BooleanLiteralImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link org.mdse.constructs.impl.BooleanLiteralImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -44,6 +46,26 @@ public class BooleanLiteralImpl extends LiteralImpl implements BooleanLiteral {
 	 * @ordered
 	 */
 	protected Boolean value = VALUE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final Type TYPE_EDEFAULT = Type.BOOLEAN;
+
+	/**
+	 * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getType()
+	 * @generated
+	 * @ordered
+	 */
+	protected Type type = TYPE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -91,11 +113,35 @@ public class BooleanLiteralImpl extends LiteralImpl implements BooleanLiteral {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Type getType() {
+		return type;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setType(Type newType) {
+		Type oldType = type;
+		type = newType == null ? TYPE_EDEFAULT : newType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ConstructsPackage.BOOLEAN_LITERAL__TYPE, oldType,
+					type));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case ConstructsPackage.BOOLEAN_LITERAL__VALUE:
 			return getValue();
+		case ConstructsPackage.BOOLEAN_LITERAL__TYPE:
+			return getType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -110,6 +156,9 @@ public class BooleanLiteralImpl extends LiteralImpl implements BooleanLiteral {
 		switch (featureID) {
 		case ConstructsPackage.BOOLEAN_LITERAL__VALUE:
 			setValue((Boolean) newValue);
+			return;
+		case ConstructsPackage.BOOLEAN_LITERAL__TYPE:
+			setType((Type) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -126,6 +175,9 @@ public class BooleanLiteralImpl extends LiteralImpl implements BooleanLiteral {
 		case ConstructsPackage.BOOLEAN_LITERAL__VALUE:
 			setValue(VALUE_EDEFAULT);
 			return;
+		case ConstructsPackage.BOOLEAN_LITERAL__TYPE:
+			setType(TYPE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -140,6 +192,8 @@ public class BooleanLiteralImpl extends LiteralImpl implements BooleanLiteral {
 		switch (featureID) {
 		case ConstructsPackage.BOOLEAN_LITERAL__VALUE:
 			return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
+		case ConstructsPackage.BOOLEAN_LITERAL__TYPE:
+			return type != TYPE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -157,6 +211,8 @@ public class BooleanLiteralImpl extends LiteralImpl implements BooleanLiteral {
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (value: ");
 		result.append(value);
+		result.append(", type: ");
+		result.append(type);
 		result.append(')');
 		return result.toString();
 	}

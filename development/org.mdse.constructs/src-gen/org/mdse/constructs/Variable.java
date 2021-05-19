@@ -51,4 +51,12 @@ public interface Variable extends EObject {
 	 */
 	Object getValue();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation"
+	 * @generated
+	 */
+	Type getType();
+
 } // Variable
