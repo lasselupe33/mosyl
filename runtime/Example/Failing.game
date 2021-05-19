@@ -1,4 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<game:Game xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:game="http://org.mdse/game">
-  <entrypoint/>
+<game:Game xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:constructs="http://org.mdse/constructs" xmlns:game="http://org.mdse/game">
+  <entrypoint>
+    <statement>
+      <nextStatement>
+        <nextStatement>
+          <nextStatement>
+            <statement xsi:type="constructs:ReturnStatement"/>
+          </nextStatement>
+          <statement xsi:type="constructs:DeclareStatement">
+            <variable xsi:type="constructs:IntegerVariable" name="Hello" value="2"/>
+          </statement>
+        </nextStatement>
+        <statement xsi:type="constructs:ReturnStatement">
+          <expression xsi:type="constructs:ComparativeExpression">
+            <expression1 xsi:type="constructs:StringLiteral"/>
+            <expression2 xsi:type="constructs:BooleanLiteral"/>
+          </expression>
+        </statement>
+      </nextStatement>
+      <statement xsi:type="constructs:IfElseStatement">
+        <condition xsi:type="constructs:ComparativeExpression">
+          <expression1 xsi:type="constructs:BooleanLiteral"/>
+          <expression2 xsi:type="constructs:BooleanLiteral"/>
+        </condition>
+      </statement>
+    </statement>
+  </entrypoint>
 </game:Game>
