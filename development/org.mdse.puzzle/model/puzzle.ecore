@@ -22,6 +22,12 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UnitTest">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="NoDuplicateVariables"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="NoDuplicateVariables" value="&#xA;&#x9;&#x9;&#x9;inputs->collect(variable)->isUnique(v | v.name)"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="expected" lowerBound="1"
         eType="ecore:EClass &_1;#//Literal" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="failedMessage" eType="ecore:EDataType &_0;#//EString"/>
@@ -37,7 +43,7 @@
       <details key="constraints" value="NoCrossTypes"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="NoCrossTypes" value="Tuple {&#xA;&#x9;message : String = variable.name &#xA;&#x9;&#x9;&#x9;+ ' expected type '&#xA;&#x9;&#x9;&#x9;+ variable.getValue().oclType().toString()&#xA;&#x9;&#x9;&#x9;+ ' but got type '&#xA;&#x9;&#x9;&#x9;+ overwritingValue.oclType().toString(),&#xA;&#x9;status : Boolean = variable.getValue().oclType().toString() = overwritingValue.oclType().toString()&#xA;}.status"/>
+      <details key="NoCrossTypes" value="Tuple {&#xA;&#x9;message : String = variable.name&#xA;&#x9;&#x9;&#x9;+ ' expected type '&#xA;&#x9;&#x9;&#x9;+ variable.getValue().oclType().toString()&#xA;&#x9;&#x9;&#x9;+ ' but got type '&#xA;&#x9;&#x9;&#x9;+ overwritingValue.oclType().toString(),&#xA;&#x9;status : Boolean = variable.getType() = overwritingValue.getType()&#xA;}.status"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
         eType="ecore:EClass &_1;#//Variable"/>
