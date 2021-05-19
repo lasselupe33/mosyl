@@ -31,6 +31,7 @@ import org.mdse.constructs.SetStatement;
 import org.mdse.constructs.Statement;
 import org.mdse.constructs.StringLiteral;
 import org.mdse.constructs.StringVariable;
+import org.mdse.constructs.Type;
 import org.mdse.constructs.Variable;
 import org.mdse.constructs.VariableReference;
 
@@ -182,6 +183,13 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	private EEnum arithmeticOperatorEEnum = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum typeEEnum = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -259,6 +267,15 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getExpression__GetType() {
+		return expressionEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVariable() {
 		return variableEClass;
 	}
@@ -286,6 +303,15 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getVariable__GetType() {
+		return variableEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIntegerVariable() {
 		return integerVariableEClass;
 	}
@@ -297,6 +323,15 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 */
 	public EAttribute getIntegerVariable_Value() {
 		return (EAttribute) integerVariableEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getIntegerVariable_Type() {
+		return (EAttribute) integerVariableEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -322,6 +357,15 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getStringVariable_Type() {
+		return (EAttribute) stringVariableEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getBooleanVariable() {
 		return booleanVariableEClass;
 	}
@@ -333,6 +377,15 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 */
 	public EAttribute getBooleanVariable_Value() {
 		return (EAttribute) booleanVariableEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBooleanVariable_Type() {
+		return (EAttribute) booleanVariableEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -358,6 +411,15 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getComparativeExpression_Type() {
+		return (EAttribute) comparativeExpressionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getArithmeticExpression() {
 		return arithmeticExpressionEClass;
 	}
@@ -369,6 +431,15 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 */
 	public EAttribute getArithmeticExpression_Operator() {
 		return (EAttribute) arithmeticExpressionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getArithmeticExpression_Type() {
+		return (EAttribute) arithmeticExpressionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -520,6 +591,15 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getIntegerLiteral_Type() {
+		return (EAttribute) integerLiteralEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getStringLiteral() {
 		return stringLiteralEClass;
 	}
@@ -538,6 +618,15 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getStringLiteral_Type() {
+		return (EAttribute) stringLiteralEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getBooleanLiteral() {
 		return booleanLiteralEClass;
 	}
@@ -549,6 +638,15 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 */
 	public EAttribute getBooleanLiteral_Value() {
 		return (EAttribute) booleanLiteralEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getBooleanLiteral_Type() {
+		return (EAttribute) booleanLiteralEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -601,6 +699,15 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getVariableReference__GetType() {
+		return variableReferenceEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getComparativeOperator() {
 		return comparativeOperatorEEnum;
 	}
@@ -612,6 +719,15 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 	 */
 	public EEnum getArithmeticOperator() {
 		return arithmeticOperatorEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getType() {
+		return typeEEnum;
 	}
 
 	/**
@@ -644,25 +760,32 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 
 		// Create classes and their features
 		expressionEClass = createEClass(EXPRESSION);
+		createEOperation(expressionEClass, EXPRESSION___GET_TYPE);
 
 		variableEClass = createEClass(VARIABLE);
 		createEAttribute(variableEClass, VARIABLE__NAME);
 		createEOperation(variableEClass, VARIABLE___GET_VALUE);
+		createEOperation(variableEClass, VARIABLE___GET_TYPE);
 
 		integerVariableEClass = createEClass(INTEGER_VARIABLE);
 		createEAttribute(integerVariableEClass, INTEGER_VARIABLE__VALUE);
+		createEAttribute(integerVariableEClass, INTEGER_VARIABLE__TYPE);
 
 		stringVariableEClass = createEClass(STRING_VARIABLE);
 		createEAttribute(stringVariableEClass, STRING_VARIABLE__VALUE);
+		createEAttribute(stringVariableEClass, STRING_VARIABLE__TYPE);
 
 		booleanVariableEClass = createEClass(BOOLEAN_VARIABLE);
 		createEAttribute(booleanVariableEClass, BOOLEAN_VARIABLE__VALUE);
+		createEAttribute(booleanVariableEClass, BOOLEAN_VARIABLE__TYPE);
 
 		comparativeExpressionEClass = createEClass(COMPARATIVE_EXPRESSION);
 		createEAttribute(comparativeExpressionEClass, COMPARATIVE_EXPRESSION__OPERATOR);
+		createEAttribute(comparativeExpressionEClass, COMPARATIVE_EXPRESSION__TYPE);
 
 		arithmeticExpressionEClass = createEClass(ARITHMETIC_EXPRESSION);
 		createEAttribute(arithmeticExpressionEClass, ARITHMETIC_EXPRESSION__OPERATOR);
+		createEAttribute(arithmeticExpressionEClass, ARITHMETIC_EXPRESSION__TYPE);
 
 		statementEClass = createEClass(STATEMENT);
 
@@ -686,12 +809,15 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 
 		integerLiteralEClass = createEClass(INTEGER_LITERAL);
 		createEAttribute(integerLiteralEClass, INTEGER_LITERAL__VALUE);
+		createEAttribute(integerLiteralEClass, INTEGER_LITERAL__TYPE);
 
 		stringLiteralEClass = createEClass(STRING_LITERAL);
 		createEAttribute(stringLiteralEClass, STRING_LITERAL__VALUE);
+		createEAttribute(stringLiteralEClass, STRING_LITERAL__TYPE);
 
 		booleanLiteralEClass = createEClass(BOOLEAN_LITERAL);
 		createEAttribute(booleanLiteralEClass, BOOLEAN_LITERAL__VALUE);
+		createEAttribute(booleanLiteralEClass, BOOLEAN_LITERAL__TYPE);
 
 		setStatementEClass = createEClass(SET_STATEMENT);
 		createEReference(setStatementEClass, SET_STATEMENT__VARIABLE);
@@ -699,10 +825,12 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 
 		variableReferenceEClass = createEClass(VARIABLE_REFERENCE);
 		createEReference(variableReferenceEClass, VARIABLE_REFERENCE__VARIABLE);
+		createEOperation(variableReferenceEClass, VARIABLE_REFERENCE___GET_TYPE);
 
 		// Create enums
 		comparativeOperatorEEnum = createEEnum(COMPARATIVE_OPERATOR);
 		arithmeticOperatorEEnum = createEEnum(ARITHMETIC_OPERATOR);
+		typeEEnum = createEEnum(TYPE);
 	}
 
 	/**
@@ -754,21 +882,29 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 		initEClass(expressionEClass, Expression.class, "Expression", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
+		initEOperation(getExpression__GetType(), this.getType(), "getType", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(variableEClass, Variable.class, "Variable", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVariable_Name(), ecorePackage.getEString(), "name", null, 0, 1, Variable.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getVariable__GetValue(), ecorePackage.getEJavaObject(), "getValue", 0, 1, IS_UNIQUE, IS_ORDERED);
 
+		initEOperation(getVariable__GetType(), this.getType(), "getType", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(integerVariableEClass, IntegerVariable.class, "IntegerVariable", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIntegerVariable_Value(), ecorePackage.getEIntegerObject(), "value", "0", 0, 1,
 				IntegerVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIntegerVariable_Type(), this.getType(), "type", "INTEGER", 0, 1, IntegerVariable.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(stringVariableEClass, StringVariable.class, "StringVariable", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getStringVariable_Value(), ecorePackage.getEString(), "value", "", 0, 1, StringVariable.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStringVariable_Type(), this.getType(), "type", "STRING", 0, 1, StringVariable.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(booleanVariableEClass, BooleanVariable.class, "BooleanVariable", !IS_ABSTRACT, !IS_INTERFACE,
@@ -776,16 +912,24 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 		initEAttribute(getBooleanVariable_Value(), ecorePackage.getEBooleanObject(), "value", "false", 0, 1,
 				BooleanVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBooleanVariable_Type(), this.getType(), "type", "BOOLEAN", 0, 1, BooleanVariable.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(comparativeExpressionEClass, ComparativeExpression.class, "ComparativeExpression", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getComparativeExpression_Operator(), this.getComparativeOperator(), "operator", null, 0, 1,
 				ComparativeExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getComparativeExpression_Type(), this.getType(), "type", "BOOLEAN", 0, 1,
+				ComparativeExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(arithmeticExpressionEClass, ArithmeticExpression.class, "ArithmeticExpression", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getArithmeticExpression_Operator(), this.getArithmeticOperator(), "operator", null, 0, 1,
+				ArithmeticExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getArithmeticExpression_Type(), this.getType(), "type", "INTEGER", 0, 1,
 				ArithmeticExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -834,10 +978,14 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 		initEAttribute(getIntegerLiteral_Value(), ecorePackage.getEIntegerObject(), "value", "0", 0, 1,
 				IntegerLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getIntegerLiteral_Type(), this.getType(), "type", "INTEGER", 0, 1, IntegerLiteral.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(stringLiteralEClass, StringLiteral.class, "StringLiteral", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getStringLiteral_Value(), ecorePackage.getEString(), "value", "", 0, 1, StringLiteral.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getStringLiteral_Type(), this.getType(), "type", "STRING", 0, 1, StringLiteral.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(booleanLiteralEClass, BooleanLiteral.class, "BooleanLiteral", !IS_ABSTRACT, !IS_INTERFACE,
@@ -845,6 +993,8 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 		initEAttribute(getBooleanLiteral_Value(), ecorePackage.getEBooleanObject(), "value", "false", 0, 1,
 				BooleanLiteral.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getBooleanLiteral_Type(), this.getType(), "type", "BOOLEAN", 0, 1, BooleanLiteral.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(setStatementEClass, SetStatement.class, "SetStatement", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -861,6 +1011,8 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 				VariableReference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEOperation(getVariableReference__GetType(), this.getType(), "getType", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		// Initialize enums and add enum literals
 		initEEnum(comparativeOperatorEEnum, ComparativeOperator.class, "ComparativeOperator");
 		addEEnumLiteral(comparativeOperatorEEnum, ComparativeOperator.EQUAL);
@@ -875,6 +1027,11 @@ public class ConstructsPackageImpl extends EPackageImpl implements ConstructsPac
 		addEEnumLiteral(arithmeticOperatorEEnum, ArithmeticOperator.MINUS);
 		addEEnumLiteral(arithmeticOperatorEEnum, ArithmeticOperator.MULTIPLY);
 		addEEnumLiteral(arithmeticOperatorEEnum, ArithmeticOperator.DIVIDE);
+
+		initEEnum(typeEEnum, Type.class, "Type");
+		addEEnumLiteral(typeEEnum, Type.INTEGER);
+		addEEnumLiteral(typeEEnum, Type.BOOLEAN);
+		addEEnumLiteral(typeEEnum, Type.STRING);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -2,7 +2,11 @@
  */
 package org.mdse.constructs.impl;
 
+import java.lang.reflect.InvocationTargetException;
+
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -10,6 +14,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.mdse.constructs.ConstructsPackage;
+import org.mdse.constructs.Type;
 import org.mdse.constructs.Variable;
 import org.mdse.constructs.VariableReference;
 
@@ -101,6 +106,15 @@ public class VariableReferenceImpl extends ExpressionImpl implements VariableRef
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Type getType() {
+		return this.variable.getType();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -154,6 +168,20 @@ public class VariableReferenceImpl extends ExpressionImpl implements VariableRef
 			return variable != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+		case ConstructsPackage.VARIABLE_REFERENCE___GET_TYPE:
+			return getType();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //VariableReferenceImpl

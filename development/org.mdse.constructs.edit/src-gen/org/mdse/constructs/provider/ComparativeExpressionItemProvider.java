@@ -46,6 +46,7 @@ public class ComparativeExpressionItemProvider extends BinaryExpressionItemProvi
 			super.getPropertyDescriptors(object);
 
 			addOperatorPropertyDescriptor(object);
+			addTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -63,6 +64,22 @@ public class ComparativeExpressionItemProvider extends BinaryExpressionItemProvi
 				getString("_UI_PropertyDescriptor_description", "_UI_ComparativeExpression_operator_feature",
 						"_UI_ComparativeExpression_type"),
 				ConstructsPackage.Literals.COMPARATIVE_EXPRESSION__OPERATOR, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Type feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_ComparativeExpression_type_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_ComparativeExpression_type_feature",
+						"_UI_ComparativeExpression_type"),
+				ConstructsPackage.Literals.COMPARATIVE_EXPRESSION__TYPE, true, false, false,
 				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -114,6 +131,7 @@ public class ComparativeExpressionItemProvider extends BinaryExpressionItemProvi
 
 		switch (notification.getFeatureID(ComparativeExpression.class)) {
 		case ConstructsPackage.COMPARATIVE_EXPRESSION__OPERATOR:
+		case ConstructsPackage.COMPARATIVE_EXPRESSION__TYPE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

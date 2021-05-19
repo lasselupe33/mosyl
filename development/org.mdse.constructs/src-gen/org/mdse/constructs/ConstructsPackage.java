@@ -78,13 +78,22 @@ public interface ConstructsPackage extends EPackage {
 	int EXPRESSION_FEATURE_COUNT = 0;
 
 	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXPRESSION___GET_TYPE = 0;
+
+	/**
 	 * The number of operations of the '<em>Expression</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPRESSION_OPERATION_COUNT = 0;
+	int EXPRESSION_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link org.mdse.constructs.impl.VariableImpl <em>Variable</em>}' class.
@@ -124,13 +133,22 @@ public interface ConstructsPackage extends EPackage {
 	int VARIABLE___GET_VALUE = 0;
 
 	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE___GET_TYPE = 1;
+
+	/**
 	 * The number of operations of the '<em>Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_OPERATION_COUNT = 1;
+	int VARIABLE_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link org.mdse.constructs.impl.IntegerVariableImpl <em>Integer Variable</em>}' class.
@@ -161,13 +179,22 @@ public interface ConstructsPackage extends EPackage {
 	int INTEGER_VARIABLE__VALUE = VARIABLE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEGER_VARIABLE__TYPE = VARIABLE_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Integer Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTEGER_VARIABLE_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 1;
+	int INTEGER_VARIABLE_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Get Value</em>' operation.
@@ -177,6 +204,15 @@ public interface ConstructsPackage extends EPackage {
 	 * @ordered
 	 */
 	int INTEGER_VARIABLE___GET_VALUE = VARIABLE___GET_VALUE;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEGER_VARIABLE___GET_TYPE = VARIABLE___GET_TYPE;
 
 	/**
 	 * The number of operations of the '<em>Integer Variable</em>' class.
@@ -216,13 +252,22 @@ public interface ConstructsPackage extends EPackage {
 	int STRING_VARIABLE__VALUE = VARIABLE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_VARIABLE__TYPE = VARIABLE_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>String Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRING_VARIABLE_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 1;
+	int STRING_VARIABLE_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Get Value</em>' operation.
@@ -232,6 +277,15 @@ public interface ConstructsPackage extends EPackage {
 	 * @ordered
 	 */
 	int STRING_VARIABLE___GET_VALUE = VARIABLE___GET_VALUE;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_VARIABLE___GET_TYPE = VARIABLE___GET_TYPE;
 
 	/**
 	 * The number of operations of the '<em>String Variable</em>' class.
@@ -271,13 +325,22 @@ public interface ConstructsPackage extends EPackage {
 	int BOOLEAN_VARIABLE__VALUE = VARIABLE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_VARIABLE__TYPE = VARIABLE_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Boolean Variable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN_VARIABLE_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 1;
+	int BOOLEAN_VARIABLE_FEATURE_COUNT = VARIABLE_FEATURE_COUNT + 2;
 
 	/**
 	 * The operation id for the '<em>Get Value</em>' operation.
@@ -287,6 +350,15 @@ public interface ConstructsPackage extends EPackage {
 	 * @ordered
 	 */
 	int BOOLEAN_VARIABLE___GET_VALUE = VARIABLE___GET_VALUE;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_VARIABLE___GET_TYPE = VARIABLE___GET_TYPE;
 
 	/**
 	 * The number of operations of the '<em>Boolean Variable</em>' class.
@@ -335,6 +407,15 @@ public interface ConstructsPackage extends EPackage {
 	int BINARY_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 2;
 
 	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BINARY_EXPRESSION___GET_TYPE = EXPRESSION___GET_TYPE;
+
+	/**
 	 * The number of operations of the '<em>Binary Expression</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -381,13 +462,31 @@ public interface ConstructsPackage extends EPackage {
 	int COMPARATIVE_EXPRESSION__OPERATOR = BINARY_EXPRESSION_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPARATIVE_EXPRESSION__TYPE = BINARY_EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Comparative Expression</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPARATIVE_EXPRESSION_FEATURE_COUNT = BINARY_EXPRESSION_FEATURE_COUNT + 1;
+	int COMPARATIVE_EXPRESSION_FEATURE_COUNT = BINARY_EXPRESSION_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPARATIVE_EXPRESSION___GET_TYPE = BINARY_EXPRESSION___GET_TYPE;
 
 	/**
 	 * The number of operations of the '<em>Comparative Expression</em>' class.
@@ -436,13 +535,31 @@ public interface ConstructsPackage extends EPackage {
 	int ARITHMETIC_EXPRESSION__OPERATOR = BINARY_EXPRESSION_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITHMETIC_EXPRESSION__TYPE = BINARY_EXPRESSION_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Arithmetic Expression</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARITHMETIC_EXPRESSION_FEATURE_COUNT = BINARY_EXPRESSION_FEATURE_COUNT + 1;
+	int ARITHMETIC_EXPRESSION_FEATURE_COUNT = BINARY_EXPRESSION_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARITHMETIC_EXPRESSION___GET_TYPE = BINARY_EXPRESSION___GET_TYPE;
 
 	/**
 	 * The number of operations of the '<em>Arithmetic Expression</em>' class.
@@ -630,6 +747,15 @@ public interface ConstructsPackage extends EPackage {
 	int LITERAL_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
 
 	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LITERAL___GET_TYPE = EXPRESSION___GET_TYPE;
+
+	/**
 	 * The operation id for the '<em>Get Value</em>' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -667,13 +793,31 @@ public interface ConstructsPackage extends EPackage {
 	int INTEGER_LITERAL__VALUE = LITERAL_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEGER_LITERAL__TYPE = LITERAL_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Integer Literal</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTEGER_LITERAL_FEATURE_COUNT = LITERAL_FEATURE_COUNT + 1;
+	int INTEGER_LITERAL_FEATURE_COUNT = LITERAL_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTEGER_LITERAL___GET_TYPE = LITERAL___GET_TYPE;
 
 	/**
 	 * The operation id for the '<em>Get Value</em>' operation.
@@ -713,13 +857,31 @@ public interface ConstructsPackage extends EPackage {
 	int STRING_LITERAL__VALUE = LITERAL_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_LITERAL__TYPE = LITERAL_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>String Literal</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRING_LITERAL_FEATURE_COUNT = LITERAL_FEATURE_COUNT + 1;
+	int STRING_LITERAL_FEATURE_COUNT = LITERAL_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRING_LITERAL___GET_TYPE = LITERAL___GET_TYPE;
 
 	/**
 	 * The operation id for the '<em>Get Value</em>' operation.
@@ -759,13 +921,31 @@ public interface ConstructsPackage extends EPackage {
 	int BOOLEAN_LITERAL__VALUE = LITERAL_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_LITERAL__TYPE = LITERAL_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Boolean Literal</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BOOLEAN_LITERAL_FEATURE_COUNT = LITERAL_FEATURE_COUNT + 1;
+	int BOOLEAN_LITERAL_FEATURE_COUNT = LITERAL_FEATURE_COUNT + 2;
+
+	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOOLEAN_LITERAL___GET_TYPE = LITERAL___GET_TYPE;
 
 	/**
 	 * The operation id for the '<em>Get Value</em>' operation.
@@ -860,13 +1040,22 @@ public interface ConstructsPackage extends EPackage {
 	int VARIABLE_REFERENCE_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
 	/**
+	 * The operation id for the '<em>Get Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VARIABLE_REFERENCE___GET_TYPE = EXPRESSION_OPERATION_COUNT + 0;
+
+	/**
 	 * The number of operations of the '<em>Variable Reference</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VARIABLE_REFERENCE_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 0;
+	int VARIABLE_REFERENCE_OPERATION_COUNT = EXPRESSION_OPERATION_COUNT + 1;
 
 	/**
 	 * The meta object id for the '{@link org.mdse.constructs.ComparativeOperator <em>Comparative Operator</em>}' enum.
@@ -889,6 +1078,16 @@ public interface ConstructsPackage extends EPackage {
 	int ARITHMETIC_OPERATOR = 19;
 
 	/**
+	 * The meta object id for the '{@link org.mdse.constructs.Type <em>Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mdse.constructs.Type
+	 * @see org.mdse.constructs.impl.ConstructsPackageImpl#getType()
+	 * @generated
+	 */
+	int TYPE = 20;
+
+	/**
 	 * Returns the meta object for class '{@link org.mdse.constructs.Expression <em>Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -897,6 +1096,16 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getExpression();
+
+	/**
+	 * Returns the meta object for the '{@link org.mdse.constructs.Expression#getType() <em>Get Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Type</em>' operation.
+	 * @see org.mdse.constructs.Expression#getType()
+	 * @generated
+	 */
+	EOperation getExpression__GetType();
 
 	/**
 	 * Returns the meta object for class '{@link org.mdse.constructs.Variable <em>Variable</em>}'.
@@ -930,6 +1139,16 @@ public interface ConstructsPackage extends EPackage {
 	EOperation getVariable__GetValue();
 
 	/**
+	 * Returns the meta object for the '{@link org.mdse.constructs.Variable#getType() <em>Get Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Type</em>' operation.
+	 * @see org.mdse.constructs.Variable#getType()
+	 * @generated
+	 */
+	EOperation getVariable__GetType();
+
+	/**
 	 * Returns the meta object for class '{@link org.mdse.constructs.IntegerVariable <em>Integer Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -949,6 +1168,17 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getIntegerVariable_Value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mdse.constructs.IntegerVariable#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.mdse.constructs.IntegerVariable#getType()
+	 * @see #getIntegerVariable()
+	 * @generated
+	 */
+	EAttribute getIntegerVariable_Type();
 
 	/**
 	 * Returns the meta object for class '{@link org.mdse.constructs.StringVariable <em>String Variable</em>}'.
@@ -972,6 +1202,17 @@ public interface ConstructsPackage extends EPackage {
 	EAttribute getStringVariable_Value();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.mdse.constructs.StringVariable#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.mdse.constructs.StringVariable#getType()
+	 * @see #getStringVariable()
+	 * @generated
+	 */
+	EAttribute getStringVariable_Type();
+
+	/**
 	 * Returns the meta object for class '{@link org.mdse.constructs.BooleanVariable <em>Boolean Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -991,6 +1232,17 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getBooleanVariable_Value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mdse.constructs.BooleanVariable#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.mdse.constructs.BooleanVariable#getType()
+	 * @see #getBooleanVariable()
+	 * @generated
+	 */
+	EAttribute getBooleanVariable_Type();
 
 	/**
 	 * Returns the meta object for class '{@link org.mdse.constructs.ComparativeExpression <em>Comparative Expression</em>}'.
@@ -1014,6 +1266,17 @@ public interface ConstructsPackage extends EPackage {
 	EAttribute getComparativeExpression_Operator();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.mdse.constructs.ComparativeExpression#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.mdse.constructs.ComparativeExpression#getType()
+	 * @see #getComparativeExpression()
+	 * @generated
+	 */
+	EAttribute getComparativeExpression_Type();
+
+	/**
 	 * Returns the meta object for class '{@link org.mdse.constructs.ArithmeticExpression <em>Arithmetic Expression</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1033,6 +1296,17 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getArithmeticExpression_Operator();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mdse.constructs.ArithmeticExpression#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.mdse.constructs.ArithmeticExpression#getType()
+	 * @see #getArithmeticExpression()
+	 * @generated
+	 */
+	EAttribute getArithmeticExpression_Type();
 
 	/**
 	 * Returns the meta object for class '{@link org.mdse.constructs.Statement <em>Statement</em>}'.
@@ -1203,6 +1477,17 @@ public interface ConstructsPackage extends EPackage {
 	EAttribute getIntegerLiteral_Value();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.mdse.constructs.IntegerLiteral#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.mdse.constructs.IntegerLiteral#getType()
+	 * @see #getIntegerLiteral()
+	 * @generated
+	 */
+	EAttribute getIntegerLiteral_Type();
+
+	/**
 	 * Returns the meta object for class '{@link org.mdse.constructs.StringLiteral <em>String Literal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1224,6 +1509,17 @@ public interface ConstructsPackage extends EPackage {
 	EAttribute getStringLiteral_Value();
 
 	/**
+	 * Returns the meta object for the attribute '{@link org.mdse.constructs.StringLiteral#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.mdse.constructs.StringLiteral#getType()
+	 * @see #getStringLiteral()
+	 * @generated
+	 */
+	EAttribute getStringLiteral_Type();
+
+	/**
 	 * Returns the meta object for class '{@link org.mdse.constructs.BooleanLiteral <em>Boolean Literal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1243,6 +1539,17 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getBooleanLiteral_Value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mdse.constructs.BooleanLiteral#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see org.mdse.constructs.BooleanLiteral#getType()
+	 * @see #getBooleanLiteral()
+	 * @generated
+	 */
+	EAttribute getBooleanLiteral_Type();
 
 	/**
 	 * Returns the meta object for class '{@link org.mdse.constructs.SetStatement <em>Set Statement</em>}'.
@@ -1298,6 +1605,16 @@ public interface ConstructsPackage extends EPackage {
 	EReference getVariableReference_Variable();
 
 	/**
+	 * Returns the meta object for the '{@link org.mdse.constructs.VariableReference#getType() <em>Get Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Type</em>' operation.
+	 * @see org.mdse.constructs.VariableReference#getType()
+	 * @generated
+	 */
+	EOperation getVariableReference__GetType();
+
+	/**
 	 * Returns the meta object for enum '{@link org.mdse.constructs.ComparativeOperator <em>Comparative Operator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1316,6 +1633,16 @@ public interface ConstructsPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getArithmeticOperator();
+
+	/**
+	 * Returns the meta object for enum '{@link org.mdse.constructs.Type <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Type</em>'.
+	 * @see org.mdse.constructs.Type
+	 * @generated
+	 */
+	EEnum getType();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1351,6 +1678,14 @@ public interface ConstructsPackage extends EPackage {
 		EClass EXPRESSION = eINSTANCE.getExpression();
 
 		/**
+		 * The meta object literal for the '<em><b>Get Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation EXPRESSION___GET_TYPE = eINSTANCE.getExpression__GetType();
+
+		/**
 		 * The meta object literal for the '{@link org.mdse.constructs.impl.VariableImpl <em>Variable</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1377,6 +1712,14 @@ public interface ConstructsPackage extends EPackage {
 		EOperation VARIABLE___GET_VALUE = eINSTANCE.getVariable__GetValue();
 
 		/**
+		 * The meta object literal for the '<em><b>Get Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation VARIABLE___GET_TYPE = eINSTANCE.getVariable__GetType();
+
+		/**
 		 * The meta object literal for the '{@link org.mdse.constructs.impl.IntegerVariableImpl <em>Integer Variable</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1393,6 +1736,14 @@ public interface ConstructsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute INTEGER_VARIABLE__VALUE = eINSTANCE.getIntegerVariable_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INTEGER_VARIABLE__TYPE = eINSTANCE.getIntegerVariable_Type();
 
 		/**
 		 * The meta object literal for the '{@link org.mdse.constructs.impl.StringVariableImpl <em>String Variable</em>}' class.
@@ -1413,6 +1764,14 @@ public interface ConstructsPackage extends EPackage {
 		EAttribute STRING_VARIABLE__VALUE = eINSTANCE.getStringVariable_Value();
 
 		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STRING_VARIABLE__TYPE = eINSTANCE.getStringVariable_Type();
+
+		/**
 		 * The meta object literal for the '{@link org.mdse.constructs.impl.BooleanVariableImpl <em>Boolean Variable</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1429,6 +1788,14 @@ public interface ConstructsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute BOOLEAN_VARIABLE__VALUE = eINSTANCE.getBooleanVariable_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BOOLEAN_VARIABLE__TYPE = eINSTANCE.getBooleanVariable_Type();
 
 		/**
 		 * The meta object literal for the '{@link org.mdse.constructs.impl.ComparativeExpressionImpl <em>Comparative Expression</em>}' class.
@@ -1449,6 +1816,14 @@ public interface ConstructsPackage extends EPackage {
 		EAttribute COMPARATIVE_EXPRESSION__OPERATOR = eINSTANCE.getComparativeExpression_Operator();
 
 		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute COMPARATIVE_EXPRESSION__TYPE = eINSTANCE.getComparativeExpression_Type();
+
+		/**
 		 * The meta object literal for the '{@link org.mdse.constructs.impl.ArithmeticExpressionImpl <em>Arithmetic Expression</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1465,6 +1840,14 @@ public interface ConstructsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ARITHMETIC_EXPRESSION__OPERATOR = eINSTANCE.getArithmeticExpression_Operator();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ARITHMETIC_EXPRESSION__TYPE = eINSTANCE.getArithmeticExpression_Type();
 
 		/**
 		 * The meta object literal for the '{@link org.mdse.constructs.impl.StatementImpl <em>Statement</em>}' class.
@@ -1609,6 +1992,14 @@ public interface ConstructsPackage extends EPackage {
 		EAttribute INTEGER_LITERAL__VALUE = eINSTANCE.getIntegerLiteral_Value();
 
 		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute INTEGER_LITERAL__TYPE = eINSTANCE.getIntegerLiteral_Type();
+
+		/**
 		 * The meta object literal for the '{@link org.mdse.constructs.impl.StringLiteralImpl <em>String Literal</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1627,6 +2018,14 @@ public interface ConstructsPackage extends EPackage {
 		EAttribute STRING_LITERAL__VALUE = eINSTANCE.getStringLiteral_Value();
 
 		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute STRING_LITERAL__TYPE = eINSTANCE.getStringLiteral_Type();
+
+		/**
 		 * The meta object literal for the '{@link org.mdse.constructs.impl.BooleanLiteralImpl <em>Boolean Literal</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1643,6 +2042,14 @@ public interface ConstructsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute BOOLEAN_LITERAL__VALUE = eINSTANCE.getBooleanLiteral_Value();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute BOOLEAN_LITERAL__TYPE = eINSTANCE.getBooleanLiteral_Type();
 
 		/**
 		 * The meta object literal for the '{@link org.mdse.constructs.impl.SetStatementImpl <em>Set Statement</em>}' class.
@@ -1689,6 +2096,14 @@ public interface ConstructsPackage extends EPackage {
 		EReference VARIABLE_REFERENCE__VARIABLE = eINSTANCE.getVariableReference_Variable();
 
 		/**
+		 * The meta object literal for the '<em><b>Get Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation VARIABLE_REFERENCE___GET_TYPE = eINSTANCE.getVariableReference__GetType();
+
+		/**
 		 * The meta object literal for the '{@link org.mdse.constructs.ComparativeOperator <em>Comparative Operator</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1707,6 +2122,16 @@ public interface ConstructsPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum ARITHMETIC_OPERATOR = eINSTANCE.getArithmeticOperator();
+
+		/**
+		 * The meta object literal for the '{@link org.mdse.constructs.Type <em>Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mdse.constructs.Type
+		 * @see org.mdse.constructs.impl.ConstructsPackageImpl#getType()
+		 * @generated
+		 */
+		EEnum TYPE = eINSTANCE.getType();
 
 	}
 
