@@ -1,0 +1,35 @@
+PUZZLE {
+	name = "Level 3"
+	description = "Given an integer 'a' and a string 'b', return twice (2x) the amount of 'a' if 'b' is equal to 'twice', else return half the value of 'a'."
+	
+	INPUTS {
+		int a = 0
+		string b = "twice"
+	}
+	
+	TEST {
+		INPUTS {
+			a = 5
+			b = "twice"
+		}
+		
+		EXPECTS 10
+		
+		ON_FAIL {
+			msg = "When 'b' is 'twice', then you should return twice the value of 'a'."
+		}
+	}
+	
+	TEST {
+		INPUTS {
+			a = 6
+			b = "half"
+		}
+		
+		EXPECTS 3
+		
+		ON_FAIL {
+			msg = "When 'b' is not 'twice', then you should return half the value of 'a'."
+		}
+	}
+}

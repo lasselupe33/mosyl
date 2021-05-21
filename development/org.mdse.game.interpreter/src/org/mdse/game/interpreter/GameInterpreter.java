@@ -141,16 +141,17 @@ public class GameInterpreter {
 		variables.put(stmt.getVariable().getName(), stmt.getVariable());
 	}
 	
-	private void evaluateSetStatement(SetStatement stmt) {
+	private void evaluateSetStatement(SetStatement stmt) throws GameInterpreterException {
 		Variable var = variables.get(stmt.getVariable().getName());
-		Literal newValue = stmt.getNewValue();
+		Expression newValueExpression = stmt.getNewValue();
+		Object newValue = evaluateExpression(newValueExpression);
 		
-		if (var instanceof BooleanVariable) {
-			((BooleanVariable) var).setValue(((BooleanLiteral)newValue).getValue());
-		} else if (var instanceof IntegerVariable) {
-			((IntegerVariable) var).setValue(((IntegerLiteral)newValue).getValue());
-		} else if (var instanceof StringVariable) {
-			((StringVariable) var).setValue(((StringLiteral)newValue).getValue());
+		if (var instanceof BooleanVariable && newValue instanceof Boolean) {
+			((BooleanVariable) var).setValue((Boolean) newValue);
+		} else if (var instanceof IntegerVariable && newValue instanceof Integer) {
+			((IntegerVariable) var).setValue((Integer) newValue);
+		} else if (var instanceof StringVariable && newValue instanceof String) {
+			((StringVariable) var).setValue((String) newValue);
 		}
 	}
 	
@@ -215,23 +216,24 @@ public class GameInterpreter {
 			Integer typedValue1 = (Integer) value1;
 			Integer typedValue2 = (Integer) value2;
 			
-			switch (opr.getLiteral()) {
-				case "LessThan":
+			
+			switch (opr.getValue()) {
+				case ComparativeOperator.LESS_THAN_VALUE:
 					return typedValue1 < typedValue2;
 					
-				case "LessThanEq":
+				case ComparativeOperator.LESS_THAN_EQ_VALUE:
 					return typedValue1 <= typedValue2;
 					
-				case "Equal":
+				case ComparativeOperator.EQUAL_VALUE:
 					return typedValue1 == typedValue2;
 				
-				case "NotEqual":
+				case ComparativeOperator.NOT_EQUAL_VALUE:
 					return typedValue1 != typedValue2;
 					
-				case "GreaterThan":
+				case ComparativeOperator.GREATER_THAN_VALUE:
 					return typedValue1 > typedValue2;
 					
-				case "GreaterThanEq":
+				case ComparativeOperator.GREATER_THAN_EQ_VALUE:
 					return typedValue1 >= typedValue2;
 			}
 		}
@@ -240,28 +242,28 @@ public class GameInterpreter {
 			Boolean typedValue1 = (Boolean) value1;
 			Boolean typedValue2 = (Boolean) value2;
 			
-			switch (opr.getLiteral()) {
-				case "Equal":
+			switch (opr.getValue()) {
+				case ComparativeOperator.EQUAL_VALUE:
 					return typedValue1 == typedValue2;
 				
-				case "NotEqual":
+				case ComparativeOperator.NOT_EQUAL_VALUE:
 					return typedValue1 != typedValue2;
 			}
 		}
-		
+				
 		if (value1 instanceof String && value2 instanceof String) {
 			String typedValue1 = (String) value1;
 			String typedValue2 = (String) value2;
 			
-			switch (opr.getLiteral()) {
-				case "EQUAL":
+			switch (opr.getValue()) {
+				case ComparativeOperator.EQUAL_VALUE:
 					return typedValue1.equals(typedValue2);
 				
-				case "NOT_EQUAL":
+				case ComparativeOperator.NOT_EQUAL_VALUE:
 					return !typedValue1.equals(typedValue2);
 			}
 		}
-		
+				
 		throw new GameInterpreterException("Failed to interpret comparative expression with opr = " + opr.getName() + ", expr1 = " + value1 + " expr2 = " + value2);
 	}
 	

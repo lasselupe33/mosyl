@@ -10,7 +10,7 @@ PUZZLE {
 	
 	TEST {
 		INPUTS {
-			myVar = 5
+			myVar = false
 		}
 		
 		EXPECTS 5
@@ -22,7 +22,7 @@ PUZZLE {
 	
 	TEST {
 		INPUTS {
-			boolVar = 5
+			boolVar = false
 		}
 		
 		EXPECTS false

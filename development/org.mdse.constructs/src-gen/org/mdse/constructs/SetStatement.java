@@ -47,12 +47,12 @@ public interface SetStatement extends Statement {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>New Value</em>' containment reference.
-	 * @see #setNewValue(Literal)
+	 * @see #setNewValue(Expression)
 	 * @see org.mdse.constructs.ConstructsPackage#getSetStatement_NewValue()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	Literal getNewValue();
+	Expression getNewValue();
 
 	/**
 	 * Sets the value of the '{@link org.mdse.constructs.SetStatement#getNewValue <em>New Value</em>}' containment reference.
@@ -62,6 +62,6 @@ public interface SetStatement extends Statement {
 	 * @see #getNewValue()
 	 * @generated
 	 */
-	void setNewValue(Literal value);
+	void setNewValue(Expression value);
 
 } // SetStatement

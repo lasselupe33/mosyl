@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<game:Game xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:constructs="http://org.mdse/constructs" xmlns:game="http://org.mdse/game" name="Level 3" description="Given an integer 'a' and a boolean 'b', return twice (2x) the amount of 'a' if 'b' is true, else return half the value of 'a'.">
+  <entrypoint>
+    <inputs>
+      <nextStatement>
+        <nextStatement>
+          <nextStatement>
+            <statement xsi:type="constructs:ReturnStatement">
+              <expression xsi:type="constructs:VariableReference" variable="//@entrypoint/@inputs/@nextStatement/@statement/@variable"/>
+            </statement>
+          </nextStatement>
+          <statement xsi:type="constructs:IfElseStatement">
+            <condition xsi:type="constructs:ComparativeExpression">
+              <expression1 xsi:type="constructs:StringLiteral" value="twice"/>
+              <expression2 xsi:type="constructs:VariableReference" variable="//@entrypoint/@inputs/@inputs/@variables.1"/>
+            </condition>
+            <elseStatement xsi:type="constructs:SetStatement" variable="//@entrypoint/@inputs/@nextStatement/@statement/@variable">
+              <newValue xsi:type="constructs:ArithmeticExpression" operator="Divide">
+                <expression1 xsi:type="constructs:VariableReference" variable="//@entrypoint/@inputs/@inputs/@variables.0"/>
+                <expression2 xsi:type="constructs:IntegerLiteral" value="2"/>
+              </newValue>
+            </elseStatement>
+            <ifStatement xsi:type="constructs:SetStatement" variable="//@entrypoint/@inputs/@nextStatement/@statement/@variable">
+              <newValue xsi:type="constructs:ArithmeticExpression" operator="Multiply">
+                <expression1 xsi:type="constructs:VariableReference" variable="//@entrypoint/@inputs/@inputs/@variables.0"/>
+                <expression2 xsi:type="constructs:IntegerLiteral" value="23"/>
+              </newValue>
+            </ifStatement>
+          </statement>
+        </nextStatement>
+        <statement xsi:type="constructs:DeclareStatement">
+          <variable xsi:type="constructs:IntegerVariable" name="toReturn"/>
+        </statement>
+      </nextStatement>
+      <inputs>
+        <variables xsi:type="constructs:IntegerVariable" name="a"/>
+        <variables xsi:type="constructs:StringVariable" name="b" value="twice"/>
+      </inputs>
+    </inputs>
+  </entrypoint>
+  <tests failedMessage="When 'b' is 'twice', then you should return twice the value of 'a'.">
+    <expected xsi:type="constructs:IntegerLiteral" value="10"/>
+    <inputs variable="//@entrypoint/@inputs/@inputs/@variables.0">
+      <overwritingValue xsi:type="constructs:IntegerLiteral" value="5"/>
+    </inputs>
+    <inputs variable="//@entrypoint/@inputs/@inputs/@variables.1">
+      <overwritingValue xsi:type="constructs:StringLiteral" value="twice"/>
+    </inputs>
+  </tests>
+  <tests failedMessage="When 'b' is not 'twice', then you should return half the value of 'a'.">
+    <expected xsi:type="constructs:IntegerLiteral" value="3"/>
+    <inputs variable="//@entrypoint/@inputs/@inputs/@variables.0">
+      <overwritingValue xsi:type="constructs:IntegerLiteral" value="6"/>
+    </inputs>
+    <inputs variable="//@entrypoint/@inputs/@inputs/@variables.1">
+      <overwritingValue xsi:type="constructs:StringLiteral" value="half"/>
+    </inputs>
+  </tests>
+</game:Game>

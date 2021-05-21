@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.mdse.constructs.ConstructsPackage;
-import org.mdse.constructs.Literal;
+import org.mdse.constructs.Expression;
 import org.mdse.constructs.SetStatement;
 import org.mdse.constructs.Variable;
 
@@ -48,7 +48,7 @@ public class SetStatementImpl extends StatementImpl implements SetStatement {
 	 * @generated
 	 * @ordered
 	 */
-	protected Literal newValue;
+	protected Expression newValue;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -114,7 +114,7 @@ public class SetStatementImpl extends StatementImpl implements SetStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Literal getNewValue() {
+	public Expression getNewValue() {
 		return newValue;
 	}
 
@@ -123,8 +123,8 @@ public class SetStatementImpl extends StatementImpl implements SetStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetNewValue(Literal newNewValue, NotificationChain msgs) {
-		Literal oldNewValue = newValue;
+	public NotificationChain basicSetNewValue(Expression newNewValue, NotificationChain msgs) {
+		Expression oldNewValue = newValue;
 		newValue = newNewValue;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
@@ -142,7 +142,7 @@ public class SetStatementImpl extends StatementImpl implements SetStatement {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNewValue(Literal newNewValue) {
+	public void setNewValue(Expression newNewValue) {
 		if (newNewValue != newValue) {
 			NotificationChain msgs = null;
 			if (newValue != null)
@@ -203,7 +203,7 @@ public class SetStatementImpl extends StatementImpl implements SetStatement {
 			setVariable((Variable) newValue);
 			return;
 		case ConstructsPackage.SET_STATEMENT__NEW_VALUE:
-			setNewValue((Literal) newValue);
+			setNewValue((Expression) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -221,7 +221,7 @@ public class SetStatementImpl extends StatementImpl implements SetStatement {
 			setVariable((Variable) null);
 			return;
 		case ConstructsPackage.SET_STATEMENT__NEW_VALUE:
-			setNewValue((Literal) null);
+			setNewValue((Expression) null);
 			return;
 		}
 		super.eUnset(featureID);

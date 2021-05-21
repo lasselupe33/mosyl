@@ -4,25 +4,16 @@
     <statement>
       <nextStatement>
         <nextStatement>
-          <nextStatement>
-            <statement xsi:type="constructs:ReturnStatement"/>
-          </nextStatement>
-          <statement xsi:type="constructs:DeclareStatement">
-            <variable xsi:type="constructs:IntegerVariable" name="Hello" value="2"/>
+          <statement xsi:type="constructs:ReturnStatement">
+            <expression xsi:type="constructs:VariableReference" variable="//@entrypoint/@statement/@nextStatement/@statement/@variable"/>
           </statement>
         </nextStatement>
-        <statement xsi:type="constructs:ReturnStatement">
-          <expression xsi:type="constructs:ComparativeExpression">
-            <expression1 xsi:type="constructs:StringLiteral"/>
-            <expression2 xsi:type="constructs:BooleanLiteral"/>
-          </expression>
+        <statement xsi:type="constructs:DeclareStatement">
+          <variable xsi:type="constructs:BooleanVariable" name="a"/>
         </statement>
       </nextStatement>
-      <statement xsi:type="constructs:IfElseStatement">
-        <condition xsi:type="constructs:ComparativeExpression">
-          <expression1 xsi:type="constructs:BooleanLiteral"/>
-          <expression2 xsi:type="constructs:BooleanLiteral"/>
-        </condition>
+      <statement xsi:type="constructs:DeclareStatement">
+        <variable xsi:type="constructs:BooleanVariable" name="a"/>
       </statement>
     </statement>
   </entrypoint>

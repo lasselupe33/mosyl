@@ -159,6 +159,12 @@ public class SetStatementItemProvider extends StatementItemProvider {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.SET_STATEMENT__NEW_VALUE,
+				ConstructsFactory.eINSTANCE.createComparativeExpression()));
+
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.SET_STATEMENT__NEW_VALUE,
+				ConstructsFactory.eINSTANCE.createArithmeticExpression()));
+
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.SET_STATEMENT__NEW_VALUE,
 				ConstructsFactory.eINSTANCE.createIntegerLiteral()));
 
 		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.SET_STATEMENT__NEW_VALUE,
@@ -166,6 +172,9 @@ public class SetStatementItemProvider extends StatementItemProvider {
 
 		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.SET_STATEMENT__NEW_VALUE,
 				ConstructsFactory.eINSTANCE.createBooleanLiteral()));
+
+		newChildDescriptors.add(createChildParameter(ConstructsPackage.Literals.SET_STATEMENT__NEW_VALUE,
+				ConstructsFactory.eINSTANCE.createVariableReference()));
 	}
 
 }

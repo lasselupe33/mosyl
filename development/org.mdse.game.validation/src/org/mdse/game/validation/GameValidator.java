@@ -1,7 +1,9 @@
 package org.mdse.game.validation;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.eclipse.emf.common.util.BasicDiagnostic;
 import org.eclipse.emf.common.util.Diagnostic;
@@ -13,8 +15,10 @@ import org.eclipse.emf.ecore.util.EObjectValidator;
 import org.eclipse.ui.IStartup;
 import org.mdse.constructs.ArithmeticExpression;
 import org.mdse.constructs.ArithmeticOperator;
+import org.mdse.constructs.BinaryExpression;
 import org.mdse.constructs.ComparativeExpression;
 import org.mdse.constructs.ComparativeOperator;
+import org.mdse.constructs.DeclareStatement;
 import org.mdse.constructs.Expression;
 import org.mdse.constructs.IfElseStatement;
 import org.mdse.constructs.ReturnStatement;
@@ -52,6 +56,7 @@ public class GameValidator extends EObjectValidator implements IStartup {
 			Entrypoint entrypoint = (Entrypoint) eObject;
 			modelIsValid &= validateWellformedEntrypoint(entrypoint);
 			modelIsValid &= validateExactlyOneReturnStatement(entrypoint);
+			modelIsValid &= validateNoRedeclartionOfVariables(entrypoint);
 		}
 		
 		if (GamePackage.eINSTANCE.getGameStatement().equals(eClass)) {
@@ -66,6 +71,7 @@ public class GameValidator extends EObjectValidator implements IStartup {
 			
 			if (stmt instanceof SetStatement) {
 				modelIsValid &= validateSetStatementValueMatchesVariable((SetStatement)stmt);
+				modelIsValid &= validateExpression(((SetStatement) stmt).getNewValue());
 			}
 			
 			if (stmt instanceof ReturnStatement) {
@@ -120,6 +126,46 @@ public class GameValidator extends EObjectValidator implements IStartup {
 			modelIsValid &= constraintViolated(entrypoint, "There must be exactly one return statement. Found " + count);
 		}
 		
+		return modelIsValid;
+	}
+	
+	protected boolean validateNoRedeclartionOfVariables(Entrypoint entrypoint) {
+		boolean modelIsValid = true;
+		Set<String> encounteredVariableNames = new HashSet<>();
+		
+		// Get initial statement
+		GameStatement statement = entrypoint.getStatement();
+		
+		if (statement == null) {
+			GameInputs inputs = entrypoint.getInputs();
+			
+			// This error will be handled by another validation function
+			if (inputs == null) {
+				return true;
+			}
+			
+			statement = inputs.getNextStatement();
+			
+			// This error will be handled by another validation function
+			if (statement == null) {
+				return true;
+			}
+		}
+		
+		while (statement != null) {
+			if (statement.getStatement() instanceof DeclareStatement) {
+				String declaredName = ((DeclareStatement) statement.getStatement()).getVariable().getName();
+				
+				if (encounteredVariableNames.contains(declaredName)) {
+					modelIsValid &= constraintViolated(statement, "It is not allowed to redeclare variables. " + declaredName + " was redeclared.");
+				} else {
+					encounteredVariableNames.add(declaredName);
+				}
+			}
+			
+			statement = statement.getNextStatement();
+		}
+
 		return modelIsValid;
 	}
 		
@@ -179,7 +225,7 @@ public class GameValidator extends EObjectValidator implements IStartup {
 		
 		return modelIsValid;
 	}
-	
+		
 	protected boolean validateExpression(Expression expr) {
 		boolean modelIsValid = true;
 
@@ -191,6 +237,23 @@ public class GameValidator extends EObjectValidator implements IStartup {
 			modelIsValid &= validateArithmeticExpression((ArithmeticExpression) expr);
 		}
 		
+		if (expr instanceof BinaryExpression) {
+			modelIsValid &= validateNoBinaryExpressionInsideBindaryExpression((BinaryExpression) expr);
+		}
+		
+		return modelIsValid;
+	}
+	
+	protected boolean validateNoBinaryExpressionInsideBindaryExpression(BinaryExpression expr) {
+		boolean modelIsValid = true;
+		
+		Expression expr1 = expr.getExpression1();
+		Expression expr2 = expr.getExpression2();
+		
+		if (expr1 instanceof BinaryExpression || expr2 instanceof BinaryExpression) {
+			modelIsValid &= constraintViolated(expr, "Nested binary expressions are not allowed");
+		}
+
 		return modelIsValid;
 	}
 	
@@ -211,13 +274,13 @@ public class GameValidator extends EObjectValidator implements IStartup {
 		switch (type1.getValue()) {
 			case Type.BOOLEAN_VALUE:
 				if (operator.getValue() != ComparativeOperator.EQUAL_VALUE && operator.getValue() != ComparativeOperator.NOT_EQUAL_VALUE) {
-					modelIsValid &= constraintViolated(expr, "Bool operands may only be compared for equality (=) or inequality (!=).");
+					modelIsValid &= constraintViolated(expr, "Bool operands may only be compared for equality or inequality.");
 				}
 				break;
 				
 			case Type.STRING_VALUE:
 				if (operator.getValue() != ComparativeOperator.EQUAL_VALUE && operator.getValue() != ComparativeOperator.NOT_EQUAL_VALUE) {
-					modelIsValid &= constraintViolated(expr, "String operands may only be compared for equality (=) or inequality (!=).");
+					modelIsValid &= constraintViolated(expr, "String operands may only be compared for equality or inequality.");
 				}
 				break;
 		}
