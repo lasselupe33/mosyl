@@ -82,7 +82,15 @@
         </containerMappings>
         <containerMappings name="Condition Container" domainClass="constructs::IfElseStatement" childrenPresentation="HorizontalStack">
           <subContainerMappings name="Expression1 Container" semanticCandidatesExpression="feature:eAllContents" domainClass="constructs::ComparativeExpression">
-            <conditionnalStyles predicateExpression="self.expression1.oclIsTypeOf(constructs::Literal)">
+            <conditionnalStyles predicateExpression="aql:self.expression1.oclIsTypeOf(constructs::VariableReference)">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.expression1.variable.name">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="aql:self.expression1.oclIsTypeOf(constructs::Literal)">
               <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.expression1.value">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -100,8 +108,16 @@
             </style>
           </subContainerMappings>
           <subContainerMappings name="Expression2 Container" semanticCandidatesExpression="feature:eAllContents" domainClass="constructs::ComparativeExpression">
-            <conditionnalStyles predicateExpression="self.expression2.oclIsTypeOf(constructs::Variable)">
+            <conditionnalStyles predicateExpression="aql:self.expression2.oclIsTypeOf(constructs::VariableReference)">
               <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.expression2.variable.name">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              </style>
+            </conditionnalStyles>
+            <conditionnalStyles predicateExpression="aql:self.expression2.oclIsTypeOf(constructs::Literal)">
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="aql:self.expression2.value">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
