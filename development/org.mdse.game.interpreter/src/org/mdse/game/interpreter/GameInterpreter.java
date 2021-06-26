@@ -3,13 +3,10 @@ package org.mdse.game.interpreter;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 
 import org.eclipse.emf.ecore.util.EcoreUtil.Copier;
-import org.eclipse.emf.common.util.EList;
 import org.mdse.constructs.ArithmeticExpression;
 import org.mdse.constructs.ArithmeticOperator;
 import org.mdse.constructs.BinaryExpression;
@@ -30,40 +27,28 @@ import org.mdse.constructs.StringLiteral;
 import org.mdse.constructs.StringVariable;
 import org.mdse.constructs.Variable;
 import org.mdse.constructs.VariableReference;
-import org.mdse.game.Entrypoint;
 import org.mdse.game.Game;
-import org.mdse.game.GameInputs;
-import org.mdse.game.GameStatement;
 import org.mdse.puzzle.Inputs;
 import org.mdse.puzzle.UnitTest;
 import org.mdse.puzzle.UnitTestInput;
 
 public class GameInterpreter {
-	private Map<String, Variable> variables;
-	private UnitTest currentTest;
-	private OutputStream outputStream;
 	private String output = "";
 	
 	public String interpret(Game game, OutputStream interpreterOutputStream) throws GameInterpreterException {
-		this.outputStream = interpreterOutputStream;
-
-		// Start by extracting inputs for the current unit test
 		List<UnitTest> tests = game.getTests();
-		Entrypoint entrypoint = game.getEntrypoint();
-		GameInputs gameInputs = entrypoint.getInputs();
-		Inputs baseInputs = null;
-		
-		if (gameInputs != null) {
-			baseInputs = gameInputs.getInputs();
-		}
 		
 		// Execute all unit tests to determine if game has been successfully implemented
 		output += "Tests:\n";
 		
 		for (UnitTest test : tests) {
-			variables = extractInputsForUnitTest(baseInputs, test.getInputs());
-			currentTest = test;
-			evaluateEntrypoint(entrypoint);
+			extractInputsForUnitTests(test.getInputs());
+			
+			for (Statement statement : game.getStatements()) {
+				evaluateStatement(statement);
+			}
+			
+			evaluateReturnStatement(game.getReturnStatement(), test);
 		}
 		
 		println(output, interpreterOutputStream);
@@ -71,25 +56,9 @@ public class GameInterpreter {
 		return output;
 	}
 	
-	private Map<String, Variable> extractInputsForUnitTest(Inputs baseInputs, List<UnitTestInput> unitTestInputs) throws GameInterpreterException {
-		Map<String, Variable> variables = new HashMap<>();
-		Copier copier = new Copier();
-		
-		// Add all base variables to variable set
-		if (baseInputs != null) {
-			List<Variable> inputVariables = baseInputs.getVariables();
-			
-			for (Variable variable : inputVariables) {
-				// Ensure we create new instances of the base variables, since overwriting uncloned variables will have side
-				// effects between unit tests
-				Variable copiedVar = (Variable) copier.copy(variable);
-				
-				variables.put(variable.getName(), copiedVar);
-			}
-		}
-		
+	private void extractInputsForUnitTests(List<UnitTestInput> unitTestInputs) throws GameInterpreterException {
 		for (UnitTestInput input : unitTestInputs) {			
-			Variable var = variables.get(input.getVariable().getName());
+			Variable var = input.getVariable();
 			Literal overwritingLiteral = input.getOverwritingValue();
 			
 			if (!var.getValue().getClass().equals(overwritingLiteral.getValue().getClass())) {
@@ -104,45 +73,18 @@ public class GameInterpreter {
 				((StringVariable) var).setValue(((StringLiteral)overwritingLiteral).getValue());
 			}
 		}
-		
-		return variables;
-	}
-	
-	private void evaluateEntrypoint(Entrypoint entrypoint) throws GameInterpreterException {
-		GameStatement currentStatement = null;
-		
-		if (entrypoint.getInputs() != null) {
-			currentStatement = entrypoint.getInputs().getNextStatement();
-		} else if (entrypoint.getStatement() != null) {
-			currentStatement = entrypoint.getStatement();
-		} else {
-			throw new GameInterpreterException("Failed to determine entrypoint, neither a first statement or inputs were available");
-		}
-		
-		while (currentStatement != null) {
-			evaluateStatement(currentStatement.getStatement());
-			currentStatement = currentStatement.getNextStatement();
-		}
 	}
 	
 	private void evaluateStatement(Statement statement) throws GameInterpreterException {
-		if (statement instanceof DeclareStatement) {
-			evaluateDeclareStatement((DeclareStatement) statement);
-		} else if (statement instanceof SetStatement) {
+		if (statement instanceof SetStatement) {
 			evaluateSetStatement((SetStatement) statement);
 		} else if (statement instanceof IfElseStatement) {
 			evaluateIfElseStatement((IfElseStatement) statement);
-		} else if (statement instanceof ReturnStatement) {
-			evaluateReturnStatement((ReturnStatement) statement);
 		}
 	}
 	
-	private void evaluateDeclareStatement(DeclareStatement stmt) {
-		variables.put(stmt.getVariable().getName(), stmt.getVariable());
-	}
-	
 	private void evaluateSetStatement(SetStatement stmt) throws GameInterpreterException {
-		Variable var = variables.get(stmt.getVariable().getName());
+		Variable var = stmt.getVariable();
 		Expression newValueExpression = stmt.getNewValue();
 		Object newValue = evaluateExpression(newValueExpression);
 		
@@ -169,7 +111,7 @@ public class GameInterpreter {
 		}
 	}
 	
-	private void evaluateReturnStatement(ReturnStatement stmt) throws GameInterpreterException {
+	private void evaluateReturnStatement(ReturnStatement stmt, UnitTest currentTest) throws GameInterpreterException {
 		Object output = evaluateExpression(stmt.getExpression());
 		Object expected = currentTest.getExpected().getValue();
 		
@@ -189,8 +131,7 @@ public class GameInterpreter {
 		
 		if (expression instanceof VariableReference) {
 			Variable var = ((VariableReference) expression).getVariable();
-			
-			return variables.get(var.getName()).getValue();
+			return var.getValue();
 		}
 		
 		if (expression instanceof ComparativeExpression) {
