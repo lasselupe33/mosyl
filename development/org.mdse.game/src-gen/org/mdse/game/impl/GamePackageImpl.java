@@ -11,12 +11,9 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.mdse.constructs.ConstructsPackage;
 
-import org.mdse.game.Entrypoint;
 import org.mdse.game.Game;
 import org.mdse.game.GameFactory;
-import org.mdse.game.GameInputs;
 import org.mdse.game.GamePackage;
-import org.mdse.game.GameStatement;
 
 import org.mdse.puzzle.PuzzlePackage;
 
@@ -33,27 +30,6 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage {
 	 * @generated
 	 */
 	private EClass gameEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gameStatementEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass gameInputsEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass entrypointEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -155,7 +131,7 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGame_Entrypoint() {
+	public EReference getGame_Tests() {
 		return (EReference) gameEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -164,7 +140,7 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGame_Tests() {
+	public EReference getGame_Inputs() {
 		return (EReference) gameEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -173,8 +149,8 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getGameStatement() {
-		return gameStatementEClass;
+	public EReference getGame_Statements() {
+		return (EReference) gameEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -182,71 +158,8 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGameStatement_NextStatement() {
-		return (EReference) gameStatementEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGameStatement_Statement() {
-		return (EReference) gameStatementEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getGameInputs() {
-		return gameInputsEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGameInputs_NextStatement() {
-		return (EReference) gameInputsEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getGameInputs_Inputs() {
-		return (EReference) gameInputsEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getEntrypoint() {
-		return entrypointEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getEntrypoint_Inputs() {
-		return (EReference) entrypointEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getEntrypoint_Statement() {
-		return (EReference) entrypointEClass.getEStructuralFeatures().get(1);
+	public EReference getGame_ReturnStatement() {
+		return (EReference) gameEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -281,20 +194,10 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage {
 		gameEClass = createEClass(GAME);
 		createEAttribute(gameEClass, GAME__NAME);
 		createEAttribute(gameEClass, GAME__DESCRIPTION);
-		createEReference(gameEClass, GAME__ENTRYPOINT);
 		createEReference(gameEClass, GAME__TESTS);
-
-		gameStatementEClass = createEClass(GAME_STATEMENT);
-		createEReference(gameStatementEClass, GAME_STATEMENT__NEXT_STATEMENT);
-		createEReference(gameStatementEClass, GAME_STATEMENT__STATEMENT);
-
-		gameInputsEClass = createEClass(GAME_INPUTS);
-		createEReference(gameInputsEClass, GAME_INPUTS__NEXT_STATEMENT);
-		createEReference(gameInputsEClass, GAME_INPUTS__INPUTS);
-
-		entrypointEClass = createEClass(ENTRYPOINT);
-		createEReference(entrypointEClass, ENTRYPOINT__INPUTS);
-		createEReference(entrypointEClass, ENTRYPOINT__STATEMENT);
+		createEReference(gameEClass, GAME__INPUTS);
+		createEReference(gameEClass, GAME__STATEMENTS);
+		createEReference(gameEClass, GAME__RETURN_STATEMENT);
 	}
 
 	/**
@@ -338,38 +241,17 @@ public class GamePackageImpl extends EPackageImpl implements GamePackage {
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGame_Description(), ecorePackage.getEString(), "description", null, 0, 1, Game.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGame_Entrypoint(), this.getEntrypoint(), null, "entrypoint", null, 1, 1, Game.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getGame_Tests(), thePuzzlePackage.getUnitTest(), null, "tests", null, 0, -1, Game.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gameStatementEClass, GameStatement.class, "GameStatement", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGameStatement_NextStatement(), this.getGameStatement(), null, "nextStatement", null, 0, 1,
-				GameStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGameStatement_Statement(), theConstructsPackage.getStatement(), null, "statement", null, 1, 1,
-				GameStatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(gameInputsEClass, GameInputs.class, "GameInputs", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGameInputs_NextStatement(), this.getGameStatement(), null, "nextStatement", null, 1, 1,
-				GameInputs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getGameInputs_Inputs(), thePuzzlePackage.getInputs(), null, "inputs", null, 1, 1,
-				GameInputs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(entrypointEClass, Entrypoint.class, "Entrypoint", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getEntrypoint_Inputs(), this.getGameInputs(), null, "inputs", null, 0, 1, Entrypoint.class,
+		initEReference(getGame_Inputs(), thePuzzlePackage.getInputs(), null, "inputs", null, 0, 1, Game.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEntrypoint_Statement(), this.getGameStatement(), null, "statement", null, 0, 1,
-				Entrypoint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEReference(getGame_Statements(), theConstructsPackage.getStatement(), null, "statements", null, 1, -1,
+				Game.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getGame_ReturnStatement(), theConstructsPackage.getReturnStatement(), null, "returnStatement",
+				null, 1, 1, Game.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource

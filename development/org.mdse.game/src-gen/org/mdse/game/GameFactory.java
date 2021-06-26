@@ -31,33 +31,6 @@ public interface GameFactory extends EFactory {
 	Game createGame();
 
 	/**
-	 * Returns a new object of class '<em>Statement</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Statement</em>'.
-	 * @generated
-	 */
-	GameStatement createGameStatement();
-
-	/**
-	 * Returns a new object of class '<em>Inputs</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Inputs</em>'.
-	 * @generated
-	 */
-	GameInputs createGameInputs();
-
-	/**
-	 * Returns a new object of class '<em>Entrypoint</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Entrypoint</em>'.
-	 * @generated
-	 */
-	Entrypoint createEntrypoint();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -85,22 +85,40 @@ public interface GamePackage extends EPackage {
 	int GAME__DESCRIPTION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Entrypoint</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GAME__ENTRYPOINT = 2;
-
-	/**
 	 * The feature id for the '<em><b>Tests</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GAME__TESTS = 3;
+	int GAME__TESTS = 2;
+
+	/**
+	 * The feature id for the '<em><b>Inputs</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME__INPUTS = 3;
+
+	/**
+	 * The feature id for the '<em><b>Statements</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME__STATEMENTS = 4;
+
+	/**
+	 * The feature id for the '<em><b>Return Statement</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GAME__RETURN_STATEMENT = 5;
 
 	/**
 	 * The number of structural features of the '<em>Game</em>' class.
@@ -109,7 +127,7 @@ public interface GamePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GAME_FEATURE_COUNT = 4;
+	int GAME_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Game</em>' class.
@@ -119,144 +137,6 @@ public interface GamePackage extends EPackage {
 	 * @ordered
 	 */
 	int GAME_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link org.mdse.game.impl.GameStatementImpl <em>Statement</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mdse.game.impl.GameStatementImpl
-	 * @see org.mdse.game.impl.GamePackageImpl#getGameStatement()
-	 * @generated
-	 */
-	int GAME_STATEMENT = 1;
-
-	/**
-	 * The feature id for the '<em><b>Next Statement</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GAME_STATEMENT__NEXT_STATEMENT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Statement</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GAME_STATEMENT__STATEMENT = 1;
-
-	/**
-	 * The number of structural features of the '<em>Statement</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GAME_STATEMENT_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Statement</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GAME_STATEMENT_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link org.mdse.game.impl.GameInputsImpl <em>Inputs</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mdse.game.impl.GameInputsImpl
-	 * @see org.mdse.game.impl.GamePackageImpl#getGameInputs()
-	 * @generated
-	 */
-	int GAME_INPUTS = 2;
-
-	/**
-	 * The feature id for the '<em><b>Next Statement</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GAME_INPUTS__NEXT_STATEMENT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Inputs</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GAME_INPUTS__INPUTS = 1;
-
-	/**
-	 * The number of structural features of the '<em>Inputs</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GAME_INPUTS_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Inputs</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GAME_INPUTS_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link org.mdse.game.impl.EntrypointImpl <em>Entrypoint</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see org.mdse.game.impl.EntrypointImpl
-	 * @see org.mdse.game.impl.GamePackageImpl#getEntrypoint()
-	 * @generated
-	 */
-	int ENTRYPOINT = 3;
-
-	/**
-	 * The feature id for the '<em><b>Inputs</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTRYPOINT__INPUTS = 0;
-
-	/**
-	 * The feature id for the '<em><b>Statement</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTRYPOINT__STATEMENT = 1;
-
-	/**
-	 * The number of structural features of the '<em>Entrypoint</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTRYPOINT_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Entrypoint</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTRYPOINT_OPERATION_COUNT = 0;
 
 	/**
 	 * Returns the meta object for class '{@link org.mdse.game.Game <em>Game</em>}'.
@@ -291,17 +171,6 @@ public interface GamePackage extends EPackage {
 	EAttribute getGame_Description();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.mdse.game.Game#getEntrypoint <em>Entrypoint</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Entrypoint</em>'.
-	 * @see org.mdse.game.Game#getEntrypoint()
-	 * @see #getGame()
-	 * @generated
-	 */
-	EReference getGame_Entrypoint();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link org.mdse.game.Game#getTests <em>Tests</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -313,100 +182,37 @@ public interface GamePackage extends EPackage {
 	EReference getGame_Tests();
 
 	/**
-	 * Returns the meta object for class '{@link org.mdse.game.GameStatement <em>Statement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Statement</em>'.
-	 * @see org.mdse.game.GameStatement
-	 * @generated
-	 */
-	EClass getGameStatement();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.mdse.game.GameStatement#getNextStatement <em>Next Statement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Next Statement</em>'.
-	 * @see org.mdse.game.GameStatement#getNextStatement()
-	 * @see #getGameStatement()
-	 * @generated
-	 */
-	EReference getGameStatement_NextStatement();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.mdse.game.GameStatement#getStatement <em>Statement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Statement</em>'.
-	 * @see org.mdse.game.GameStatement#getStatement()
-	 * @see #getGameStatement()
-	 * @generated
-	 */
-	EReference getGameStatement_Statement();
-
-	/**
-	 * Returns the meta object for class '{@link org.mdse.game.GameInputs <em>Inputs</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Inputs</em>'.
-	 * @see org.mdse.game.GameInputs
-	 * @generated
-	 */
-	EClass getGameInputs();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.mdse.game.GameInputs#getNextStatement <em>Next Statement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Next Statement</em>'.
-	 * @see org.mdse.game.GameInputs#getNextStatement()
-	 * @see #getGameInputs()
-	 * @generated
-	 */
-	EReference getGameInputs_NextStatement();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.mdse.game.GameInputs#getInputs <em>Inputs</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.mdse.game.Game#getInputs <em>Inputs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Inputs</em>'.
-	 * @see org.mdse.game.GameInputs#getInputs()
-	 * @see #getGameInputs()
+	 * @see org.mdse.game.Game#getInputs()
+	 * @see #getGame()
 	 * @generated
 	 */
-	EReference getGameInputs_Inputs();
+	EReference getGame_Inputs();
 
 	/**
-	 * Returns the meta object for class '{@link org.mdse.game.Entrypoint <em>Entrypoint</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.mdse.game.Game#getStatements <em>Statements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Entrypoint</em>'.
-	 * @see org.mdse.game.Entrypoint
+	 * @return the meta object for the containment reference list '<em>Statements</em>'.
+	 * @see org.mdse.game.Game#getStatements()
+	 * @see #getGame()
 	 * @generated
 	 */
-	EClass getEntrypoint();
+	EReference getGame_Statements();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link org.mdse.game.Entrypoint#getInputs <em>Inputs</em>}'.
+	 * Returns the meta object for the containment reference '{@link org.mdse.game.Game#getReturnStatement <em>Return Statement</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Inputs</em>'.
-	 * @see org.mdse.game.Entrypoint#getInputs()
-	 * @see #getEntrypoint()
+	 * @return the meta object for the containment reference '<em>Return Statement</em>'.
+	 * @see org.mdse.game.Game#getReturnStatement()
+	 * @see #getGame()
 	 * @generated
 	 */
-	EReference getEntrypoint_Inputs();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link org.mdse.game.Entrypoint#getStatement <em>Statement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Statement</em>'.
-	 * @see org.mdse.game.Entrypoint#getStatement()
-	 * @see #getEntrypoint()
-	 * @generated
-	 */
-	EReference getEntrypoint_Statement();
+	EReference getGame_ReturnStatement();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -458,14 +264,6 @@ public interface GamePackage extends EPackage {
 		EAttribute GAME__DESCRIPTION = eINSTANCE.getGame_Description();
 
 		/**
-		 * The meta object literal for the '<em><b>Entrypoint</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GAME__ENTRYPOINT = eINSTANCE.getGame_Entrypoint();
-
-		/**
 		 * The meta object literal for the '<em><b>Tests</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -474,82 +272,28 @@ public interface GamePackage extends EPackage {
 		EReference GAME__TESTS = eINSTANCE.getGame_Tests();
 
 		/**
-		 * The meta object literal for the '{@link org.mdse.game.impl.GameStatementImpl <em>Statement</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.mdse.game.impl.GameStatementImpl
-		 * @see org.mdse.game.impl.GamePackageImpl#getGameStatement()
-		 * @generated
-		 */
-		EClass GAME_STATEMENT = eINSTANCE.getGameStatement();
-
-		/**
-		 * The meta object literal for the '<em><b>Next Statement</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GAME_STATEMENT__NEXT_STATEMENT = eINSTANCE.getGameStatement_NextStatement();
-
-		/**
-		 * The meta object literal for the '<em><b>Statement</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GAME_STATEMENT__STATEMENT = eINSTANCE.getGameStatement_Statement();
-
-		/**
-		 * The meta object literal for the '{@link org.mdse.game.impl.GameInputsImpl <em>Inputs</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.mdse.game.impl.GameInputsImpl
-		 * @see org.mdse.game.impl.GamePackageImpl#getGameInputs()
-		 * @generated
-		 */
-		EClass GAME_INPUTS = eINSTANCE.getGameInputs();
-
-		/**
-		 * The meta object literal for the '<em><b>Next Statement</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GAME_INPUTS__NEXT_STATEMENT = eINSTANCE.getGameInputs_NextStatement();
-
-		/**
 		 * The meta object literal for the '<em><b>Inputs</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GAME_INPUTS__INPUTS = eINSTANCE.getGameInputs_Inputs();
+		EReference GAME__INPUTS = eINSTANCE.getGame_Inputs();
 
 		/**
-		 * The meta object literal for the '{@link org.mdse.game.impl.EntrypointImpl <em>Entrypoint</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see org.mdse.game.impl.EntrypointImpl
-		 * @see org.mdse.game.impl.GamePackageImpl#getEntrypoint()
-		 * @generated
-		 */
-		EClass ENTRYPOINT = eINSTANCE.getEntrypoint();
-
-		/**
-		 * The meta object literal for the '<em><b>Inputs</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Statements</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ENTRYPOINT__INPUTS = eINSTANCE.getEntrypoint_Inputs();
+		EReference GAME__STATEMENTS = eINSTANCE.getGame_Statements();
 
 		/**
-		 * The meta object literal for the '<em><b>Statement</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Return Statement</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ENTRYPOINT__STATEMENT = eINSTANCE.getEntrypoint_Statement();
+		EReference GAME__RETURN_STATEMENT = eINSTANCE.getGame_ReturnStatement();
 
 	}
 

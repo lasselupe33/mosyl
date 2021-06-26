@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE ecore:EPackage [
-<!ENTITY _0 "http://www.eclipse.org/emf/2002/Ecore">
-<!ENTITY _1 "../../org.mdse.constructs/model/constructs.ecore">
-]>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="puzzle" nsURI="http://org.mdse/puzzle" nsPrefix="puzzle">
   <eAnnotations source="http://www.eclipse.org/OCL/Import">
@@ -14,8 +10,8 @@
     <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="Puzzle">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType &_0;#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType &_0;#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tests" lowerBound="1" upperBound="-1"
         eType="#//UnitTest" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" eType="#//Inputs"
@@ -29,14 +25,16 @@
       <details key="NoDuplicateVariables" value="&#xA;&#x9;&#x9;&#x9;inputs->collect(variable)->isUnique(v | v.name)"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="expected" lowerBound="1"
-        eType="ecore:EClass &_1;#//Literal" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="failedMessage" eType="ecore:EDataType &_0;#//EString"/>
+        eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//Literal"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="failedMessage" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" upperBound="-1"
         eType="#//UnitTestInput" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Inputs">
     <eStructuralFeatures xsi:type="ecore:EReference" name="variables" lowerBound="1"
-        upperBound="-1" eType="ecore:EClass &_1;#//Variable" containment="true"/>
+        upperBound="-1" eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//Variable"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="UnitTestInput">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -46,8 +44,8 @@
       <details key="NoCrossTypes" value="Tuple {&#xA;&#x9;message : String = variable.name&#xA;&#x9;&#x9;&#x9;+ ' expected type '&#xA;&#x9;&#x9;&#x9;+ variable.getType().toString()&#xA;&#x9;&#x9;&#x9;+ ' but got type '&#xA;&#x9;&#x9;&#x9;+ overwritingValue.getType().toString(),&#xA;&#x9;status : Boolean = variable.getType() = overwritingValue.getType()&#xA;}.status"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="variable" lowerBound="1"
-        eType="ecore:EClass &_1;#//Variable"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="overwritingValue" eType="ecore:EClass &_1;#//Literal"
+        eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//Variable"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="overwritingValue" eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//Literal"
         containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

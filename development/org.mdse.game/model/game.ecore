@@ -4,28 +4,15 @@
   <eClassifiers xsi:type="ecore:EClass" name="Game">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="entrypoint" lowerBound="1"
-        eType="#//Entrypoint" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tests" upperBound="-1"
         eType="ecore:EClass ../../org.mdse.puzzle/model/puzzle.ecore#//UnitTest" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GameStatement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nextStatement" eType="#//GameStatement"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" eType="ecore:EClass ../../org.mdse.puzzle/model/puzzle.ecore#//Inputs"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="statement" lowerBound="1"
-        eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//Statement"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statements" lowerBound="1"
+        upperBound="-1" eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//Statement"
         containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GameInputs">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="nextStatement" lowerBound="1"
-        eType="#//GameStatement" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" lowerBound="1"
-        eType="ecore:EClass ../../org.mdse.puzzle/model/puzzle.ecore#//Inputs" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Entrypoint">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" eType="#//GameInputs"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="statement" eType="#//GameStatement"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="returnStatement" lowerBound="1"
+        eType="ecore:EClass ../../org.mdse.constructs/model/constructs.ecore#//ReturnStatement"
         containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

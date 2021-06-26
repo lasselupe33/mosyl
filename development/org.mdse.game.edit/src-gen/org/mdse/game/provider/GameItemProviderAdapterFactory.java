@@ -96,75 +96,6 @@ public class GameItemProviderAdapterFactory extends GameAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link org.mdse.game.GameStatement} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected GameStatementItemProvider gameStatementItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.mdse.game.GameStatement}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createGameStatementAdapter() {
-		if (gameStatementItemProvider == null) {
-			gameStatementItemProvider = new GameStatementItemProvider(this);
-		}
-
-		return gameStatementItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.mdse.game.GameInputs} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected GameInputsItemProvider gameInputsItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.mdse.game.GameInputs}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createGameInputsAdapter() {
-		if (gameInputsItemProvider == null) {
-			gameInputsItemProvider = new GameInputsItemProvider(this);
-		}
-
-		return gameInputsItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link org.mdse.game.Entrypoint} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected EntrypointItemProvider entrypointItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link org.mdse.game.Entrypoint}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createEntrypointAdapter() {
-		if (entrypointItemProvider == null) {
-			entrypointItemProvider = new EntrypointItemProvider(this);
-		}
-
-		return entrypointItemProvider;
-	}
-
-	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -265,12 +196,6 @@ public class GameItemProviderAdapterFactory extends GameAdapterFactory
 	public void dispose() {
 		if (gameItemProvider != null)
 			gameItemProvider.dispose();
-		if (gameStatementItemProvider != null)
-			gameStatementItemProvider.dispose();
-		if (gameInputsItemProvider != null)
-			gameInputsItemProvider.dispose();
-		if (entrypointItemProvider != null)
-			entrypointItemProvider.dispose();
 	}
 
 }

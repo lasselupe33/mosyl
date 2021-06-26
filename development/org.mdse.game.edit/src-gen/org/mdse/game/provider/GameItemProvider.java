@@ -23,8 +23,9 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import org.mdse.constructs.ConstructsFactory;
+
 import org.mdse.game.Game;
-import org.mdse.game.GameFactory;
 import org.mdse.game.GamePackage;
 
 import org.mdse.puzzle.PuzzleFactory;
@@ -60,6 +61,8 @@ public class GameItemProvider extends ItemProviderAdapter implements IEditingDom
 
 			addNamePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
+			addInputsPropertyDescriptor(object);
+			addReturnStatementPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -96,6 +99,35 @@ public class GameItemProvider extends ItemProviderAdapter implements IEditingDom
 	}
 
 	/**
+	 * This adds a property descriptor for the Inputs feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInputsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Game_inputs_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Game_inputs_feature", "_UI_Game_type"),
+						GamePackage.Literals.GAME__INPUTS, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Return Statement feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addReturnStatementPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Game_returnStatement_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Game_returnStatement_feature",
+								"_UI_Game_type"),
+						GamePackage.Literals.GAME__RETURN_STATEMENT, true, false, true, null, null, null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -107,8 +139,10 @@ public class GameItemProvider extends ItemProviderAdapter implements IEditingDom
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(GamePackage.Literals.GAME__ENTRYPOINT);
 			childrenFeatures.add(GamePackage.Literals.GAME__TESTS);
+			childrenFeatures.add(GamePackage.Literals.GAME__INPUTS);
+			childrenFeatures.add(GamePackage.Literals.GAME__STATEMENTS);
+			childrenFeatures.add(GamePackage.Literals.GAME__RETURN_STATEMENT);
 		}
 		return childrenFeatures;
 	}
@@ -176,8 +210,10 @@ public class GameItemProvider extends ItemProviderAdapter implements IEditingDom
 		case GamePackage.GAME__DESCRIPTION:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
-		case GamePackage.GAME__ENTRYPOINT:
 		case GamePackage.GAME__TESTS:
+		case GamePackage.GAME__INPUTS:
+		case GamePackage.GAME__STATEMENTS:
+		case GamePackage.GAME__RETURN_STATEMENT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -195,11 +231,47 @@ public class GameItemProvider extends ItemProviderAdapter implements IEditingDom
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(
-				createChildParameter(GamePackage.Literals.GAME__ENTRYPOINT, GameFactory.eINSTANCE.createEntrypoint()));
-
 		newChildDescriptors
 				.add(createChildParameter(GamePackage.Literals.GAME__TESTS, PuzzleFactory.eINSTANCE.createUnitTest()));
+
+		newChildDescriptors
+				.add(createChildParameter(GamePackage.Literals.GAME__INPUTS, PuzzleFactory.eINSTANCE.createInputs()));
+
+		newChildDescriptors.add(createChildParameter(GamePackage.Literals.GAME__STATEMENTS,
+				ConstructsFactory.eINSTANCE.createIfElseStatement()));
+
+		newChildDescriptors.add(createChildParameter(GamePackage.Literals.GAME__STATEMENTS,
+				ConstructsFactory.eINSTANCE.createDeclareStatement()));
+
+		newChildDescriptors.add(createChildParameter(GamePackage.Literals.GAME__STATEMENTS,
+				ConstructsFactory.eINSTANCE.createReturnStatement()));
+
+		newChildDescriptors.add(createChildParameter(GamePackage.Literals.GAME__STATEMENTS,
+				ConstructsFactory.eINSTANCE.createSetStatement()));
+
+		newChildDescriptors.add(createChildParameter(GamePackage.Literals.GAME__RETURN_STATEMENT,
+				ConstructsFactory.eINSTANCE.createReturnStatement()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify = childFeature == GamePackage.Literals.GAME__STATEMENTS
+				|| childFeature == GamePackage.Literals.GAME__RETURN_STATEMENT;
+
+		if (qualify) {
+			return getString("_UI_CreateChild_text2",
+					new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 	/**

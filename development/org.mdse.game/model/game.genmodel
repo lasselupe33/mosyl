@@ -14,20 +14,10 @@
     <genClasses ecoreClass="game.ecore#//Game">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Game/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute game.ecore#//Game/description"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//Game/entrypoint"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//Game/tests"/>
-    </genClasses>
-    <genClasses ecoreClass="game.ecore#//GameStatement">
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//GameStatement/nextStatement"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//GameStatement/statement"/>
-    </genClasses>
-    <genClasses ecoreClass="game.ecore#//GameInputs">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//GameInputs/nextStatement"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//GameInputs/inputs"/>
-    </genClasses>
-    <genClasses ecoreClass="game.ecore#//Entrypoint">
-      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//Entrypoint/inputs"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//Entrypoint/statement"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//Game/inputs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference game.ecore#//Game/statements"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference game.ecore#//Game/returnStatement"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

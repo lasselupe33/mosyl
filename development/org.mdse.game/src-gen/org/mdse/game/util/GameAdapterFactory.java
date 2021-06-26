@@ -72,21 +72,6 @@ public class GameAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseGameStatement(GameStatement object) {
-			return createGameStatementAdapter();
-		}
-
-		@Override
-		public Adapter caseGameInputs(GameInputs object) {
-			return createGameInputsAdapter();
-		}
-
-		@Override
-		public Adapter caseEntrypoint(Entrypoint object) {
-			return createEntrypointAdapter();
-		}
-
-		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -116,48 +101,6 @@ public class GameAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createGameAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.mdse.game.GameStatement <em>Statement</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.mdse.game.GameStatement
-	 * @generated
-	 */
-	public Adapter createGameStatementAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.mdse.game.GameInputs <em>Inputs</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.mdse.game.GameInputs
-	 * @generated
-	 */
-	public Adapter createGameInputsAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link org.mdse.game.Entrypoint <em>Entrypoint</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see org.mdse.game.Entrypoint
-	 * @generated
-	 */
-	public Adapter createEntrypointAdapter() {
 		return null;
 	}
 

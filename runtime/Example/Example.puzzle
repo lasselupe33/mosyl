@@ -1,0 +1,32 @@
+PUZZLE {
+	name = "Level 3"
+	description = "Given a boolean b, return 5 if b is true, else return 2."
+	
+	INPUTS {
+		bool b = true
+	}
+	
+	TEST {
+		INPUTS {
+			b = true
+		}
+		
+		EXPECTS 5
+		
+		ON_FAIL {
+			msg = "Expected 5"
+		}
+	}
+	
+	TEST {
+		INPUTS {
+			b = false
+		}
+		
+		EXPECTS 2
+		
+		ON_FAIL {
+			msg = "Expected 2"
+		}
+	}
+}

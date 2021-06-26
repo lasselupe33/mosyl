@@ -18,10 +18,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
-import org.mdse.game.Entrypoint;
+import org.mdse.constructs.ReturnStatement;
+import org.mdse.constructs.Statement;
+
 import org.mdse.game.Game;
 import org.mdse.game.GamePackage;
 
+import org.mdse.puzzle.Inputs;
 import org.mdse.puzzle.UnitTest;
 
 /**
@@ -34,8 +37,10 @@ import org.mdse.puzzle.UnitTest;
  * <ul>
  *   <li>{@link org.mdse.game.impl.GameImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.mdse.game.impl.GameImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link org.mdse.game.impl.GameImpl#getEntrypoint <em>Entrypoint</em>}</li>
  *   <li>{@link org.mdse.game.impl.GameImpl#getTests <em>Tests</em>}</li>
+ *   <li>{@link org.mdse.game.impl.GameImpl#getInputs <em>Inputs</em>}</li>
+ *   <li>{@link org.mdse.game.impl.GameImpl#getStatements <em>Statements</em>}</li>
+ *   <li>{@link org.mdse.game.impl.GameImpl#getReturnStatement <em>Return Statement</em>}</li>
  * </ul>
  *
  * @generated
@@ -82,16 +87,6 @@ public class GameImpl extends MinimalEObjectImpl.Container implements Game {
 	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getEntrypoint() <em>Entrypoint</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getEntrypoint()
-	 * @generated
-	 * @ordered
-	 */
-	protected Entrypoint entrypoint;
-
-	/**
 	 * The cached value of the '{@link #getTests() <em>Tests</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -100,6 +95,36 @@ public class GameImpl extends MinimalEObjectImpl.Container implements Game {
 	 * @ordered
 	 */
 	protected EList<UnitTest> tests;
+
+	/**
+	 * The cached value of the '{@link #getInputs() <em>Inputs</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInputs()
+	 * @generated
+	 * @ordered
+	 */
+	protected Inputs inputs;
+
+	/**
+	 * The cached value of the '{@link #getStatements() <em>Statements</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStatements()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Statement> statements;
+
+	/**
+	 * The cached value of the '{@link #getReturnStatement() <em>Return Statement</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReturnStatement()
+	 * @generated
+	 * @ordered
+	 */
+	protected ReturnStatement returnStatement;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -168,8 +193,11 @@ public class GameImpl extends MinimalEObjectImpl.Container implements Game {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entrypoint getEntrypoint() {
-		return entrypoint;
+	public EList<UnitTest> getTests() {
+		if (tests == null) {
+			tests = new EObjectContainmentEList<UnitTest>(UnitTest.class, this, GamePackage.GAME__TESTS);
+		}
+		return tests;
 	}
 
 	/**
@@ -177,12 +205,21 @@ public class GameImpl extends MinimalEObjectImpl.Container implements Game {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetEntrypoint(Entrypoint newEntrypoint, NotificationChain msgs) {
-		Entrypoint oldEntrypoint = entrypoint;
-		entrypoint = newEntrypoint;
+	public Inputs getInputs() {
+		return inputs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetInputs(Inputs newInputs, NotificationChain msgs) {
+		Inputs oldInputs = inputs;
+		inputs = newInputs;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GamePackage.GAME__ENTRYPOINT,
-					oldEntrypoint, newEntrypoint);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, GamePackage.GAME__INPUTS,
+					oldInputs, newInputs);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -196,21 +233,20 @@ public class GameImpl extends MinimalEObjectImpl.Container implements Game {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEntrypoint(Entrypoint newEntrypoint) {
-		if (newEntrypoint != entrypoint) {
+	public void setInputs(Inputs newInputs) {
+		if (newInputs != inputs) {
 			NotificationChain msgs = null;
-			if (entrypoint != null)
-				msgs = ((InternalEObject) entrypoint).eInverseRemove(this,
-						EOPPOSITE_FEATURE_BASE - GamePackage.GAME__ENTRYPOINT, null, msgs);
-			if (newEntrypoint != null)
-				msgs = ((InternalEObject) newEntrypoint).eInverseAdd(this,
-						EOPPOSITE_FEATURE_BASE - GamePackage.GAME__ENTRYPOINT, null, msgs);
-			msgs = basicSetEntrypoint(newEntrypoint, msgs);
+			if (inputs != null)
+				msgs = ((InternalEObject) inputs).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GamePackage.GAME__INPUTS, null, msgs);
+			if (newInputs != null)
+				msgs = ((InternalEObject) newInputs).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GamePackage.GAME__INPUTS, null, msgs);
+			msgs = basicSetInputs(newInputs, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.GAME__ENTRYPOINT, newEntrypoint,
-					newEntrypoint));
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.GAME__INPUTS, newInputs, newInputs));
 	}
 
 	/**
@@ -218,11 +254,61 @@ public class GameImpl extends MinimalEObjectImpl.Container implements Game {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<UnitTest> getTests() {
-		if (tests == null) {
-			tests = new EObjectContainmentEList<UnitTest>(UnitTest.class, this, GamePackage.GAME__TESTS);
+	public EList<Statement> getStatements() {
+		if (statements == null) {
+			statements = new EObjectContainmentEList<Statement>(Statement.class, this, GamePackage.GAME__STATEMENTS);
 		}
-		return tests;
+		return statements;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ReturnStatement getReturnStatement() {
+		return returnStatement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetReturnStatement(ReturnStatement newReturnStatement, NotificationChain msgs) {
+		ReturnStatement oldReturnStatement = returnStatement;
+		returnStatement = newReturnStatement;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					GamePackage.GAME__RETURN_STATEMENT, oldReturnStatement, newReturnStatement);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setReturnStatement(ReturnStatement newReturnStatement) {
+		if (newReturnStatement != returnStatement) {
+			NotificationChain msgs = null;
+			if (returnStatement != null)
+				msgs = ((InternalEObject) returnStatement).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - GamePackage.GAME__RETURN_STATEMENT, null, msgs);
+			if (newReturnStatement != null)
+				msgs = ((InternalEObject) newReturnStatement).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - GamePackage.GAME__RETURN_STATEMENT, null, msgs);
+			msgs = basicSetReturnStatement(newReturnStatement, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GamePackage.GAME__RETURN_STATEMENT,
+					newReturnStatement, newReturnStatement));
 	}
 
 	/**
@@ -233,10 +319,14 @@ public class GameImpl extends MinimalEObjectImpl.Container implements Game {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case GamePackage.GAME__ENTRYPOINT:
-			return basicSetEntrypoint(null, msgs);
 		case GamePackage.GAME__TESTS:
 			return ((InternalEList<?>) getTests()).basicRemove(otherEnd, msgs);
+		case GamePackage.GAME__INPUTS:
+			return basicSetInputs(null, msgs);
+		case GamePackage.GAME__STATEMENTS:
+			return ((InternalEList<?>) getStatements()).basicRemove(otherEnd, msgs);
+		case GamePackage.GAME__RETURN_STATEMENT:
+			return basicSetReturnStatement(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -253,10 +343,14 @@ public class GameImpl extends MinimalEObjectImpl.Container implements Game {
 			return getName();
 		case GamePackage.GAME__DESCRIPTION:
 			return getDescription();
-		case GamePackage.GAME__ENTRYPOINT:
-			return getEntrypoint();
 		case GamePackage.GAME__TESTS:
 			return getTests();
+		case GamePackage.GAME__INPUTS:
+			return getInputs();
+		case GamePackage.GAME__STATEMENTS:
+			return getStatements();
+		case GamePackage.GAME__RETURN_STATEMENT:
+			return getReturnStatement();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -276,12 +370,19 @@ public class GameImpl extends MinimalEObjectImpl.Container implements Game {
 		case GamePackage.GAME__DESCRIPTION:
 			setDescription((String) newValue);
 			return;
-		case GamePackage.GAME__ENTRYPOINT:
-			setEntrypoint((Entrypoint) newValue);
-			return;
 		case GamePackage.GAME__TESTS:
 			getTests().clear();
 			getTests().addAll((Collection<? extends UnitTest>) newValue);
+			return;
+		case GamePackage.GAME__INPUTS:
+			setInputs((Inputs) newValue);
+			return;
+		case GamePackage.GAME__STATEMENTS:
+			getStatements().clear();
+			getStatements().addAll((Collection<? extends Statement>) newValue);
+			return;
+		case GamePackage.GAME__RETURN_STATEMENT:
+			setReturnStatement((ReturnStatement) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -301,11 +402,17 @@ public class GameImpl extends MinimalEObjectImpl.Container implements Game {
 		case GamePackage.GAME__DESCRIPTION:
 			setDescription(DESCRIPTION_EDEFAULT);
 			return;
-		case GamePackage.GAME__ENTRYPOINT:
-			setEntrypoint((Entrypoint) null);
-			return;
 		case GamePackage.GAME__TESTS:
 			getTests().clear();
+			return;
+		case GamePackage.GAME__INPUTS:
+			setInputs((Inputs) null);
+			return;
+		case GamePackage.GAME__STATEMENTS:
+			getStatements().clear();
+			return;
+		case GamePackage.GAME__RETURN_STATEMENT:
+			setReturnStatement((ReturnStatement) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -323,10 +430,14 @@ public class GameImpl extends MinimalEObjectImpl.Container implements Game {
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case GamePackage.GAME__DESCRIPTION:
 			return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-		case GamePackage.GAME__ENTRYPOINT:
-			return entrypoint != null;
 		case GamePackage.GAME__TESTS:
 			return tests != null && !tests.isEmpty();
+		case GamePackage.GAME__INPUTS:
+			return inputs != null;
+		case GamePackage.GAME__STATEMENTS:
+			return statements != null && !statements.isEmpty();
+		case GamePackage.GAME__RETURN_STATEMENT:
+			return returnStatement != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -15,7 +15,7 @@ mapping MMPuzzle::Puzzle :: Puzzle2Game() : MMGame::Game {
 	tests := self.tests.map UnitTest2Test();
 	
 	if (self.inputs != null) {	
-		entrypoint := self.inputs.map Inputs2Entrypoint();
+		inputs := self.inputs.map Inputs2Inputs();
 	}
 }
 
@@ -30,11 +30,6 @@ mapping MMPuzzle::UnitTestInput :: UnitTestInput2UnitTestInput() : MMPuzzle::Uni
 	variable := self.variable;
 }
 
-mapping MMPuzzle::Inputs :: Inputs2Entrypoint() : MMGame::Entrypoint {
-	inputs := self.map Inputs2GameInputs();
-}
-
-mapping MMPuzzle::Inputs :: Inputs2GameInputs() : MMGame::GameInputs {
-	inputs := self;
-	nextStatement := null;
+mapping MMPuzzle::Inputs :: Inputs2Inputs() : MMPuzzle::Inputs {
+	variables := self.variables;
 }

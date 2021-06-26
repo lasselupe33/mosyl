@@ -25,10 +25,13 @@ import org.mdse.constructs.ReturnStatement;
 import org.mdse.constructs.SetStatement;
 import org.mdse.constructs.Statement;
 import org.mdse.constructs.Type;
+import org.mdse.constructs.Variable;
 import org.mdse.game.Entrypoint;
+import org.mdse.game.Game;
 import org.mdse.game.GameInputs;
 import org.mdse.game.GamePackage;
 import org.mdse.game.GameStatement;
+import org.mdse.puzzle.Inputs;
 
 public class GameValidator extends EObjectValidator implements IStartup {
 	private DiagnosticChain diagnostics;
@@ -51,13 +54,9 @@ public class GameValidator extends EObjectValidator implements IStartup {
 
 		this.diagnostics = diagnostics;
 		
+		Game game = (Game) eObject;
 		
-		if (GamePackage.eINSTANCE.getEntrypoint().equals(eClass)) {
-			Entrypoint entrypoint = (Entrypoint) eObject;
-			modelIsValid &= validateWellformedEntrypoint(entrypoint);
-			modelIsValid &= validateExactlyOneReturnStatement(entrypoint);
-			modelIsValid &= validateNoRedeclartionOfVariables(entrypoint);
-		}
+		modelIsValid &= validateNoVariableRedeclerations(game);
 		
 		if (GamePackage.eINSTANCE.getGameStatement().equals(eClass)) {
 			GameStatement gstmt = (GameStatement) eObject;
@@ -83,78 +82,20 @@ public class GameValidator extends EObjectValidator implements IStartup {
 		return modelIsValid;
 	}
 	
-	protected boolean validateWellformedEntrypoint(Entrypoint entrypoint) {
-		boolean modelIsValid = true;
-		
-		if (entrypoint.getStatement() == null && entrypoint.getInputs() == null) {
-			modelIsValid &= constraintViolated(entrypoint, "Entrypoint must specify either a statement or inputs");
-		}
-		
-		return modelIsValid;
-	}
-	
-	protected boolean validateExactlyOneReturnStatement(Entrypoint entrypoint) {
-		boolean modelIsValid = true;
-		int count = 0;
-		GameStatement statement = entrypoint.getStatement();
-		
-		if (statement == null) {
-			GameInputs inputs = entrypoint.getInputs();
-			
-			// This error will be handled by another validation function
-			if (inputs == null) {
-				return true;
-			}
-			
-			statement = inputs.getNextStatement();
-			
-			// This error will be handled by another validation function
-			if (statement == null) {
-				return true;
-			}
-		}
-		
-		while (statement != null) {
-			if (statement.getStatement() instanceof ReturnStatement) {
-				count++;
-			}
-			
-			statement = statement.getNextStatement();
-		}
-		
-		if (count != 1) {
-			modelIsValid &= constraintViolated(entrypoint, "There must be exactly one return statement. Found " + count);
-		}
-		
-		return modelIsValid;
-	}
-	
-	protected boolean validateNoRedeclartionOfVariables(Entrypoint entrypoint) {
+	protected boolean validateNoVariableRedeclerations(Game game) {
 		boolean modelIsValid = true;
 		Set<String> encounteredVariableNames = new HashSet<>();
 		
-		// Get initial statement
-		GameStatement statement = entrypoint.getStatement();
-		
-		if (statement == null) {
-			GameInputs inputs = entrypoint.getInputs();
-			
-			// This error will be handled by another validation function
-			if (inputs == null) {
-				return true;
-			}
-			
-			statement = inputs.getNextStatement();
-			
-			// This error will be handled by another validation function
-			if (statement == null) {
-				return true;
+		Inputs inputs = game.getInputs();
+		if (inputs != null) {
+			for (Variable input : inputs.getVariables()) {
+				encounteredVariableNames.add(input.getName());
 			}
 		}
 		
-		while (statement != null) {
-			if (statement.getStatement() instanceof DeclareStatement) {
-				String declaredName = ((DeclareStatement) statement.getStatement()).getVariable().getName();
+		for (Statement statement : game.getStatements()) {
+			if (statement instanceof DeclareStatement) {
+				String declaredName = ((DeclareStatement) statement).getVariable().getName();
 				
 				if (encounteredVariableNames.contains(declaredName)) {
 					modelIsValid &= constraintViolated(statement, "It is not allowed to redeclare variables. " + declaredName + " was redeclared.");
@@ -162,10 +103,8 @@ public class GameValidator extends EObjectValidator implements IStartup {
 					encounteredVariableNames.add(declaredName);
 				}
 			}
-			
-			statement = statement.getNextStatement();
 		}
-
+		
 		return modelIsValid;
 	}
 		
@@ -211,16 +150,6 @@ public class GameValidator extends EObjectValidator implements IStartup {
 					stmt.getNewValue().getType().getName()
 			);
 					
-		}
-		
-		return modelIsValid;
-	}
-	
-	protected boolean validateReturnStatementHasNoNextStatement(GameStatement stmt) {
-		boolean modelIsValid = true;
-
-		if (stmt.getNextStatement() != null) {
-			modelIsValid &= constraintViolated(stmt, "The return statement must be the final statement in the program");
 		}
 		
 		return modelIsValid;

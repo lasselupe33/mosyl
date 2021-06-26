@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<game:Game xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:constructs="http://org.mdse/constructs" xmlns:game="http://org.mdse/game" name="Level 3" description="Given a boolean b, return 5 if b is true, else return 2.">
+  <tests failedMessage="Expected 5">
+    <expected xsi:type="constructs:IntegerLiteral" value="5"/>
+    <inputs variable="//@inputs/@variables.0">
+      <overwritingValue xsi:type="constructs:BooleanLiteral" value="true"/>
+    </inputs>
+  </tests>
+  <tests failedMessage="Expected 2">
+    <expected xsi:type="constructs:IntegerLiteral" value="2"/>
+    <inputs variable="//@inputs/@variables.0">
+      <overwritingValue xsi:type="constructs:BooleanLiteral"/>
+    </inputs>
+  </tests>
+  <returnStatement>
+    <expression xsi:type="constructs:VariableReference" variable="//@statements.0/@variable"/>
+  </returnStatement>
+  <statements xsi:type="constructs:DeclareStatement">
+    <variable xsi:type="constructs:IntegerVariable" name="a"/>
+  </statements>
+  <statements xsi:type="constructs:IfElseStatement">
+    <condition xsi:type="constructs:ComparativeExpression">
+      <expression1 xsi:type="constructs:VariableReference" variable="//@inputs/@variables.0"/>
+      <expression2 xsi:type="constructs:BooleanLiteral" value="true"/>
+    </condition>
+    <elseStatement xsi:type="constructs:SetStatement" variable="//@statements.0/@variable">
+      <newValue xsi:type="constructs:IntegerLiteral" value="2"/>
+    </elseStatement>
+    <ifStatement xsi:type="constructs:SetStatement" variable="//@statements.0/@variable">
+      <newValue xsi:type="constructs:IntegerLiteral" value="5"/>
+    </ifStatement>
+  </statements>
+  <inputs>
+    <variables xsi:type="constructs:BooleanVariable" name="b" value="true"/>
+  </inputs>
+</game:Game>
