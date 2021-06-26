@@ -26,11 +26,8 @@ import org.mdse.constructs.SetStatement;
 import org.mdse.constructs.Statement;
 import org.mdse.constructs.Type;
 import org.mdse.constructs.Variable;
-import org.mdse.game.Entrypoint;
 import org.mdse.game.Game;
-import org.mdse.game.GameInputs;
 import org.mdse.game.GamePackage;
-import org.mdse.game.GameStatement;
 import org.mdse.puzzle.Inputs;
 
 public class GameValidator extends EObjectValidator implements IStartup {
@@ -58,13 +55,10 @@ public class GameValidator extends EObjectValidator implements IStartup {
 		
 		modelIsValid &= validateNoVariableRedeclerations(game);
 		
-		if (GamePackage.eINSTANCE.getGameStatement().equals(eClass)) {
-			GameStatement gstmt = (GameStatement) eObject;
-			Statement stmt = gstmt.getStatement();
-			
+		for (Statement stmt : game.getStatements()) {
 			if (stmt instanceof IfElseStatement) {
 				modelIsValid &= validateIfElseStatementOperatorIsBool((IfElseStatement)stmt);
-				modelIsValid &= validateIfElseStatementHasNoReturnStatements((IfElseStatement)stmt);
+				modelIsValid &= validateIfElseStatementHasNoReturnStatements((IfElseStatement)stmt); // TODO: Capture in Constructs metamodel!
 				modelIsValid &= validateExpression(((IfElseStatement) stmt).getCondition());
 			}
 			
@@ -72,12 +66,10 @@ public class GameValidator extends EObjectValidator implements IStartup {
 				modelIsValid &= validateSetStatementValueMatchesVariable((SetStatement)stmt);
 				modelIsValid &= validateExpression(((SetStatement) stmt).getNewValue());
 			}
-			
-			if (stmt instanceof ReturnStatement) {
-				modelIsValid &= validateReturnStatementHasNoNextStatement(gstmt);
-				modelIsValid &= validateExpression(((ReturnStatement) stmt).getExpression());
-			}
 		}
+		
+		// Validate expression of final return statement
+		modelIsValid &= validateExpression(game.getReturnStatement().getExpression());
 		
 		return modelIsValid;
 	}

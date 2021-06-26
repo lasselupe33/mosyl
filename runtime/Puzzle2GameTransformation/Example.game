@@ -12,9 +12,9 @@
       <overwritingValue xsi:type="constructs:BooleanLiteral"/>
     </inputs>
   </tests>
-  <returnStatement>
-    <expression xsi:type="constructs:VariableReference" variable="//@statements.0/@variable"/>
-  </returnStatement>
+  <inputs>
+    <variables xsi:type="constructs:BooleanVariable" name="b" value="true"/>
+  </inputs>
   <statements xsi:type="constructs:DeclareStatement">
     <variable xsi:type="constructs:IntegerVariable" name="a"/>
   </statements>
@@ -30,7 +30,7 @@
       <newValue xsi:type="constructs:IntegerLiteral" value="5"/>
     </ifStatement>
   </statements>
-  <inputs>
-    <variables xsi:type="constructs:BooleanVariable" name="b" value="true"/>
-  </inputs>
+  <returnStatement>
+    <expression xsi:type="constructs:VariableReference" variable="//@statements.0/@variable"/>
+  </returnStatement>
 </game:Game>
