@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<game:Game xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:constructs="http://org.mdse/constructs" xmlns:game="http://org.mdse/game" name="Multiple Inputs" description="Description">
+  <tests>
+    <expected xsi:type="constructs:IntegerLiteral" value="1"/>
+  </tests>
+  <inputs>
+    <variables xsi:type="constructs:StringVariable" name="a" value="Hello"/>
+    <variables xsi:type="constructs:IntegerVariable" name="b" value="3"/>
+  </inputs>
+</game:Game>

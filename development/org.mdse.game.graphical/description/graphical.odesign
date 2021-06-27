@@ -197,6 +197,14 @@
   <ownedViewpoints name="Game" modelFileExtension="game">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Game" domainClass="game::Game" enablePopupBars="true">
       <defaultLayer name="Default">
+        <edgeMappings name="Statement" sourceMapping="//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Inputs'] //@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Declare%20Statement'] //@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Set%20Statement']" targetMapping="//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Comparative%20Expression'] //@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Declare%20Statement'] //@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Set%20Statement']" targetFinderExpression="feature:statements">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
         <containerMappings name="Inputs" domainClass="puzzle::Inputs">
           <subNodeMappings name="Input" semanticCandidatesExpression="feature:eAllContents" domainClass="constructs::Variable">
             <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql:self.type.toString().toLower()+' '+self.name+' = '+self.value" labelPosition="node" resizeKind="NSEW" width="16" height="8">
@@ -207,12 +215,13 @@
           </subNodeMappings>
           <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Inputs'">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
           </style>
         </containerMappings>
-        <containerMappings name="Statement" semanticCandidatesExpression="feature:eContents" domainClass="constructs::Statement">
+        <containerMappings name="Declare Statement" domainClass="constructs::DeclareStatement">
           <subNodeMappings name="Variable" semanticCandidatesExpression="feature:eAllContents" domainClass="constructs::Variable">
             <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql:self.type.toString().toLower()+' '+self.name+' = '+self.value" labelPosition="node" resizeKind="NSEW" width="16" height="8">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -220,124 +229,67 @@
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
           </subNodeMappings>
-          <subNodeMappings name="VariableReference" semanticCandidatesExpression="feature:eContents" domainClass="constructs::VariableReference">
-            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql:self.variable.name" labelPosition="node" resizeKind="NSEW" width="16" height="8">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Define variable'">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Comparative Expression" domainClass="constructs::ComparativeExpression">
+          <subNodeMappings name="Comparative Variable Reference" semanticCandidatesExpression="feature:eAllContents" domainClass="constructs::VariableReference">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql:self.variable.name" labelPosition="node" resizeKind="NSEW">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
           </subNodeMappings>
-          <subNodeMappings name="VariableReassignment" semanticCandidatesExpression="feature:eAllContents" domainClass="constructs::SetStatement">
-            <conditionnalStyles predicateExpression="self.newValue.oclIsKindOf(constructs::Literal)">
-              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql:'Set variable:\n'+self.variable.name+' = '+self.newValue.value" labelPosition="node" resizeKind="NSEW">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="self.newValue.oclIsKindOf(constructs::BinaryOperator)">
-              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql:'Set variable:\n'+self.variable.name+' = '+self.newValue.expression1.value+' '+self.newValue.operator.toString()+' '+self.newValue.expression2.value" labelPosition="node" resizeKind="NSEW">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="self.newValue.oclIsTypeOf(constructs::VariableReference)">
-              <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql:'Set variable:\n'+self.variable.name+' = '+self.newValue.variable.name" labelPosition="node" resizeKind="NSEW">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
+          <subNodeMappings name="Comparative Literal" semanticCandidatesExpression="feature:eAllContents" domainClass="constructs::Literal">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="feature:value" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
           </subNodeMappings>
-          <conditionnalStyles predicateExpression="aql:self.oclIsTypeOf(constructs::DeclareStatement)">
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Define variable'">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelFormat>bold</labelFormat>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
-              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
-            </style>
-          </conditionnalStyles>
-          <conditionnalStyles predicateExpression="aql:self.oclIsTypeOf(constructs::ReturnStatement)">
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Return'">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelFormat>bold</labelFormat>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
-              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
-            </style>
-          </conditionnalStyles>
-          <conditionnalStyles predicateExpression="aql:self.oclIsTypeOf(constructs::IfElseStatement)">
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Then'">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelFormat>bold</labelFormat>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
-            </style>
-          </conditionnalStyles>
-          <conditionnalStyles predicateExpression="aql:self.oclIsTypeOf(constructs::SetStatement)">
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Set variable'">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelFormat>bold</labelFormat>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-            </style>
-          </conditionnalStyles>
-        </containerMappings>
-        <containerMappings name="Condition" semanticCandidatesExpression="feature:eContents" domainClass="constructs::IfElseStatement" childrenPresentation="HorizontalStack">
-          <subContainerMappings name="Expression1" semanticCandidatesExpression="feature:eAllContents" domainClass="constructs::ComparativeExpression">
-            <conditionnalStyles predicateExpression="aql:self.expression1.oclIsKindOf(constructs::Literal)">
-              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.expression1.value">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="aql:self.expression1.oclIsTypeOf(constructs::VariableReference)">
-              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.expression1.variable.name">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-          </subContainerMappings>
-          <subContainerMappings name="Operator" semanticCandidatesExpression="feature:eAllContents" domainClass="constructs::ComparativeExpression">
-            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.operator.toString()">
-              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-            </style>
-          </subContainerMappings>
-          <subContainerMappings name="Expression2" semanticCandidatesExpression="feature:eAllContents" domainClass="constructs::ComparativeExpression">
-            <conditionnalStyles predicateExpression="aql:self.expression2.oclIsKindOf(constructs::Literal)">
-              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.expression2.value">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-            <conditionnalStyles predicateExpression="aql:self.expression2.oclIsTypeOf(constructs::VariableReference)">
-              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:self.expression2.variable.name">
-                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              </style>
-            </conditionnalStyles>
-          </subContainerMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'If'">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'If '+self.operator.toString()">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Set Statement" domainClass="constructs::SetStatement">
+          <subNodeMappings name="Literal" semanticCandidatesExpression="feature:eAllContents" domainClass="constructs::Literal">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="feature:value" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Set variable: '+self.variable.name+' ='">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Return Statement" domainClass="constructs::ReturnStatement">
+          <subNodeMappings name="Return Variable Reference" semanticCandidatesExpression="feature:eAllContents" domainClass="constructs::VariableReference">
+            <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="aql:self.variable.name" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="aql:'Return'">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
           </style>
         </containerMappings>
       </defaultLayer>

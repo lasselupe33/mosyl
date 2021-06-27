@@ -1,0 +1,13 @@
+PUZZLE {
+	name="Multiple Inputs"
+	description="Description"
+	
+	INPUTS {
+		string a = "Hello"
+		int b = 3
+	}
+	
+	TEST {
+		EXPECTS 1
+	}
+}

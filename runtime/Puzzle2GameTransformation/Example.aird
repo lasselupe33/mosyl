@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:constructs="http://org.mdse/constructs" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:game="http://org.mdse/game" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:puzzle="http://org.mdse/puzzle" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_hC6xsNaBEeuGZJr0_N3MvA" selectedViews="_jCNv8NaBEeuGZJr0_N3MvA" version="14.3.1.202003261200">
+    <semanticResources>Example.game</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_jCNv8NaBEeuGZJr0_N3MvA">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_nKSYkNaBEeuGZJr0_N3MvA" name="Example" repPath="#_nJP2wNaBEeuGZJr0_N3MvA" changeId="d47968e9-26f1-44de-98cb-7a35c1aa5961">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']"/>
+        <target xmi:type="game:Game" href="Example.game#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_nJP2wNaBEeuGZJr0_N3MvA">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_nLZy4NaBEeuGZJr0_N3MvA" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_nLZy4daBEeuGZJr0_N3MvA" type="Sirius" element="_nJP2wNaBEeuGZJr0_N3MvA" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_nPwHYNaBEeuGZJr0_N3MvA" type="2002" element="_nL0poNaBEeuGZJr0_N3MvA">
+          <children xmi:type="notation:Node" xmi:id="_nP54YNaBEeuGZJr0_N3MvA" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_nP7tkNaBEeuGZJr0_N3MvA" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_VoHwENaGEeuFT462wAUVRw" type="3007" element="_VoC3kNaGEeuFT462wAUVRw">
+              <children xmi:type="notation:Node" xmi:id="_VoIXINaGEeuFT462wAUVRw" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_VoIXIdaGEeuFT462wAUVRw" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_VoI-MNaGEeuFT462wAUVRw" type="3003" element="_VoEswNaGEeuFT462wAUVRw">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_VoI-MdaGEeuFT462wAUVRw" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VoI-MtaGEeuFT462wAUVRw"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_VoHwEdaGEeuFT462wAUVRw" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VoHwEtaGEeuFT462wAUVRw" x="15" y="29" width="160" height="80"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_nP7tkdaBEeuGZJr0_N3MvA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_nP7tktaBEeuGZJr0_N3MvA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_nPwucNaBEeuGZJr0_N3MvA" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nPwucdaBEeuGZJr0_N3MvA" x="120" y="65" width="203"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_-20noNc3EeuuN8bnMLOJlg" type="2002" element="_-2kwANc3EeuuN8bnMLOJlg">
+          <children xmi:type="notation:Node" xmi:id="_-26uQNc3EeuuN8bnMLOJlg" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_-27VUNc3EeuuN8bnMLOJlg" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_Pg5YQNc4Eeu2K9TCTsaLFQ" type="3007" element="_Pgquwtc4Eeu2K9TCTsaLFQ">
+              <children xmi:type="notation:Node" xmi:id="_PhGzoNc4Eeu2K9TCTsaLFQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_PhGzodc4Eeu2K9TCTsaLFQ" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_PhP9kNc4Eeu2K9TCTsaLFQ" type="3003" element="_Pgr84Nc4Eeu2K9TCTsaLFQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_PhP9kdc4Eeu2K9TCTsaLFQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PhP9ktc4Eeu2K9TCTsaLFQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_Pg5YQdc4Eeu2K9TCTsaLFQ" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Pg5YQtc4Eeu2K9TCTsaLFQ" x="15" y="29" width="160" height="80"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_-27VUdc3EeuuN8bnMLOJlg"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_-27VUtc3EeuuN8bnMLOJlg"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_-20nodc3EeuuN8bnMLOJlg" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-20notc3EeuuN8bnMLOJlg" x="120" y="230" width="203"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_PUmPYNc9EeuC-7B3CVLZjA" type="2002" element="_PUe6oNc9EeuC-7B3CVLZjA">
+          <children xmi:type="notation:Node" xmi:id="_PUrH4Nc9EeuC-7B3CVLZjA" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_PUru8Nc9EeuC-7B3CVLZjA" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_5jJqYNc-Eeu4Sb_8TXinmA" type="3007" element="_5i2vcNc-Eeu4Sb_8TXinmA">
+              <children xmi:type="notation:Node" xmi:id="_5jS0UNc-Eeu4Sb_8TXinmA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_5jS0Udc-Eeu4Sb_8TXinmA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_5jclUNc-Eeu4Sb_8TXinmA" type="3003" element="_5i5LsNc-Eeu4Sb_8TXinmA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_5jclUdc-Eeu4Sb_8TXinmA" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5jclUtc-Eeu4Sb_8TXinmA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_5jJqYdc-Eeu4Sb_8TXinmA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5jJqYtc-Eeu4Sb_8TXinmA" x="35" y="29" width="46" height="46"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_5jawINc-Eeu4Sb_8TXinmA" type="3007" element="_5i7n8Nc-Eeu4Sb_8TXinmA">
+              <children xmi:type="notation:Node" xmi:id="_5jbXMNc-Eeu4Sb_8TXinmA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_5jbXMdc-Eeu4Sb_8TXinmA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_5jdMYNc-Eeu4Sb_8TXinmA" type="3003" element="_5i8PANc-Eeu4Sb_8TXinmA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_5jdMYdc-Eeu4Sb_8TXinmA" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5jdMYtc-Eeu4Sb_8TXinmA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_5jawIdc-Eeu4Sb_8TXinmA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_5jawItc-Eeu4Sb_8TXinmA" x="115" y="29" width="46" height="46"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_PUru8dc9EeuC-7B3CVLZjA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_PUru8tc9EeuC-7B3CVLZjA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_PUmPYdc9EeuC-7B3CVLZjA" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_PUmPYtc9EeuC-7B3CVLZjA" x="120" y="390" width="203" height="108"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_kTxT0NdEEeu6sJJIft3eFA" type="2002" element="_kTmUstdEEeu6sJJIft3eFA">
+          <children xmi:type="notation:Node" xmi:id="_kT3acNdEEeu6sJJIft3eFA" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_kT4BgNdEEeu6sJJIft3eFA" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_WHlFcNdFEeuhEfFcQCoZrA" type="3007" element="_WHWb8NdFEeuhEfFcQCoZrA">
+              <children xmi:type="notation:Node" xmi:id="_WHrMENdFEeuhEfFcQCoZrA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_WHrMEddFEeuhEfFcQCoZrA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_WH1kINdFEeuhEfFcQCoZrA" type="3003" element="_WHXqENdFEeuhEfFcQCoZrA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_WH1kIddFEeuhEfFcQCoZrA" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WH1kItdFEeuhEfFcQCoZrA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_WHlFcddFEeuhEfFcQCoZrA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WHlFctdFEeuhEfFcQCoZrA" x="45" y="34" width="51" height="50"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_kT4BgddEEeu6sJJIft3eFA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_kT4BgtdEEeu6sJJIft3eFA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_kTxT0ddEEeu6sJJIft3eFA" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kTxT0tdEEeu6sJJIft3eFA" x="25" y="575" width="158" height="103"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_kT8S8NdEEeu6sJJIft3eFA" type="2002" element="_kTow8ddEEeu6sJJIft3eFA">
+          <children xmi:type="notation:Node" xmi:id="_kT86ANdEEeu6sJJIft3eFA" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_kT86AddEEeu6sJJIft3eFA" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_WH2yQNdFEeuhEfFcQCoZrA" type="3007" element="_WHZfQNdFEeuhEfFcQCoZrA">
+              <children xmi:type="notation:Node" xmi:id="_WH4AYNdFEeuhEfFcQCoZrA" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_WH4AYddFEeuhEfFcQCoZrA" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_WH4ncNdFEeuhEfFcQCoZrA" type="3003" element="_WHZfQddFEeuhEfFcQCoZrA">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_WH4ncddFEeuhEfFcQCoZrA" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WH4nctdFEeuhEfFcQCoZrA"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_WH2yQddFEeuhEfFcQCoZrA" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WH2yQtdFEeuhEfFcQCoZrA" x="40" y="34" width="51" height="50"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_kT86AtdEEeu6sJJIft3eFA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_kT86A9dEEeu6sJJIft3eFA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_kT8S8ddEEeu6sJJIft3eFA" fontName="Segoe UI" fontHeight="12"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_kT8S8tdEEeu6sJJIft3eFA" x="285" y="575" width="153" height="103"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_k-97ANdGEeuvVNrKmOMk_Q" type="2002" element="_k-lggNdGEeuvVNrKmOMk_Q">
+          <children xmi:type="notation:Node" xmi:id="_k_ITENdGEeuvVNrKmOMk_Q" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_k_JhMNdGEeuvVNrKmOMk_Q" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_k_RdANdGEeuvVNrKmOMk_Q" type="3007" element="_k-qZANdGEeuvVNrKmOMk_Q">
+              <children xmi:type="notation:Node" xmi:id="_k_TSMNdGEeuvVNrKmOMk_Q" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_k_TSMddGEeuvVNrKmOMk_Q" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_k_W8kNdGEeuvVNrKmOMk_Q" type="3003" element="_k-qZAddGEeuvVNrKmOMk_Q">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_k_W8kddGEeuvVNrKmOMk_Q" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_k_W8ktdGEeuvVNrKmOMk_Q"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_k_RdAddGEeuvVNrKmOMk_Q" fontName="Segoe UI" fontHeight="12"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_k_RdAtdGEeuvVNrKmOMk_Q" x="50" y="34" width="41" height="35"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_k_JhMddGEeuvVNrKmOMk_Q"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_k_JhMtdGEeuvVNrKmOMk_Q"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_k-97AddGEeuvVNrKmOMk_Q" fontName="Segoe UI" fontHeight="12" bold="true"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_k-97AtdGEeuvVNrKmOMk_Q" x="165" y="785" width="153" height="83"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_nLZy4taBEeuGZJr0_N3MvA"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_nPb-UNaBEeuGZJr0_N3MvA" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_nPb-UdaBEeuGZJr0_N3MvA"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_nL0poNaBEeuGZJr0_N3MvA" name="Inputs">
+      <target xmi:type="puzzle:Inputs" href="Example.game#//@inputs"/>
+      <semanticElements xmi:type="puzzle:Inputs" href="Example.game#//@inputs"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_nPEx8NaBEeuGZJr0_N3MvA" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="253,206,137" foregroundColor="253,206,137">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Inputs']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Inputs']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_VoC3kNaGEeuFT462wAUVRw" name="boolean b = true" width="16" height="8" resizeKind="NSEW">
+        <target xmi:type="constructs:BooleanVariable" href="Example.game#//@inputs/@variables.0"/>
+        <semanticElements xmi:type="constructs:BooleanVariable" href="Example.game#//@inputs/@variables.0"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_VoEswNaGEeuFT462wAUVRw" labelSize="12" showIcon="false" labelPosition="node" width="16" height="8" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Inputs']/@subNodeMappings[name='Input']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Inputs']/@subNodeMappings[name='Input']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_-2kwANc3EeuuN8bnMLOJlg" name="Define variable">
+      <target xmi:type="constructs:DeclareStatement" href="Example.game#//@statements.0"/>
+      <semanticElements xmi:type="constructs:DeclareStatement" href="Example.game#//@statements.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_-2l-INc3EeuuN8bnMLOJlg" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="217,196,215" foregroundColor="217,196,215">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Declare%20Statement']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Declare%20Statement']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_Pgquwtc4Eeu2K9TCTsaLFQ" name="integer a = 0" width="16" height="8" resizeKind="NSEW">
+        <target xmi:type="constructs:IntegerVariable" href="Example.game#//@statements.0/@variable"/>
+        <semanticElements xmi:type="constructs:IntegerVariable" href="Example.game#//@statements.0/@variable"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_Pgr84Nc4Eeu2K9TCTsaLFQ" labelSize="12" showIcon="false" labelPosition="node" width="16" height="8" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Declare%20Statement']/@subNodeMappings[name='Variable']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Declare%20Statement']/@subNodeMappings[name='Variable']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_PUe6oNc9EeuC-7B3CVLZjA" name="If Equal">
+      <target xmi:type="constructs:ComparativeExpression" href="Example.game#//@statements.1/@condition"/>
+      <semanticElements xmi:type="constructs:ComparativeExpression" href="Example.game#//@statements.1/@condition"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_4WNZUddCEeuXJNfP_QsUSA" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="246,139,139" foregroundColor="246,139,139">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Comparative%20Expression']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Comparative%20Expression']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_5i2vcNc-Eeu4Sb_8TXinmA" name="b" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="constructs:VariableReference" href="Example.game#//@statements.1/@condition/@expression1"/>
+        <semanticElements xmi:type="constructs:VariableReference" href="Example.game#//@statements.1/@condition/@expression1"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_5i5LsNc-Eeu4Sb_8TXinmA" labelSize="12" showIcon="false" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Comparative%20Expression']/@subNodeMappings[name='Comparative%20Variable%20Reference']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Comparative%20Expression']/@subNodeMappings[name='Comparative%20Variable%20Reference']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_5i7n8Nc-Eeu4Sb_8TXinmA" name="true" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="constructs:BooleanLiteral" href="Example.game#//@statements.1/@condition/@expression2"/>
+        <semanticElements xmi:type="constructs:BooleanLiteral" href="Example.game#//@statements.1/@condition/@expression2"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_5i8PANc-Eeu4Sb_8TXinmA" labelSize="12" showIcon="false" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Comparative%20Expression']/@subNodeMappings[name='Comparative%20Literal']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Comparative%20Expression']/@subNodeMappings[name='Comparative%20Literal']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_kTmUstdEEeu6sJJIft3eFA" name="Set variable: a =">
+      <target xmi:type="constructs:SetStatement" href="Example.game#//@statements.1/@elseStatement"/>
+      <semanticElements xmi:type="constructs:SetStatement" href="Example.game#//@statements.1/@elseStatement"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_kTni0NdEEeu6sJJIft3eFA" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="194,239,255" foregroundColor="194,239,255">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Set%20Statement']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Set%20Statement']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_WHWb8NdFEeuhEfFcQCoZrA" name="2" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="constructs:IntegerLiteral" href="Example.game#//@statements.1/@elseStatement/@newValue"/>
+        <semanticElements xmi:type="constructs:IntegerLiteral" href="Example.game#//@statements.1/@elseStatement/@newValue"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_WHXqENdFEeuhEfFcQCoZrA" labelSize="12" showIcon="false" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Set%20Statement']/@subNodeMappings[name='Literal']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Set%20Statement']/@subNodeMappings[name='Literal']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_kTow8ddEEeu6sJJIft3eFA" name="Set variable: a =">
+      <target xmi:type="constructs:SetStatement" href="Example.game#//@statements.1/@ifStatement"/>
+      <semanticElements xmi:type="constructs:SetStatement" href="Example.game#//@statements.1/@ifStatement"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_kTpYANdEEeu6sJJIft3eFA" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="194,239,255" foregroundColor="194,239,255">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Set%20Statement']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Set%20Statement']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_WHZfQNdFEeuhEfFcQCoZrA" name="5" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="constructs:IntegerLiteral" href="Example.game#//@statements.1/@ifStatement/@newValue"/>
+        <semanticElements xmi:type="constructs:IntegerLiteral" href="Example.game#//@statements.1/@ifStatement/@newValue"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_WHZfQddFEeuhEfFcQCoZrA" labelSize="12" showIcon="false" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Set%20Statement']/@subNodeMappings[name='Literal']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Set%20Statement']/@subNodeMappings[name='Literal']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_k-lggNdGEeuvVNrKmOMk_Q" name="Return">
+      <target xmi:type="constructs:ReturnStatement" href="Example.game#//@returnStatement"/>
+      <semanticElements xmi:type="constructs:ReturnStatement" href="Example.game#//@returnStatement"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_k-nVsNdGEeuvVNrKmOMk_Q" labelSize="12" showIcon="false" borderSize="1" borderSizeComputationExpression="1" backgroundColor="255,245,181" foregroundColor="255,245,181">
+        <labelFormat>bold</labelFormat>
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Return%20Statement']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Return%20Statement']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_k-qZANdGEeuvVNrKmOMk_Q" name="a" width="3" height="3" resizeKind="NSEW">
+        <target xmi:type="constructs:VariableReference" href="Example.game#//@returnStatement/@expression"/>
+        <semanticElements xmi:type="constructs:VariableReference" href="Example.game#//@returnStatement/@expression"/>
+        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+        <ownedStyle xmi:type="diagram:Square" uid="_k-qZAddGEeuvVNrKmOMk_Q" labelSize="12" showIcon="false" labelPosition="node" color="255,255,255">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Return%20Statement']/@subNodeMappings[name='Return%20Variable%20Reference']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer/@containerMappings[name='Return%20Statement']/@subNodeMappings[name='Return%20Variable%20Reference']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_nJnqMNaBEeuGZJr0_N3MvA"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.mdse.game.graphical/description/graphical.odesign#//@ownedViewpoints[name='Game']/@ownedRepresentations[name='Game']/@defaultLayer"/>
+    <target xmi:type="game:Game" href="Example.game#/"/>
+  </diagram:DSemanticDiagram>
+</xmi:XMI>
